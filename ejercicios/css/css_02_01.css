@@ -1,0 +1,17 @@
+nombreCentro {
+  display: block;
+}
+
+web {
+  display: block;
+}
+
+ciclo {
+  display: block;
+}
+
+nombre, grado, decretoTitulo {
+  display: list-item;
+  list-style: disc inside;
+  margin-left: 10px;
+}

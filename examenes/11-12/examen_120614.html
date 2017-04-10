@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Examen 14/06/12. Exámenes. XML. Bartolomé Sintes Marco</title>
+    <link href="../../varios/xml.css" rel="stylesheet" type="text/css" title="Estilo mclibre" />
+    <link rel="icon" href="../../varios/favicon.ico" />
+    <link rel="stylesheet" href="../../varios/prism-xml.css" />
+    <script type="text/javascript" src="../../varios/prism.js"></script>
+  </head>
+
+  <body>
+    <h1>Examen 14 de junio de 2012</h1>
+
+    <nav>
+      <p>
+        <a href="../../index.html"><img src="../../varios/iconos/icono_xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48" /></a>
+        <a href="#"><img src="../../varios/iconos/icono_arrow_circle_up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36" /></a>
+        <a href="../examenes.html"><img src="../../varios/iconos/icono_school.svg" alt="Exámenes" title="Exámenes" width="36" height="36" /></a>
+      </p>
+
+      <h2>Examen 14/06/12</h2>
+
+      <div class="toc">
+        <ol>
+          <li><a href="#ejercicio-1">DTD</a></li>
+          <li><a href="#ejercicio-2">CSS</a></li>
+          <li><a href="#ejercicio-3">XPath</a></li>
+        </ol>
+      </div>
+    </nav>
+
+    <p>Resuelva los siguientes ejercicios guardando las respuestas en una carpeta con su nombre y apellidos.</p>
+
+    <section id="ejercicio-1">
+      <h2>Ejercicio 1. DTD</h2>
+
+      <p>Escriba la DTD correspondiente a este documento:</p>
+
+      <div class="codigo">
+        <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;noticias&gt;
+  &lt;tags&gt;
+    &lt;tag nombre="astronaútica" /&gt;
+    &lt;tag nombre="viajes" /&gt;
+    &lt;tag nombre="medicina" /&gt;
+    &lt;tag nombre="descubrimientos" /&gt;
+  &lt;/tags&gt;
+  &lt;noticia tags="astronaútica viajes"&gt;
+    &lt;tiempo fecha="21-07-1969" hora="02:56" /&gt;
+    &lt;lugar&gt;Al sur del Mar de la Tranquilidad, en la Luna&lt;/lugar&gt;
+    &lt;protagonistas&gt;
+      &lt;nombre&gt;Neil A. Armstrong&lt;/nombre&gt;
+      &lt;nombre&gt;Edwin E. Aldrin Jr.&lt;/nombre&gt;
+      &lt;nombre&gt;Michael Collins&lt;/nombre&gt;
+    &lt;/protagonistas&gt;
+    &lt;resumen&gt;El comandante Neil Armstrong fue el primer ser humano que pisó la superficie
+     de la Luna&lt;/resumen&gt;
+  &lt;/noticia&gt;
+  &lt;noticia tags="medicina descubrimientos"&gt;
+    &lt;tiempo fecha="28-09-1928" /&gt;
+    &lt;lugar&gt;Sótano del laboratorio del Hospital St. Mary en Londres&lt;/lugar&gt;
+    &lt;protagonistas&gt;
+      &lt;nombre&gt;Alexander Fleming&lt;/nombre&gt;
+    &lt;/protagonistas&gt;
+    &lt;resumen&gt;El médico Alexander Fleming observó que el moho Penicillium notatum producía
+    la muerte de bacterias de Staphylococcus aureus, observación que conduciría al
+    descubrimiento del  antibiótico penicilina.&lt;/resumen&gt;
+  &lt;/noticia&gt;
+&lt;/noticias&gt;</code>
+</pre>
+      </div>
+
+      <p>... teniendo en cuenta que:</p>
+      <ul>
+        <li>los tags de cada noticia deben estar definidos en el apartado de tags</li>
+        <li>la fecha debe estar en el formato DD-MM-AAAA</li>
+        <li>una noticia puede no tener protagonista</li>
+      </ul>
+    </section>
+
+    <section id="ejercicio-2">
+      <h2>Ejercicio 2. CSS</h2>
+
+      <p>Escriba la hoja de estilo CSS para que el siguiente documento se vea en el navegador como muestra la imagen.</p>
+
+      <div class="codigo">
+        <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;pintores&gt;
+  &lt;titulo&gt;Pintores universales&lt;/titulo&gt;
+  &lt;pintor id="Goya"&gt;
+    &lt;nombre&gt;Francisco de Goya&lt;/nombre&gt;
+    &lt;nacido&gt;1746&lt;/nacido&gt;
+    &lt;fallecido&gt;1828&lt;/fallecido&gt;
+    &lt;nacionalidad&gt;España&lt;/nacionalidad&gt;
+  &lt;/pintor&gt;
+  &lt;pintor id="Velazquez"&gt;
+    &lt;nombre&gt;Diego Velázquez&lt;/nombre&gt;
+    &lt;nacido&gt;1599&lt;/nacido&gt;
+    &lt;fallecido&gt;1660&lt;/fallecido&gt;
+    &lt;nacionalidad&gt;España&lt;/nacionalidad&gt;
+  &lt;/pintor&gt;
+  &lt;pintor id="Vermeer"&gt;
+    &lt;nombre&gt;Johannes Vermeer&lt;/nombre&gt;
+    &lt;nacido&gt;1632&lt;/nacido&gt;
+    &lt;fallecido&gt;1675&lt;/fallecido&gt;
+    &lt;nacionalidad&gt;Holanda&lt;/nacionalidad&gt;
+  &lt;/pintor&gt;
+&lt;/pintores&gt;</code>
+</pre>
+      </div>
+
+      <p>Captura del navegador (resolución 800 x 600):</p>
+
+      <p class="captura"><img alt="XML y CSS" src="examen_120614_xml_css.png" width="800" height="600" /></p>
+    </section>
+
+    <section id="ejercicio-3">
+      <h2>Ejercicio 3. XPath</h2>
+
+      <p>Dado el siguiente documento XML, escriba las expresiones XPath que devuelvan <strong>exactamente</strong> la respuesta indicadas en los cuadros. Escriba todas las expresiones XPath en un único fichero XPath.txt, numerando las respuestas.</p>
+
+      <div class="codigo">
+        <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;arte&gt;
+  &lt;museos&gt;
+    &lt;museo id="Prado"&gt;
+      &lt;nombre&gt;Museo del Prado&lt;/nombre&gt;
+      &lt;pais&gt;España&lt;/pais&gt;
+      &lt;ciudad&gt;Madrid&lt;/ciudad&gt;
+      &lt;creacion&gt;1819&lt;/creacion&gt;
+    &lt;/museo&gt;
+    &lt;museo id="Louvre"&gt;
+      &lt;nombre&gt;Musée du Louvre&lt;/nombre&gt;
+      &lt;pais&gt;Francia&lt;/pais&gt;
+      &lt;ciudad&gt;París&lt;/ciudad&gt;
+      &lt;creacion&gt;1793&lt;/creacion&gt;
+    &lt;/museo&gt;
+  &lt;/museos&gt;
+  &lt;pintores&gt;
+    &lt;pintor id="Goya"&gt;
+      &lt;nombre&gt;Francisco de Goya&lt;/nombre&gt;
+      &lt;nombreCompleto&gt;Francisco José de Goya y Lucientes&lt;/nombreCompleto&gt;
+      &lt;nacido&gt;1746&lt;/nacido&gt;
+      &lt;fallecido&gt;1828&lt;/fallecido&gt;
+      &lt;nacionalidad&gt;España&lt;/nacionalidad&gt;
+    &lt;/pintor&gt;
+    &lt;pintor id="Velazquez"&gt;
+      &lt;nombre&gt;Diego Velázquez&lt;/nombre&gt;
+      &lt;nombreCompleto&gt;Diego Rodríguez de Silva y Velázquez&lt;/nombreCompleto&gt;
+      &lt;nacido&gt;1599&lt;/nacido&gt;
+      &lt;fallecido&gt;1660&lt;/fallecido&gt;
+      &lt;nacionalidad&gt;España&lt;/nacionalidad&gt;
+    &lt;/pintor&gt;
+    &lt;pintor id="Vermeer"&gt;
+      &lt;nombre&gt;Johannes Vermeer&lt;/nombre&gt;
+      &lt;nombreCompleto&gt;Johannes Vermeer van Delft &lt;/nombreCompleto&gt;
+      &lt;nacido&gt;1632&lt;/nacido&gt;
+      &lt;fallecido&gt;1675&lt;/fallecido&gt;
+      &lt;nacionalidad&gt;Holanda&lt;/nacionalidad&gt;
+    &lt;/pintor&gt;
+  &lt;/pintores&gt;
+  &lt;cuadros&gt;
+    &lt;cuadro autor="Goya" museo="Louvre" fecha="1794" titulo="La condesa del Carpio, marquesa de La Solana" /&gt;
+    &lt;cuadro autor="Goya" museo="Prado" fecha="1814" titulo="Los fusilamientos del 3 de mayo" /&gt;
+    &lt;cuadro autor="Goya" museo="Prado" fecha="1798" titulo="La maja desnuda" /&gt;
+    &lt;cuadro autor="Velazquez" museo="Prado" fecha="1629" titulo="Los borrachos" /&gt;
+    &lt;cuadro autor="Vermeer" museo="Louvre" fecha="1670" titulo="La hilandera" /&gt;
+    &lt;cuadro autor="Vermeer" museo="Prado" fecha="1665" titulo="Mujer con aguamanil" /&gt;
+  &lt;/cuadros&gt;
+&lt;/arte&gt;</code>
+</pre>
+      </div>
+
+      <ol>
+        <li>Nombre de los pintores:
+          <div class="codigo">
+            <pre>
+<code class="language-xml">Francisco de Goya
+Diego Velázquez
+Johannes Vermeer</code>
+</pre>
+          </div>
+        </li>
+
+        <li>Fecha de creación de los cuadros:
+          <div class="codigo">
+            <pre>
+<code class="language-xml"> <span class="xml-attr">fecha</span>="1794"
+ <span class="xml-attr">fecha</span>="1814"
+ <span class="xml-attr">fecha</span>="1798"
+ <span class="xml-attr">fecha</span>="1629"
+ <span class="xml-attr">fecha</span>="1670"
+ <span class="xml-attr">fecha</span>="1665"</code>
+</pre>
+          </div>
+        </li>
+
+        <li>Título de los cuadros pintados antes de 1700:
+          <div class="codigo">
+            <pre>
+<code class="language-xml"> <span class="xml-attr">titulo</span>="Los borrachos"
+ <span class="xml-attr">titulo</span>="La hilandera"
+ <span class="xml-attr">titulo</span>="Mujer con aguamanil"</code>
+</pre>
+          </div>
+        </li>
+
+        <li>Nombre de los pintores españoles:
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;nombre&gt;Francisco de Goya&lt;/nombre&gt;
+&lt;nombre&gt;Diego Velázquez&lt;/nombre&gt;</code>
+</pre>
+          </div>
+        </li>
+
+        <li>Nombre de los pintores que vivieron más de 50 años:
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;nombre&gt;Francisco de Goya&lt;/nombre&gt;
+&lt;nombre&gt;Diego Velázquez&lt;/nombre&gt;</code>
+</pre>
+          </div>
+        </li>
+
+        <li>Ciudades en los que hay cuadros de Velázquez:
+          <div class="codigo">
+            <pre><code class="language-xml">Madrid</code></pre>
+          </div>
+        </li>
+
+        <li>Fecha de nacimiento del pintor de La maja desnuda:
+          <div class="codigo">
+            <pre><code class="language-xml">&lt;nacido&gt;1746&lt;/nacido&gt;</code></pre>
+          </div>
+        </li>
+
+        <li>Nacionalidad de los pintores expuestos en museos de París:
+          <div class="codigo">
+            <pre>
+<code class="language-xml">España
+Holanda</code>
+</pre>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <footer>
+      <p class="ultmod">Última modificación de esta página: 14 de junio de 2012</p>
+
+      <p class="licencia"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../../varios/iconos/icono_cc_by_sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
+        Esta página forma parte del curso <a href="http://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a> por <a href="http://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
+        que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+titulo, autor, fechaPublicacion {
+  display: block;
+  font-family: sans-serif;
+}
+
+titulo {
+  font-weight: bold;
+}
+
+fechaPublicacion {
+  border-bottom: black 1px solid;
+  margin-bottom: 10px;
+}

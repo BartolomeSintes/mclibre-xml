@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XPath: XML Path language (Resumen). XML. Bartolomé Sintes Marco</title>
+    <link href="../varios/xml.css" rel="stylesheet" type="text/css" title="Estilo mclibre" />
+    <link rel="icon" href="../varios/favicon.ico" />
+    <link rel="stylesheet" href="../varios/prism-xml.css" />
+    <script type="text/javascript" src="../varios/prism.js"></script>
+  </head>
+
+  <body>
+    <h1>XPath: XML Path language (Resumen)</h1>
+
+    <nav>
+      <p>
+        <a href="../index.html"><img src="../varios/iconos/icono_xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48" /></a>
+        <a href="#"><img src="../varios/iconos/icono_arrow_circle_up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36" /></a>
+      </p>
+    </nav>
+
+    <section id="sintaxis-abreviada">
+      <h2>Sintaxis abreviada</h2>
+
+      <ul>
+        <li><em><strong>elemento</strong></em>: selecciona el elemento.</li>
+        <li><strong>@<em>atributo</em></strong>: selecciona el atributo.</li>
+      </ul>
+
+      <section id="xpath-eje">
+        <h3>Eje (en inglés, axis)</h3>
+
+        <ul>
+          <li><strong>/</strong>: si está al principio de la expresión, indica el nodo raíz, si no, indica "hijo".</li>
+          <li><strong>/</strong><strong>/</strong>: indica "descendiente" (hijos, hijos de hijos, etc.).</li>
+          <li><strong>..</strong>: selecciona el elemento padre.</li>
+          <li><strong>|</strong>: permite elegir varios recorridos.</li>
+        </ul>
+      </section>
+
+      <section id="xpath-predicado">
+        <h3>Predicado (en inglés, predicate)</h3>
+
+        <p>Los predicados se escriben entre corchetes</p>
+
+        <ul>
+          <li><strong>[@atributo]</strong>: selecciona los elementos que tienen el atributo.</li>
+          <li><strong>[número]</strong>: si hay varios resultados selecciona uno de ellos por número de orden; <strong>last()</strong> selecciona el último de ellos.</li>
+          <li><strong>[condicion]</strong>: selecciona los nodos que cumplen la condición. La condición puede utilizar el valor de un atributo (utilizando @) o el texto que contiene el elemento.
+            <p>En las condiciones se pueden utilizar los operadores siguientes: </p>
+            <ul>
+              <li>operadores lógicos: and, or, not().</li>
+              <li>operadores aritméticos: +, -, *, div, mod.</li>
+              <li>operadores de comparación: =, !=, &lt;, &gt;, &lt;=, &gt;=.</li>
+            </ul>
+            <p>Se pueden escribir varios predicados seguidos, teniendo en cuenta que cada uno restringe los resultados del anterior, como si estuvieran encadenados por la operación lógica and.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="xpath-seleccion-nodos">
+        <h3>Selección de nodos (en inglés, node test)</h3>
+
+        <ul>
+          <li><strong>node()</strong>: selecciona todos los nodos (elementos y texto).</li>
+          <li><strong>text()</strong>: selecciona el contenido del elemento (texto).</li>
+          <li><strong>*</strong>: selecciona todos los elementos.</li>
+          <li><strong>@*</strong>: selecciona todos los atributos.</li>
+        </ul>
+      </section>
+    </section>
+
+    <footer>
+      <p class="ultmod">Última modificación de esta página: 11 de mayo de 2015</p>
+
+      <p class="licencia"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../varios/iconos/icono_cc_by_sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
+        Esta página forma parte del curso <a href="http://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a> por <a href="http://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
+        que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.</p>
+    </footer>
+  </body>
+</html>

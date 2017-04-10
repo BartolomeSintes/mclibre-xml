@@ -1,0 +1,10 @@
+lista {
+  display: block;
+  margin-bottom: 10px;
+}
+
+elemento {
+  display: list-item;
+  list-style: decimal inside;
+  margin-left: 20px;
+}

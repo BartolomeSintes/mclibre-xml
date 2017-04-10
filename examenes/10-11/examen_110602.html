@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Examen 02/06/11. Exámenes. XML. Bartolomé Sintes Marco</title>
+    <link href="../../varios/xml.css" rel="stylesheet" type="text/css" title="Estilo mclibre" />
+    <link rel="icon" href="../../varios/favicon.ico" />
+    <link rel="stylesheet" href="../../varios/prism-xml.css" />
+    <script type="text/javascript" src="../../varios/prism.js"></script>
+  </head>
+
+  <body>
+    <h1>Examen 2 de junio de 2011</h1>
+
+    <nav>
+      <p>
+        <a href="../../index.html"><img src="../../varios/iconos/icono_xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48" /></a>
+        <a href="#"><img src="../../varios/iconos/icono_arrow_circle_up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36" /></a>
+        <a href="../examenes.html"><img src="../../varios/iconos/icono_school.svg" alt="Exámenes" title="Exámenes" width="36" height="36" /></a>
+      </p>
+
+      <h2>Examen 02/06/11</h2>
+
+      <div class="toc">
+        <ol>
+          <li><a href="#ejercicio-1">WFD</a></li>
+          <li><a href="#ejercicio-2">WFD</a></li>
+          <li><a href="#ejercicio-3">DTD</a></li>
+          <li><a href="#ejercicio-4">CSS</a></li>
+          <li><a href="#ejercicio-5">XPath</a></li>
+          <li><a href="#ejercicio-6">XSLT</a></li>
+        </ol>
+      </div>
+    </nav>
+
+    <p>Resuelva los siguientes ejercicios guardando las respuestas en una carpeta con su nombre y apellidos. Los nombres de los ficheros están indicados en los enunciados (XYZ corresponde a sus propias iniciales, Nombre Apellido1 Apellido2).</p>
+
+    <section id="ejercicio-1">
+      <h2>Ejercicio 1. Documentos bien formados (XYZ_e110602_1.xml)</h2>
+
+      <p>El siguiente documento no está bien formado porque contiene errores. Corrija los errores (si para corregir algún error hay que inventarse una etiqueta o atributo, utilice un nombre que tenga relación con la información contenida en el documento).</p>
+
+      <div class="codigo">
+        <pre>
+<code class="xml-malformado">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;documento&gt;
+  &lt;autor /&gt;Bartolomé Sintes Marco
+  &lt;fecha fecha=30/05/11&gt;
+  &lt;contenido&gt;
+  &lt;punto 1&gt;XML significa eXtensible Markup Languages&lt;/punto 1&gt;
+  &lt;/contenido&gt;
+&lt;/documentos&gt;</code>
+</pre>
+      </div>
+    </section>
+
+    <section id="ejercicio-2">
+      <h2>Ejercicio 2. Documentos bien formados (XYZ_e110602_2.xml)</h2>
+      <p>El siguiente documento no está bien formado porque contiene errores. Corrija los errores (si para corregir algún error hay que inventarse una etiqueta o atributo, utilice un nombre que tenga relación con la información contenida en el documento).</p>
+
+      <div class="codigo">
+        <pre>
+<code class="xml-malformado">&lt;persona&gt;
+&lt;nombre="Pepito Conejo"&gt;
+pepito.conejo@example.org
+&lt;persona&gt;
+&lt;nombre&gt;Juanita Banana&lt;/nombre&gt;
+&lt;telefono fijo&gt;3141593&lt;/telefono fijo&gt;</code>
+</pre>
+      </div>
+    </section>
+
+    <section id="ejercicio-3">
+      <h2>Ejercicio 3. DTD (XYZ_e110602_3.xml)</h2>
+      <p>Escriba la DTD que corresponde al siguiente documento, incluyéndola en el propio documento.</p>
+
+      <div class="codigo">
+        <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;formula1 año="2011"&gt;
+&lt;carrera&gt;
+  &lt;nombre&gt;GP de Mónaco&lt;/nombre&gt;
+  &lt;fecha&gt;&lt;dia&gt;29&lt;/dia&gt; de &lt;mes&gt;mayo&lt;/mes&gt; de &lt;año&gt;2011&lt;/año&gt;&lt;/fecha&gt;
+  &lt;podium&gt;
+    &lt;orden n="1" nombre="Sebastian Vettel" escudería="Red Bull"/&gt;
+    &lt;orden n="2" nombre="Fernando Alonso" /&gt;
+    &lt;orden n="3" nombre="Jenson Button" /&gt;
+  &lt;/podium&gt;
+&lt;/carrera&gt;
+&lt;/formula1&gt;</code>
+</pre>
+      </div>
+    </section>
+
+    <section id="ejercicio-4">
+      <h2>Ejercicio 4. CSS (XYZ_e110602_4.xml y XYZ_e110602_4.css)</h2>
+      <p>Escriba la hoja de estilo CSS para que el siguiente documento se vea en el navegador como muestra la imagen.</p>
+
+      <div class="codigo">
+        <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;citas&gt;
+  &lt;cita&gt;
+    &lt;autor&gt;Will Rogers&lt;/autor&gt;
+    &lt;fechas&gt;1879 - 1935&lt;/fechas&gt;
+    &lt;texto&gt;Todo ha cambiado. La gente se toma a los humoristas en serio y a los políticos en broma.&lt;/texto&gt;
+  &lt;/cita&gt;
+  &lt;cita&gt;
+    &lt;autor&gt;Groucho Marx&lt;/autor&gt;
+    &lt;fechas&gt;1890 - 1977&lt;/fechas&gt;
+    &lt;texto&gt;No reírse de nada es de tontos, reirse de todo es de estúpidos.&lt;/texto&gt;
+  &lt;/cita&gt;
+  &lt;cita&gt;
+    &lt;autor&gt;Isaac Asimov&lt;/autor&gt;
+    &lt;fechas&gt;1920 - 1992&lt;/fechas&gt;
+    &lt;texto&gt;La primera ley de la dietética parece ser: si está bueno, es malo para usted.&lt;/texto&gt;
+  &lt;/cita&gt;
+  &lt;cita&gt;
+    &lt;autor&gt;Robin Williams&lt;/autor&gt;
+    &lt;fechas&gt;1952 - &lt;/fechas&gt;
+    &lt;texto&gt;El problema es que Dios le dio al hombre un cerebro y un pene, pero no le dio sangre suficiente para los dos a la vez.&lt;/texto&gt;
+  &lt;/cita&gt;
+&lt;/citas&gt;</code>
+</pre>
+      </div>
+
+      <p>La captura de la pantalla siguiente tiene un tamaño de 400 x 300 px. Haga clic en la imagen para ver la captura a 1024 x 768 px.</p>
+
+      <p class="centrado"><a href="examen_110602_ej_04_css_corregido_grande.png"><img alt="Ejercicio CSS resultado" src="examen_110602_ej_04_css_corregido_pequeno.png" width="400" height="300" /></a></p>
+    </section>
+
+    <section id="ejercicio-5">
+      <h2>Ejercicio 5. XPath (XYZ_e110602_5.txt)</h2>
+      <p>Dado el siguiente documento XML, escriba las expresiones XPath que devuelvan la respuesta deseada. La respuestas está indicada entre paréntesis y unas veces incluye las etiquetas y otras no). Escriba las expresiones XPath y los resultados obtenidos en el fichero txt.</p>
+
+      <div class="codigo">
+        <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;cine&gt;
+  &lt;personas&gt;
+    &lt;persona sexo="hombre"&gt;
+      &lt;nombre&gt;Alfred Hitchcock&lt;/nombre&gt;
+      &lt;fechas nacimiento="1899" fallecimiento="1980" /&gt;
+    &lt;/persona&gt;
+    &lt;persona sexo="mujer"&gt;
+      &lt;nombre&gt;Lauren Bacall&lt;/nombre&gt;
+      &lt;fechas nacimiento="1924" /&gt;
+    &lt;/persona&gt;
+    &lt;persona sexo="hombre"&gt;
+      &lt;nombre&gt;Sidney Lumet&lt;/nombre&gt;
+      &lt;fechas nacimiento="1924" fallecimiento="2011" /&gt;
+    &lt;/persona&gt;
+    &lt;persona sexo="hombre"&gt;
+      &lt;nombre&gt;Jerry Lewis&lt;/nombre&gt;
+      &lt;fechas nacimiento="1926" /&gt;
+    &lt;/persona&gt;
+    &lt;persona sexo="mujer"&gt;
+      &lt;nombre&gt;Janet Leigh&lt;/nombre&gt;
+      &lt;fechas nacimiento="1927" fallecimiento="2004" /&gt;
+    &lt;/persona&gt;
+    &lt;persona sexo="hombre"&gt;
+      &lt;nombre&gt;Anthony Perkins&lt;/nombre&gt;
+      &lt;fechas nacimiento="1932" fallecimiento="1992" /&gt;
+    &lt;/persona&gt;
+  &lt;/personas&gt;
+  &lt;peliculas&gt;
+    &lt;pelicula&gt;
+      &lt;titulo&gt;Psicosis&lt;/titulo&gt;
+      &lt;fecha&gt;1960&lt;/fecha&gt;
+      &lt;director&gt;Alfred Hitchcock&lt;/director&gt;
+      &lt;actor&gt;Anthony Perkins&lt;/actor&gt;
+      &lt;actor&gt;Janet Leigh&lt;/actor&gt;
+    &lt;/pelicula&gt;
+    &lt;pelicula&gt;
+      &lt;titulo&gt;Tres en un sofá&lt;/titulo&gt;
+      &lt;fecha&gt;1966&lt;/fecha&gt;
+      &lt;director&gt;Jerry Lewis&lt;/director&gt;
+      &lt;actor&gt;Jerry Lewis&lt;/actor&gt;
+      &lt;actor&gt;Janet Leigh&lt;/actor&gt;
+    &lt;/pelicula&gt;
+    &lt;pelicula&gt;
+      &lt;titulo&gt;Asesinato en el Orient Express&lt;/titulo&gt;
+      &lt;fecha&gt;1966&lt;/fecha&gt;
+      &lt;director&gt;Sidney Lumet&lt;/director&gt;
+      &lt;actor&gt;Anthony Perkins&lt;/actor&gt;
+      &lt;actor&gt;Lauren Bacall&lt;/actor&gt;
+    &lt;/pelicula&gt;
+  &lt;/peliculas&gt;
+&lt;/cine&gt;</code>
+</pre>
+      </div>
+      <ol style="list-style-type: lower-latin; ">
+        <li>Títulos de las películas:
+
+          <div class="codigo">
+            <pre>
+<code class="language-xml">Psicosis
+Tres en un sofá
+Asesinato en el Orient Express</code>
+</pre>
+          </div>
+        </li>
+        <li>Títulos de las películas en las que Anthony Perkins es actor:
+
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;titulo&gt;Psicosis&lt;/titulo&gt;
+&lt;titulo&gt;Asesinato en el Orient Express&lt;/titulo&gt;</code>
+</pre>
+          </div>
+        </li>
+        <li>Nombre de las personas de sexo femenino:
+
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;nombre&gt;Lauren Bacall&lt;/nombre&gt;
+&lt;nombre&gt;Janet Leigh&lt;/nombre&gt;</code>
+</pre>
+          </div>
+        </li>
+        <li>Directores de las películas en las que actua Janet Leigh:
+
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;director&gt;Alfred Hitchcock&lt;/director&gt;
+&lt;director&gt;Jerry Lewis&lt;/director&gt;</code>
+</pre>
+          </div>
+        </li>
+        <li>Nombre de las personas vivas:
+
+          <div class="codigo">
+            <pre>
+<code class="language-xml">Lauren Bacall
+Jerry Lewis</code>
+</pre>
+          </div>
+        </li>
+        <li>Nombre de las personas que vivieron toda su vida en el siglo XX:
+
+          <div class="codigo">
+            <pre><code class="language-xml">&lt;nombre&gt;Anthony Perkins&lt;/nombre&gt;</code></pre>
+          </div>
+        </li>
+        <li>Fecha de nacimiento de los actores de la película "Tres en un sofá":
+
+          <div class="codigo">
+            <pre>
+<code class="language-xml"><span class="xml-attr">nacimiento</span>="1926"
+<span class="xml-attr">nacimiento</span>="1927"</code>
+</pre>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="ejercicio-6">
+      <h2>Ejercicio 6. XSLT (XYZ_e110602_6a.xml y XYZ_e110602_6a.xsl, etc.)</h2>
+      <p>Dado el siguiente documento XML, escriba las hojas de estilo XSLT que devuelvan la respuesta deseada y enlacelas desde el documento XML (uno para cada caso).</p>
+
+      <div class="codigo">
+        <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;peliculas&gt;
+  &lt;pelicula&gt;
+    &lt;titulo&gt;Psicosis&lt;/titulo&gt;
+    &lt;fecha&gt;1960&lt;/fecha&gt;
+    &lt;director&gt;Alfred Hitchcock&lt;/director&gt;
+    &lt;actor&gt;Anthony Perkins&lt;/actor&gt;
+    &lt;actor&gt;Janet Leigh&lt;/actor&gt;
+  &lt;/pelicula&gt;
+  &lt;pelicula&gt;
+    &lt;titulo&gt;Tres en un sofá&lt;/titulo&gt;
+    &lt;fecha&gt;1966&lt;/fecha&gt;
+    &lt;director&gt;Jerry Lewis&lt;/director&gt;
+    &lt;actor&gt;Jerry Lewis&lt;/actor&gt;
+    &lt;actor&gt;Janet Leigh&lt;/actor&gt;
+  &lt;/pelicula&gt;
+  &lt;pelicula&gt;
+    &lt;titulo&gt;Asesinato en el Orient Express&lt;/titulo&gt;
+    &lt;fecha&gt;1966&lt;/fecha&gt;
+    &lt;director&gt;Sidney Lumet&lt;/director&gt;
+    &lt;actor&gt;Anthony Perkins&lt;/actor&gt;
+    &lt;actor&gt;Lauren Bacall&lt;/actor&gt;
+  &lt;/pelicula&gt;
+&lt;/peliculas&gt;</code>
+</pre>
+      </div>
+      <ol style="list-style-type: lower-latin; ">
+        <li>Películas
+
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;peliculas&gt;
+  &lt;pelicula titulo="Psicosis"/&gt;
+  &lt;pelicula titulo="Tres en un sofá"/&gt;
+  &lt;pelicula titulo="Asesinato en el Orient Express"/&gt;
+&lt;/peliculas&gt;</code>
+</pre>
+          </div>
+        </li>
+        <li>Películas
+
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;peliculas&gt;
+  &lt;pelicula&gt;Psicosis (Alfred Hitchcock, 1960)&lt;/pelicula&gt;
+  &lt;pelicula&gt;Tres en un sofá (Jerry Lewis, 1966)&lt;/pelicula&gt;
+  &lt;pelicula&gt;Asesinato en el Orient Express (Sidney Lumet, 1966)&lt;/pelicula&gt;
+&lt;/peliculas&gt;</code>
+</pre>
+          </div>
+        </li>
+        <li>Tabla Películas y Directores
+
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;html&gt;
+  &lt;table border="1"&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Película&lt;/th&gt;
+      &lt;th&gt;Director&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Psicosis&lt;/td&gt;
+      &lt;td&gt;Alfred Hitchcock&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Tres en un sofá&lt;/td&gt;
+      &lt;td&gt;Jerry Lewis&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Asesinato en el Orient Express&lt;/td&gt;
+      &lt;td&gt;Sidney Lumet&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/html&gt;</code>
+</pre>
+          </div>
+
+          <div class="codigo">
+
+            <table class="conborde">
+              <tbody>
+                <tr>
+                  <th>Película</th>
+                  <th>Director</th>
+                </tr>
+                <tr>
+                  <td>Psicosis</td>
+                  <td>Alfred Hitchcock</td>
+                </tr>
+                <tr>
+                  <td>Tres en un sofá</td>
+                  <td>Jerry Lewis</td>
+                </tr>
+                <tr>
+                  <td>Asesinato en el Orient Express</td>
+                  <td>Sidney Lumet</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </li>
+        <li>Lista de Películas y Actores
+
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;html&gt;
+  &lt;p&gt;Psicosis&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Anthony Perkins&lt;/li&gt;
+    &lt;li&gt;Janet Leigh&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;p&gt;Tres en un sofá&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Jerry Lewis&lt;/li&gt;
+    &lt;li&gt;Janet Leigh&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;p&gt;Asesinato en el Orient Express&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Anthony Perkins&lt;/li&gt;
+    &lt;li&gt;Lauren Bacall&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/html&gt;</code>
+</pre>
+          </div>
+
+          <div class="codigo">
+            <p>Psicosis</p>
+            <ul>
+              <li>Anthony Perkins</li>
+              <li>Janet Leigh</li>
+            </ul>
+            <p>Tres en un sofá</p>
+            <ul>
+              <li>Jerry Lewis</li>
+              <li>Janet Leigh</li>
+            </ul>
+            <p>Asesinato en el Orient Express</p>
+            <ul>
+              <li>Anthony Perkins</li>
+              <li>Lauren Bacall</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <footer>
+      <p class="ultmod">Última modificación de esta página: 7 de junio de 2011</p>
+
+      <p class="licencia"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../../varios/iconos/icono_cc_by_sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
+        Esta página forma parte del curso <a href="http://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a> por <a href="http://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
+        que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.</p>
+    </footer>
+  </body>
+</html>

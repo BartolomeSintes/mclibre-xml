@@ -1,0 +1,17 @@
+biblioteca {
+  counter-reset: contador;
+}
+
+titulo:before {
+  content: counter(contador, upper-alpha) ". ";
+  counter-increment: contador;
+}
+
+titulo, autor, fechaPublicacion {
+  display: block;
+  margin-left: 25px;
+}
+
+autor, fechaPublicacion {
+  margin-left: 45px;
+}

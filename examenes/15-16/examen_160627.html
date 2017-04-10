@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Examen 28/06/16. Exámenes. XML. Bartolomé Sintes Marco</title>
+    <link href="../../varios/xml.css" rel="stylesheet" type="text/css" title="Estilo mclibre" />
+    <link rel="icon" href="../../varios/favicon.ico" />
+    <link rel="stylesheet" href="../../varios/prism-xml.css" />
+    <script type="text/javascript" src="../../varios/prism.js"></script>
+  </head>
+
+  <body>
+    <h1>Examen 28 de junio de 2016</h1>
+
+    <nav>
+      <p>
+        <a href="../../index.html"><img src="../../varios/iconos/icono_xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48" /></a>
+        <a href="#"><img src="../../varios/iconos/icono_arrow_circle_up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36" /></a>
+        <a href="../examenes.html"><img src="../../varios/iconos/icono_school.svg" alt="Exámenes" title="Exámenes" width="36" height="36" /></a>
+      </p>
+
+      <h2>Examen 28/06/16</h2>
+
+      <div class="toc">
+        <ol>
+          <li><a href="#ejercicio-1">XPath</a></li>
+        </ol>
+      </div>
+    </nav>
+
+    <p>Resuelva los siguientes ejercicios guardando las respuestas en una carpeta cuyo nombre contenga su nombre y apellidos.</p>
+
+    <section id="ejercicio-1">
+      <h2>Ejercicio 1. XPath</h2>
+
+      <p>Dado el siguiente documento XML, escriba las expresiones XPath que devuelvan <strong>exactamente</strong> las respuestas indicadas en los cuadros. Escriba todas las expresiones XPath en un único fichero de texto, numerando las respuestas.</p>
+
+      <div class="codigo">
+        <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;rock&gt;
+  &lt;personas&gt;
+    &lt;persona nombre=&quot;Ian Gillan&quot;&gt;
+      &lt;nacido&gt;
+        &lt;fecha&gt;1945&lt;/fecha&gt;
+        &lt;lugar&gt;Inglaterra&lt;/lugar&gt;
+      &lt;/nacido&gt;
+      &lt;instrumento&gt;voz&lt;/instrumento&gt;
+    &lt;/persona&gt;
+    &lt;persona nombre=&quot;Jon Lord&quot;&gt;
+      &lt;nacido&gt;
+        &lt;fecha&gt;1941&lt;/fecha&gt;
+        &lt;lugar&gt;Inglaterra&lt;/lugar&gt;
+      &lt;/nacido&gt;
+      &lt;fallecido&gt;
+        &lt;fecha&gt;2012&lt;/fecha&gt;
+      &lt;/fallecido&gt;
+      &lt;instrumento&gt;órgano Hammond&lt;/instrumento&gt;
+    &lt;/persona&gt;
+    &lt;persona nombre=&quot;Ritchie Blackmore&quot;&gt;
+      &lt;nacido&gt;
+        &lt;fecha&gt;1945&lt;/fecha&gt;
+        &lt;lugar&gt;Inglaterra&lt;/lugar&gt;
+      &lt;/nacido&gt;
+      &lt;instrumento&gt;guitarra&lt;/instrumento&gt;
+    &lt;/persona&gt;
+    &lt;persona nombre=&quot;Ian Paice&quot;&gt;
+      &lt;nacido&gt;
+        &lt;fecha&gt;1948&lt;/fecha&gt;
+        &lt;lugar&gt;Inglaterra&lt;/lugar&gt;
+      &lt;/nacido&gt;
+      &lt;instrumento&gt;batería&lt;/instrumento&gt;
+    &lt;/persona&gt;
+    &lt;persona nombre=&quot;Roger Glover&quot;&gt;
+      &lt;nacido&gt;
+        &lt;fecha&gt;1945&lt;/fecha&gt;
+        &lt;lugar&gt;País de Gales&lt;/lugar&gt;
+      &lt;/nacido&gt;
+      &lt;instrumento&gt;bajo&lt;/instrumento&gt;
+    &lt;/persona&gt;
+      &lt;persona nombre=&quot;David Coverdale&quot;&gt;
+      &lt;nacido&gt;
+        &lt;fecha&gt;1951&lt;/fecha&gt;
+        &lt;lugar&gt;Inglaterra&lt;/lugar&gt;
+      &lt;/nacido&gt;
+      &lt;instrumento&gt;voz&lt;/instrumento&gt;
+    &lt;/persona&gt;
+  &lt;/personas&gt;
+
+  &lt;grupos&gt;
+    &lt;grupo nombre=&quot;Deep Purple&quot;&gt;
+      &lt;fundado fecha=&quot;1968&quot; /&gt;
+      &lt;albumes&gt;
+        &lt;album nombre=&quot;Deep Purple&quot; fecha=&quot;1969&quot; /&gt;
+        &lt;album nombre=&quot;Machine Head&quot; fecha=&quot;1972&quot; /&gt;
+        &lt;album nombre=&quot;Who do you think we are&quot; fecha=&quot;1973&quot; /&gt;
+      &lt;/albumes&gt;
+    &lt;/grupo&gt;
+    &lt;grupo nombre=&quot;Whitesnake&quot;&gt;
+      &lt;fundado fecha=&quot;1978&quot; /&gt;
+      &lt;albumes&gt;
+        &lt;album nombre=&quot;Lovehunter&quot; fecha=&quot;1979&quot; /&gt;
+        &lt;album nombre=&quot;Whitesnake&quot; fecha=&quot;1987&quot; /&gt;
+      &lt;/albumes&gt;
+    &lt;/grupo&gt;
+    &lt;grupo nombre=&quot;Rainbow&quot;&gt;
+      &lt;fundado fecha=&quot;1975&quot; /&gt;
+      &lt;albumes&gt;
+        &lt;album nombre=&quot;Rising&quot; fecha=&quot;1976&quot; /&gt;
+        &lt;album nombre=&quot;Down to Earth&quot; fecha=&quot;1979&quot; /&gt;
+      &lt;/albumes&gt;
+    &lt;/grupo&gt;
+  &lt;/grupos&gt;
+
+  &lt;miembros&gt;
+    &lt;miembro grupo=&quot;Deep Purple&quot; nombre=&quot;Ian Gillan&quot; desde=&quot;1968&quot; hasta=&quot;1973&quot; /&gt;
+    &lt;miembro grupo=&quot;Deep Purple&quot; nombre=&quot;Jon Lord&quot; desde=&quot;1968&quot; hasta=&quot;1976&quot; /&gt;
+    &lt;miembro grupo=&quot;Deep Purple&quot; nombre=&quot;Ritchie Blackmore&quot; desde=&quot;1968&quot; hasta=&quot;1975&quot; /&gt;
+    &lt;miembro grupo=&quot;Deep Purple&quot; nombre=&quot;Ian Paice&quot; desde=&quot;1968&quot; hasta=&quot;&quot; /&gt;
+    &lt;miembro grupo=&quot;Deep Purple&quot; nombre=&quot;Roger Glover&quot; desde=&quot;1968&quot; hasta=&quot;1973&quot; /&gt;
+    &lt;miembro grupo=&quot;Deep Purple&quot; nombre=&quot;David Coverdale&quot; desde=&quot;1973&quot; hasta=&quot;1976&quot; /&gt;
+    &lt;miembro grupo=&quot;Whitesnake&quot; nombre=&quot;David Coverdale&quot; desde=&quot;1978&quot; hasta=&quot;&quot; /&gt;
+    &lt;miembro grupo=&quot;Whitesnake&quot; nombre=&quot;Jon Lord&quot; desde=&quot;1978&quot; hasta=&quot;1984&quot; /&gt;
+    &lt;miembro grupo=&quot;Whitesnake&quot; nombre=&quot;Ian Pace&quot; desde=&quot;1979&quot; hasta=&quot;1982&quot; /&gt;
+    &lt;miembro grupo=&quot;Rainbow&quot; nombre=&quot;Ritchie Blackmore&quot; desde=&quot;1975&quot; hasta=&quot;&quot; /&gt;
+  &lt;/miembros&gt;
+
+&lt;/rock&gt;</code>
+</pre>
+      </div>
+
+      <ol>
+        <li>Álbumes de Deep Purple:
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;album nombre=&quot;Deep Purple&quot; fecha=&quot;1969&quot;/&gt;
+&lt;album nombre=&quot;Machine Head&quot; fecha=&quot;1972&quot;/&gt;
+&lt;album nombre=&quot;Who do you think we are&quot; fecha=&quot;1973&quot;/&gt;</code>
+</pre>
+          </div>
+        </li>
+
+        <li>Músicos nacidos en Inglaterra:
+          <div class="codigo">
+            <pre>
+<code class="language-xml"> nombre="Ian Gillan"
+ nombre="Jon Lord"
+ nombre="Ritchie Blackmore"
+ nombre="Ian Paice"
+ nombre="David Coverdale"</code>
+</pre>
+          </div>
+        </li>
+
+        <li>Músicos que estuvieron menos de cinco años en un grupo:
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;miembro grupo=&quot;Deep Purple&quot; nombre=&quot;David Coverdale&quot; desde=&quot;1973&quot; hasta=&quot;1976&quot;/&gt;
+&lt;miembro grupo=&quot;Whitesnake&quot; nombre=&quot;Ian Pace&quot; desde=&quot;1979&quot; hasta=&quot;1982&quot;/&gt;</code>
+</pre>
+          </div>
+        </li>
+
+        <li>Discos publicados a los 4 años de fundarse el grupo:
+          <div class="codigo">
+            <pre>
+<code class="language-xml"> nombre="Machine Head"
+ nombre="Down to Earth"</code>
+</pre>
+          </div>
+        </li>
+
+        <li>Álbumes de grupos en los que ha estado Ritchie Blackmore:
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;album nombre=&quot;Deep Purple&quot; fecha=&quot;1969&quot;/&gt;
+&lt;album nombre=&quot;Machine Head&quot; fecha=&quot;1972&quot;/&gt;
+&lt;album nombre=&quot;Who do you think we are&quot; fecha=&quot;1973&quot;/&gt;
+&lt;album nombre=&quot;Rising&quot; fecha=&quot;1976&quot;/&gt;
+&lt;album nombre=&quot;Down to Earth&quot; fecha=&quot;1979&quot;/&gt;</code>
+</pre>
+          </div>
+        </li>
+
+        <li>Cantantes de Deep Purple:
+          <div class="codigo">
+            <pre>
+<code class="language-xml"> nombre="Ian Gillan"
+ nombre="David Coverdale"</code>
+</pre>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <footer>
+      <p class="ultmod">Última modificación de esta página: 28 de junio de 2016</p>
+
+      <p class="licencia"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../../varios/iconos/icono_cc_by_sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
+        Esta página forma parte del curso <a href="http://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a> por <a href="http://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
+        que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.</p>
+    </footer>
+  </body>
+</html>

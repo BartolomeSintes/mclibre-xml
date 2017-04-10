@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios. Documentos bien formados. XML. Bartolomé Sintes Marco</title>
+    <link href="../varios/xml.css" rel="stylesheet" type="text/css" title="Estilo mclibre" />
+    <link rel="icon" href="../varios/favicon.ico" />
+    <link rel="stylesheet" href="../varios/prism-xml.css" />
+    <script type="text/javascript" src="../varios/prism.js"></script>
+  </head>
+
+  <body>
+    <h1>Documentos bien formados - Ejercicios</h1>
+
+    <nav>
+      <p>
+        <a href="../index.html"><img src="../varios/iconos/icono_xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48" /></a>
+        <a href="#"><img src="../varios/iconos/icono_arrow_circle_up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36" /></a>
+      </p>
+
+      <h2>WFD - Ejercicios</h2>
+
+      <div class="toc">
+        <ol>
+          <li><a href="#ejercicio-1">Deportistas</a></li>
+          <li><a href="#ejercicio-2">Películas</a></li>
+          <li><a href="#ejercicio-3">Texto</a></li>
+          <li><a href="#ejercicio-4">Información geográfica</a></li>
+          <li><a href="#ejercicio-5">Programas</a></li>
+          <li><a href="#ejercicio-6">Mundiales de fútbol</a></li>
+          <li><a href="#ejercicio-7">Medios de transporte</a></li>
+        </ol>
+      </div>
+    </nav>
+
+    <p>Estos ejercicios corresponden a lo explicado en la lección <a href="../lecciones/xml_quees.html">Qué es el XML</a>.</p>
+
+    <p>Los siguientes documentos no están bien formados porque cada uno contiene dos errores (dos errores del mismo tipo cuentan como uno sólo). Corrija los errores y compruebe con XML Copy Editor que ya son documentos bien formados (si para corregir algún error hay que inventarse una etiqueta o atributo, utilice un nombre que tenga relación con la información contenida en el documento).</p>
+
+    <p>Aunque en XML Copy Editor no es necesario guardar los documentos para comprobar que están bien formados, se recomienda guardarlos para poder consultarlos en el futuro. El nombre del archivo podría ser wdf_XX.xml, donde XX es el número del ejercicio.</p>
+
+    <p>Se pueden consultar las <a href="documentos_bien_formados_soluciones.html">soluciones de estos ejercicios</a>.</p>
+
+    <section id="ejercicio-1">
+      <h2><a href="documentos_bien_formados_soluciones.html#ejercicio-1"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>WFD - Ejercicio 1 - Deportistas</h2>
+
+      <div class="codigo">
+        <pre>
+<code class="xml-malformado">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;deportistas&gt;
+  &lt;deportista&gt;
+    &lt;deporte Atletismo /&gt;
+    &lt;nombre&gt;Jesse Owens&lt;/nombre&gt;
+  &lt;deportista&gt;
+    &lt;deporte Natación /&gt;
+    &lt;nombre&gt;Mark Spitz&lt;/nombre&gt;
+  &lt;/deportista&gt;
+&lt;/deportistas&gt;</code>
+</pre>
+      </div>
+    </section>
+
+    <section id="ejercicio-2">
+      <h2><a href="documentos_bien_formados_soluciones.html#ejercicio-2"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>WFD - Ejercicio 2 - Películas</h2>
+
+      <div class="codigo">
+        <pre>
+<code class="xml-malformado">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;pelicula&gt;
+  &lt;titulo&gt;Con faldas y a lo loco&lt;/titulo&gt;
+  &lt;director&gt;Billy Wilder&lt;/director&gt;
+&lt;/pelicula&gt;
+&lt;pelicula&gt;
+  &lt;director&gt;Leo McCarey&lt;/director&gt;
+  &lt;titulo&gt;Sopa de ganso&lt;/titulo&gt;
+&lt;/pelicula&gt;
+&lt;autor /&gt;barto&lt;/autor&gt;</code>
+</pre>
+      </div>
+    </section>
+
+    <section id="ejercicio-3">
+      <h2><a href="documentos_bien_formados_soluciones.html#ejercicio-3"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>WFD - Ejercicio  3 - Texto</h2>
+
+      <div class="codigo">
+        <pre>
+<code class="xml-malformado">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;texto&gt;
+  &lt;Titulo&gt;XML explicado a los niños&lt;/titulo&gt;
+  &lt;párrafo&gt;El &lt;abreviatura&gt;XML&lt;/abreviatura&gt;define cómo crear
+  lenguajes de marcas.&lt;/párrafo&gt;
+  &lt;párrafo&gt;Las marcas se añaden a un documento de texto
+  para añadir información.&lt;/párrafo&gt;
+  &lt;http://&gt;www.example.org&lt;/http://&gt;
+&lt;/texto&gt;</code>
+</pre>
+      </div>
+    </section>
+
+    <section id="ejercicio-4">
+      <h2><a href="documentos_bien_formados_soluciones.html#ejercicio-4"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>WFD - Ejercicio 4 - Información geográfica</h2>
+
+      <div class="codigo">
+        <pre>
+<code class="xml-malformado">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;geografia mundial&gt;
+  &lt;pais&gt;
+    &lt;pais&gt;España&lt;/pais&gt;
+    &lt;continente&gt;Europa&lt;/continente&gt;
+    &lt;capital&gt;&lt;/capital nombre="Madrid"&gt;
+  &lt;/pais&gt;
+&lt;/geografia mundial&gt;</code>
+</pre>
+      </div>
+    </section>
+
+    <section id="ejercicio-5">
+      <h2><a href="documentos_bien_formados_soluciones.html#ejercicio-5"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>WFD - Ejercicio 5 - Programas</h2>
+
+      <div class="codigo">
+        <pre>
+<code class="xml-malformado">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;programas&gt;
+  &lt;programa nombre="Firefox" licencia="GPL" licencia="MPL" /&gt;
+  &lt;programa nombre="LibreOffice" licencia="LGPL" /&gt;
+  &lt;programa nombre="Inkscape" licencia=GPL /&gt;
+&lt;/programas&gt;</code>
+</pre>
+      </div>
+    </section>
+
+    <section id="ejercicio-6">
+      <h2><a href="documentos_bien_formados_soluciones.html#ejercicio-6"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>WFD - Ejercicio 6 - Mundiales de fútbol</h2>
+
+      <div class="codigo">
+        <pre>
+<code class="xml-malformado">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;mundiales-de-futbol&gt;
+  &lt;mundial&gt;
+    &lt;pais=<span class="attr-value">"España"</span> /&gt;
+    &lt;1982 /&gt;
+  &lt;/mundial&gt;
+&lt;/mundiales-de-futbol&gt;</code>
+</pre>
+      </div>
+    </section>
+
+    <section id="ejercicio-7">
+      <h2><a href="documentos_bien_formados_soluciones.html#ejercicio-7"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>WFD - Ejercicio 7 - Medios de transporte</h2>
+
+      <div class="codigo">
+        <pre>
+<code class="xml-malformado">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;mediosDeTransporte&gt;
+  &lt;bicicleta velocidad="v&lt;100km/h" /&gt;
+  &lt;patinete velocidad maxima="50 km/h"
+&lt;/mediosDeTransporte&gt;</code>
+</pre>
+      </div>
+    </section>
+
+    <footer>
+      <p class="ultmod">Última modificación de esta página: 27 de abril de 2015</p>
+
+      <p class="licencia"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../varios/iconos/icono_cc_by_sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
+        Esta página forma parte del curso <a href="http://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a> por <a href="http://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
+        que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.</p>
+    </footer>
+  </body>
+</html>

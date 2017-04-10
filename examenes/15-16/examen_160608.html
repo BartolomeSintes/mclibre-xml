@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Examen 08/06/16. Exámenes. XML. Bartolomé Sintes Marco</title>
+    <link href="../../varios/xml.css" rel="stylesheet" type="text/css" title="Estilo mclibre" />
+    <link rel="icon" href="../../varios/favicon.ico" />
+    <link rel="stylesheet" href="../../varios/prism-xml.css" />
+    <script type="text/javascript" src="../../varios/prism.js"></script>
+  </head>
+
+  <body>
+    <h1>Examen 8 de junio de 2016</h1>
+
+    <nav>
+      <p>
+        <a href="../../index.html"><img src="../../varios/iconos/icono_xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48" /></a>
+        <a href="#"><img src="../../varios/iconos/icono_arrow_circle_up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36" /></a>
+        <a href="../examenes.html"><img src="../../varios/iconos/icono_school.svg" alt="Exámenes" title="Exámenes" width="36" height="36" /></a>
+      </p>
+
+      <h2>Examen 08/06/16</h2>
+
+      <div class="toc">
+        <ol>
+          <li><a href="#ejercicio-1">WFD</a></li>
+          <li><a href="#ejercicio-2">CSS</a></li>
+          <li><a href="#ejercicio-3">XPath</a></li>
+        </ol>
+      </div>
+    </nav>
+
+    <p>Resuelva los siguientes ejercicios guardando las respuestas en una carpeta cuyo nombre contenga su nombre y apellidos.</p>
+
+    <section id="ejercicio-1">
+      <h2>Ejercicio 1. Documentos bien formados</h2>
+
+      <p>El siguiente documento no está bien formado porque contiene errores. Corrija los errores (si para corregir algún error hay que inventarse una etiqueta o atributo, utilice un nombre que tenga relación con la información contenida en el documento).</p>
+
+      <div class="codigo">
+        <pre>
+<code class="xml-malformado">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;/&gt;
+&lt;examen&gt;
+&lt;fecha&gt;08/06/2016&lt; /fecha&gt;
+&lt;preguntas 1&gt;¿sabes XML&lt;/pregunta&gt;
+&lt;respuestas respuesta=&quot;si&quot; respuesta=&quot;no&quot; //&gt;
+&lt;puntos si=''1&quot; no=&quot;2&quot;&gt;</code>
+</pre>
+      </div>
+    </section>
+
+    <section id="ejercicio-2">
+      <h2>Ejercicio 2. CSS</h2>
+
+      <p>Escriba dos hojas de estilo CSS para que el siguiente documento se vea en el navegador como muestran las imágenes.</p>
+
+      <div class="codigo">
+        <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;rascacielos&gt;
+  &lt;resumen&gt;rascacielos del mundo&lt;/resumen&gt;
+  &lt;edificios&gt;
+    &lt;edificio&gt;
+      &lt;nombre&gt;Burj Khalifa&lt;/nombre&gt;
+      &lt;ciudad&gt;Dubai&lt;/ciudad&gt;
+      &lt;datos&gt;
+        &lt;altura&gt;828 metros.&lt;/altura&gt;
+        &lt;pisos&gt;163 pisos.&lt;/pisos&gt;
+        &lt;completado&gt;Completado en 2010&lt;/completado&gt;
+      &lt;/datos&gt;
+    &lt;/edificio&gt;
+    &lt;edificio&gt;
+      &lt;nombre&gt;Shanghai Tower&lt;/nombre&gt;
+      &lt;ciudad&gt;Shanghai&lt;/ciudad&gt;
+      &lt;datos&gt;
+        &lt;altura&gt;632 metros.&lt;/altura&gt;
+        &lt;pisos&gt;128 pisos.&lt;/pisos&gt;
+        &lt;completado&gt;Completado en 2015&lt;/completado&gt;
+      &lt;/datos&gt;
+    &lt;/edificio&gt;
+    &lt;edificio&gt;
+      &lt;nombre&gt;One World Trade Center&lt;/nombre&gt;
+      &lt;ciudad&gt;Nueva York&lt;/ciudad&gt;
+      &lt;datos&gt;
+        &lt;altura&gt;541 metros.&lt;/altura&gt;
+        &lt;pisos&gt;104 pisos.&lt;/pisos&gt;
+        &lt;completado&gt;Completado en 2014&lt;/completado&gt;
+      &lt;/datos&gt;
+    &lt;/edificio&gt;
+    &lt;edificio&gt;
+      &lt;nombre&gt;CTF Finance Centre&lt;/nombre&gt;
+      &lt;ciudad&gt;Guangzhou&lt;/ciudad&gt;
+      &lt;datos&gt;
+        &lt;altura&gt;530 metros.&lt;/altura&gt;
+        &lt;pisos&gt;111 pisos.&lt;/pisos&gt;
+        &lt;completado&gt;Completado en 2016&lt;/completado&gt;
+      &lt;/datos&gt;
+    &lt;/edificio&gt;
+  &lt;/edificios&gt;
+&lt;/rascacielos&gt;</code>
+</pre>
+      </div>
+
+      <p class="captura"><img alt="CSS" src="160608_1.png" width="800" height="200" /></p>
+
+      <p class="captura"><img alt="CSS" src="160608_2.png" width="800" height="450" /></p>
+    </section>
+
+    <section id="ejercicio-3">
+      <h2>Ejercicio 3. XPath</h2>
+
+      <p>Dado el siguiente documento XML, escriba las expresiones XPath que devuelvan <strong>exactamente</strong> las respuestas indicadas en los cuadros. Escriba todas las expresiones XPath en un único fichero de texto, numerando las respuestas.</p>
+
+      <div class="codigo">
+        <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;rascacielos&gt;
+  &lt;ciudades&gt;
+    &lt;continente nombre=&quot;Asia&quot;&gt;
+      &lt;pais nombre=&quot;China&quot;&gt;
+        &lt;ciudad&gt;Shanghai&lt;/ciudad&gt;
+        &lt;ciudad&gt;Guangzhou&lt;/ciudad&gt;
+      &lt;/pais&gt;
+      &lt;pais nombre=&quot;Emiratos Árabes Unidos&quot;&gt;
+        &lt;ciudad&gt;Dubai&lt;/ciudad&gt;
+      &lt;/pais&gt;
+      &lt;pais nombre=&quot;Taiwan&quot;&gt;
+        &lt;ciudad&gt;Taipei&lt;/ciudad&gt;
+      &lt;/pais&gt;
+    &lt;/continente&gt;
+    &lt;continente nombre=&quot;América&quot;&gt;
+      &lt;pais nombre=&quot;Estados Unidos de América&quot;&gt;
+        &lt;ciudad&gt;Nueva York&lt;/ciudad&gt;
+        &lt;ciudad&gt;Chicago&lt;/ciudad&gt;
+      &lt;/pais&gt;
+    &lt;/continente&gt;
+  &lt;/ciudades&gt;
+
+  &lt;edificios&gt;
+    &lt;edificio&gt;
+      &lt;nombre&gt;Burj Khalifa&lt;/nombre&gt;
+      &lt;ciudad&gt;Dubai&lt;/ciudad&gt;
+      &lt;datos&gt;
+        &lt;altura&gt;828&lt;/altura&gt;
+        &lt;pisos&gt;163&lt;/pisos&gt;
+        &lt;completado&gt;2010&lt;/completado&gt;
+      &lt;/datos&gt;
+    &lt;/edificio&gt;
+    &lt;edificio&gt;
+      &lt;nombre&gt;Shanghai Tower&lt;/nombre&gt;
+      &lt;ciudad&gt;Shanghai&lt;/ciudad&gt;
+      &lt;datos&gt;
+        &lt;altura&gt;632&lt;/altura&gt;
+        &lt;pisos&gt;128&lt;/pisos&gt;
+        &lt;completado&gt;2015&lt;/completado&gt;
+      &lt;/datos&gt;
+    &lt;/edificio&gt;
+    &lt;edificio&gt;
+      &lt;nombre&gt;One World Trade Center&lt;/nombre&gt;
+      &lt;ciudad&gt;Nueva York&lt;/ciudad&gt;
+      &lt;datos&gt;
+        &lt;altura&gt;541&lt;/altura&gt;
+        &lt;pisos&gt;104&lt;/pisos&gt;
+        &lt;completado&gt;2014&lt;/completado&gt;
+      &lt;/datos&gt;
+    &lt;/edificio&gt;
+    &lt;edificio&gt;
+      &lt;nombre&gt;CTF Finance Centre&lt;/nombre&gt;
+      &lt;ciudad&gt;Guangzhou&lt;/ciudad&gt;
+      &lt;datos&gt;
+        &lt;altura&gt;530&lt;/altura&gt;
+        &lt;pisos&gt;111&lt;/pisos&gt;
+        &lt;completado&gt;2016&lt;/completado&gt;
+      &lt;/datos&gt;
+    &lt;/edificio&gt;
+    &lt;edificio&gt;
+      &lt;nombre&gt;Taipei 101&lt;/nombre&gt;
+      &lt;ciudad&gt;Taipei&lt;/ciudad&gt;
+      &lt;datos&gt;
+        &lt;altura&gt;509&lt;/altura&gt;
+        &lt;pisos&gt;101&lt;/pisos&gt;
+        &lt;completado&gt;2004&lt;/completado&gt;
+      &lt;/datos&gt;
+    &lt;/edificio&gt;
+    &lt;edificio&gt;
+      &lt;nombre&gt;Shanghai World Financial Center&lt;/nombre&gt;
+      &lt;ciudad&gt;Shanghai&lt;/ciudad&gt;
+      &lt;datos&gt;
+        &lt;altura&gt;492&lt;/altura&gt;
+        &lt;pisos&gt;101&lt;/pisos&gt;
+        &lt;completado&gt;2018&lt;/completado&gt;
+      &lt;/datos&gt;
+    &lt;/edificio&gt;
+    &lt;edificio&gt;
+      &lt;nombre&gt;Sears Towers&lt;/nombre&gt;
+      &lt;ciudad&gt;Chicago&lt;/ciudad&gt;
+      &lt;datos&gt;
+        &lt;altura&gt;442&lt;/altura&gt;
+        &lt;pisos&gt;107&lt;/pisos&gt;
+        &lt;completado&gt;1974&lt;/completado&gt;
+      &lt;/datos&gt;
+    &lt;/edificio&gt;
+    &lt;edificio&gt;
+      &lt;nombre&gt;432 Park Avenue&lt;/nombre&gt;
+      &lt;ciudad&gt;Nueva York&lt;/ciudad&gt;
+      &lt;datos&gt;
+        &lt;altura&gt;426&lt;/altura&gt;
+        &lt;pisos&gt;88&lt;/pisos&gt;
+        &lt;completado&gt;2015&lt;/completado&gt;
+      &lt;/datos&gt;
+    &lt;/edificio&gt;
+    &lt;edificio&gt;
+      &lt;nombre&gt;Trump Tower&lt;/nombre&gt;
+      &lt;ciudad&gt;Chicago&lt;/ciudad&gt;
+      &lt;datos&gt;
+        &lt;altura&gt;423&lt;/altura&gt;
+        &lt;pisos&gt;98&lt;/pisos&gt;
+        &lt;completado&gt;2009&lt;/completado&gt;
+      &lt;/datos&gt;
+    &lt;/edificio&gt;
+  &lt;/edificios&gt;
+&lt;/rascacielos&gt;
+</code>
+</pre>
+      </div>
+
+      <ol>
+        <li>Nombre de los rascacielos de Chicago:
+          <div class="codigo">
+            <pre>
+<code class="language-xml">Sears Towers
+Trump Tower</code>
+</pre>
+          </div>
+        </li>
+
+        <li>Países de Asia:
+          <div class="codigo">
+            <pre>
+<code class="language-xml"> nombre="China"
+ nombre="Emiratos Árabes Unidos"
+ nombre="Taiwan"</code>
+</pre>
+          </div>
+        </li>
+
+        <li>Altura de los edificios construidos hasta 2010:
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;altura&gt;828&lt;/altura&gt;
+&lt;altura&gt;509&lt;/altura&gt;
+&lt;altura&gt;442&lt;/altura&gt;
+&lt;altura&gt;423&lt;/altura&gt;</code>
+</pre>
+          </div>
+        </li>
+
+        <li>Años en los que se completaron rascacielos de más de 500 metros y menos de 110 pisos:
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;completado&gt;2014&lt;/completado&gt;
+&lt;completado&gt;2004&lt;/completado&gt;</code>
+</pre>
+          </div>
+        </li>
+
+        <li>Nombre de los edificios cuyos pisos miden más de 5 metros de media:
+          <p><strong>Nota</strong>: Para dividir, se puede utilizar el operador <strong>div</strong>.</p>
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;nombre&gt;Burj Khalifa&lt;/nombre&gt;
+&lt;nombre&gt;One World Trade Center&lt;/nombre&gt;
+&lt;nombre&gt;Taipei 101&lt;/nombre&gt;</code>
+</pre>
+          </div>
+        </li>
+
+        <li>Número de pisos de los rascacielos de China:
+          <div class="codigo">
+            <pre>
+<code class="language-xml">128
+111
+101</code>
+</pre>
+          </div>
+        </li>
+
+        <li>Continente donde está el Burj Khalifa:
+          <div class="codigo">
+            <pre>
+<code class="language-xml"> nombre="Asia"</code>
+</pre>
+          </div>
+        </li>
+
+      </ol>
+    </section>
+
+    <footer>
+      <p class="ultmod">Última modificación de esta página: 7 de junio de 2016</p>
+
+      <p class="licencia"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../../varios/iconos/icono_cc_by_sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
+        Esta página forma parte del curso <a href="http://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a> por <a href="http://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
+        que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.</p>
+    </footer>
+  </body>
+</html>

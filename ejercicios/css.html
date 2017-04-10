@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios. CSS en XML. XML. Bartolomé Sintes Marco</title>
+    <link href="../varios/xml.css" rel="stylesheet" type="text/css" title="Estilo mclibre" />
+    <link rel="icon" href="../varios/favicon.ico" />
+    <link rel="stylesheet" href="../varios/prism-xml.css" />
+    <script type="text/javascript" src="../varios/prism.js"></script>
+  </head>
+
+  <body>
+    <h1>CSS en XML - Ejercicios</h1>
+
+    <nav>
+      <p>
+        <a href="../index.html"><img src="../varios/iconos/icono_xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48" /></a>
+        <a href="#"><img src="../varios/iconos/icono_arrow_circle_up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36" /></a>
+      </p>
+
+      <h2>CSS - Ejercicios</h2>
+
+      <div class="toc">
+        <ul>
+          <li><a href="#ejercicio-1">1 - Párrafos</a></li>
+          <li><a href="#ejercicio-2">2 - Listas</a></li>
+          <li><a href="#ejercicio-3">3 - Tablas</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <p>Estos ejercicios corresponden a lo explicado en la lección <a href="../lecciones/xml_css.html">Hojas de estilo CSS en XML</a>.</p>
+
+    <p>Se pueden consultar unas posibles <a href="css_soluciones.html">soluciones de estos ejercicios</a>.</p>
+
+    <p><strong>Nota</strong>: Internet Explorer 8 y anteriores no permiten ver correctamente estos ejercicios. Se recomienda utilizar navegadores modernos.</p>
+
+    <section id="ejercicio-1">
+      <h2>CSS - Ejercicio 1 - Párrafos</h2>
+
+      <p>Dado el siguiente documento XML, </p>
+
+      <div class="codigo">
+        <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;biblioteca&gt;
+  &lt;libro&gt;
+    &lt;titulo&gt;La vida está en otra parte&lt;/titulo&gt;
+    &lt;autor&gt;Milan Kundera&lt;/autor&gt;
+    &lt;fechaPublicacion&gt;1973&lt;/fechaPublicacion&gt;
+  &lt;/libro&gt;
+  &lt;libro&gt;
+    &lt;titulo&gt;Pantaleón y las visitadoras&lt;/titulo&gt;
+    &lt;autor&gt;Mario Vargas Llosa&lt;/autor&gt;
+    &lt;fechaPublicacion&gt;1973&lt;/fechaPublicacion&gt;
+  &lt;/libro&gt;
+  &lt;libro&gt;
+    &lt;titulo&gt;Conversación en la catedral&lt;/titulo&gt;
+    &lt;autor&gt;Mario Vargas Llosa&lt;/autor&gt;
+    &lt;fechaPublicacion&gt;1969&lt;/fechaPublicacion&gt;
+  &lt;/libro&gt;
+&lt;/biblioteca&gt;</code>
+</pre>
+      </div>
+
+      <p>... escriba las hojas de estilo que permitan verlo en el navegador como se muestra a continuación:</p>
+
+      <section id="ejercicio-1-1">
+        <h3><a href="css_soluciones.html#ejercicio-1-1"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>CSS - Ejercicio 1-1</h3>
+
+        <div class="ejercicio">
+          <object type="application/xml" data="css/css_01_01.xml" class="ejercicio">ERROR (no puede mostrarse el objeto)</object>
+        </div>
+      </section>
+
+      <section id="ejercicio-1-2">
+        <h3><a href="css_soluciones.html#ejercicio-1-2"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>CSS - Ejercicio 1-2</h3>
+
+        <div class="ejercicio">
+          <object type="application/xml" data="css/css_01_02.xml" class="ejercicio">ERROR (no puede mostrarse el objeto)</object>
+        </div>
+      </section>
+
+      <section id="ejercicio-1-3">
+        <h3><a href="css_soluciones.html#ejercicio-1-3"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>CSS - Ejercicio 1-3</h3>
+
+        <div class="ejercicio">
+          <object type="application/xml" data="css/css_01_03.xml" class="ejercicio">ERROR (no puede mostrarse el objeto)</object>
+        </div>
+      </section>
+
+      <section id="ejercicio-1-4">
+        <h3><a href="css_soluciones.html#ejercicio-1-4"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>CSS - Ejercicio 1-4</h3>
+
+        <div class="ejercicio">
+          <object type="application/xml" data="css/css_01_04.xml" class="ejercicio">ERROR (no puede mostrarse el objeto)</object>
+        </div>
+      </section>
+    </section>
+
+    <section id="ejercicio-2">
+      <h2>CSS - Ejercicio 2 - Listas</h2>
+
+      <p>Dado el siguiente documento XML, </p>
+
+      <div class="codigo">
+        <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;ies&gt;
+  &lt;nombreCentro&gt;IES Abastos&lt;/nombreCentro&gt;
+  &lt;web&gt;http://www.iesabastos.org&lt;/web&gt;
+  &lt;ciclos&gt;
+    &lt;ciclo id="ASIR"&gt;
+      &lt;nombre&gt;Administración de Sistemas Informáticos en Red&lt;/nombre&gt;
+      &lt;grado&gt;Superior&lt;/grado&gt;
+      &lt;decretoTitulo&gt;2009&lt;/decretoTitulo&gt;
+    &lt;/ciclo&gt;
+    &lt;ciclo id="DAM"&gt;
+      &lt;nombre&gt;Desarrollo de Aplicaciones Multiplataforma&lt;/nombre&gt;
+      &lt;grado&gt;Superior&lt;/grado&gt;
+      &lt;decretoTitulo&gt;2010&lt;/decretoTitulo&gt;
+    &lt;/ciclo&gt;
+    &lt;ciclo id="DAW"&gt;
+      &lt;nombre&gt;Desarrollo de Aplicaciones Web&lt;/nombre&gt;
+      &lt;grado&gt;Superior&lt;/grado&gt;
+      &lt;decretoTitulo&gt;2010&lt;/decretoTitulo&gt;
+    &lt;/ciclo&gt;
+    &lt;ciclo id="SMR"&gt;
+      &lt;nombre&gt;Sistemas Microinformáticos y Redes&lt;/nombre&gt;
+      &lt;grado&gt;Medio&lt;/grado&gt;
+      &lt;decretoTitulo&gt;2008&lt;/decretoTitulo&gt;
+    &lt;/ciclo&gt;
+  &lt;/ciclos&gt;
+&lt;/ies&gt;</code>
+</pre>
+      </div>
+
+      <p>... escriba las hojas de estilo que permitan verlo en el navegador como se muestra a continuación:</p>
+
+      <section id="ejercicio-2-1">
+        <h3><a href="css_soluciones.html#ejercicio-2-1"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>CSS - Ejercicio 2-1</h3>
+
+        <div class="ejercicio">
+          <object type="application/xml" data="css/css_02_01.xml" class="ejercicio">ERROR (no puede mostrarse el objeto)</object>
+        </div>
+      </section>
+
+      <section id="ejercicio-2-2">
+        <h3><a href="css_soluciones.html#ejercicio-2-2"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>CSS - Ejercicio 2-2</h3>
+
+        <div class="ejercicio">
+          <object type="application/xml" data="css/css_02_02.xml" class="ejercicio">ERROR (no puede mostrarse el objeto)</object>
+        </div>
+      </section>
+
+      <section id="ejercicio-2-3">
+        <h3><a href="css_soluciones.html#ejercicio-2-3"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>CSS - Ejercicio 2-3</h3>
+
+        <div class="ejercicio">
+          <object type="application/xml" data="css/css_02_03.xml" class="ejercicio">ERROR (no puede mostrarse el objeto)</object>
+        </div>
+      </section>
+
+      <section id="ejercicio-2-4">
+        <h3><a href="css_soluciones.html#ejercicio-2-4"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>CSS - Ejercicio 2-4</h3>
+
+        <div class="ejercicio">
+          <object type="application/xml" data="css/css_02_04.xml" class="ejercicio">ERROR (no puede mostrarse el objeto)</object>
+        </div>
+      </section>
+    </section>
+
+    <section id="ejercicio-3">
+      <h2>CSS - Ejercicio 3 - Tablas</h2>
+
+      <p>Dado el siguiente documento XML, </p>
+
+      <div class="codigo">
+        <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;ies&gt;
+  &lt;nombreCentro&gt;IES Abastos&lt;/nombreCentro&gt;
+  &lt;web&gt;http://www.iesabastos.org&lt;/web&gt;
+  &lt;ciclos&gt;
+    &lt;ciclo id="ASIR"&gt;
+      &lt;nombre&gt;Administración de Sistemas Informáticos en Red&lt;/nombre&gt;
+      &lt;grado&gt;Superior&lt;/grado&gt;
+      &lt;decretoTitulo&gt;2009&lt;/decretoTitulo&gt;
+    &lt;/ciclo&gt;
+    &lt;ciclo id="DAM"&gt;
+      &lt;nombre&gt;Desarrollo de Aplicaciones Multiplataforma&lt;/nombre&gt;
+      &lt;grado&gt;Superior&lt;/grado&gt;
+      &lt;decretoTitulo&gt;2010&lt;/decretoTitulo&gt;
+    &lt;/ciclo&gt;
+    &lt;ciclo id="DAW"&gt;
+      &lt;nombre&gt;Desarrollo de Aplicaciones Web&lt;/nombre&gt;
+      &lt;grado&gt;Superior&lt;/grado&gt;
+      &lt;decretoTitulo&gt;2010&lt;/decretoTitulo&gt;
+    &lt;/ciclo&gt;
+    &lt;ciclo id="SMR"&gt;
+      &lt;nombre&gt;Sistemas Microinformáticos y Redes&lt;/nombre&gt;
+      &lt;grado&gt;Medio&lt;/grado&gt;
+      &lt;decretoTitulo&gt;2008&lt;/decretoTitulo&gt;
+    &lt;/ciclo&gt;
+  &lt;/ciclos&gt;
+&lt;/ies&gt;</code>
+</pre>
+      </div>
+
+      <p>... escriba las hojas de estilo que permitan verlo en el navegador como se muestra a continuación:</p>
+
+      <section id="ejercicio-3-1">
+        <h3><a href="css_soluciones.html#ejercicio-3-1"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>CSS - Ejercicio 3-1</h3>
+
+        <div class="ejercicio">
+          <object type="application/xml" data="css/css_03_01.xml" class="ejercicio">ERROR (no puede mostrarse el objeto)</object>
+        </div>
+      </section>
+
+      <section id="ejercicio-3-2">
+        <h3><a href="css_soluciones.html#ejercicio-3-2"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>CSS - Ejercicio 3-2</h3>
+
+        <div class="ejercicio">
+          <object type="application/xml" data="css/css_03_02.xml" class="ejercicio">ERROR (no puede mostrarse el objeto)</object>
+        </div>
+      </section>
+
+      <section id="ejercicio-3-3">
+        <h3><a href="css_soluciones.html#ejercicio-3-3"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>CSS - Ejercicio 3-3</h3>
+
+        <div class="ejercicio">
+          <object type="application/xml" data="css/css_03_03.xml" class="ejercicio">ERROR (no puede mostrarse el objeto)</object>
+        </div>
+      </section>
+
+      <section id="ejercicio-3-4">
+        <h3><a href="css_soluciones.html#ejercicio-3-4"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>CSS - Ejercicio 3-4</h3>
+
+        <div class="ejercicio">
+          <object type="application/xml" data="css/css_03_04.xml" class="ejercicio">ERROR (no puede mostrarse el objeto)</object>
+        </div>
+      </section>
+    </section>
+
+    <footer>
+      <p class="ultmod">Última modificación de esta página: 27 de abril de 2015</p>
+
+      <p class="licencia"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../varios/iconos/icono_cc_by_sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
+        Esta página forma parte del curso <a href="http://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a> por <a href="http://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
+        que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.</p>
+    </footer>
+  </body>
+</html>

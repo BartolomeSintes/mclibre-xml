@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="ejemplo_css_2-2.css"?>
+<libro>
+  <titulo>La vida está en otra parte</titulo>
+  <autor>Milan Kundera</autor>
+  <fechaPublicacion año="1973"/>
+</libro>

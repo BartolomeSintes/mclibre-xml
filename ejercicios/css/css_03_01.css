@@ -1,0 +1,32 @@
+ies {
+  font-family: sans-serif;
+}
+
+nombreCentro {
+  display: block;
+  font-size: 120%;
+}
+
+web {
+  display: block;
+  margin-bottom: 10px;
+}
+
+ciclos {
+  display: table;
+  border-spacing: 10px;
+  border: black 1px solid;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ciclo {
+  display: table-row;
+}
+
+nombre, grado, decretoTitulo {
+  background-color: white;
+  border: black 1px solid;
+  display: table-cell;
+  padding: 10px;
+}

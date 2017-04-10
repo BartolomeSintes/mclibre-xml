@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Examen 26/06/15. Exámenes. XML. Bartolomé Sintes Marco</title>
+    <link href="../../varios/xml.css" rel="stylesheet" type="text/css" title="Estilo mclibre" />
+    <link rel="icon" href="../../varios/favicon.ico" />
+    <link rel="stylesheet" href="../../varios/prism-xml.css" />
+    <script type="text/javascript" src="../../varios/prism.js"></script>
+  </head>
+
+  <body>
+    <h1>Examen 26 de junio de 2015</h1>
+
+    <nav>
+      <p>
+        <a href="../../index.html"><img src="../../varios/iconos/icono_xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48" /></a>
+        <a href="#"><img src="../../varios/iconos/icono_arrow_circle_up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36" /></a>
+        <a href="../examenes.html"><img src="../../varios/iconos/icono_school.svg" alt="Exámenes" title="Exámenes" width="36" height="36" /></a>
+      </p>
+
+      <h2>Examen 26/06/15</h2>
+
+      <div class="toc">
+        <ol>
+          <li><a href="#ejercicio-1">CSS</a></li>
+          <li><a href="#ejercicio-2">XPath</a></li>
+        </ol>
+      </div>
+    </nav>
+
+    <p>Resuelva los siguientes ejercicios guardando las respuestas en una carpeta cuyo nombre contenga su nombre y apellidos.</p>
+
+    <section id="ejercicio-1">
+      <h2>Ejercicio 1. CSS</h2>
+
+      <p>Escriba la hoja de estilo CSS para que el siguiente documento se vea en el navegador como muestra la imagen.</p>
+
+      <div class="codigo">
+        <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;pintores&gt;
+  &lt;titulo&gt;Pintores universales&lt;/titulo&gt;
+  &lt;pintor id="Goya"&gt;
+    &lt;nombre&gt;Francisco de Goya&lt;/nombre&gt;
+    &lt;nacido&gt;1746&lt;/nacido&gt;
+    &lt;fallecido&gt;1828&lt;/fallecido&gt;
+    &lt;nacionalidad&gt;España&lt;/nacionalidad&gt;
+  &lt;/pintor&gt;
+  &lt;pintor id="Velazquez"&gt;
+    &lt;nombre&gt;Diego Velázquez&lt;/nombre&gt;
+    &lt;nacido&gt;1599&lt;/nacido&gt;
+    &lt;fallecido&gt;1660&lt;/fallecido&gt;
+    &lt;nacionalidad&gt;España&lt;/nacionalidad&gt;
+  &lt;/pintor&gt;
+  &lt;pintor id="Vermeer"&gt;
+    &lt;nombre&gt;Johannes Vermeer&lt;/nombre&gt;
+    &lt;nacido&gt;1632&lt;/nacido&gt;
+    &lt;fallecido&gt;1675&lt;/fallecido&gt;
+    &lt;nacionalidad&gt;Holanda&lt;/nacionalidad&gt;
+  &lt;/pintor&gt;
+&lt;/pintores&gt;</code>
+</pre>
+      </div>
+
+      <p>Captura del navegador (resolución 800 x 600):</p>
+
+      <p class="captura"><img alt="XML y CSS" src="150626_css.png" width="785" height="276" /></p>
+    </section>
+
+    <section id="ejercicio-2">
+      <h2>Ejercicio 2. XPath</h2>
+
+      <p>Dado el siguiente documento XML, escriba las expresiones XPath que devuelvan <strong>exactamente</strong> la respuesta indicadas en los cuadros. Escriba todas las expresiones XPath en un único fichero de texto, numerando las respuestas.</p>
+
+      <div class="codigo">
+        <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;arte&gt;
+  &lt;museos&gt;
+    &lt;museo id="Prado"&gt;
+      &lt;nombre&gt;Museo del Prado&lt;/nombre&gt;
+      &lt;pais&gt;España&lt;/pais&gt;
+      &lt;ciudad&gt;Madrid&lt;/ciudad&gt;
+      &lt;creacion&gt;1819&lt;/creacion&gt;
+    &lt;/museo&gt;
+    &lt;museo id="Louvre"&gt;
+      &lt;nombre&gt;Musée du Louvre&lt;/nombre&gt;
+      &lt;pais&gt;Francia&lt;/pais&gt;
+      &lt;ciudad&gt;París&lt;/ciudad&gt;
+      &lt;creacion&gt;1793&lt;/creacion&gt;
+    &lt;/museo&gt;
+  &lt;/museos&gt;
+  &lt;pintores&gt;
+    &lt;pintor id="Goya"&gt;
+      &lt;nombre&gt;Francisco de Goya&lt;/nombre&gt;
+      &lt;nombreCompleto&gt;Francisco José de Goya y Lucientes&lt;/nombreCompleto&gt;
+      &lt;nacido&gt;1746&lt;/nacido&gt;
+      &lt;fallecido&gt;1828&lt;/fallecido&gt;
+      &lt;nacionalidad&gt;España&lt;/nacionalidad&gt;
+    &lt;/pintor&gt;
+    &lt;pintor id="Velazquez"&gt;
+      &lt;nombre&gt;Diego Velázquez&lt;/nombre&gt;
+      &lt;nombreCompleto&gt;Diego Rodríguez de Silva y Velázquez&lt;/nombreCompleto&gt;
+      &lt;nacido&gt;1599&lt;/nacido&gt;
+      &lt;fallecido&gt;1660&lt;/fallecido&gt;
+      &lt;nacionalidad&gt;España&lt;/nacionalidad&gt;
+    &lt;/pintor&gt;
+    &lt;pintor id="Vermeer"&gt;
+      &lt;nombre&gt;Johannes Vermeer&lt;/nombre&gt;
+      &lt;nombreCompleto&gt;Johannes Vermeer van Delft &lt;/nombreCompleto&gt;
+      &lt;nacido&gt;1632&lt;/nacido&gt;
+      &lt;fallecido&gt;1675&lt;/fallecido&gt;
+      &lt;nacionalidad&gt;Holanda&lt;/nacionalidad&gt;
+    &lt;/pintor&gt;
+  &lt;/pintores&gt;
+  &lt;cuadros&gt;
+    &lt;cuadro autor="Goya" museo="Louvre" fecha="1794" titulo="La condesa del Carpio, marquesa de La Solana" /&gt;
+    &lt;cuadro autor="Goya" museo="Prado" fecha="1814" titulo="Los fusilamientos del 3 de mayo" /&gt;
+    &lt;cuadro autor="Goya" museo="Prado" fecha="1798" titulo="La maja desnuda" /&gt;
+    &lt;cuadro autor="Velazquez" museo="Prado" fecha="1629" titulo="Los borrachos" /&gt;
+    &lt;cuadro autor="Vermeer" museo="Louvre" fecha="1670" titulo="La hilandera" /&gt;
+    &lt;cuadro autor="Vermeer" museo="Prado" fecha="1665" titulo="Mujer con aguamanil" /&gt;
+  &lt;/cuadros&gt;
+&lt;/arte&gt;</code>
+</pre>
+      </div>
+
+      <ol>
+        <li>Nombre de los museos:
+          <div class="codigo">
+            <pre>
+<code class="language-xml">Museo del Prado
+Musée du Louvre</code>
+</pre>
+          </div>
+        </li>
+
+        <li>Fecha de nacimiento de los pintores españoles:
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;nacido&gt;1746&lt;/nacido&gt;
+&lt;nacido&gt;1599&lt;/nacido&gt;</code>
+</pre>
+          </div>
+        </li>
+
+        <li>Edad a la que murió Velázquez:
+          <div class="codigo">
+            <pre><code class="language-xml"> 61</code></pre>
+          </div>
+        </li>
+
+        <li>Nombre completo de los pintores de cuadros pintados en el siglo XVII:
+          <div class="codigo">
+            <pre>
+<code class="language-xml">Diego Rodríguez de Silva y Velázquez
+Johannes Vermeer van Delft</code>
+</pre>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <footer>
+      <p class="ultmod">Última modificación de esta página: 26 de junio de 2015</p>
+
+      <p class="licencia"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../../varios/iconos/icono_cc_by_sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
+        Esta página forma parte del curso <a href="http://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a> por <a href="http://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
+        que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.</p>
+    </footer>
+  </body>
+</html>

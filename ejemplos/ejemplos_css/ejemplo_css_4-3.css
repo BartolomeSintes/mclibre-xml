@@ -1,0 +1,14 @@
+libro {
+  display: list-item;
+  list-style: upper-alpha inside;
+  margin-left: 20px;
+}
+
+titulo {
+  display: inline;
+}
+
+autor, fechaPublicacion {
+  display: block;
+  margin-left: 20px;
+}

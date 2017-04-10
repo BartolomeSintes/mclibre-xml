@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soluciones (1). XSLT. XML. Bartolomé Sintes Marco</title>
+    <link href="../varios/xml.css" rel="stylesheet" type="text/css" title="Estilo mclibre" />
+    <link rel="icon" href="../varios/favicon.ico" />
+    <link rel="stylesheet" href="../varios/prism-xml.css" />
+    <script type="text/javascript" src="../varios/prism.js"></script>
+  </head>
+
+  <body>
+    <h1>XSLT - Soluciones (1)</h1>
+
+    <nav>
+      <p>
+        <a href="../index.html"><img src="../varios/iconos/icono_xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48" /></a>
+        <a href="#"><img src="../varios/iconos/icono_arrow_circle_up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36" /></a>
+      </p>
+
+      <h2>XSLT - Soluciones (1)</h2>
+
+      <div class="toc">
+        <ul>
+          <li><a href="#ejercicio-1">Ejercicio 1</a><br />
+            <a href="#ejercicio-1-1">1</a> - <a href="#ejercicio-1-2">2</a> - <a href="#ejercicio-1-3">3</a> - <a href="#ejercicio-1-4">4</a>
+          </li>
+          <li><a href="#ejercicio-2">Ejercicio 2</a><br />
+            <a href="#ejercicio-2-1">1</a> - <a href="#ejercicio-2-2">2</a> - <a href="#ejercicio-2-3">3</a>
+          </li>
+          <li><a href="#ejercicio-3">Ejercicio 3</a><br />
+            <a href="#ejercicio-3-1">1</a> - <a href="#ejercicio-3-2">2</a> - <a href="#ejercicio-3-3">3</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <p>Se ofrecen a continuación unas posibles soluciones de los <a href="xslt_1.html">ejercicios XSLT (1)</a>. Estos ejercicios se pueden resolver de varias maneras.</p>
+
+    <section id="ejercicio-1">
+      <h2>XSLT (1) - Ejercicio 1</h2>
+
+      <section id="ejercicio-1-1">
+        <h3><a href="xslt_1.html#ejercicio-1-1"><img src="../varios/iconos/icono_enunciado.svg" alt="Enunciado del ejercicio" title="Enunciado del ejercicio" width="48" height="48" class="d noprint" /></a>XSLT (1) - Ejercicio 1-1 - Solución</h3>
+
+        <p>Sin etiquetas:</p>
+
+        <div class="codigo">
+          <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
+
+  &lt;xsl:template match="ciclo"&gt;
+     &lt;xsl:value-of select="nombre"/&gt;
+  &lt;/xsl:template&gt;
+
+&lt;/xsl:stylesheet&gt;</code>
+</pre>
+        </div>
+      </section>
+
+      <section id="ejercicio-1-2">
+        <h3><a href="xslt_1.html#ejercicio-1-2"><img src="../varios/iconos/icono_enunciado.svg" alt="Enunciado del ejercicio" title="Enunciado del ejercicio" width="48" height="48" class="d noprint" /></a>XSLT (1) - Ejercicio 1-2 - Solución</h3>
+
+        <p>Párrafos:</p>
+
+        <div class="codigo">
+          <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
+
+  &lt;xsl:template match="ciclos"&gt;
+    &lt;html&gt;
+        &lt;xsl:apply-templates /&gt;
+    &lt;/html&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match="ciclo"&gt;
+     &lt;p&gt;&lt;xsl:value-of select="nombre"/&gt;&lt;/p&gt;
+  &lt;/xsl:template&gt;
+
+&lt;/xsl:stylesheet&gt;</code>
+</pre>
+        </div>
+      </section>
+
+      <section id="ejercicio-1-3">
+        <h3><a href="xslt_1.html#ejercicio-1-3"><img src="../varios/iconos/icono_enunciado.svg" alt="Enunciado del ejercicio" title="Enunciado del ejercicio" width="48" height="48" class="d noprint" /></a>XSLT (1) - Ejercicio 1-3 - Solución</h3>
+
+        <p>Lista:</p>
+
+        <div class="codigo">
+          <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
+
+  &lt;xsl:template match="ciclos"&gt;
+    &lt;html&gt;
+    &lt;ul&gt;
+        &lt;xsl:apply-templates /&gt;
+    &lt;/ul&gt;
+    &lt;/html&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match="ciclo"&gt;
+     &lt;li&gt;&lt;xsl:value-of select="nombre"/&gt;&lt;/li&gt;
+  &lt;/xsl:template&gt;
+
+&lt;/xsl:stylesheet&gt;</code></pre>
+        </div>
+      </section>
+
+      <section id="ejercicio-1-4">
+        <h3><a href="xslt_1.html#ejercicio-1-4"><img src="../varios/iconos/icono_enunciado.svg" alt="Enunciado del ejercicio" title="Enunciado del ejercicio" width="48" height="48" class="d noprint" /></a>XSLT (1) - Ejercicio 1-4 - Solución</h3>
+
+        <p>Tabla:</p>
+
+        <p><strong>En XML Copy editor</strong>, la siguiente hoja de estilo genera un resultado correcto, pero con un formato distinto al del enunciado (saltos de línea y espacios).</p>
+
+        <table class="ejemplo">
+          <tr>
+            <td class="codigo">
+              <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
+
+  &lt;xsl:template match="ciclos"&gt;
+    &lt;html&gt;
+    &lt;table border="1"&gt;
+      &lt;xsl:apply-templates /&gt;
+    &lt;/table&gt;
+    &lt;/html&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match="ciclo"&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;xsl:value-of select="nombre"/&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/xsl:template&gt;
+
+&lt;/xsl:stylesheet&gt;</code>
+</pre>
+            </td>
+            <td class="codigo">
+              <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+
+
+&lt;html&gt;
+  &lt;table border=&quot;1&quot;&gt;
+    &lt;tr&gt;&lt;td&gt;Administración de Sistemas Informáticos en Red&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Desarrollo de Aplicaciones Web&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Sistemas Microinformáticos y Redes&lt;/td&gt;&lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/html&gt;</code>
+</pre>
+            </td>
+          </tr>
+        </table>
+
+        <p>Para que el formato fuera como en el enunciado, bastaría con añadir la instrucción <span class="xsl-i">&lt;xsl:strip-space&gt;</span>:</p>
+
+        <table class="ejemplo">
+          <tr>
+            <td class="codigo">
+              <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
+  &lt;xsl:strip-space elements=&quot;*&quot; /&gt;
+
+  &lt;xsl:template match="ciclos"&gt;
+    &lt;html&gt;
+    &lt;table border="1"&gt;
+      &lt;xsl:apply-templates /&gt;
+    &lt;/table&gt;
+    &lt;/html&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match="ciclo"&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;xsl:value-of select="nombre"/&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/xsl:template&gt;
+
+&lt;/xsl:stylesheet&gt;</code>
+</pre>
+            </td>
+            <td class="codigo">
+              <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;html&gt;
+  &lt;table border=&quot;1&quot;&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Administración de Sistemas Informáticos en Red&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Desarrollo de Aplicaciones Web&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Sistemas Microinformáticos y Redes&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/html&gt;
+</code>
+</pre>
+            </td>
+          </tr>
+        </table>
+
+        <p><strong>En Notepad++ con XML Tools</strong>, la siguiente hoja de estilo genera un resultado correcto, pero con un formato distinto al del enunciado (saltos de línea y espacios).</p>
+
+        <table class="ejemplo">
+          <tr>
+            <td class="codigo">
+              <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
+
+  &lt;xsl:template match="ciclos"&gt;
+    &lt;html&gt;
+    &lt;table border="1"&gt;
+      &lt;xsl:apply-templates /&gt;
+    &lt;/table&gt;
+    &lt;/html&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match="ciclo"&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;xsl:value-of select="nombre"/&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/xsl:template&gt;
+
+&lt;/xsl:stylesheet&gt;</code>
+</pre>
+            </td>
+            <td class="codigo">
+              <pre>
+<code class="language-xml">&lt;html&gt;&lt;table border=&quot;1&quot;&gt;
+    &lt;tr&gt;&lt;td&gt;Administración de Sistemas Informáticos en Red&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Desarrollo de Aplicaciones Web&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Sistemas Microinformáticos y Redes&lt;/td&gt;&lt;/tr&gt;
+  &lt;/table&gt;&lt;/html&gt;</code>
+</pre>
+            </td>
+          </tr>
+        </table>
+
+        <p>Para que el formato fuera como en el enunciado, habría que añadir instrucciones<span class="xsl-i">&lt;xsl:text&gt;</span> en los sitios necesarios:</p>
+
+        <table class="ejemplo">
+          <tr>
+            <td class="codigo">
+              <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; version=&quot;1.0&quot;&gt;
+
+  &lt;xsl:template match=&quot;ciclos&quot;&gt;
+    &lt;html&gt;
+    &lt;xsl:text&gt;&amp;#10;  &lt;/xsl:text&gt;
+    &lt;table border=&quot;1&quot;&gt;
+      &lt;xsl:apply-templates /&gt;
+    &lt;/table&gt;
+    &lt;/html&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match=&quot;ciclo&quot;&gt;
+    &lt;tr&gt;
+      &lt;xsl:text&gt;&amp;#10;      &lt;/xsl:text&gt;
+      &lt;td&gt;&lt;xsl:value-of select=&quot;nombre&quot;/&gt;&lt;/td&gt;
+      &lt;xsl:text&gt;&amp;#10;    &lt;/xsl:text&gt;
+    &lt;/tr&gt;
+  &lt;/xsl:template&gt;
+
+&lt;/xsl:stylesheet&gt;
+</code>
+</pre>
+            </td>
+            <td class="codigo">
+              <pre>
+<code class="language-xml">&lt;html&gt;
+  &lt;table border=&quot;1&quot;&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Administración de Sistemas Informáticos en Red&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Desarrollo de Aplicaciones Web&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Sistemas Microinformáticos y Redes&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/html&gt;
+</code>
+</pre>
+            </td>
+          </tr>
+        </table>
+      </section>
+    </section>
+
+    <section id="ejercicio-2">
+      <h2>XSLT (1) - Ejercicio 2</h2>
+
+      <section id="ejercicio-2-1">
+        <h3><a href="xslt_1.html#ejercicio-2-1"><img src="../varios/iconos/icono_enunciado.svg" alt="Enunciado del ejercicio" title="Enunciado del ejercicio" width="48" height="48" class="d noprint" /></a>XSLT (1) - Ejercicio 2-1 - Solución</h3>
+
+        <p>Párrafos:</p>
+
+        <div class="codigo">
+          <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; version=&quot;1.0&quot;&gt;
+  &lt;xsl:strip-space elements=&quot;*&quot; /&gt;
+
+  &lt;xsl:template match=&quot;ies&quot;&gt;
+    &lt;html&gt;
+      &lt;h1&gt;&lt;xsl:value-of select=&quot;@nombre&quot; /&gt;&lt;/h1&gt;
+      &lt;xsl:apply-templates /&gt;
+    &lt;/html&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match=&quot;ciclo&quot;&gt;
+    &lt;p&gt;&lt;xsl:value-of select=&quot;nombre&quot; /&gt;&lt;/p&gt;
+  &lt;/xsl:template&gt;
+
+&lt;/xsl:stylesheet&gt;</code>
+</pre>
+        </div>
+
+        <p>Una solución un poco más complicada, pero que da el mismo resultado que la anterior, podría ser la siguiente:</p>
+
+        <div class="codigo">
+          <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; version=&quot;1.0&quot;&gt;
+  &lt;xsl:strip-space elements=&quot;*&quot; /&gt;
+
+  &lt;xsl:template match=&quot;/&quot;&gt;
+    &lt;html&gt;
+      &lt;xsl:apply-templates /&gt;
+    &lt;/html&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match=&quot;ies&quot;&gt;
+      &lt;h1&gt;&lt;xsl:value-of select=&quot;@nombre&quot; /&gt;&lt;/h1&gt;
+      &lt;xsl:apply-templates /&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match=&quot;ciclo&quot;&gt;
+    &lt;p&gt;&lt;xsl:value-of select=&quot;nombre&quot; /&gt;&lt;/p&gt;
+  &lt;/xsl:template&gt;
+
+&lt;/xsl:stylesheet&gt;</code>
+</pre>
+        </div>
+
+        <p>Para arreglar el formato, habría que eliminar las líneas en blanco de la misma manera.</p>
+      </section>
+
+      <section id="ejercicio-2-2">
+        <h3><a href="xslt_1.html#ejercicio-2-2"><img src="../varios/iconos/icono_enunciado.svg" alt="Enunciado del ejercicio" title="Enunciado del ejercicio" width="48" height="48" class="d noprint" /></a>XSLT (1) - Ejercicio 2-2 - Solución</h3>
+
+        <p>Lista:</p>
+
+        <div class="codigo">
+          <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; version=&quot;1.0&quot;&gt;
+  &lt;xsl:strip-space elements=&quot;*&quot; /&gt;
+
+  &lt;xsl:template match=&quot;ies&quot;&gt;
+    &lt;html&gt;
+      &lt;h1&gt;&lt;xsl:value-of select=&quot;@nombre&quot; /&gt;&lt;/h1&gt;
+      &lt;p&gt;Página web: &lt;a &gt;
+        &lt;xsl:attribute name=&quot;href&quot;&gt;
+          &lt;xsl:value-of select=&quot;@web&quot; /&gt;
+        &lt;/xsl:attribute&gt;
+        &lt;xsl:value-of select=&quot;@web&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+      &lt;ul&gt;
+       &lt;xsl:apply-templates /&gt;
+      &lt;/ul&gt;
+    &lt;/html&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match=&quot;ciclo&quot;&gt;
+     &lt;li&gt;&lt;xsl:value-of select=&quot;nombre&quot;/&gt;&lt;/li&gt;
+  &lt;/xsl:template&gt;
+
+&lt;/xsl:stylesheet&gt;</code>
+</pre>
+        </div>
+      </section>
+
+      <section id="ejercicio-2-3">
+        <h3><a href="xslt_1.html#ejercicio-2-3"><img src="../varios/iconos/icono_enunciado.svg" alt="Enunciado del ejercicio" title="Enunciado del ejercicio" width="48" height="48" class="d noprint" /></a>XSLT (1) - Ejercicio 2-3 - Solución</h3>
+
+        <p>Tabla:</p>
+
+        <div class="codigo">
+          <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; version=&quot;1.0&quot;&gt;
+  &lt;xsl:strip-space elements=&quot;*&quot; /&gt;
+
+  &lt;xsl:template match=&quot;ies&quot;&gt;
+    &lt;html&gt;
+      &lt;h1&gt;&lt;xsl:value-of select=&quot;@nombre&quot; /&gt;&lt;/h1&gt;
+      &lt;p&gt;Página web: &lt;a &gt;
+        &lt;xsl:attribute name=&quot;href&quot;&gt;
+          &lt;xsl:value-of select=&quot;@web&quot; /&gt;
+        &lt;/xsl:attribute&gt;
+        &lt;xsl:value-of select=&quot;@web&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+      &lt;table border=&quot;1&quot;&gt;
+        &lt;tr&gt;
+          &lt;th&gt;Nombre del ciclo&lt;/th&gt;
+          &lt;th&gt;Grado&lt;/th&gt;
+          &lt;th&gt;Año del título&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;xsl:apply-templates /&gt;
+      &lt;/table&gt;
+    &lt;/html&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match=&quot;ciclo&quot;&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;xsl:value-of select=&quot;nombre&quot;/&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;xsl:value-of select=&quot;grado&quot;/&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;xsl:value-of select=&quot;decretoTitulo/@año&quot;/&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/xsl:template&gt;
+
+&lt;/xsl:stylesheet&gt;</code>
+</pre>
+        </div>
+      </section>
+    </section>
+
+    <section id="ejercicio-3">
+      <h2>XSLT (1) - Ejercicio 3</h2>
+
+      <section id="ejercicio-3-1">
+        <h3><a href="xslt_1.html#ejercicio-3-1"><img src="../varios/iconos/icono_enunciado.svg" alt="Enunciado del ejercicio" title="Enunciado del ejercicio" width="48" height="48" class="d noprint" /></a>XSLT (1) - Ejercicio 3-1 - Solución</h3>
+
+        <p>Párrafos:</p>
+
+        <div class="codigo">
+          <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; version=&quot;1.0&quot;&gt;
+  &lt;xsl:strip-space elements=&quot;*&quot; /&gt;
+
+  &lt;xsl:template match=&quot;ies&quot;&gt;
+    &lt;html&gt;
+      &lt;xsl:apply-templates /&gt;
+    &lt;/html&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match=&quot;nombre&quot;&gt;
+      &lt;h1&gt;&lt;xsl:value-of select=&quot;.&quot; /&gt;&lt;/h1&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match=&quot;web&quot;&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match=&quot;ciclo&quot;&gt;
+    &lt;p&gt;&lt;xsl:value-of select=&quot;nombre&quot; /&gt;&lt;/p&gt;
+  &lt;/xsl:template&gt;
+
+&lt;/xsl:stylesheet&gt;</code>
+</pre>
+        </div>
+      </section>
+
+      <section id="ejercicio-3-2">
+        <h3><a href="xslt_1.html#ejercicio-3-2"><img src="../varios/iconos/icono_enunciado.svg" alt="Enunciado del ejercicio" title="Enunciado del ejercicio" width="48" height="48" class="d noprint" /></a>XSLT (1) - Ejercicio 3-2 - Solución</h3>
+
+        <p>Lista:</p>
+
+        <div class="codigo">
+          <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; version=&quot;1.0&quot;&gt;
+  &lt;xsl:strip-space elements=&quot;*&quot; /&gt;
+
+  &lt;xsl:template match=&quot;ies&quot;&gt;
+    &lt;html&gt;
+      &lt;xsl:apply-templates /&gt;
+    &lt;/html&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match=&quot;nombre&quot;&gt;
+      &lt;h1&gt;Ciclos formativos del &lt;xsl:value-of select=&quot;.&quot; /&gt;&lt;/h1&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match=&quot;web&quot;&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match=&quot;ciclos&quot;&gt;
+    &lt;ul&gt;
+    &lt;xsl:apply-templates /&gt;
+    &lt;/ul&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match=&quot;ciclo&quot;&gt;
+    &lt;li&gt;&lt;xsl:value-of select=&quot;@id&quot; /&gt;&lt;br /&gt;
+    &lt;xsl:value-of select=&quot;nombre&quot; /&gt;, Ciclo Formativo de Grado &lt;xsl:value-of select=&quot;grado&quot; /&gt;
+    creado en &lt;xsl:value-of select=&quot;decretoTitulo/@año&quot; /&gt;&lt;/li&gt;
+  &lt;/xsl:template&gt;
+
+&lt;/xsl:stylesheet&gt;</code>
+</pre>
+        </div>
+      </section>
+
+      <section id="ejercicio-3-3">
+        <h3><a href="xslt_1.html#ejercicio-3-3"><img src="../varios/iconos/icono_enunciado.svg" alt="Enunciado del ejercicio" title="Enunciado del ejercicio" width="48" height="48" class="d noprint" /></a>XSLT (1) - Ejercicio 3-3 - Solución</h3>
+
+        <p>Tabla:</p>
+
+        <div class="codigo">
+          <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; version=&quot;1.0&quot;&gt;
+  &lt;xsl:strip-space elements=&quot;*&quot; /&gt;
+
+  &lt;xsl:template match=&quot;ies&quot;&gt;
+    &lt;html&gt;
+      &lt;xsl:apply-templates /&gt;
+    &lt;/html&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match=&quot;nombre&quot;&gt;
+    &lt;h1&gt;&lt;xsl:value-of select=&quot;.&quot; /&gt;&lt;/h1&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match=&quot;web&quot;&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match=&quot;ciclos&quot;&gt;
+   &lt;table border=&quot;1&quot;&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Nombre del ciclo&lt;/th&gt;
+      &lt;th&gt;Grado&lt;/th&gt;
+      &lt;th&gt;Año del título&lt;/th&gt;
+    &lt;/tr&gt;
+     &lt;xsl:apply-templates /&gt;
+    &lt;/table&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match=&quot;ciclo&quot;&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;xsl:value-of select=&quot;nombre&quot;/&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;xsl:value-of select=&quot;grado&quot;/&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;xsl:value-of select=&quot;decretoTitulo/@año&quot;/&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;</code>
+</pre>
+        </div>
+      </section>
+    </section>
+
+    <footer>
+      <p class="ultmod">Última modificación de esta página: 16 de mayo de 2016</p>
+
+      <p class="licencia"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../varios/iconos/icono_cc_by_sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
+        Esta página forma parte del curso <a href="http://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a> por <a href="http://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
+        que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.</p>
+    </footer>
+  </body>
+</html>

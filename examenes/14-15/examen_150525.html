@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Examen 25/05/15. Exámenes. XML. Bartolomé Sintes Marco</title>
+    <link href="../../varios/xml.css" rel="stylesheet" type="text/css" title="Estilo mclibre" />
+    <link rel="icon" href="../../varios/favicon.ico" />
+    <link rel="stylesheet" href="../../varios/prism-xml.css" />
+    <script type="text/javascript" src="../../varios/prism.js"></script>
+  </head>
+
+  <body>
+    <h1>Examen 25 de mayo de 2015</h1>
+
+    <nav>
+      <p>
+        <a href="../../index.html"><img src="../../varios/iconos/icono_xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48" /></a>
+        <a href="#"><img src="../../varios/iconos/icono_arrow_circle_up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36" /></a>
+        <a href="../examenes.html"><img src="../../varios/iconos/icono_school.svg" alt="Exámenes" title="Exámenes" width="36" height="36" /></a>
+      </p>
+
+      <h2>Examen 25/05/15</h2>
+
+      <div class="toc">
+        <ol>
+          <li><a href="#ejercicio-1">WFD</a></li>
+          <li><a href="#ejercicio-2">XPath</a></li>
+          <li><a href="#ejercicio-3">XSLT</a></li>
+        </ol>
+      </div>
+    </nav>
+
+    <p>Resuelva los siguientes ejercicios guardando las respuestas en una carpeta cuyo nombre contenga su nombre y apellidos.</p>
+
+    <section id="ejercicio-1">
+      <h2>Ejercicio 1. Documentos bien formados</h2>
+
+      <p>El siguiente documento no está bien formado porque contiene errores. Corrija los errores (si para corregir algún error hay que inventarse una etiqueta o atributo, utilice un nombre que tenga relación con la información contenida en el documento).</p>
+
+      <div class="codigo">
+        <pre>
+<code class="xml-malformado">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+diccionario para corrector ortográfico
+&lt;palabra#correcta idioma=español&gt;hincapié
+&lt;palabra#incorrecta idioma=español&gt;incapié
+&lt;signo="?" /&gt;interrogación
+&lt;autor&gt;Barto&lt;/ autor&gt;</code>
+</pre>
+      </div>
+    </section>
+
+    <section id="ejercicio-2">
+      <h2>Ejercicio 2. XPath</h2>
+
+      <p>Dado el siguiente documento XML, escriba las expresiones XPath que devuelvan <strong>exactamente</strong> la respuesta indicadas en los cuadros. Escriba todas las expresiones XPath en un único fichero de texto, numerando las respuestas.</p>
+
+      <div class="codigo">
+        <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;geografia&gt;
+  &lt;organizaciones&gt;
+    &lt;organizacion nombre="otan" tipo="militar" /&gt;
+    &lt;organizacion nombre="ue" tipo="economico" /&gt;
+  &lt;/organizaciones&gt;
+  &lt;otan&gt;
+    &lt;pais nombre="Francia" entrada="1948" /&gt;
+    &lt;pais nombre="España" entrada="1982" /&gt;
+    &lt;pais nombre="Alemania" entrada="1955" /&gt;
+  &lt;/otan&gt;
+  &lt;ue&gt;
+    &lt;pais nombre="Francia" entrada="1957" /&gt;
+    &lt;pais nombre="España" entrada="1986" /&gt;
+    &lt;pais nombre="Suecia" entrada="1995" /&gt;
+    &lt;pais nombre="Alemania" entrada="1957" /&gt;
+    &lt;pais nombre="Finlandia" entrada="1995" /&gt;
+  &lt;/ue&gt;
+  &lt;paises&gt;
+    &lt;pais tipo="república"&gt;
+      &lt;nombre&gt;Ucrania&lt;/nombre&gt;
+      &lt;capital&gt;Kiev&lt;/capital&gt;
+      &lt;datos superficie="603700" poblacion="48.4" /&gt;
+    &lt;/pais&gt;
+    &lt;pais tipo="república"&gt;
+      &lt;nombre&gt;Francia&lt;/nombre&gt;
+      &lt;capital&gt;París&lt;/capital&gt;
+      &lt;datos superficie="547030" poblacion="63.2" /&gt;
+    &lt;/pais&gt;
+    &lt;pais tipo="monarquía"&gt;
+      &lt;nombre&gt;España&lt;/nombre&gt;
+      &lt;capital&gt;Madrid&lt;/capital&gt;
+      &lt;datos superficie="547030" poblacion="48.4" /&gt;
+    &lt;/pais&gt;
+    &lt;pais tipo="monarquía"&gt;
+      &lt;nombre&gt;Suecia&lt;/nombre&gt;
+      &lt;capital&gt;Estocolmo&lt;/capital&gt;
+      &lt;datos superficie="449964" poblacion="9.1" /&gt;
+    &lt;/pais&gt;
+    &lt;pais tipo="república"&gt;
+      &lt;nombre&gt;Alemania&lt;/nombre&gt;
+      &lt;capital&gt;Berlín&lt;/capital&gt;
+      &lt;datos superficie="357021" poblacion="83.3" /&gt;
+    &lt;/pais&gt;
+    &lt;pais tipo="república"&gt;
+      &lt;nombre&gt;Finlandia&lt;/nombre&gt;
+      &lt;capital&gt;Helsinki&lt;/capital&gt;
+      &lt;datos superficie="336953" poblacion="5.2" /&gt;
+    &lt;/pais&gt;
+  &lt;/paises&gt;
+&lt;/geografia&gt;</code>
+</pre>
+      </div>
+
+      <ol>
+        <li>Nombre de los países de la UE:
+          <div class="codigo">
+            <pre>
+<code class="language-xml"> <span class="xml-attr">nombre</span>="Francia"
+ <span class="xml-attr">nombre</span>="España"
+ <span class="xml-attr">nombre</span>="Suecia"
+ <span class="xml-attr">nombre</span>="Alemania"
+ <span class="xml-attr">nombre</span>="Finlandia"</code>
+</pre>
+          </div>
+        </li>
+
+        <li>Nombre de la capial de Suecia:
+          <div class="codigo">
+            <pre><code class="language-xml">Estocolmo</code></pre>
+          </div>
+        </li>
+
+        <li>Nombre de los países que entraron en la Otan antes de 1980:
+          <div class="codigo">
+            <pre>
+<code class="language-xml"> <span class="xml-attr">nombre</span>="Francia"
+ <span class="xml-attr">nombre</span>="Alemania"</code>
+ </pre>
+          </div>
+        </li>
+
+        <li>Tipo de país de los países de más de 50 millones de habitantes:
+          <div class="codigo">
+            <pre>
+<code class="language-xml"> <span class="xml-attr">tipo</span>="república"
+ <span class="xml-attr">tipo</span>="república"</code>
+</pre>
+          </div>
+        </li>
+
+        <li>Población de las repúblicas de menos de 500000 km²:
+          <div class="codigo">
+            <pre>
+<code class="language-xml"> <span class="xml-attr">poblacion</span>="83.3"
+ <span class="xml-attr">poblacion</span>="5.2"</code>
+</pre>
+          </div>
+        </li>
+
+        <li>Nombre de las capitales de países de la UE:<br />
+          <div class="codigo">
+            <pre>
+<code class="language-xml">París
+Madrid
+Estocolmo
+Berlín
+Helsinki</code>
+</pre>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="ejercicio-3">
+      <h2>Ejercicio 3. XSLT</h2>
+
+      <p>Dado el documento XML del ejercicio 3, escriba y enlace las hojas de estilo XSLT que devuelvan la respuesta deseada.</p>
+
+      <p><strong>Nota</strong>: En el atributo select se pueden hacer cálculos, usando por ejemplo los operadores + (suma), - (resta), * (multiplicación), div (división) y round() (redondear). Por ejemplo, podría calcular la velocidad a partir de distancia y tiempo:</p>
+
+      <div class="codigo">
+        <pre><code class="language-xml">&lt;xsl:value-of select="round(distancia div tiempo)" /&gt; </code></pre>
+      </div>
+
+      <ol>
+        <li>Mostrar la información de los países en forma de lista:
+          <p class="captura"><img alt="XSLT" src="150525_xslt.png" width="600" height="210" /></p>
+
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;html&gt;
+  &lt;h1&gt;Países de Europa&lt;/h1&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Ucrania es una república con capital en Kiev
+     y una densidad de 80 hab/km².&lt;/li&gt;
+    &lt;li&gt;Francia es una república con capital en París
+     y una densidad de 116 hab/km².&lt;/li&gt;
+    &lt;li&gt;España es una monarquía con capital en Madrid
+     y una densidad de 88 hab/km².&lt;/li&gt;
+    &lt;li&gt;Suecia es una monarquía con capital en Estocolmo
+     y una densidad de 20 hab/km².&lt;/li&gt;
+    &lt;li&gt;Alemania es una república con capital en Berlín
+     y una densidad de 233 hab/km².&lt;/li&gt;
+    &lt;li&gt;Finlandia es una república con capital en Helsinki
+     y una densidad de 15 hab/km².&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/html&gt;</code>
+</pre>
+          </div>
+        </li>
+
+        <li>Cambiar la estructura del documento:
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;paises&gt;
+  &lt;entrada&gt;
+    &lt;otan&gt;Francia, 1948&lt;/otan&gt;
+    &lt;otan&gt;España, 1982&lt;/otan&gt;
+    &lt;otan&gt;Alemania, 1955&lt;/otan&gt;
+  &lt;/entrada&gt;
+  &lt;pais capital="Kiev" superficie="603700" poblacion="48.4"&gt;Ucrania&lt;/pais&gt;
+  &lt;pais capital="París" superficie="547030" poblacion="63.2"&gt;Francia&lt;/pais&gt;
+  &lt;pais capital="Madrid" superficie="547030" poblacion="48.4"&gt;España&lt;/pais&gt;
+  &lt;pais capital="Estocolmo" superficie="449964" poblacion="9.1"&gt;Suecia&lt;/pais&gt;
+  &lt;pais capital="Berlín" superficie="357021" poblacion="83.3"&gt;Alemania&lt;/pais&gt;
+  &lt;pais capital="Helsinki" superficie="336953" poblacion="5.2"&gt;Finlandia&lt;/pais&gt;
+&lt;/paises&gt;</code>
+</pre>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <footer>
+      <p class="ultmod">Última modificación de esta página: 25 de mayo de 2015</p>
+
+      <p class="licencia"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../../varios/iconos/icono_cc_by_sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
+        Esta página forma parte del curso <a href="http://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a> por <a href="http://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
+        que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.</p>
+    </footer>
+  </body>
+</html>

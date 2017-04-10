@@ -1,0 +1,30 @@
+ies {
+  font-family: sans-serif;
+}
+
+nombreCentro {
+  display: block;
+  font-size: 150%;
+  margin: 10px;
+}
+
+web {
+  display: block;
+  margin: 10px;
+}
+
+ciclo {
+  display: block;
+}
+
+nombre {
+  display: block;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+grado, decretoTitulo {
+  display: list-item;
+  list-style: disc inside;
+  margin-left: 20px;
+}

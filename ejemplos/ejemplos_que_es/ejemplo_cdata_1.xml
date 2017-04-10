@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prueba>
+  <texto>Los caracteres < y & no pueden escribirse
+  si no es como comienzo de marcas</texto>
+</prueba>

@@ -1,0 +1,61 @@
+/* HIGHLIGHT.JS
+   Bartolomé Sintes Marco
+   http://www.mclibre.org
+
+   Hoja de estilo para highlight.js
+
+  22 de abril de 2015
+*/
+
+/* Estilo para XML imitando a XML Copy Editor */
+
+code.lang-xml { font-weight: bold; font-family: monospace; font-size: 120%; line-height: 120%;}
+
+pre code.lang-xml .hljs-doctype   { color: #0000FF; } /* doctype   */
+pre code.lang-xml .hljs-tag       { color: #0000FF; } /* tag       */
+pre code.lang-xml .hljs-attribute { color: #FC0204; } /* attribute */
+pre code.lang-xml .hljs-value     { color: #000000; } /* value     */
+pre code.lang-xml .hljs-comment   { color: #808080; } /* comment   */
+pre code.lang-xml .hljs-pi        { color: #0000FF; } /* pi        */
+pre code.lang-xml .hljs-cdata     { color: #FF0000; } /* cdata     */
+
+/* Estas clases no las pone highlight. Las tengo que añadir a mano */
+pre code.lang-xml .hljs-character-entity   { color: #FC0204; } /* character entity */
+pre code.lang-xml .hljs-attribute .hljs-pi { color: #FC0204; } /* attribute in pi  */
+pre code.lang-xml .hljs-value .hljs-pi     { color: #000000; } /* value in pi      */
+/* he tenido que poner los porque highlight añade una clase pi dentro de la clase
+  attribute que pongo yo */
+
+/* Estilo para HTML imitando a Brackets */
+
+code.lang-html { font-weight: bold; font-size: 120%; line-height: 120%;}
+
+pre code.lang-html .hljs-tag       { color: #446FBD; } /* any tag from "<" till ">"              */
+pre code.lang-html .hljs-attribute { color: #6D8600; } /* tag's attribute with or without value  */
+pre code.lang-html .hljs-value     { color: #E88501; } /* attribute's value                      */
+pre code.lang-html .hljs-comment   { color: #535353; } /* comment                                */
+pre code.lang-html .hljs-pi        { color: #535353; } /* processing instruction (<? ... ?>)     */
+pre code.lang-html .hljs-doctype   { color: #535353; } /* <!DOCTYPE ... > declaration            */
+pre code.lang-html .hljs-cdata     { color: #E88501; } /* CDATA section                          */
+
+/* Estilo para CSS imitando a Brackets */
+
+code.lang-css { font-weight: bold; font-size: 120%; }
+
+pre code.lang-css .hljs-tag           { color: #446FBD; }          /* tag in selectors                   */
+pre code.lang-css .hljs-id            { color: #446FBD; }          /* #some_name in selectors            */
+pre code.lang-css .hljs-class         { color: #446FBD; }          /* .some_name in selectors            */
+pre code.lang-css .hljs-at_rule       { color: #8757AD; }          /* @-rule till first "{" or ";"       */
+pre code.lang-css .hljs-attr_selector { color: rgb( 63,127,127); } /* attribute selector ([])            */
+pre code.lang-css .hljs-pseudo        { color: #535353; }          /* pseudo classes/elements            */
+pre code.lang-css .hljs-comment       { color: #535353; }          /* comment                            */
+pre code.lang-css .hljs-rules         { color: #000000; }          /* everything from "{" till "}"       */
+pre code.lang-css .hljs-attribute     { color: #8757AD; }          /* property name inside a rule        */
+pre code.lang-css .hljs-value         { color: #E88501; }          /* property value inside a rule       */
+pre code.lang-css .hljs-number        { color: #6D8600; }          /* number within a value              */
+pre code.lang-css .hljs-string        { color: #E88501; }          /* string within a value              */
+pre code.lang-css .hljs-hexcolor      { color: #E88501; }          /* hex color (#FFFFFF) within a value */
+pre code.lang-css .hljs-function      { color: rgb( 42,  0,255); } /* CSS function within a value        */
+pre code.lang-css .hljs-important     { color: rgb( 63,127,127); } /* "!important" symbol                */
+
+

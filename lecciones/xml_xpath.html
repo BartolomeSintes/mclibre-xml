@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XPath: XML Path language. XML. Bartolomé Sintes Marco</title>
+    <link href="../varios/xml.css" rel="stylesheet" type="text/css" title="Estilo mclibre" />
+    <link rel="icon" href="../varios/favicon.ico" />
+    <link rel="stylesheet" href="../varios/prism-xml.css" />
+    <script type="text/javascript" src="../varios/prism.js"></script>
+  </head>
+
+  <body>
+    <h1>XPath: XML Path language</h1>
+
+    <nav>
+      <p>
+        <a href="../index.html"><img src="../varios/iconos/icono_xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48" /></a>
+        <a href="#"><img src="../varios/iconos/icono_arrow_circle_up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36" /></a>
+      </p>
+
+      <h2>XPath</h2>
+
+      <div class="toc">
+        <ul>
+          <li><a href="#xpath-que-es">Qué es XPath</a></li>
+          <li><a href="#arbol-documento">Árbol del documento</a>
+            <ul>
+              <li><a href="#tipos-nodos">Tipos de nodos</a></li>
+            </ul>
+          </li>
+          <li><a href="#sintaxis-xpath">Sintaxis expresiones XPath</a></li>
+          <li><a href="#sintaxis-abreviada">Sintaxis abreviada</a>
+            <ul>
+              <li><a href="#xpath-eje">Eje (axis)</a></li>
+              <li><a href="#xpath-predicado">Predicado (predicate)</a></li>
+              <li><a href="#xpath-seleccion-nodos">Selección nodos (node test)</a></li>
+              <li><a href="#xpath-pasos-consecutivos">Pasos consecutivos</a></li>
+              <li><a href="#xpath-expresiones-anidadas">Expresiones anidadas</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section id="xpath-que-es">
+      <h2>Qué es XPath</h2>
+
+      <p>XPath es un lenguaje que permite seleccionar nodos de un documento XML y calcular valores a partir de su contenido. Existen varias versiones de XPath aprobadas por el W3C.</p>
+
+      <ul>
+        <li>noviembre de 1999: <a href="http://www.w3.org/TR/1999/REC-xpath-19991116/">XML Path Language (XPath) 1.0</a> </li>
+        <li>enero de 2007: <a href="http://www.w3.org/TR/2007/REC-xpath20-20070123/">XML Path Language (XPath) 2.0</a> </li>
+        <li>diciembre de 2010: <a href="http://www.w3.org/TR/2010/REC-xpath20-20101214/">XML Path Language (XPath) 2.0 (2º edición)</a></li>
+        <li>abril de 2014: <a href="http://www.w3.org/TR/2014/REC-xpath-30-20140408/">XML Path Language (XPath) 3.0</a></li>
+        <li>marzo de 2017: <a href="https://www.w3.org/TR/2017/REC-xpath-31-20170321/">XML Path Language (XPath) 3.1 </a></li>
+      </ul>
+
+        <p class="centrado">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="850" viewBox="-50 -60 850 120">
+            <line x1="-50" y1="0" x2="950" y2="0" stroke-width="3" stroke="red" />
+            <line x1="0" y1="-30" x2="0" y2="30" stroke-width="2" stroke-dasharray="5,5" stroke="black" />
+            <text x="0" y="-40" text-anchor="middle" style="font-size: 100%">1995</text>
+            <line x1="150" y1="-30" x2="150" y2="30" stroke-width="2" stroke-dasharray="5,5" stroke="black" />
+            <text x="150" y="-40" text-anchor="middle" style="font-size: 100%">2000</text>
+            <line x1="300" y1="-30" x2="300" y2="30" stroke-width="2" stroke-dasharray="5,5" stroke="black" />
+            <text x="300" y="-40" text-anchor="middle" style="font-size: 100%">2005</text>
+            <line x1="450" y1="-30" x2="450" y2="30" stroke-width="2" stroke-dasharray="5,5" stroke="black" />
+            <text x="450" y="-40" text-anchor="middle" style="font-size: 100%">2010</text>
+            <line x1="600" y1="-30" x2="600" y2="30" stroke-width="2" stroke-dasharray="5,5" stroke="black" />
+            <text x="600" y="-40" text-anchor="middle" style="font-size: 100%">2015</text>
+            <line x1="750" y1="-30" x2="750" y2="30" stroke-width="2" stroke-dasharray="5,5" stroke="black" />
+            <text x="750" y="-40" text-anchor="middle" style="font-size: 100%">2020</text>
+            <circle cx="146" cy="0" r="7" fill="red" />
+            <text x="146" y="-15" text-anchor="middle" fill="red" style="font-size: 100%; font-weight: bold">XPath 1.0</text>
+            <circle cx="362" cy="0" r="7" fill="red" />
+            <text x="362" y="-15" text-anchor="middle" fill="red" style="font-size: 100%; font-weight: bold">XPath 2.0</text>
+            <circle cx="479" cy="0" r="7" fill="red" />
+            <text x="469" y="-15" text-anchor="middle" fill="red" style="font-size: 100%; font-weight: bold">XPath 2.0 2ª ed</text>
+            <circle cx="578" cy="0" r="7" fill="red" />
+            <text x="578" y="-15" text-anchor="middle" fill="red" style="font-size: 100%; font-weight: bold">XPath 3.0</text>
+            <circle cx="667" cy="0" r="7" fill="red" />
+            <text x="667" y="-15" text-anchor="middle" fill="red" style="font-size: 100%; font-weight: bold">XPath 3.1</text>
+          </svg>
+        </p>
+
+    </section>
+
+    <section id="arbol-documento">
+      <h2>Árbol del documento</h2>
+
+      <p>XPath considera un documento XML como un árbol de nodos. En Informática, un árbol es una estructura de datos que equivale a un árbol matemático. En Matemáticas un árbol es un caso particular de grafo. Los siguientes términos definidos en teoría de grafos se utilizan también en Informática y en XPath:</p>
+      <ul>
+        <li><img alt="Grafo dirigido" src="../img/grafos/grafos_grafo_dirigido.png" width="283" height="140" class="d" /><img alt="Grafo" src="../img/grafos/grafos_grafo.png" width="291" height="149" class="d" /> Un <strong>grafo</strong> es un conjunto de objetos llamados nodos o vértices unidos por enlaces llamados arcos o aristas. Un <strong>grafo dirigido</strong> es un grafo en el que los arcos tienen dirección.</li>
+        <li><img alt="Nodo padre y nodo hijo" src="../img/grafos/grafos_padre_hijo.png" width="204" height="94" class="i" />Cuando dos nodos están unidos por un arco con dirección, el <strong>nodo padre</strong> es el nodo del que parte el arco y el <strong>nodo hijo</strong> es el nodo al que llega el arco.</li>
+        <li><img alt="Árbol dirigido" src="../img/grafos/grafos_arbol_dirigido.png" width="231" height="187" class="d" /><img alt="Árbol" src="../img/grafos/grafos_arbol.png" width="202" height="187" class="d" />Un <strong>árbol</strong> es un grafo en el que cualquier pareja de vértices están conectada por un único camino (es decir, que no hay ciclos). Un <strong>árbol dirigido</strong> es un árbol en el que las aristas tienen dirección y todos los nodos menos uno tienen un único padre.</li>
+        <li><img alt="Nodo raíz y nodos hermanos" src="../img/grafos/grafos_raiz_hermanos.png" width="305" height="225" class="i" />El <strong>nodo raíz</strong> de un árbol dirigido es el único nodo sin padre. Los <strong>nodos hermanos</strong> son los nodos que tienen el mismo padre.</li>
+        <li><img alt="Nodos ascendientes" src="../img/grafos/grafos_ascendientes.png" width="273" height="200" class="d" /><img alt="Nodos descendientes" src="../img/grafos/grafos_descendientes.png" width="250" height="214" class="d" />Los <strong>nodos descendientes</strong> de un nodo son todos los nodos a los que se llega desde el nodo: los hijos, los hijos de los hijos, etc. Los <strong>nodos ascendientes</strong> de un nodo son todos los nodos de los que un nodo es descendiente: el padre, el padre del padre, etc.</li>
+      </ul>
+
+      <section id="tipos-nodos">
+        <h3>Tipos de nodos</h3>
+
+        <p>Un documento XML puede representarse como un árbol dirigido, considerando por ejemplo los elementos como nodos y que un elemento es padre de los elementos que contiene. Pero en XPath no sólo los elementos son nodos, en realidad hay siete tipos de nodos:</p>
+        <ul>
+          <li>Raíz</li>
+          <li>Elemento</li>
+          <li>Atributo</li>
+          <li>Texto</li>
+          <li>Comentario</li>
+          <li>Instrucción de procesamiento</li>
+          <li>Espacio de nombres</li>
+        </ul>
+
+        <p>Nota: La declaración DOCTYPE no se considera como nodo.</p>
+
+        <p>Por ejemplo, el documento XML siguiente:</p>
+
+        <div class="codigo">
+          <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;biblioteca&gt;
+  &lt;libro&gt;
+    &lt;titulo&gt;La vida está en otra parte&lt;/titulo&gt;
+    &lt;autor&gt;Milan Kundera&lt;/autor&gt;
+    &lt;fechaPublicacion año="1973"/&gt;
+  &lt;/libro&gt;
+  &lt;libro&gt;
+    &lt;titulo&gt;Pantaleón y las visitadoras&lt;/titulo&gt;
+    &lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;
+    &lt;fechaPublicacion año="1973"/&gt;
+  &lt;/libro&gt;
+  &lt;libro&gt;
+    &lt;titulo&gt;Conversación en la catedral&lt;/titulo&gt;
+    &lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;
+    &lt;fechaPublicacion año="1969"/&gt;
+  &lt;/libro&gt;
+&lt;/biblioteca&gt;</code>
+</pre>
+        </div>
+
+        <p>se puede representar mediante el siguiente grafo:</p>
+
+        <p class="centrado"><img alt="Árbol de documento XML" src="../img/grafos/grafos_documento.png" width="700" height="525" /></p>
+
+        <p>Los nodos atributos y de texto no son como los nodos elemento. Por ejemplo, los nodos atributo y de texto no pueden tener descendientes. En realidad el nodo atributo ni siquiera se considera como hijo, sino como una etiqueta adosada al elemento. El texto contenido por una etiqueta sí que se considera hijo del elemento, aunque las expresiones XPath suelen trabajar con nodos elemento y para referirse a los atributos o al texto se utilizan notaciones especiales.</p>
+      </section>
+    </section>
+
+    <section id="sintaxis-xpath">
+      <h2>Sintaxis de la expresiones XPath</h2>
+
+      <p>Una expresión XPath es una cadena de texto que representa un recorrido en el árbol del documento. Las expresiones más simples se parecen a las rutas de los archivos en el explorador de Windows o en la shell de GNU/Linux.</p>
+
+      <p>Evaluar una expresión XPath es buscar si hay nodos en el documento que se ajustan al recorrido definido en la expresión. El resultado de la evaluación son todos los nodos que se ajustan a la expresión. Para poder evaluar una expresión XPath, el documento debe estar bien formado.</p>
+
+      <p>Las expresiones XPath se pueden escribir de dos formas distintas:</p>
+      <ul>
+        <li>sintaxis abreviada: más compacta y fácil de leer, que se explica en esta lección</li>
+        <li>sintaxis completa: más larga pero con más opciones disponibles</li>
+      </ul>
+
+      <p>Las expresiones XPath se pueden dividir en pasos de búsqueda. Cada paso de búsqueda se puede a su vez dividir en tres partes:</p>
+      <ul>
+        <li>eje: selecciona nodos elemento o atributo basándose en sus nombres.</li>
+        <li>predicado: restringe la selección del eje a que los nodos cumplan ciertas condiciones.</li>
+        <li>selección de nodos: de los nodos seleccionados por el eje y predicado, selecciona los elementos, el texto que contienen o ambos.</li>
+      </ul>
+    </section>
+
+    <section id="sintaxis-abreviada">
+      <h2>Sintaxis abreviada</h2>
+
+      <p>Veamos unos ejemplos de expresiones XPath de sintaxis abreviada y el resultado de su evaluación en el documento de ejemplo anterior:</p>
+
+      <div class="codigo">
+        <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;biblioteca&gt;
+  &lt;libro&gt;
+    &lt;titulo&gt;La vida está en otra parte&lt;/titulo&gt;
+    &lt;autor&gt;Milan Kundera&lt;/autor&gt;
+    &lt;fechaPublicacion año="1973"/&gt;
+  &lt;/libro&gt;
+  &lt;libro&gt;
+    &lt;titulo&gt;Pantaleón y las visitadoras&lt;/titulo&gt;
+    &lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;
+    &lt;fechaPublicacion año="1973"/&gt;
+  &lt;/libro&gt;
+  &lt;libro&gt;
+    &lt;titulo&gt;Conversación en la catedral&lt;/titulo&gt;
+    &lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;
+    &lt;fechaPublicacion año="1969"/&gt;
+  &lt;/libro&gt;
+&lt;/biblioteca&gt;</code>
+</pre>
+      </div>
+
+      <section id="xpath-eje">
+        <h3>Eje (en inglés, axis)</h3>
+
+        <p>El eje nos permite seleccionar un subconjunto de nodos del documento y corresponde a recorridos en el árbol del documento. Los nodos elemento se indican mediante el nombre del elemento. Los nodos atributo se indican mediante @ y el nombre del atributo.</p>
+        <ul>
+          <li><strong>/</strong>: si está al principio de la expresión, indica el nodo raíz, si no, indica "hijo". Debe ir seguida del nombre de un elemento.
+
+            <table class="ejemplo">
+              <tbody>
+                <tr>
+                  <td class="codigo">/biblioteca/libro/autor</td>
+                  <td class="codigo">
+                    <pre>
+<code class="language-xml">&lt;autor&gt;Milan Kundera&lt;/autor&gt;
+&lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;
+&lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;</code>
+</pre>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="codigo">/autor</td>
+                  <td class="codigo">No devuelve nada porque <span class="xml-tag">&lt;autor&gt;</span> no es hijo del nodo raíz.</td>
+                </tr>
+                <tr>
+                  <td class="codigo">/biblioteca/autor</td>
+                  <td class="codigo">No devuelve nada porque <span class="xml-tag">&lt;autor&gt;</span> no es hijo de <span class="xml-tag">&lt;biblioteca&gt;</span>.</td>
+                </tr>
+                <tr>
+                  <td class="codigo">/biblioteca/libro/autor/@fechaNacimiento</td>
+                  <td class="codigo">
+                    <pre>
+<code class="language-xml"> <span class="xml-attr">fechaNacimiento</span>="28/03/1936"
+ <span class="xml-attr">fechaNacimiento</span>="28/03/1936"</code>
+</pre>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="codigo">/biblioteca/libro/@fechaNacimiento</td>
+                  <td class="codigo">No devuelve nada porque <span class="xml-tag">&lt;libro&gt;</span> no tiene el atributo <span class="xml-attr">fechaNacimiento</span>.</td>
+                </tr>
+              </tbody>
+            </table>
+            <p><strong>Nota</strong>: En XPath 1.0 no se puede seleccionar únicamente el valor del atributo, sino que se obtienen respuestas del tipo nombreDelAtributo=ValorDelAtributo</p>
+          </li>
+          <li><strong>/</strong><strong>/</strong>: indica "descendiente" (hijos, hijos de hijos, etc.).
+
+            <table class="ejemplo">
+              <tbody>
+                <tr>
+                  <td class="codigo">/biblioteca//autor</td>
+                  <td class="codigo">
+                    <pre>
+<code class="language-xml">&lt;autor&gt;Milan Kundera&lt;/autor&gt;
+&lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;
+&lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;</code>
+</pre>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="codigo">//autor</td>
+                  <td class="codigo">
+                    <pre>
+<code class="language-xml">&lt;autor&gt;Milan Kundera&lt;/autor&gt;
+&lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;
+&lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;</code>
+</pre>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="codigo">//autor//libro</td>
+                  <td class="codigo">No devuelve nada porque <span class="xml-tag">&lt;libro&gt;</span> no es descendiente de <span class="xml-tag">&lt;autor&gt;</span>.</td>
+                </tr>
+                <tr>
+                  <td class="codigo">//@año</td>
+                  <td class="codigo">
+                    <pre>
+<code class="language-xml"> <span class="xml-attr">año</span>="1973"
+ <span class="xml-attr">año</span>="1973"
+ <span class="xml-attr">año</span>="1969"</code>
+</pre>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+          <li><strong>/..</strong>: indica el elemento padre.
+
+            <table class="ejemplo">
+              <tbody>
+                <tr>
+                  <td class="codigo">/biblioteca/libro/autor/@fechaNacimiento/..</td>
+                  <td class="codigo">
+                    <pre>
+<code class="language-xml">&lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;
+&lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;</code>
+</pre>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="codigo">//@fechaNacimiento/../..</td>
+                  <td class="codigo">
+                    <pre>
+<code class="language-xml">&lt;libro&gt;
+  &lt;titulo&gt;Pantaleón y las visitadoras&lt;/titulo&gt;
+  &lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;
+  &lt;fechaPublicacion año="1973"/&gt;
+&lt;/libro&gt;
+&lt;libro&gt;
+  &lt;titulo&gt;Conversación en la catedral&lt;/titulo&gt;
+  &lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;
+  &lt;fechaPublicacion año="1969"/&gt;
+&lt;/libro&gt;</code>
+</pre>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <p><strong>Nota</strong>: En estos ejemplos se seleccionan únicamente los nodos que tienen el atributo <span class="xml-attr">fechaNacimiento</span>.</p>
+          </li>
+          <li><strong>|</strong>: permite indicar varios recorridos.
+
+            <table class="ejemplo">
+              <tbody>
+                <tr>
+                  <td class="codigo">//autor|//titulo</td>
+                  <td class="codigo">
+                    <pre>
+<code class="language-xml">&lt;titulo&gt;La vida está en otra parte&lt;/titulo&gt;
+&lt;autor&gt;Milan Kundera&lt;/autor&gt;
+&lt;titulo&gt;Pantaleón y las visitadoras&lt;/titulo&gt;
+&lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;
+&lt;titulo&gt;Conversación en la catedral&lt;/titulo&gt;
+&lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;</code>
+</pre>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="codigo">//autor|//titulo|//@año</td>
+                  <td class="codigo">
+                    <pre>
+<code class="language-xml">&lt;titulo&gt;La vida está en otra parte&lt;/titulo&gt;
+&lt;autor&gt;Milan Kundera&lt;/autor&gt;
+ año="1973"
+&lt;titulo&gt;Pantaleón y las visitadoras&lt;/titulo&gt;
+&lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;
+ año="1973"
+&lt;titulo&gt;Conversación en la catedral&lt;/titulo&gt;
+&lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;
+ año="1969"</code>
+ </pre>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+        </ul>
+      </section>
+
+      <section id="xpath-predicado">
+        <h3>Predicado (en inglés, predicate)</h3>
+
+        <p>El predicado se escribe entre corchetes, a continuación del eje. Si el eje ha seleccionado unos nodos, el predicado permite restringir esa selección a los que cumplan determinadas condiciones.</p>
+        <ul>
+          <li><strong>[@atributo]</strong>: selecciona los elementos que tienen el atributo.
+
+            <table class="ejemplo">
+              <tbody>
+                <tr>
+                  <td class="codigo">//autor<strong>[@fechaNacimiento]</strong></td>
+                  <td class="codigo">
+                    <pre>
+<code class="language-xml">&lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;
+&lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;</code>
+</pre>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+          <li><strong>[número]</strong>: si hay varios resultados selecciona uno de ellos por número de orden; <strong>last()</strong> selecciona el último de ellos
+
+            <table class="ejemplo">
+              <tbody>
+                <tr>
+                  <td class="codigo">//libro<strong>[1]</strong></td>
+                  <td class="codigo">
+                    <pre>
+<code class="language-xml">&lt;libro&gt;
+  &lt;titulo&gt;La vida está en otra parte&lt;/titulo&gt;
+  &lt;autor&gt;Milan Kundera&lt;/autor&gt;
+  &lt;fechaPublicacion año="1973"/&gt;
+&lt;/libro&gt;</code>
+</pre>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="codigo">//libro<strong>[last()]</strong></td>
+                  <td class="codigo">
+                    <pre>
+<code class="language-xml">&lt;libro&gt;
+  &lt;titulo&gt;Conversación en la catedral&lt;/titulo&gt;
+  &lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;
+  &lt;fechaPublicacion año="1969"/&gt;
+&lt;/libro&gt;</code>
+</pre>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="codigo">//libro<strong>[last()-1]</strong></td>
+                  <td class="codigo">
+                    <pre>
+<code class="language-xml">&lt;libro&gt;
+  &lt;titulo&gt;Pantaleón y las visitadoras&lt;/titulo&gt;
+  &lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;
+  &lt;fechaPublicacion año="1973"/&gt;
+&lt;/libro&gt;</code>
+</pre>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+        </ul>
+        <ul>
+          <li><strong>[condicion]</strong>: selecciona los nodos que cumplen la condición.
+            <p>Los predicados permiten definir condiciones sobre los valores de los atributos. En las condiciones se pueden utilizar los operadores siguientes:</p>
+            <ul>
+              <li>operadores lógicos: and, or, not()</li>
+              <li>operadores aritméticos: +, -, *, div, mod</li>
+              <li>operadores de comparación: =, !=, &lt;, &gt;, &lt;=, &gt;=</li>
+            </ul>
+            <p>Las comparaciones se pueden hacer entre valores de nodos y atributos o con cadenas de texto o numéricas. En el caso de las cadenas de texto deben estar rodeadeas por comillas simples o dobles. En el caso de las cadenas numéricas, las comillas son optativas.</p>
+            <ul>
+              <li>La condición puede utilizar el valor de un atributo (utilizando @) o el texto que contiene el elemento. <br />
+                En los ejemplos siguientes se obtienen respectivamente los elementos &lt;fechaPublicacion&gt; cuyo atributo año es posterior/mayor a 1970 y los elementos &lt;libro&gt; cuyo subelemento &lt;autor&gt; tiene como contenido "Mario Vargas LLosa":
+
+                <table class="ejemplo">
+                  <tbody>
+                    <tr>
+                      <td class="codigo">//fechaPublicacion<strong>[@año&gt;1970]</strong></td>
+                      <td class="codigo">
+                        <pre>
+<code class="language-xml">&lt;fechaPublicacion año="1973"/&gt;
+&lt;fechaPublicacion año="1973"/&gt;</code>
+</pre>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="codigo">//libro<strong>[autor="Mario Vargas
+                        Llosa"]</strong></td>
+                      <td class="codigo">
+                        <pre>
+<code class="language-xml">&lt;libro&gt;
+  &lt;titulo&gt;Pantaleón y las visitadoras&lt;/titulo&gt;
+  &lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;
+  &lt;fechaPublicacion año="1973"/&gt;
+&lt;/libro&gt;
+&lt;libro&gt;
+  &lt;titulo&gt;Conversación en la catedral&lt;/titulo&gt;
+  &lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;
+  &lt;fechaPublicacion año="1969"/&gt;
+&lt;/libro&gt;</code>
+</pre>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </li>
+              <li>Para hacer referencia al propio valor del elemento seleccionado se utiliza el punto (.).
+
+                <table class="ejemplo">
+                  <tbody>
+                    <tr>
+                      <td class="codigo">//@año<strong>[.&gt;1970]</strong></td>
+                      <td class="codigo">
+                        <pre>
+<code class="language-xml"> <span class="xml-attr">año</span>="1973"
+ <span class="xml-attr">año</span>="1973"</code>
+ </pre>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="codigo">//autor<strong>[.="Mario Vargas Llosa"]</strong></td>
+                      <td class="codigo">
+                        <pre>
+<code class="language-xml">&lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;
+&lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;</code>
+</pre>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </li>
+              <li>Se pueden escribir varios predicados seguidos, cada uno de los cuales restringe los resultados del anterior, como si estuvieran encadenados por la operación lógica and.<br />
+                En el ejemplo siguiente se seleccionan los libros escritos por Mario Vargas Llosa y publicados en 1973:
+
+                <table class="ejemplo">
+                  <tbody>
+                    <tr>
+                      <td class="codigo">//libro[autor="Mario Vargas Llosa"][fechaPublicacion/@año="1973"]</td>
+                      <td class="codigo">
+                        <pre>
+<code class="language-xml">&lt;libro&gt;
+  &lt;titulo&gt;Pantaleón y las visitadoras&lt;/titulo&gt;
+  &lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;
+  &lt;fechaPublicacion año="1973"/&gt;
+&lt;/libro&gt;</code>
+</pre>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </li>
+              <li>Un predicado puede contener condiciones compuestas.<br />
+                En los ejemplos siguientes se seleccionan, respectivamente , los libros escritos por Mario Vargas Llosa <strong>y</strong> publicados en 1973 (primer ejemplo) y los libros escritos por Mario Vargas Llosa <strong>o</strong> publicados en 1973 (segundo ejemplo):
+
+                <table class="ejemplo">
+                  <tbody>
+                    <tr>
+                      <td class="codigo">//libro[autor="Mario Vargas Llosa" <strong>and</strong> fechaPublicacion/@año="1973"]</td>
+                      <td class="codigo">
+                        <pre>
+<code class="language-xml">&lt;libro&gt;
+  &lt;titulo&gt;Pantaleón y las visitadoras&lt;/titulo&gt;
+  &lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;
+  &lt;fechaPublicacion año="1973"/&gt;
+&lt;/libro&gt;</code>
+</pre>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="codigo">//libro[autor="Mario Vargas Llosa" <strong>or</strong> fechaPublicacion/@año="1973"]</td>
+                      <td class="codigo">
+                        <pre>
+<code class="language-xml">&lt;libro&gt;
+  &lt;titulo&gt;La vida está en otra parte&lt;/titulo&gt;
+  &lt;autor&gt;Milan Kundera&lt;/autor&gt;
+  &lt;fechaPublicacion año="1973"/&gt;
+&lt;/libro&gt;
+&lt;libro&gt;
+  &lt;titulo&gt;Pantaleón y las visitadoras&lt;/titulo&gt;
+  &lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;
+  &lt;fechaPublicacion año="1973"/&gt;
+&lt;/libro&gt;
+&lt;libro&gt;
+  &lt;titulo&gt;Conversación en la catedral&lt;/titulo&gt;
+  &lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;
+  &lt;fechaPublicacion año="1969"/&gt;
+&lt;/libro&gt;</code>
+</pre>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section id="xpath-seleccion-nodos">
+        <h3>Selección de nodos (en inglés, node test)</h3>
+
+        <p>La selección de nodos se escribe a continuación del eje y el predicado. Si el eje y el predicado han seleccionado unos nodos, la selección de nodos indica con qué parte de esos nodos nos quedamos.</p>
+        <ul>
+          <li><strong>/node()</strong>: selecciona todos los hijos (elementos o texto) del nodo.<br />
+            <strong>//node()</strong>: selecciona todos los descendientes (elementos o texto) del nodo.
+
+            <table class="ejemplo">
+              <tbody>
+                <tr>
+                  <td class="codigo">//libro<strong>/node()</strong></td>
+                  <td class="codigo">
+                    <pre>
+<code class="language-xml">&lt;titulo&gt;La vida está en otra parte&lt;/titulo&gt;
+&lt;autor&gt;Milan Kundera&lt;/autor&gt;
+&lt;fechaPublicacion año="1973"/&gt;
+&lt;titulo&gt;Pantaleón y las visitadoras&lt;/titulo&gt;
+&lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;
+&lt;fechaPublicacion año="1973"/&gt;
+&lt;titulo&gt;Conversación en la catedral&lt;/titulo&gt;
+&lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;
+&lt;fechaPublicacion año="1969"/&gt;</code>
+</pre>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="codigo">//autor<strong>/node()</strong></td>
+                  <td class="codigo">
+                    <pre>
+<code class="language-xml">Milan Kundera
+Mario Vargas Llosa
+Mario Vargas Llosa</code>
+</pre>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="codigo">//libro<strong>//node()</strong></td>
+                  <td class="codigo">
+                    <pre>
+<code class="language-xml">&lt;titulo&gt;La vida está en otra parte&lt;/titulo&gt;
+La vida está en otra parte
+&lt;autor&gt;Milan Kundera&lt;/autor&gt;
+Milan Kundera
+&lt;fechaPublicacion año="1973"/&gt;
+&lt;titulo&gt;Pantaleón y las visitadoras&lt;/titulo&gt;
+Pantaleón y las visitadoras
+&lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;
+Mario Vargas Llosa
+&lt;fechaPublicacion año="1973"/&gt;
+&lt;titulo&gt;Conversación en la catedral&lt;/titulo&gt;
+Conversación en la catedral
+&lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;
+Mario Vargas Llosa
+&lt;fechaPublicacion año="1969"/&gt;</code>
+</pre>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+          <li><strong>/text()</strong>: selecciona únicamente el texto contenido en el nodo.<br />
+            <strong>//text()</strong>: selecciona únicamente el texto contenido en el nodo y todos sus descendientes.
+
+            <table class="ejemplo">
+              <tbody>
+                <tr>
+                  <td class="codigo">//autor<strong>/text()</strong></td>
+                  <td class="codigo">
+                    <pre>
+<code class="language-xml">Milan Kundera
+Mario Vargas Llosa
+Mario Vargas Llosa</code>
+</pre>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="codigo">//libro<strong>/text()</strong></td>
+                  <td class="codigo">No devuelve nada porque <span class="xml-tag">&lt;libro&gt;</span> no contiene texto.</td>
+                </tr>
+                <tr>
+                  <td class="codigo">//libro<strong>//text()</strong></td>
+                  <td class="codigo">
+                    <pre>
+<code class="language-xml">La vida está en otra parte
+Milan Kundera
+Pantaleón y las visitadoras
+Mario Vargas Llosa
+Conversación en la catedral
+Mario Vargas Llosa</code>
+</pre>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+          <li><strong>/*</strong>: selecciona todos los hijos (sólo elementos) del nodo. <br />
+            <strong>//*</strong>: selecciona todos los descendientes (sólo elementos) del nodo.
+
+            <table class="ejemplo">
+              <tbody>
+                <tr>
+                  <td class="codigo">/biblioteca<strong>/*</strong></td>
+                  <td class="codigo">
+                    <pre>
+<code class="language-xml">&lt;libro&gt;
+  &lt;titulo&gt;La vida está en otra parte&lt;/titulo&gt;
+  &lt;autor&gt;Milan Kundera&lt;/autor&gt;
+  &lt;fechaPublicacion año="1973"/&gt;
+&lt;/libro&gt;
+&lt;libro&gt;
+  &lt;titulo&gt;Pantaleón y las visitadoras&lt;/titulo&gt;
+  &lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;
+  &lt;fechaPublicacion año="1973"/&gt;
+&lt;/libro&gt;
+&lt;libro&gt;
+  &lt;titulo&gt;Conversación en la catedral&lt;/titulo&gt;
+  &lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;
+  &lt;fechaPublicacion año="1969"/&gt;
+&lt;/libro&gt;</code>
+</pre>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="codigo">//autor<strong>/*</strong></td>
+                  <td class="codigo">No devuelve nada porque <span class="xml-tag">&lt;autor&gt;</span> sólo contiene texto.</td>
+                </tr>
+                <tr>
+                  <td class="codigo">/biblioteca<strong>//*</strong></td>
+                  <td class="codigo">
+                    <pre>
+<code class="language-xml">&lt;libro&gt;
+  &lt;titulo&gt;La vida está en otra parte&lt;/titulo&gt;
+  &lt;autor&gt;Milan Kundera&lt;/autor&gt;
+  &lt;fechaPublicacion año="1973"/&gt;
+&lt;/libro&gt;
+&lt;titulo&gt;La vida está en otra parte&lt;/titulo&gt;
+&lt;autor&gt;Milan Kundera&lt;/autor&gt;
+&lt;fechaPublicacion año="1973"/&gt;
+&lt;libro&gt;
+  &lt;titulo&gt;Pantaleón y las visitadoras&lt;/titulo&gt;
+  &lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;
+  &lt;fechaPublicacion año="1973"/&gt;
+&lt;/libro&gt;
+&lt;titulo&gt;Pantaleón y las visitadoras&lt;/titulo&gt;
+&lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;
+&lt;fechaPublicacion año="1973"/&gt;
+&lt;libro&gt;
+  &lt;titulo&gt;Conversación en la catedral&lt;/titulo&gt;
+  &lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;
+  &lt;fechaPublicacion año="1969"/&gt;
+&lt;/libro&gt;
+&lt;titulo&gt;Conversación en la catedral&lt;/titulo&gt;
+&lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;
+&lt;fechaPublicacion año="1969"/&gt;  </code>
+</pre>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+          <li><strong>/@*</strong>: selecciona todos los atributos del nodo.<br />
+            <strong>//@*</strong>: selecciona todos los atributos de los descendientes del nodo.
+
+            <table class="ejemplo">
+              <tbody>
+                <tr>
+                  <td class="codigo">//@*</td>
+                  <td class="codigo">
+                    <pre>
+<code class="language-xml"><span class="xml-attr">año</span>="1973"
+<span class="xml-attr">fechaNacimiento</span>="28/03/1936"
+<span class="xml-attr">año</span>="1973"
+<span class="xml-attr">fechaNacimiento</span>="28/03/1936"
+<span class="xml-attr">año</span>="1969"</code>
+</pre>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="codigo">//libro/@*</td>
+                  <td class="codigo">No devuelve nada porque <span class="xml-tag">&lt;libro&gt;</span> no tiene atributos.</td>
+                </tr>
+                <tr>
+                  <td class="codigo">//autor/@*</td>
+                  <td class="codigo">
+                    <pre>
+<code class="language-xml"> <span class="xml-attr">fechaNacimiento</span>="28/03/1936"
+ <span class="xml-attr">fechaNacimiento</span>="28/03/1936"  </code></pre>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <p><strong>Nota</strong>: En XPath 1.0 no se puede seleccionar únicamente el valor del atributo, sino que se obtienen respuestas del tipo nombreDelAtributo=ValorDelAtributo</p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="xpath-pasos-consecutivos">
+        <h3>Pasos de búsqueda consecutivos</h3>
+
+        <p>Una expresión XPath puede contener varios pasos de búsqueda consecutivos. Cada uno incluirá su eje (y en su caso, su predicado) y el último paso de búsqueda incluirá en su caso una selección de nodos. Cada paso de búsqueda trabaja a partir de los nodos seleccionados por el paso de búsqueda anterior.</p>
+
+        <p>En el ejemplo siguiente se obtienen los títulos de los libros publicados después de 1970, mediante dos pasos de búsqueda:</p>
+
+        <ul>
+          <li>en el primer paso (//fechaPublicacion[@año&gt;1970]) se seleccionan los elementos &lt;fechaPublicacion&gt; cuyo atributo año es superior a 1970.</li>
+          <li>en el segundo paso (/../titulo), se seleccionan primero los elementos padre (/..) de los &lt;fechaPublicacion&gt; seleccionados en el primer paso de búsqueda (es decir, elementos &lt;libro&gt;) y a continuación sus subelementos &lt;titulo&gt;.</li>
+        </ul>
+
+        <table class="ejemplo">
+          <tbody>
+            <tr>
+              <td class="codigo">//fechaPublicacion[@año&gt;1970]/../titulo</td>
+              <td class="codigo">
+                <pre>
+<code class="language-xml">&lt;titulo&gt;La vida está en otra parte&lt;/titulo&gt;
+&lt;titulo&gt;Pantaleón y las visitadoras&lt;/titulo&gt;</code>
+</pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>Un determinado resultado se puede obtener mediante un sólo paso de búsqueda o mediante varios pasos.</p>
+        <ul>
+          <li>En los ejemplos siguientes se obtienen los libros escritos por Mario Vargas Llosa de dos formas distintas:
+            <ul>
+              <li>mediante un sólo paso de búsqueda. Se seleccionan los elementos &lt;libro&gt; cuyo subelemento &lt;autor&gt; tiene como contenido la cadena "Mario Vargas Llosa".
+
+                <table class="ejemplo">
+                  <tbody>
+                    <tr>
+                      <td class="codigo">//libro[autor="Mario Vargas Llosa"]</td>
+                      <td class="codigo">
+                        <pre>
+<code class="language-xml">&lt;libro&gt;
+  &lt;titulo&gt;Pantaleón y las visitadoras&lt;/titulo&gt;
+  &lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;
+  &lt;fechaPublicacion año="1973"/&gt;
+&lt;/libro&gt;
+&lt;libro&gt;
+  &lt;titulo&gt;Conversación en la catedral&lt;/titulo&gt;
+  &lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;
+  &lt;fechaPublicacion año="1969"/&gt;
+&lt;/libro&gt;</code>
+</pre>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </li>
+              <li>mediante dos pasos de búsqueda. En el primer paso se seleccionan los elementos &lt;autor&gt; cuyo contenido es la cadena "Mario Vargas Llosa". En el segundo paso de búsqueda se seleccionan los elementos padre (es decir, los elementos &lt;libro&gt;).
+
+                <table class="ejemplo">
+                  <tbody>
+                    <tr>
+                      <td class="codigo">//autor[.="Mario Vargas Llosa"]/..</td>
+                      <td class="codigo">
+                        <pre>
+<code class="language-xml">&lt;libro&gt;
+  &lt;titulo&gt;Pantaleón y las visitadoras&lt;/titulo&gt;
+  &lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;
+  &lt;fechaPublicacion año="1973"/&gt;
+&lt;/libro&gt;
+&lt;libro&gt;
+  &lt;titulo&gt;Conversación en la catedral&lt;/titulo&gt;
+  &lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;
+  &lt;fechaPublicacion año="1969"/&gt;
+&lt;/libro&gt;</code>
+</pre>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </li>
+            </ul>
+          </li>
+          <li>En los ejemplos siguientes se obtiene el autor que ha publicado libros en 1969 de varias formas distintas:
+
+            <table class="ejemplo">
+              <tbody>
+                <tr>
+                  <td class="codigo">//@año[.=1969]/../../autor</td>
+                  <td class="codigo"><pre><code class="language-xml">&lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;</code></pre>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="codigo">//libro[fechaPublicacion/@año=1969]/autor</td>
+                  <td class="codigo"><pre><code class="language-xml">&lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;</code></pre>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="codigo">//fechaPublicacion[@año=1969]/../autor</td>
+                  <td class="codigo"><pre><code class="language-xml">&lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;</code></pre>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="codigo">//autor[../fechaPublicacion/@año=1969]</td>
+                  <td class="codigo"><pre><code class="language-xml">&lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;</code></pre>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+        </ul>
+      </section>
+
+      <section id="xpath-expresiones-anidadas">
+        <h3>Expresiones anidadas</h3>
+
+        <p>Las expresiones XPath pueden anidarse, lo que permite definir expresiones más complicadas. Por ejemplo, en el documento utilizado anteriormente:</p>
+
+        <div class="codigo">
+          <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;biblioteca&gt;
+  &lt;libro&gt;
+    &lt;titulo&gt;La vida está en otra parte&lt;/titulo&gt;
+    &lt;autor&gt;Milan Kundera&lt;/autor&gt;
+    &lt;fechaPublicacion año="1973"/&gt;
+  &lt;/libro&gt;
+  &lt;libro&gt;
+    &lt;titulo&gt;Pantaleón y las visitadoras&lt;/titulo&gt;
+    &lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;
+    &lt;fechaPublicacion año="1973"/&gt;
+  &lt;/libro&gt;
+  &lt;libro&gt;
+    &lt;titulo&gt;Conversación en la catedral&lt;/titulo&gt;
+    &lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;
+    &lt;fechaPublicacion año="1969"/&gt;
+  &lt;/libro&gt;
+&lt;/biblioteca&gt;</code>
+</pre>
+        </div>
+
+        <p>Un ejemplo de expresión anidada sería, por ejemplo, obtener los títulos de los libros publicados el mismo año que la novela "La vida está en otra parte". Esta información no está directamente almacenada en el documento, pero se puede obtener la respuesta en dos pasos:</p>
+        <ul>
+          <li>obtener primero el año en que se publicó la novela "La vida está en otra parte":
+
+            <table class="ejemplo">
+              <tbody>
+                <tr>
+                  <td class="codigo">//libro[titulo="La vida está en otra parte"]/fechaPublicacion/@año</td>
+                  <td class="codigo"><pre><code class="language-xml">año="1973"</code></pre>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+          <li>y obtener después los títulos de los libros publicados en 1973:
+
+            <table class="ejemplo">
+              <tbody>
+                <tr>
+                  <td class="codigo">//libro[fechaPublicacion/@año=1973]/titulo</td>
+                  <td class="codigo">
+                    <pre>
+<code class="language-xml">&lt;titulo&gt;La vida está en otra parte&lt;/titulo&gt;
+&lt;titulo&gt;Pantaleón y las visitadoras&lt;/titulo&gt;</code>
+</pre>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+        </ul>
+
+        <p>Estas dos expresiones se pueden unir en una única expresión, sustituyendo en la segunda expresión el valor 1973 por la primera expresión:</p>
+
+        <table class="ejemplo">
+          <tbody>
+            <tr>
+              <td class="codigo">//libro[fechaPublicacion/@año=<span
+                                                                     class="resaltado">//libro[titulo="La vida está en otra parte"]/fechaPublicacion/@año</span>]/titulo</td>
+              <td class="codigo">
+                <pre>
+<code class="language-xml">&lt;titulo&gt;La vida está en otra parte&lt;/titulo&gt;
+&lt;titulo&gt;Pantaleón y las visitadoras&lt;/titulo&gt;</code>
+</pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>Como cada una de las expresiones puede escribirse de varias maneras, en realidad hay muchas formas de encontrar la respuesta. Por ejemplo, en la solución siguiente los predicados se encuentran al final del eje en cada subexpresión:</p>
+
+        <table class="ejemplo">
+          <tbody>
+            <tr>
+              <td class="codigo">//titulo[../fechaPublicacion/@año=<span class="resaltado">//@año[../../titulo="La vida está en otra parte"]</span>]</td>
+              <td class="codigo">
+                <pre>
+<code class="language-xml">&lt;titulo&gt;La vida está en otra parte&lt;/titulo&gt;
+&lt;titulo&gt;Pantaleón y las visitadoras&lt;/titulo&gt;</code>
+</pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <hr class="corta" />
+
+        <p>Otro ejemplo de expresión anidada sería obtener los títulos de los libros del mismo autor que la novela "Pantaleón y las visitadoras". Como en el ejemplo anterior, la respuesta puede obtenerse en dos pasos:</p>
+
+        <ul>
+          <li>obtener primero el autor de la novela "Pantaleón y las visitadoras":
+
+            <table class="ejemplo">
+              <tbody>
+                <tr>
+                  <td class="codigo">//libro[titulo="Pantaleón y las visitadoras"]/autor/text()</td>
+                  <td class="codigo"><pre><code class="language-xml">Mario Vargas Llosa</code></pre>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+          <li>y obtener después los títulos de los libros escritos por Mario Vargas LLosa:
+
+            <table class="ejemplo">
+              <tbody>
+                <tr>
+                  <td class="codigo">//libro[autor="Mario Vargas Llosa"]/titulo</td>
+                  <td class="codigo">
+                    <pre>
+<code class="language-xml">&lt;titulo&gt;Pantaleón y las visitadoras&lt;/titulo&gt;
+&lt;titulo&gt;Conversación en la catedral&lt;/titulo&gt;</code>
+</pre>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+        </ul>
+
+        <p>Estas dos expresiones se pueden unir en una única expresión, sustituyendo en la segunda expresión el valor "Mario Vargas Llosa" por la primera expresión:</p>
+
+        <table class="ejemplo">
+          <tbody>
+            <tr>
+              <td class="codigo">//libro[autor=<span class="resaltado">//libro[titulo="Pantaleón y las visitadoras"]/autor/text()</span>]/titulo</td>
+              <td class="codigo">
+                <pre>
+<code class="language-xml">&lt;titulo&gt;Pantaleón y las visitadoras&lt;/titulo&gt;
+&lt;titulo&gt;Conversación en la catedral&lt;/titulo&gt;</code>
+</pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>Un detalle importante es que no hay que escribir la primera expresión entre comillas.</p>
+
+        <p>Incluso se puede omitir la selección de nodos /text() de la segunda expresión y escribir la expresión XPath así:</p>
+
+        <table class="ejemplo">
+          <tbody>
+            <tr>
+              <td class="codigo">//libro[autor=<span class="resaltado">//libro[titulo="Pantaleón y las visitadoras"]/autor</span>]/titulo</td>
+              <td class="codigo">
+                <pre>
+<code class="language-xml">&lt;titulo&gt;Pantaleón y las visitadoras&lt;/titulo&gt;
+&lt;titulo&gt;Conversación en la catedral&lt;/titulo&gt;</code>
+</pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </section>
+
+    <footer>
+      <p class="ultmod">Última modificación de esta página: 21 de marzo de 2017</p>
+
+      <p class="licencia"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../varios/iconos/icono_cc_by_sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
+        Esta página forma parte del curso <a href="http://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a> por <a href="http://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
+        que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.</p>
+    </footer>
+  </body>
+</html>

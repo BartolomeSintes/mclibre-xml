@@ -1,0 +1,31 @@
+libro, titulo, autor, fechaPublicacion {
+  display: block;
+}
+
+biblioteca {
+  background-color: lightgrey;
+  font-family: sans-serif;
+}
+
+libro {
+  background-color: lightgreen;
+  border: black 2px solid;
+  margin: 10px;
+}
+
+titulo {
+  background-color: white;
+  border-bottom: black 2px solid;
+  font-weight: bold;
+  padding-left: 5px;
+}
+
+autor {
+  padding-left: 5px;
+}
+
+fechaPublicacion {
+  padding-left: 5px;
+}
+
+

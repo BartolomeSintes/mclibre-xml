@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soluciones. CSS. XML. Bartolomé Sintes Marco</title>
+    <link href="../varios/xml.css" rel="stylesheet" type="text/css" title="Estilo mclibre" />
+    <link rel="icon" href="../varios/favicon.ico" />
+    <link rel="stylesheet" href="../varios/prism-xml.css" />
+    <script type="text/javascript" src="../varios/prism.js"></script>
+  </head>
+
+  <body>
+    <h1>CSS en XML - Soluciones</h1>
+
+    <nav>
+      <p>
+        <a href="../index.html"><img src="../varios/iconos/icono_xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48" /></a>
+        <a href="#"><img src="../varios/iconos/icono_arrow_circle_up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36" /></a>
+      </p>
+
+      <h2>CSS - Soluciones</h2>
+
+      <div class="toc">
+        <ul>
+          <li><a href="#ejercicio-1">1 - Párrafos</a></li>
+          <li><a href="#ejercicio-2">2 - Listas</a></li>
+          <li><a href="#ejercicio-3">3 - Tablas</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <p>Se ofrecen a continuación unas posibles soluciones de los <a href="css.html">ejercicios CSS en XML</a> . Estos ejercicios se pueden resolver de varias maneras.</p>
+
+    <section id="ejercicio-1">
+      <h2>CSS - Ejercicio 1 - Párrafos</h2>
+
+      <section id="ejercicio-1-1">
+        <h3><a href="css.html#ejercicio-1-1"><img src="../varios/iconos/icono_enunciado.svg" alt="Enunciado del ejercicio" title="Enunciado del ejercicio" width="48" height="48" class="d noprint" /></a>CSS - Ejercicio 1-1 - Solución</h3>
+
+        <table class="ejemplo">
+          <col /><col class="icono" />
+          <tbody>
+            <tr>
+              <td class="resul"><pre>
+<code class="language-css">titulo, autor, fechaPublicacion {
+  display: block;
+}</code>
+</pre>
+              </td>
+              <td><a href="css/css_01_01.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" class="noprint" /></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="ejercicio-1-2">
+        <h3><a href="css.html#ejercicio-1-2"><img src="../varios/iconos/icono_enunciado.svg" alt="Enunciado del ejercicio" title="Enunciado del ejercicio" width="48" height="48" class="d noprint" /></a>CSS - Ejercicio 1-2 - Solución</h3>
+
+        <table class="ejemplo">
+          <col /><col class="icono" />
+          <tbody>
+            <tr>
+              <td class="resul"><pre>
+<code class="language-css">titulo, autor, fechaPublicacion {
+  display: block;
+  font-family: sans-serif;
+}
+
+titulo {
+  font-weight: bold;
+}
+
+fechaPublicacion {
+  border-bottom: black 1px solid;
+  margin-bottom: 10px;
+}</code>
+</pre>
+              </td>
+              <td><a href="css/css_01_02.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" class="noprint" /></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="ejercicio-1-3">
+        <h3><a href="css.html#ejercicio-1-3"><img src="../varios/iconos/icono_enunciado.svg" alt="Enunciado del ejercicio" title="Enunciado del ejercicio" width="48" height="48" class="d noprint" /></a>CSS - Ejercicio 1-3 - Solución</h3>
+
+        <table class="ejemplo">
+          <col /><col class="icono" />
+          <tbody>
+            <tr>
+              <td class="resul"><pre>
+<code class="language-css">biblioteca {
+  font-family: sans-serif;
+}
+
+libro, titulo, autor, fechaPublicacion {
+  display: block;
+}
+
+titulo {
+  font-weight: bold;
+}
+
+fechaPublicacion {
+}
+
+libro {
+  background-color: lightgreen;
+  border: black 2px solid;
+  margin: 10px;
+  padding: 10px;
+}</code>
+</pre>
+              </td>
+              <td><a href="css/css_01_03.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" class="noprint" /></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="ejercicio-1-4">
+        <h3><a href="css.html#ejercicio-1-4"><img src="../varios/iconos/icono_enunciado.svg" alt="Enunciado del ejercicio" title="Enunciado del ejercicio" width="48" height="48" class="d noprint" /></a>CSS - Ejercicio 1-4 - Solución</h3>
+
+        <table class="ejemplo">
+          <col /><col class="icono" />
+          <tbody>
+            <tr>
+              <td class="resul"><pre>
+<code class="language-css">libro, titulo, autor, fechaPublicacion {
+  display: block;
+}
+
+biblioteca {
+  background-color: lightgrey;
+  font-family: sans-serif;
+}
+
+libro {
+  background-color: lightgreen;
+  border: black 2px solid;
+  margin: 10px;
+}
+
+titulo {
+  background-color: white;
+  border-bottom: black 2px solid;
+  font-weight: bold;
+  padding-left: 5px;
+}
+
+autor {
+  padding-left: 5px;
+}
+
+fechaPublicacion {
+  padding-left: 5px;
+}</code>
+</pre>
+              </td>
+              <td><a href="css/css_01_04.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" class="noprint" /></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </section>
+
+    <section id="ejercicio-2">
+      <h2>CSS - Ejercicio 2 - Listas</h2>
+
+      <section id="ejercicio-2-1">
+        <h3><a href="css.html#ejercicio-2-1"><img src="../varios/iconos/icono_enunciado.svg" alt="Enunciado del ejercicio" title="Enunciado del ejercicio" width="48" height="48" class="d noprint" /></a>CSS - Ejercicio 2-1 - Solución</h3>
+
+        <table class="ejemplo">
+          <col /><col class="icono" />
+          <tbody>
+            <tr>
+              <td class="resul"><pre>
+<code class="language-css">nombreCentro {
+  display: block;
+}
+
+web {
+  display: block;
+}
+
+ciclo {
+  display: block;
+}
+
+nombre, grado, decretoTitulo {
+  display: list-item;
+  list-style: disc inside;
+  margin-left: 10px;
+}</code>
+</pre>
+              </td>
+              <td><a href="css/css_02_01.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" class="noprint" /></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="ejercicio-2-2">
+        <h3><a href="css.html#ejercicio-2-2"><img src="../varios/iconos/icono_enunciado.svg" alt="Enunciado del ejercicio" title="Enunciado del ejercicio" width="48" height="48" class="d noprint" /></a>CSS - Ejercicio 2-2 - Solución</h3>
+
+        <table class="ejemplo">
+          <col /><col class="icono" />
+          <tbody>
+            <tr>
+              <td class="resul"><pre>
+<code class="language-css">ies {
+  font-family: sans-serif;
+}
+
+nombreCentro {
+  display: block;
+  font-size: 150%;
+  margin: 10px;
+}
+
+web {
+  display: block;
+  margin: 10px;
+}
+
+ciclo {
+  display: block;
+}
+
+nombre {
+  display: block;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+grado, decretoTitulo {
+  display: list-item;
+  list-style: disc inside;
+  margin-left: 20px;
+}</code>
+</pre>
+              </td>
+              <td><a href="css/css_02_02.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" class="noprint" /></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="ejercicio-2-3">
+        <h3><a href="css.html#ejercicio-2-3"><img src="../varios/iconos/icono_enunciado.svg" alt="Enunciado del ejercicio" title="Enunciado del ejercicio" width="48" height="48" class="d noprint" /></a>CSS - Ejercicio 2-3 - Solución</h3>
+
+        <table class="ejemplo">
+          <col /><col class="icono" />
+          <tbody>
+            <tr>
+              <td class="resul"><pre>
+<code class="language-css">ies {
+  font-family: sans-serif;
+}
+
+nombreCentro {
+  display: block;
+  font-size: 150%;
+  margin: 10px;
+}
+
+web {
+  display: block;
+  margin: 10px;
+}
+
+ciclo {
+  display: block;
+  counter-reset: contador;
+  margin-bottom: 10px;
+}
+
+nombre:before, grado:before, decretoTitulo:before {
+  content: counter(contador, lower-alpha) ". ";
+}
+
+nombre, grado, decretoTitulo {
+  display: block;
+  margin-left: 40px;
+  counter-increment: contador;
+  list-style: lower-alpha inside;
+}</code>
+</pre>
+              </td>
+              <td><a href="css/css_02_03.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" class="noprint" /></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="ejercicio-2-4">
+        <h3><a href="css.html#ejercicio-2-4"><img src="../varios/iconos/icono_enunciado.svg" alt="Enunciado del ejercicio" title="Enunciado del ejercicio" width="48" height="48" class="d noprint" /></a>CSS - Ejercicio 2-4 - Solución</h3>
+
+        <table class="ejemplo">
+          <col /><col class="icono" />
+          <tbody>
+            <tr>
+              <td class="resul"><pre>
+<code class="language-css">ies {
+  font-family: sans-serif;
+}
+
+nombreCentro {
+  display: block;
+  font-size: 150%;
+  margin: 10px;
+}
+
+web {
+  display: block;
+  margin: 10px;
+}
+
+ciclos {
+  counter-reset: cuentaciclos;
+}
+
+ciclo {
+  display: block;
+}
+
+nombre:before {
+  content: counter(cuentaciclos) ". ";
+  counter-increment: cuentaciclos;
+}
+
+nombre {
+  display: block;
+  margin-top: 10px;
+  margin-left: 30px;
+  text-indent: -15px;
+}
+
+grado, decretoTitulo {
+  display: list-item;
+  list-style: disc inside;
+  margin-left: 40px;
+}</code>
+</pre>
+              </td>
+              <td><a href="css/css_02_04.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" class="noprint" /></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </section>
+
+    <section id="ejercicio-3">
+      <h2>CSS - Ejercicio 3 - Tablas</h2>
+
+      <section id="ejercicio-3-1">
+        <h3><a href="css.html#ejercicio-3-1"><img src="../varios/iconos/icono_enunciado.svg" alt="Enunciado del ejercicio" title="Enunciado del ejercicio" width="48" height="48" class="d noprint" /></a>CSS - Ejercicio 3-1 - Solución</h3>
+
+        <table class="ejemplo">
+          <col /><col class="icono" />
+          <tbody>
+            <tr>
+              <td class="resul"><pre>
+<code class="language-css">ies {
+  font-family: sans-serif;
+}
+
+nombreCentro {
+  display: block;
+  font-size: 120%;
+}
+
+web {
+  display: block;
+  margin-bottom: 10px;
+}
+
+ciclos {
+  display: table;
+  border-spacing: 10px;
+  border: black 1px solid;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ciclo {
+  display: table-row;
+}
+
+nombre, grado, decretoTitulo {
+  background-color: white;
+  border: black 1px solid;
+  display: table-cell;
+  padding: 10px;
+}</code>
+</pre>
+              </td>
+              <td><a href="css/css_03_01.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" class="noprint" /></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="ejercicio-3-2">
+        <h3><a href="css.html#ejercicio-3-2"><img src="../varios/iconos/icono_enunciado.svg" alt="Enunciado del ejercicio" title="Enunciado del ejercicio" width="48" height="48" class="d noprint" /></a>CSS - Ejercicio 3-2 - Solución</h3>
+
+        <table class="ejemplo">
+          <col /><col class="icono" />
+          <tbody>
+            <tr>
+              <td class="resul"><pre>
+<code class="language-css">ies {
+  font-family: sans-serif;
+  display: table;
+  border-spacing: 10px;
+  border: black 1px solid;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+
+nombreCentro {
+  display: table-caption;
+  text-align: center;
+  background-color: #DDDDDD;
+  font-size: 150%;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+web {
+  display: none;
+}
+
+ciclos {
+}
+
+ciclo {
+  display: table-row;
+}
+
+nombre, grado, decretoTitulo {
+  background-color: white;
+  border: black 1px solid;
+  display: table-cell;
+  padding: 10px;
+}</code>
+</pre>
+              </td>
+              <td><a href="css/css_03_02.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" class="noprint" /></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="ejercicio-3-3">
+        <h3><a href="css.html#ejercicio-3-3"><img src="../varios/iconos/icono_enunciado.svg" alt="Enunciado del ejercicio" title="Enunciado del ejercicio" width="48" height="48" class="d noprint" /></a>CSS - Ejercicio 3-3 - Solución</h3>
+
+        <table class="ejemplo">
+          <col /><col class="icono" />
+          <tbody>
+            <tr>
+              <td class="resul"><pre>
+<code class="language-css">ies {
+  font-family: sans-serif;
+}
+
+nombreCentro {
+  display: block;
+  float: left;
+  font-size: 120%;
+}
+
+web {
+  display: block;
+  float: right;
+  font-size: 120%;
+  margin-bottom: 10px;
+}
+
+ciclos {
+  display: block;
+  clear: both;
+}
+
+ciclo {
+  display: table;
+  border-spacing: 10px;
+  border: black 1px solid;
+  font-size: 120%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  width: 50%;
+}
+
+nombre {
+  display: table-caption;
+  background-color: #DDDDDD;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+grado, decretoTitulo {
+  background-color: white;
+  border: black 1px solid;
+  display: table-cell;
+  padding: 10px;
+}</code>
+</pre>
+              </td>
+              <td><a href="css/css_03_03.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" class="noprint" /></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="ejercicio-3-4">
+        <h3><a href="css.html#ejercicio-3-4"><img src="../varios/iconos/icono_enunciado.svg" alt="Enunciado del ejercicio" title="Enunciado del ejercicio" width="48" height="48" class="d noprint" /></a>CSS - Ejercicio 3-4 - Solución</h3>
+
+        <table class="ejemplo">
+          <col /><col class="icono" />
+          <tbody>
+            <tr>
+              <td class="resul"><pre>
+<code class="language-css">ies {
+  font-family: sans-serif;
+}
+
+nombreCentro {
+  display: block;
+  float: right;
+  font-size: 120%;
+}
+
+web {
+  display: block;
+  float: left;
+  font-size: 120%;
+  margin-bottom: 10px;
+}
+
+ciclos {
+  display: block;
+  clear: both;
+}
+
+ciclo {
+  display: table;
+  border-spacing: 10px;
+  border: black 1px solid;
+  float: left;
+  margin: 10px;
+}
+
+nombre, grado, decretoTitulo {
+  background-color: lightgreen;
+  display: table-row;
+  padding: 10px;
+}</code>
+</pre>
+              </td>
+              <td><a href="css/css_03_04.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" class="noprint" /></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </section>
+
+    <footer>
+      <p class="ultmod">Última modificación de esta página: 27 de abril de 2015</p>
+
+      <p class="licencia"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../varios/iconos/icono_cc_by_sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
+        Esta página forma parte del curso <a href="http://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a> por <a href="http://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
+        que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.</p>
+    </footer>
+  </body>
+</html>

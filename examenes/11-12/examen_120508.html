@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Examen 08/05/12. Exámenes. XML. Bartolomé Sintes Marco</title>
+    <link href="../../varios/xml.css" rel="stylesheet" type="text/css" title="Estilo mclibre" />
+    <link rel="icon" href="../../varios/favicon.ico" />
+    <link rel="stylesheet" href="../../varios/prism-xml.css" />
+    <script type="text/javascript" src="../../varios/prism.js"></script>
+  </head>
+
+  <body>
+    <h1>Examen 8 de mayo de 2012</h1>
+
+    <nav>
+      <p>
+        <a href="../../index.html"><img src="../../varios/iconos/icono_xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48" /></a>
+        <a href="#"><img src="../../varios/iconos/icono_arrow_circle_up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36" /></a>
+        <a href="../examenes.html"><img src="../../varios/iconos/icono_school.svg" alt="Exámenes" title="Exámenes" width="36" height="36" /></a>
+      </p>
+
+      <h2>Examen 08/05/12</h2>
+
+      <div class="toc">
+        <ol>
+          <li><a href="#ejercicio-1">XPath</a></li>
+          <li><a href="#ejercicio-2">XSLT</a></li>
+        </ol>
+      </div>
+    </nav>
+
+    <p>Resuelva los siguientes ejercicios guardando las respuestas en una carpeta con su nombre y apellidos. Los nombres de los ficheros están indicados en los enunciados (NAA corresponde a sus propias iniciales, Nombre Apellido1 Apellido2)</p>
+
+    <section id="ejercicio-1">
+      <h2>Ejercicio 1. XPath</h2>
+
+      <p>Dado el siguiente documento XML, escriba las expresiones XPath que devuelvan <strong>exactamente</strong> la respuesta indicadas en los cuadros. Escriba todas las expresiones XPath en un único fichero NAA_1.txt, numerando las respuestas.</p>
+
+      <div class="codigo">
+        <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;inventario cliente="IES Abastos"&gt;
+  &lt;espacios&gt;
+    &lt;espacio id="A116"&gt;
+      &lt;ocupante&gt;1º ASIR (mañana)&lt;/ocupante&gt;
+      &lt;ocupante&gt;1º ASIR (tarde)&lt;/ocupante&gt;
+    &lt;/espacio&gt;
+    &lt;espacio id="A112"&gt;
+      &lt;ocupante&gt;2º ASIR (mañana)&lt;/ocupante&gt;
+      &lt;ocupante&gt;2º ASIR (tarde)&lt;/ocupante&gt;
+    &lt;/espacio&gt;
+  &lt;/espacios&gt;
+  &lt;modelos&gt;
+    &lt;modelo id="E001"&gt;
+      &lt;dispositivo id="PC" /&gt;
+      &lt;marca&gt;Inves&lt;/marca&gt;
+      &lt;modelo&gt;Sierra DT6300A&lt;/modelo&gt;
+    &lt;/modelo&gt;
+    &lt;modelo id="E002"&gt;
+      &lt;dispositivo id="Monitor" /&gt;
+      &lt;marca&gt;Inves&lt;/marca&gt;
+      &lt;modelo&gt;HW191DP&lt;/modelo&gt;
+    &lt;/modelo&gt;
+    &lt;modelo id="E003"&gt;
+      &lt;dispositivo id="Proyector" /&gt;
+      &lt;marca&gt;Epson&lt;/marca&gt;
+      &lt;modelo&gt;EMP-62&lt;/modelo&gt;
+    &lt;/modelo&gt;
+  &lt;/modelos&gt;
+  &lt;equipos&gt;
+    &lt;equipo sn="20933739" equipo="E001" espacio="A116" id="A116-PC01" /&gt;
+    &lt;equipo sn="20933750" equipo="E001" espacio="A116" id="A116-PC11" /&gt;
+    &lt;equipo sn="20933180" equipo="E001" espacio="A112" id="A112-PC12" /&gt;
+    &lt;equipo sn="CIEG6007053" equipo="E002" espacio="A112" id="A112-MO12" /&gt;
+    &lt;equipo sn="GYTF630095L" equipo="E003" espacio="A116" id="A116-PR01" /&gt;
+  &lt;/equipos&gt;
+&lt;/inventario&gt;</code>
+</pre>
+      </div>
+
+      <ol>
+        <li>Nombre del Instituto:
+          <div class="codigo">
+            <pre><code class="language-xml">cliente="IES Abastos"</code></pre>
+          </div>
+        </li>
+
+        <li>Tipos de dispositivos:
+          <div class="codigo">
+            <pre>
+<code class="language-xml"> <span class="xml-attr">id</span>="PC"
+ <span class="xml-attr">id</span>="Monitor"
+ <span class="xml-attr">id</span>="Proyector"</code>
+</pre>
+          </div>
+        </li>
+
+        <li>Modelos de equipos:
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;modelo&gt;Sierra DT6300A&lt;/modelo&gt;
+&lt;modelo&gt;HW191DP&lt;/modelo&gt;
+&lt;modelo&gt;EMP-62&lt;/modelo&gt;</code>
+</pre>
+          </div>
+        </li>
+
+        <li>Ocupantes de los espacios:
+          <div class="codigo">
+            <pre>
+<code class="language-xml">1º ASIR (mañana)
+1º ASIR (tarde)
+2º ASIR (mañana)
+2º ASIR (tarde)</code>
+</pre>
+          </div>
+        </li>
+
+        <li>Ocupantes del aula A112:
+          <div class="codigo">
+            <pre>
+<code class="language-xml">2º ASIR (mañana)
+2º ASIR (tarde)</code>
+</pre>
+          </div>
+        </li>
+
+        <li>Modelos de la marca Inves:
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;modelo&gt;Sierra DT6300A&lt;/modelo&gt;
+&lt;modelo&gt;HW191DP&lt;/modelo&gt;</code>
+</pre>
+          </div>
+        </li>
+
+        <li>Dispositivos que se encuentran en el aula 116:
+          <div class="codigo">
+            <pre>
+<code class="language-xml"> <span class="xml-attr">id</span>="PC"
+ <span class="xml-attr">id</span>="Proyector"</code>
+</pre>
+          </div>
+        </li>
+
+        <li>Equipos Sierra DT6300A:
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;equipo sn="20933739" equipo="E001" espacio="A116" id="A116-PC01"/&gt;
+&lt;equipo sn="20933750" equipo="E001" espacio="A116" id="A116-PC11"/&gt;
+&lt;equipo sn="20933180" equipo="E001" espacio="A112" id="A112-PC12"/&gt;</code>
+</pre>
+          </div>
+        </li>
+
+        <li>Grupos que dan clase en un aula con proyector:
+          <div class="codigo">
+            <pre>
+<code class="language-xml">1º ASIR (mañana)
+1º ASIR (tarde)</code>
+</pre>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="ejercicio-2">
+      <h2>Ejercicio 2 . XSLT</h2>
+
+      <p>Dado el siguiente documento XML, escriba y enlace las hojas de estilo XSLT que devuelvan la respuesta deseada (una para cada caso).</p>
+
+      <p>Los nombres de los ficheros deben ser NAA_2-1.xml y NAA_2-1.xsl, etc.</p>
+
+      <div class="codigo">
+        <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;lenguajes fuente="http://www.wikipedia.org" fecha="2012"&gt;
+  &lt;lenguaje&gt;
+    &lt;nombre&gt;C&lt;/nombre&gt;
+    &lt;creador&gt;Dennis Ritchie&lt;/creador&gt;
+    &lt;fecha&gt;1973&lt;/fecha&gt;
+    &lt;compilado /&gt;
+  &lt;/lenguaje&gt;
+  &lt;lenguaje&gt;
+    &lt;nombre&gt;Python&lt;/nombre&gt;
+    &lt;creador&gt;Guido van Rossum&lt;/creador&gt;
+    &lt;fecha&gt;1991&lt;/fecha&gt;
+    &lt;interpretado /&gt;
+  &lt;/lenguaje&gt;
+  &lt;lenguaje&gt;
+    &lt;nombre&gt;PHP&lt;/nombre&gt;
+    &lt;creador&gt;Rasmus Lerdorf&lt;/creador&gt;
+    &lt;fecha&gt;1995&lt;/fecha&gt;
+    &lt;interpretado /&gt;
+  &lt;/lenguaje&gt;
+  &lt;lenguaje&gt;
+    &lt;nombre&gt;XSLT&lt;/nombre&gt;
+    &lt;creador&gt;James Clark&lt;/creador&gt;
+    &lt;fecha&gt;1998&lt;/fecha&gt;
+    &lt;interpretado /&gt;
+  &lt;/lenguaje&gt;
+&lt;/lenguajes&gt;</code>
+</pre>
+      </div>
+
+      <ol>
+        <li>Nombres de los lenguajes
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;lenguajes&gt;
+  &lt;lenguaje&gt;C&lt;/lenguaje&gt;
+  &lt;lenguaje&gt;Python&lt;/lenguaje&gt;
+  &lt;lenguaje&gt;PHP&lt;/lenguaje&gt;
+  &lt;lenguaje&gt;XSLT&lt;/lenguaje&gt;
+&lt;/lenguajes&gt;</code>
+</pre>
+          </div>
+        </li>
+
+        <li>Explicación de los lenguajes en forma de página web:
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;html&gt;
+  &lt;h1&gt;Lenguajes de programación&lt;/h1&gt;
+  &lt;p&gt;El lenguaje C fue creado por Dennis Ritchie en 1973.&lt;/p&gt;
+  &lt;p&gt;El lenguaje Python fue creado por Guido van Rossum en 1991.&lt;/p&gt;
+  &lt;p&gt;El lenguaje PHP fue creado por Rasmus Lerdorf en 1995.&lt;/p&gt;
+  &lt;p&gt;El lenguaje XSLT fue creado por James Clark en 1998.&lt;/p&gt;
+&lt;/html&gt;</code>
+</pre>
+          </div>
+        </li>
+
+        <li>Tabla de lenguajes y creadores
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;html&gt;
+&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Lenguaje&lt;/th&gt;
+    &lt;th&gt;Creador&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;C&lt;/td&gt;
+    &lt;td&gt;Dennis Ritchie&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Python&lt;/td&gt;
+    &lt;td&gt;Guido van Rossum&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;PHP&lt;/td&gt;
+    &lt;td&gt;Rasmus Lerdorf&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;XSLT&lt;/td&gt;
+    &lt;td&gt;James Clark&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;/html&gt;</code>
+</pre>
+          </div>
+
+          <div class="codigo">
+            <table class="conborde">
+              <tbody>
+                <tr>
+                  <th>Lenguaje</th>
+                  <th>Creador</th>
+                </tr>
+                <tr>
+                  <td>C</td>
+                  <td>Dennis Ritchie</td>
+                </tr>
+                <tr>
+                  <td>Python</td>
+                  <td>Guido van Rossum</td>
+                </tr>
+                <tr>
+                  <td>PHP</td>
+                  <td>Rasmus Lerdorf</td>
+                </tr>
+                <tr>
+                  <td>XSLT</td>
+                  <td>James Clark</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </li>
+
+        <li>Otra explicación de los lenguajes en forma de página web:
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;html&gt;
+  &lt;p&gt;El lenguaje C es compilado.&lt;/p&gt;
+  &lt;p&gt;El lenguaje Python es interpretado.&lt;/p&gt;
+  &lt;p&gt;El lenguaje PHP es interpretado.&lt;/p&gt;
+  &lt;p&gt;El lenguaje XSLT es interpretado.&lt;/p&gt;
+  &lt;p&gt;Información obtenida de http://www.wikipedia.org en el año 2012&lt;/p&gt;
+&lt;/html&gt;</code>
+</pre>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <footer>
+      <p class="ultmod">Última modificación de esta página: 8 de mayo de 2012</p>
+
+      <p class="licencia"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../../varios/iconos/icono_cc_by_sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
+        Esta página forma parte del curso <a href="http://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a> por <a href="http://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
+        que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.</p>
+    </footer>
+  </body>
+</html>

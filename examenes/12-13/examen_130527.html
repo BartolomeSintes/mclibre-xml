@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Examen 27/05/13. Exámenes. XML. Bartolomé Sintes Marco</title>
+    <link href="../../varios/xml.css" rel="stylesheet" type="text/css" title="Estilo mclibre" />
+    <link rel="icon" href="../../varios/favicon.ico" />
+    <link rel="stylesheet" href="../../varios/prism-xml.css" />
+    <script type="text/javascript" src="../../varios/prism.js"></script>
+  </head>
+
+  <body>
+    <h1>Examen 27 de mayo de 2013</h1>
+
+    <nav>
+      <p>
+        <a href="../../index.html"><img src="../../varios/iconos/icono_xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48" /></a>
+        <a href="#"><img src="../../varios/iconos/icono_arrow_circle_up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36" /></a>
+        <a href="../examenes.html"><img src="../../varios/iconos/icono_school.svg" alt="Exámenes" title="Exámenes" width="36" height="36" /></a>
+      </p>
+
+      <h2>Examen 27/05/13</h2>
+
+      <div class="toc">
+        <ol>
+          <li><a href="#ejercicio-1">WFD</a></li>
+          <li><a href="#ejercicio-2">DTD</a></li>
+          <li><a href="#ejercicio-3">CSS</a></li>
+          <li><a href="#ejercicio-4">XPath</a></li>
+          <li><a href="#ejercicio-5">XSLT</a></li>
+        </ol>
+      </div>
+    </nav>
+
+    <p>Resuelva los siguientes ejercicios guardando las respuestas en una carpeta cuyo nombre contenga su nombre y apellidos.</p>
+
+    <section id="ejercicio-1">
+      <h2>Ejercicio 1. Documentos bien formados</h2>
+
+      <p>El siguiente documento no está bien formado porque contiene errores. Corrija los errores (si para corregir algún error hay que inventarse una etiqueta o atributo, utilice un nombre que tenga relación con la información contenida en el documento).</p>
+
+      <div class="codigo">
+        <pre>
+<code class="xml-malformado">&lt;documento /&gt;
+&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+  &lt;contenido importante&gt;Ejemplo de documento&lt;/contenido&gt;
+  &lt;contenido &lt;!-- Ejemplo de comentario --&gt;&gt;Otro ejemplo&lt;/contenido&gt;
+&lt;/documento&gt;</code>
+</pre>
+      </div>
+    </section>
+
+    <section id="ejercicio-2">
+      <h2>Ejercicio 2. DTD</h2>
+
+      <p>Escriba la DTD correspondiente al documento siguiente:</p>
+
+      <div class="codigo">
+        <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;arbol&gt;
+  &lt;lugares&gt;
+    &lt;lugar nombre="Valencia" pais="España" /&gt;
+    &lt;lugar nombre="Gandia" pais="España" /&gt;
+    &lt;lugar nombre="Marsella" pais="Francia" /&gt;
+  &lt;/lugares&gt;
+  &lt;personas&gt;
+    &lt;persona&gt;
+      &lt;nombre&gt;Pedro Ramírez Dupont&lt;/nombre&gt;
+      &lt;padre&gt;Juan Ramírez Amigo&lt;/padre&gt;
+      &lt;madre&gt;Jeanne Dupont&lt;/madre&gt;
+      &lt;nacimiento lugar="Valencia" fecha="1942-07-14" /&gt;
+    &lt;/persona&gt;
+    &lt;persona&gt;
+      &lt;nombre&gt;Juan Ramírez Amigo&lt;/nombre&gt;
+      &lt;nacimiento lugar="Gandia" fecha="1918-11-19" /&gt;
+    &lt;/persona&gt;
+    &lt;persona&gt;
+      &lt;nombre&gt;Jeanne Dupont&lt;/nombre&gt;
+      &lt;nacimiento lugar="Marsella" /&gt;
+    &lt;/persona&gt;
+  &lt;/personas&gt;
+&lt;/arbol&gt;</code>
+</pre>
+      </div>
+
+      <p>teniendo en cuenta que:</p>
+      <ul>
+        <li>los lugares de nacimiento de las personas deben estar definidos previamente</li>
+        <li>la DTD debe admitir que primero aparezcan los lugares y luego las personas (como en el ejemplo), o al revés</li>
+        <li>la única información obligatoria es el nombre de las personas</li>
+      </ul>
+    </section>
+
+    <section id="ejercicio-3">
+      <h2>Ejercicio 3. CSS</h2>
+
+      <p>Escriba la hoja de estilo CSS para que el siguiente documento se vea en el navegador como muestra la imagen.</p>
+
+      <div class="codigo">
+        <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;diccionarios&gt;
+  &lt;diccionario&gt;
+    &lt;nombre&gt;Diccionario de la Real Academia Española&lt;/nombre&gt;
+    &lt;siglas&gt;DRAE&lt;/siglas&gt;
+    &lt;definicion&gt;
+      &lt;palabra&gt;ordenador, ra&lt;/palabra&gt;
+      &lt;def&gt;Que ordena.&lt;/def&gt;
+      &lt;def&gt;Jefe de una ordenación de pagos u oficina de cuenta y razón.&lt;/def&gt;
+      &lt;def&gt;Máquina electrónica ...&lt;/def&gt;
+    &lt;/definicion&gt;
+    &lt;definicion&gt;
+      &lt;palabra&gt;monitor, ra.&lt;/palabra&gt;
+      &lt;def&gt;Persona que guía el aprendizaje deportivo, cultural, etc.&lt;/def&gt;
+      &lt;def&gt;Hombre que amonesta o avisa.&lt;/def&gt;
+      &lt;def&gt;Aparato receptor ...&lt;/def&gt;
+    &lt;/definicion&gt;
+  &lt;/diccionario&gt;
+&lt;/diccionarios&gt;</code>
+</pre>
+      </div>
+
+      <p class="captura"><img alt="CSS" src="130527_xml_ej3_css_1.png" width="1008" height="250" /></p>
+    </section>
+
+    <section id="ejercicio-4">
+      <h2>Ejercicio 4. XPath</h2>
+
+      <p>Dado el siguiente documento XML, escriba las expresiones XPath que devuelvan <strong>exactamente</strong> la respuesta indicadas en los cuadros. Escriba todas las expresiones XPath en un único fichero de texto, numerando las respuestas.</p>
+
+      <div class="codigo">
+        <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;arbol&gt;
+  &lt;lugares&gt;
+    &lt;lugar nombre="Valencia" pais="España" /&gt;
+    &lt;lugar nombre="Gandia" pais="España" /&gt;
+    &lt;lugar nombre="Marsella" pais="Francia" /&gt;
+  &lt;/lugares&gt;
+  &lt;personas&gt;
+    &lt;persona&gt;
+      &lt;nombre&gt;Ramón Ramírez Villaescusa&lt;/nombre&gt;
+      &lt;padre&gt;Pedro Ramírez Dupont&lt;/padre&gt;
+      &lt;nacimiento lugar="Gandia" año="1976" mes="10" dia="3" /&gt;
+    &lt;/persona&gt;
+    &lt;persona&gt;
+      &lt;nombre&gt;Elena Forte Ramírez&lt;/nombre&gt;
+      &lt;madre&gt;Juana Ramírez Dupont&lt;/madre&gt;
+      &lt;nacimiento lugar="Valencia" año="1974" mes="05" dia="31" /&gt;
+    &lt;/persona&gt;
+    &lt;persona&gt;
+      &lt;nombre&gt;Pedro Ramírez Dupont&lt;/nombre&gt;
+      &lt;padre&gt;Juan Ramírez Amigo&lt;/padre&gt;
+      &lt;madre&gt;Jeanne Dupont&lt;/madre&gt;
+      &lt;nacimiento lugar="Gandia" año="1942" mes="07" dia="14" /&gt;
+    &lt;/persona&gt;
+    &lt;persona&gt;
+      &lt;nombre&gt;Juana Ramírez Dupont&lt;/nombre&gt;
+      &lt;padre&gt;Juan Ramírez Amigo&lt;/padre&gt;
+      &lt;madre&gt;Jeanne Dupont&lt;/madre&gt;
+      &lt;nacimiento lugar="Valencia" año="1945" mes="02" dia="20" /&gt;
+    &lt;/persona&gt;
+    &lt;persona&gt;
+      &lt;nombre&gt;Juan Ramírez Amigo&lt;/nombre&gt;
+      &lt;nacimiento lugar="Gandia" año="1918" mes="07" dia="19" /&gt;
+    &lt;/persona&gt;
+    &lt;persona&gt;
+      &lt;nombre&gt;Jeanne Dupont&lt;/nombre&gt;
+      &lt;nacimiento lugar="Marsella" /&gt;
+    &lt;/persona&gt;
+  &lt;/personas&gt;
+&lt;/arbol&gt;</code>
+</pre>
+      </div>
+      <ol>
+        <li>Nombre de las madres:
+
+          <div class="codigo">
+            <pre>
+<code class="language-xml">Juana Ramírez Dupont
+Jeanne Dupont
+Jeanne Dupont</code>
+</pre>
+          </div>
+        </li>
+        <li>Nombres de los paises:
+
+          <div class="codigo">
+            <pre>
+<code class="language-xml"> <span class="xml-attr">pais</span>="España"
+ <span class="xml-attr">pais</span>="España"
+ <span class="xml-attr">pais</span>="Francia"</code>
+ </pre>
+          </div>
+        </li>
+        <li>Nombre de los nacidos después de 1950:
+
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;nombre&gt;Ramón Ramírez Villaescusa&lt;/nombre&gt;
+&lt;nombre&gt;Elena Forte Ramírez&lt;/nombre&gt;</code>
+</pre>
+          </div>
+        </li>
+        <li>Lugar de nacimiento de los hijos de Jeanne Dupont:
+
+          <div class="codigo">
+            <pre>
+<code class="language-xml"> <span class="xml-attr">lugar</span>="Gandia"
+ <span class="xml-attr">lugar</span>="Valencia"</code>
+</pre>
+          </div>
+        </li>
+        <li>Nombre de los nacidos en España:
+
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;nombre&gt;Ramón Ramírez Villaescusa&lt;/nombre&gt;
+&lt;nombre&gt;Elena Forte Ramírez&lt;/nombre&gt;
+&lt;nombre&gt;Pedro Ramírez Dupont&lt;/nombre&gt;
+&lt;nombre&gt;Juana Ramírez Dupont&lt;/nombre&gt;
+&lt;nombre&gt;Juan Ramírez Amigo&lt;/nombre&gt;</code>
+</pre>
+          </div>
+        </li>
+        <li>Nietos (personas de las que se conoce el nombre de alguno de los cuatro abuelos):
+
+          <div class="codigo">
+            <pre>
+<code class="language-xml">Ramón Ramírez Villaescusa
+Elena Forte Ramírez</code>
+</pre>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="ejercicio-5">
+      <h2>Ejercicio 5. XSLT</h2>
+
+      <p>Dado el siguiente documento XML, escriba y enlace las hojas de estilo XSLT que devuelvan la respuesta deseada (una para cada caso).</p>
+
+      <p>Para cada apartado, prepare dos ficheros (fichero xml y fichero xsl enlazado).</p>
+
+      <div class="codigo">
+        <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;diccionarios&gt;
+  &lt;diccionario&gt;
+    &lt;nombre&gt;Diccionario de la Real Academia Española&lt;/nombre&gt;
+    &lt;siglas&gt;DRAE&lt;/siglas&gt;
+    &lt;definicion&gt;
+      &lt;palabra&gt;ordenador, ra&lt;/palabra&gt;
+      &lt;def&gt;Que ordena.&lt;/def&gt;
+      &lt;def&gt;Jefe de una ordenación de pagos u oficina de cuenta y razón.&lt;/def&gt;
+      &lt;def&gt;Máquina electrónica ...&lt;/def&gt;
+    &lt;/definicion&gt;
+    &lt;definicion&gt;
+      &lt;palabra&gt;monitor, ra.&lt;/palabra&gt;
+      &lt;def&gt;Persona que guía el aprendizaje deportivo, cultural, etc.&lt;/def&gt;
+      &lt;def&gt;Hombre que amonesta o avisa.&lt;/def&gt;
+      &lt;def&gt;Aparato receptor ...&lt;/def&gt;
+    &lt;/definicion&gt;
+  &lt;/diccionario&gt;
+  &lt;diccionario&gt;
+    &lt;nombre&gt;Diccionario de María Moliner&lt;/nombre&gt;
+    &lt;siglas&gt;DMM&lt;/siglas&gt;
+    &lt;definicion&gt;
+      &lt;palabra&gt;ordenador, ra&lt;/palabra&gt;
+      &lt;def&gt;Se aplica a lo que sirve para ordenar.&lt;/def&gt;
+      &lt;def&gt;Aplicado a personas, aficionado a poner las cosas en orden.&lt;/def&gt;
+      &lt;def&gt;Jefe de una ordenación (oficina).&lt;/def&gt;
+      &lt;def&gt;Máquina electrónica ...&lt;/def&gt;
+    &lt;/definicion&gt;
+    &lt;definicion&gt;
+      &lt;palabra&gt;monitor, ra.&lt;/palabra&gt;
+      &lt;def&gt;Persona que amonesta, corrige o avisa. Consejero.&lt;/def&gt;
+      &lt;def&gt;Persona encargada de instruir a otras en determinadas actividades.&lt;/def&gt;
+      &lt;def&gt;Cualquier aparato dotado de una pantalla.&lt;/def&gt;
+    &lt;/definicion&gt;
+  &lt;/diccionario&gt;
+&lt;/diccionarios&gt;</code>
+</pre>
+      </div>
+      <ol>
+        <li>Lista de diccionarios
+          <p class="captura"><img alt="XSLT" src="130527_xml_ej4_xslt_1.png" width="1008" height="65" /></p>
+
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;html&gt;
+  &lt;ul&gt;
+    &lt;li&gt;DRAE: Diccionario de la Real Academia Española&lt;/li&gt;
+    &lt;li&gt;DMM: Diccionario de María Moliner&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/html&gt;</code>
+</pre>
+          </div>
+        </li>
+        <li>Tabla con las palabras en filas
+          <p class="captura"><img alt="XSLT" src="130527_xml_ej4_xslt_2.png" width="1008" height="350" /></p>
+
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;html&gt;
+  &lt;h1&gt;Palabras en diccionarios&lt;/h1&gt;
+  &lt;table border="1"&gt;
+    &lt;caption&gt;Diccionario de la Real Academia Española&lt;/caption&gt;
+    &lt;tr&gt;
+      &lt;th&gt;ordenador, ra&lt;/th&gt;
+      &lt;td&gt;Que ordena.&lt;/td&gt;
+      &lt;td&gt;Jefe de una ordenación de pagos u oficina de cuenta y razón.&lt;/td&gt;
+      &lt;td&gt;Máquina electrónica ...&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;monitor, ra.&lt;/th&gt;
+      &lt;td&gt;Persona que guía el aprendizaje deportivo, cultural, etc.&lt;/td&gt;
+      &lt;td&gt;Hombre que amonesta o avisa.&lt;/td&gt;
+      &lt;td&gt;Aparato receptor ...&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+
+  &lt;table border="1"&gt;
+    &lt;caption&gt;Diccionario de María Moliner&lt;/caption&gt;
+    &lt;tr&gt;
+      &lt;th&gt;ordenador, ra&lt;/th&gt;
+      &lt;td&gt;Se aplica a lo que sirve para ordenar.&lt;/td&gt;
+      &lt;td&gt;Aplicado a personas, aficionado a poner las cosas en orden.&lt;/td&gt;
+      &lt;td&gt;Jefe de una ordenación (oficina).&lt;/td&gt;
+      &lt;td&gt;Máquina electrónica ...&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;monitor, ra.&lt;/th&gt;
+      &lt;td&gt;Persona que amonesta, corrige o avisa. Consejero.&lt;/td&gt;
+      &lt;td&gt;Persona encargada de instruir a otras en determinadas actividades.&lt;/td&gt;
+      &lt;td&gt;Cualquier aparato dotado de una pantalla.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/html&gt;</code>
+</pre>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <footer>
+      <p class="ultmod">Última modificación de esta página: 27 de mayo de 2013</p>
+
+      <p class="licencia"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../../varios/iconos/icono_cc_by_sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
+        Esta página forma parte del curso <a href="http://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a> por <a href="http://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
+        que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Examen 01/09/11. Exámenes. XML. Bartolomé Sintes Marco</title>
+    <link href="../../varios/xml.css" rel="stylesheet" type="text/css" title="Estilo mclibre" />
+    <link rel="icon" href="../../varios/favicon.ico" />
+    <link rel="stylesheet" href="../../varios/prism-xml.css" />
+    <script type="text/javascript" src="../../varios/prism.js"></script>
+  </head>
+
+  <body>
+    <h1>Examen 1 de septiembre de 2011</h1>
+
+    <nav>
+      <p>
+        <a href="../../index.html"><img src="../../varios/iconos/icono_xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48" /></a>
+        <a href="#"><img src="../../varios/iconos/icono_arrow_circle_up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36" /></a>
+        <a href="../examenes.html"><img src="../../varios/iconos/icono_school.svg" alt="Exámenes" title="Exámenes" width="36" height="36" /></a>
+      </p>
+
+      <h2>Examen 01/09/11</h2>
+
+      <div class="toc">
+        <ol>
+          <li><a href="#ejercicio-1">WFD</a></li>
+          <li><a href="#ejercicio-2">DTD</a></li>
+          <li><a href="#ejercicio-3">XPath</a></li>
+          <li><a href="#ejercicio-4">XSLT</a></li>
+        </ol>
+      </div>
+    </nav>
+
+    <p>Resuelva los siguientes ejercicios guardando las respuestas en una carpeta con su nombre y apellidos. Los nombres de los ficheros están indicados en los enunciados (XYZ corresponde a sus propias iniciales, Nombre Apellido1 Apellido2).</p>
+
+    <section id="ejercicio-1">
+      <h2>Ejercicio 1. Documentos bien formados (XYZ_e110901_1.xml)</h2>
+      <p>El siguiente documento no está bien formado porque contiene errores. Corrija los errores (si para corregir algún error hay que inventarse una etiqueta o atributo, utilice un nombre que tenga relación con la información contenida en el documento).</p>
+
+      <div class="codigo">
+        <pre>
+<code class="xml-malformado">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;examen&gt;
+  &lt;pregunta 1&gt;
+  XML significa ...
+  &lt;/pregunta&gt;
+  &lt;respuesta correcta&gt;
+  ... eXtensible Markup Language
+  &lt;/respuesta&gt;</code>
+</pre>
+      </div>
+    </section>
+
+    <section id="ejercicio-2">
+      <h2>Ejercicio 2. DTD (XYZ_e110901_2.xml)</h2>
+      <p>Escriba la DTD que corresponde al siguiente documento, incluyéndola en el propio documento).</p>
+
+      <div class="codigo">
+        <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;software&gt;
+  &lt;programa id="P0001"&gt;
+    &lt;nombre&gt;Firefox &lt;version&gt;6&lt;/version&gt;&lt;/nombre&gt;
+    &lt;fecha_publicacion año="2011" mes="agosto" /&gt;
+    &lt;sistema_operativo&gt;Windows&lt;/sistema_operativo&gt;
+    &lt;sistema_operativo&gt;GNU/Linux&lt;/sistema_operativo&gt;
+    &lt;sistema_operativo&gt;Mac&lt;/sistema_operativo&gt;
+  &lt;/programa&gt;
+&lt;/software&gt;</code>
+</pre>
+      </div>
+    </section>
+
+    <section id="ejercicio-3">
+      <h2>Ejercicio 3. XPath (XYZ_e110901_3.txt)</h2>
+      <p>Dado el siguiente documento XML, escriba las expresiones XPath que devuelvan la respuesta deseada. La respuestas está indicada entre paréntesis y unas veces incluye las etiquetas y otras no). Escriba las expresiones XPath y los resultados obtenidos en el fichero txt.</p>
+
+      <div class="codigo">
+        <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;premios_nobel&gt;
+  &lt;individuos&gt;
+    &lt;individuo sexo="mujer"&gt;
+      &lt;nombre&gt;María Curie&lt;/nombre&gt;
+      &lt;nacido pais="Polonia" fecha="1867"/&gt;
+    &lt;/individuo&gt;
+    &lt;individuo sexo="hombre"&gt;
+      &lt;nombre&gt;Isaac Bashevis Singer&lt;/nombre&gt;
+      &lt;nacido pais="Polonia" fecha="1902"/&gt;
+    &lt;/individuo&gt;
+    &lt;individuo&gt;
+      &lt;nombre sexo="hombre"&gt;Mario Vargas Llosa&lt;/nombre&gt;
+      &lt;nacido pais="Perú" fecha="1936"/&gt;
+    &lt;/individuo&gt;
+    &lt;individuo&gt;
+      &lt;nombre sexo="hombre"&gt;Gerhard Ertl&lt;/nombre&gt;
+      &lt;nacido pais="Alemania" fecha="1936"/&gt;
+    &lt;/individuo&gt;
+  &lt;/individuos&gt;
+  &lt;premios&gt;
+    &lt;premio categoria="física"&gt;
+      &lt;año&gt;1903&lt;/año&gt;
+      &lt;premiado&gt;María Curie&lt;/premiado&gt;
+      &lt;motivo&gt;descubrimiento radioactividad&lt;/motivo&gt;
+    &lt;/premio&gt;
+    &lt;premio categoria="química"&gt;
+      &lt;año&gt;1911&lt;/año&gt;
+      &lt;premiado&gt;María Curie&lt;/premiado&gt;
+      &lt;motivo&gt;descubrimiento radioactividad&lt;/motivo&gt;
+    &lt;/premio&gt;
+    &lt;premio categoria="literatura"&gt;
+      &lt;año&gt;1978&lt;/año&gt;
+      &lt;premiado&gt;Isaac Bashevis Singer&lt;/premiado&gt;
+    &lt;/premio&gt;
+    &lt;premio categoria="física"&gt;
+      &lt;año&gt;2007&lt;/año&gt;
+      &lt;premiado&gt;Gerhard Ertl&lt;/premiado&gt;
+      &lt;motivo&gt;procesos químicos en superficies sólidas&lt;/motivo&gt;
+    &lt;/premio&gt;
+    &lt;premio categoria="literatura"&gt;
+      &lt;año&gt;2010&lt;/año&gt;
+      &lt;premiado&gt;Mario Vargas Llosa&lt;/premiado&gt;
+    &lt;/premio&gt;
+  &lt;/premios&gt;
+&lt;/premios_nobel&gt;</code>
+</pre>
+      </div>
+      <ol style="list-style-type: lower-latin; ">
+        <li>Nombre de ganadores de premios Nobel:
+
+          <div class="codigo">
+            <pre>
+<code class="language-xml">María Curie
+María Curie
+Isaac Bashevis Singer
+Gerhard Ertl
+Mario Vargas Llosa</code>
+</pre>
+          </div>
+        </li>
+        <li>Premios ganados por María Curie:
+
+          <div class="codigo">
+            <pre>
+<code class="language-xml"><span class="xml-attr">categoria</span>="física"
+<span class="xml-attr">categoria</span>="química"</code>
+</pre>
+          </div>
+        </li>
+        <li>Nombre del premiado en 2007:
+
+          <div class="codigo">
+            <pre><code class="language-xml">&lt;premiado&gt;Gerhard Ertl&lt;/premiado&gt;</code></pre>
+          </div>
+        </li>
+        <li>Países de origen de los premiados en Literatura:
+
+          <div class="codigo">
+            <pre>
+<code class="language-xml"><span class="xml-attr">pais</span>="Polonia"
+<span class="xml-attr">pais</span>="Perú"</code>
+</pre>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="ejercicio-4">
+      <h2>Ejercicio 4. XSLT (XYZ_e110901_4a.xml y XYZ_e110901_4a.xsl, etc.)</h2>
+      <p>Dado el siguiente documento XML, escriba las hojas de estilo XSLT que devuelvan la respuesta deseada y enlacelas desde el documento XML (uno para cada caso).</p>
+
+      <div class="codigo">
+        <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;premios_nobel&gt;
+  &lt;premios&gt;
+    &lt;premio categoria="física"&gt;
+      &lt;año&gt;1903&lt;/año&gt;
+      &lt;premiado&gt;María Curie&lt;/premiado&gt;
+      &lt;motivo&gt;descubrimiento radioactividad&lt;/motivo&gt;
+    &lt;/premio&gt;
+    &lt;premio categoria="química"&gt;
+      &lt;año&gt;1911&lt;/año&gt;
+      &lt;premiado&gt;María Curie&lt;/premiado&gt;
+      &lt;motivo&gt;descubrimiento radioactividad&lt;/motivo&gt;
+    &lt;/premio&gt;
+    &lt;premio categoria="literatura"&gt;
+      &lt;año&gt;1978&lt;/año&gt;
+      &lt;premiado&gt;Isaac Bashevis Singer&lt;/premiado&gt;
+    &lt;/premio&gt;
+    &lt;premio categoria="física"&gt;
+      &lt;año&gt;2007&lt;/año&gt;
+      &lt;premiado&gt;Gerhard Ertl&lt;/premiado&gt;
+      &lt;motivo&gt;procesos químicos en superficies sólidas&lt;/motivo&gt;
+    &lt;/premio&gt;
+    &lt;premio categoria="literatura"&gt;
+      &lt;año&gt;2010&lt;/año&gt;
+      &lt;premiado&gt;Mario Vargas Llosa&lt;/premiado&gt;
+    &lt;/premio&gt;
+  &lt;/premios&gt;
+&lt;/premios_nobel&gt;</code>
+</pre>
+      </div>
+      <ol style="list-style-type: lower-latin; ">
+        <li>Premios
+
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;premios_nobel&gt;
+  &lt;premio&gt;María Curie (física, 1903)&lt;/premio&gt;
+  &lt;premio&gt;María Curie (química, 1911)&lt;/premio&gt;
+  &lt;premio&gt;Isaac Bashevis Singer (literatura, 1978)&lt;/premio&gt;
+  &lt;premio&gt;Gerhard Ertl (física, 2007)&lt;/premio&gt;
+  &lt;premio&gt;Mario Vargas Llosa (literatura, 2010)&lt;/premio&gt;
+&lt;/premios_nobel&gt;</code>
+</pre>
+          </div>
+        </li>
+        <li>Ganadores
+
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;html&gt;
+  &lt;table border="1"&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Categoría y Año&lt;/th&gt;
+      &lt;th&gt;Ganador&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;física 1903&lt;/td&gt;
+      &lt;td&gt;María Curie&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;química 1911&lt;/td&gt;
+      &lt;td&gt;María Curie&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;literatura 1978&lt;/td&gt;
+      &lt;td&gt;Isaac Bashevis Singer&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;física 2007&lt;/td&gt;
+      &lt;td&gt;Gerhard Ertl&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;literatura 2010&lt;/td&gt;
+      &lt;td&gt;Mario Vargas Llosa&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/html&gt;</code>
+</pre>
+          </div>
+
+          <div class="codigo">
+            <table class="conborde">
+              <tbody>
+                <tr>
+                  <th>Categoría y Año</th>
+                  <th>Ganador</th>
+                </tr>
+                <tr>
+                  <td>física 1903</td>
+                  <td>María Curie</td>
+                </tr>
+                <tr>
+                  <td>química 1911</td>
+                  <td>María Curie</td>
+                </tr>
+                <tr>
+                  <td>literatura 1978</td>
+                  <td>Isaac Bashevis Singer</td>
+                </tr>
+                <tr>
+                  <td>física 2007</td>
+                  <td>Gerhard Ertl</td>
+                </tr>
+                <tr>
+                  <td>literatura 2010</td>
+                  <td>Mario Vargas Llosa</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <footer>
+      <p class="ultmod">Última modificación de esta página: 31 de agosto de 2011</p>
+
+      <p class="licencia"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../../varios/iconos/icono_cc_by_sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
+        Esta página forma parte del curso <a href="http://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a> por <a href="http://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
+        que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.</p>
+    </footer>
+  </body>
+</html>

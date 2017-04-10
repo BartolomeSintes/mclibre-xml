@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ies>
+  <nombreCentro>IES Abastos</nombreCentro>
+  <web>http://www.iesabastos.org</web>
+  <ciclos>
+    <ciclo id="ASIR">
+      <nombre>Administración de Sistemas Informáticos en Red</nombre>
+      <grado>Superior</grado>
+      <decretoTitulo>2009</decretoTitulo>
+    </ciclo>
+    <ciclo id="DAM">
+      <nombre>Desarrollo de Aplicaciones Multiplataforma</nombre>
+      <grado>Superior</grado>
+      <decretoTitulo>2010</decretoTitulo>
+    </ciclo>
+    <ciclo id="DAW">
+      <nombre>Desarrollo de Aplicaciones Web</nombre>
+      <grado>Superior</grado>
+      <decretoTitulo>2010</decretoTitulo>
+    </ciclo>
+    <ciclo id="SMR">
+      <nombre>Sistemas Microinformáticos y Redes</nombre>
+      <grado>Medio</grado>
+      <decretoTitulo>2008</decretoTitulo>
+    </ciclo>
+  </ciclos>
+</ies>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Examen 10/06/14. Exámenes. XML. Bartolomé Sintes Marco</title>
+    <link href="../../varios/xml.css" rel="stylesheet" type="text/css" title="Estilo mclibre" />
+    <link rel="icon" href="../../varios/favicon.ico" />
+    <link rel="stylesheet" href="../../varios/prism-xml.css" />
+    <script type="text/javascript" src="../../varios/prism.js"></script>
+  </head>
+
+  <body>
+    <h1>Examen 10 de junio de 2014</h1>
+
+    <nav>
+      <p>
+        <a href="../../index.html"><img src="../../varios/iconos/icono_xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48" /></a>
+        <a href="#"><img src="../../varios/iconos/icono_arrow_circle_up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36" /></a>
+        <a href="../examenes.html"><img src="../../varios/iconos/icono_school.svg" alt="Exámenes" title="Exámenes" width="36" height="36" /></a>
+      </p>
+
+      <h2>Examen 10/06/14</h2>
+
+      <div class="toc">
+        <ol>
+          <li><a href="#ejercicio-1">WFD</a></li>
+          <li><a href="#ejercicio-2">DTD</a></li>
+          <li><a href="#ejercicio-3">XPath</a></li>
+          <li><a href="#ejercicio-4">XSLT</a></li>
+        </ol>
+      </div>
+    </nav>
+
+    <p>Resuelva los siguientes ejercicios guardando las respuestas en una carpeta cuyo nombre contenga su nombre y apellidos.</p>
+
+    <section id="ejercicio-1">
+      <h2>Ejercicio 1. Documentos bien formados</h2>
+
+      <p>El siguiente documento no está bien formado porque contiene errores. Corrija los errores (si para corregir algún error hay que inventarse una etiqueta o atributo, utilice un nombre que tenga relación con la información contenida en el documento).</p>
+
+      <div class="codigo">
+        <pre>
+<code class="xml-malformado">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;diccionarios&gt;
+&lt;idiomas&gt;
+&lt;idioma "id"=es&gt;español
+&lt;idioma "id"=fr&gt;francés
+&lt;idioma "id"=en&gt;inglés
+&lt;palabra es id:perro /&gt;perro
+&lt;palabra en id:perro /&gt;dog
+&lt;palabra fr id:perro /&gt;chien
+&lt;\palabras&gt;
+autor: Acme &amp; Co.
+&lt;/diccionario&gt;</code>
+</pre>
+      </div>
+    </section>
+
+    <section id="ejercicio-2">
+      <h2>Ejercicio 2. DTD</h2>
+
+      <p>Reescriba el documento siguiente (sin modificar la DTD y conservando toda la información) de manera que sea un documento válido:</p>
+
+      <p><strong>Notas</strong>:</p>
+      <ul>
+        <li>Los códigos de países deben ser: USA, GBR y DEU</li>
+        <li>Los códigos de idiomas deben ser: en y es</li>
+      </ul>
+
+      <div class="codigo">
+        <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;!DOCTYPE cine [
+  &lt;!ELEMENT cine (paises, idiomas, personas, peliculas)&gt;
+  &lt;!ELEMENT paises (pais+)&gt;
+  &lt;!ELEMENT pais (#PCDATA)&gt;
+  &lt;!ATTLIST pais
+            cc ID #REQUIRED&gt;
+&lt;!ELEMENT idiomas (idioma+)&gt;
+&lt;!ELEMENT idioma (#PCDATA)&gt;
+&lt;!ATTLIST idioma
+          lc ID #REQUIRED&gt;
+  &lt;!ELEMENT personas (persona+)&gt;
+  &lt;!ELEMENT persona (#PCDATA)&gt;
+  &lt;!ATTLIST persona
+            fecha_nacimiento CDATA #REQUIRED
+            pais_nacimiento IDREF #REQUIRED&gt;
+  &lt;!ELEMENT peliculas (pelicula+)&gt;
+  &lt;!ELEMENT pelicula (estreno, titulo+, autores)&gt;
+  &lt;!ELEMENT estreno (#PCDATA)&gt;
+  &lt;!ELEMENT titulo (#PCDATA)&gt;
+  &lt;!ATTLIST titulo
+            idioma IDREF #REQUIRED&gt;
+  &lt;!ELEMENT autores (#PCDATA)&gt;
+  &lt;!ATTLIST autores
+          compositor CDATA #IMPLIED
+          director CDATA #REQUIRED&gt;
+]&gt;
+&lt;cine&gt;
+  &lt;directores&gt;
+    &lt;director nombre="Christopher Nolan" fecha_nacimiento="1970" pais_nacimiento="UK" /&gt;
+    &lt;director nombre="Martin Scorsese" fecha_nacimiento="1942" pais_nacimiento="EEUU" /&gt;
+    &lt;director nombre="Drew Goddard" fecha_nacimiento="1975" pais_nacimiento="EEUU" /&gt;
+  &lt;/directores&gt;
+  &lt;compositores&gt;
+    &lt;compositor nombre="Hans Zimmer" fecha_nacimiento="1957" pais_nacimiento="Alemania" /&gt;
+    &lt;compositor nombre="David Julyan" fecha_nacimiento="1967" pais_nacimiento="UK" /&gt;
+  &lt;/compositores&gt;
+  &lt;peliculas&gt;
+    &lt;pelicula titulo="Uno de los nuestros"&gt;
+      &lt;estreno&gt;1990&lt;/estreno&gt;
+      &lt;titulo&gt;Goodfellas&lt;/titulo&gt;
+      &lt;director&gt;Martin Scorsese&lt;/director&gt;
+    &lt;/pelicula&gt;
+    &lt;pelicula titulo="Thelma y Louise"&gt;
+      &lt;estreno&gt;1991&lt;/estreno&gt;
+      &lt;titulo&gt;Thelma y Louise&lt;/titulo&gt;
+      &lt;director&gt;Ridley Scott&lt;/director&gt;
+      &lt;compositor&gt;Hans Zimmer&lt;/compositor&gt;
+    &lt;/pelicula&gt;
+    &lt;pelicula titulo="El truco final"&gt;
+      &lt;estreno&gt;2006&lt;/estreno&gt;
+      &lt;titulo&gt;The Prestige&lt;/titulo&gt;
+      &lt;director&gt;Christopher Nolan&lt;/director&gt;
+      &lt;compositor&gt;David Julyan&lt;/compositor&gt;
+    &lt;/pelicula&gt;
+    &lt;pelicula titulo="Origen"&gt;
+      &lt;estreno&gt;2010&lt;/estreno&gt;
+      &lt;titulo&gt;Inception&lt;/titulo&gt;
+      &lt;director&gt;Christopher Nolan&lt;/director&gt;
+      &lt;compositor&gt;Hans Zimmer&lt;/compositor&gt;
+    &lt;/pelicula&gt;
+   &lt;pelicula titulo="La cabaña en el bosque"&gt;
+      &lt;estreno&gt;2011&lt;/estreno&gt;
+      &lt;titulo&gt;The Cabin in the Woods&lt;/titulo&gt;
+      &lt;director&gt;Drew Goddard&lt;/director&gt;
+      &lt;compositor&gt;David Julyan&lt;/compositor&gt;
+    &lt;/pelicula&gt;
+  &lt;/peliculas&gt;
+&lt;/cine&gt;</code>
+</pre>
+      </div>
+    </section>
+
+    <section id="ejercicio-3">
+      <h2>Ejercicio 3. XPath</h2>
+
+      <p>Dado el siguiente documento XML, escriba las expresiones XPath que devuelvan <strong>exactamente</strong> la respuesta indicadas en los cuadros. Escriba todas las expresiones XPath en un único fichero de texto, numerando las respuestas.</p>
+
+      <div class="codigo">
+        <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;florencia&gt;
+  &lt;museos&gt;
+    &lt;museo nombre="Uffizi"&gt;
+      &lt;arquitecto&gt;Vasari&lt;/arquitecto&gt;
+      &lt;construccion&gt;16&lt;/construccion&gt;
+    &lt;/museo&gt;
+    &lt;museo nombre="Bargello"&gt;
+      &lt;arquitecto&gt;NA&lt;/arquitecto&gt;
+      &lt;construccion&gt;13&lt;/construccion&gt;
+    &lt;/museo&gt;
+    &lt;museo nombre="Accademia"&gt;
+      &lt;arquitecto&gt;NA&lt;/arquitecto&gt;
+      &lt;construccion&gt;18&lt;/construccion&gt;
+    &lt;/museo&gt;
+  &lt;/museos&gt;
+  &lt;artistas&gt;
+    &lt;artista nombre="Miguel Angel"&gt;
+      &lt;nombre&gt;Miguel Ángel Buonarroti&lt;/nombre&gt;
+      &lt;nacimiento&gt;1475&lt;/nacimiento&gt;
+      &lt;muerte&gt;1564&lt;/muerte&gt;
+      &lt;pintor /&gt;
+      &lt;escultor /&gt;
+      &lt;arquitecto /&gt;
+    &lt;/artista&gt;
+    &lt;artista nombre="Vasari"&gt;
+      &lt;nombre&gt;Giorgio Vasari&lt;/nombre&gt;
+      &lt;nacimiento&gt;1511&lt;/nacimiento&gt;
+      &lt;muerte&gt;1574&lt;/muerte&gt;
+      &lt;pintor /&gt;
+      &lt;arquitecto /&gt;
+    &lt;/artista&gt;
+    &lt;artista nombre="Ghiberti"&gt;
+      &lt;nombre&gt;Lorenzo Ghiberti &lt;/nombre&gt;
+      &lt;nacimiento&gt;1378&lt;/nacimiento&gt;
+      &lt;muerte&gt;1455&lt;/muerte&gt;
+      &lt;orfebre /&gt;
+      &lt;escultor /&gt;
+    &lt;/artista&gt;
+    &lt;artista nombre="Donatello"&gt;
+      &lt;nombre&gt;Donato di Niccolò di Betto Bardi&lt;/nombre&gt;
+      &lt;nacimiento&gt;1386&lt;/nacimiento&gt;
+      &lt;muerte&gt;1466&lt;/muerte&gt;
+      &lt;escultor /&gt;
+    &lt;/artista&gt;
+  &lt;/artistas&gt;
+  &lt;obras&gt;
+    &lt;obra autor="Miguel Angel" museo="Bargello"&gt;Baco&lt;/obra&gt;
+    &lt;obra autor="Miguel Angel" museo="Accademia"&gt;David&lt;/obra&gt;
+    &lt;obra autor="Donatello" museo="Bargello"&gt;David&lt;/obra&gt;
+    &lt;obra autor="Ghiberti" museo="Bargello"&gt;Sacrificio de Isaac&lt;/obra&gt;
+    &lt;obra autor="Miguel Angel" museo="Uffizi"&gt;Tondo Doni&lt;/obra&gt;
+    &lt;obra autor="Vasari" museo="Uffizi"&gt;Uffizi&lt;/obra&gt;
+  &lt;/obras&gt;
+&lt;/florencia&gt;</code>
+</pre>
+      </div>
+
+      <ol>
+        <li>Nombres de escultores:
+          <div class="codigo">
+            <pre>
+<code class="language-xml"> <span class="xml-attr">nombre</span>="Miguel Angel"
+ <span class="xml-attr">nombre</span>="Ghiberti"
+ <span class="xml-attr">nombre</span>="Donatello"</code>
+</pre>
+          </div>
+        </li>
+
+        <li>Nombre completo de Donatello:
+          <div class="codigo">
+            <pre><code class="language-xml">&lt;nombre&gt;Donato di Niccolò di Betto Bardi&lt;/nombre&gt;</code></pre>
+          </div>
+        </li>
+
+        <li>Museos con esculturas llamadas "David":
+          <div class="codigo">
+            <pre>
+<code class="language-xml"> <span class="xml-attr">museo</span>="Accademia"
+ <span class="xml-attr">museo</span>="Bargello"</code>
+</pre>
+          </div>
+        </li>
+
+        <li>Años que vivió Vasari:
+          <div class="codigo">
+            <pre><code class="language-xml">63</code></pre>
+          </div>
+        </li>
+
+        <li>Obras en museos construidos en el siglo XIII:
+          <div class="codigo">
+            <pre>
+<code class="language-xml">Baco
+David
+Sacrificio de Isaac</code></pre>
+          </div>
+        </li>
+
+        <li>Siglo de construcción de museos con obras de orfebres:
+          <div class="codigo">
+            <pre><code class="language-xml">&lt;construccion&gt;13&lt;/construccion&gt;</code></pre>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="ejercicio-4">
+      <h2>Ejercicio 4. XSLT</h2>
+
+      <p>Dado el mismo documento XML del ejercicio 3, escriba y enlace las hojas de estilo XSLT que devuelvan la respuesta deseada (una para cada caso).</p>
+
+      <p>Para cada apartado, prepare dos ficheros (fichero xml y fichero xsl enlazado).</p>
+
+      <ol>
+        <li>Mostrar la información en forma de tabla:
+          <p class="captura"><img alt="XSLT" src="140610_xml_xslt_1.png" width="300" height="180" /></p>
+
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;html&gt;
+  &lt;h1&gt;Museos de Florencia&lt;/h1&gt;
+  &lt;table border="1"&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Museo&lt;/th&gt;
+      &lt;th&gt;Siglo construcción&lt;/th&gt;
+      &lt;th&gt;Arquitecto&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td align="center"&gt;Uffizi&lt;/td&gt;
+      &lt;td align="center"&gt;16&lt;/td&gt;
+      &lt;td align="center"&gt;Vasari&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td align="center"&gt;Bargello&lt;/td&gt;
+      &lt;td align="center"&gt;13&lt;/td&gt;
+      &lt;td align="center"&gt;NA&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td align="center"&gt;Accademia&lt;/td&gt;
+      &lt;td align="center"&gt;18&lt;/td&gt;
+      &lt;td align="center"&gt;NA&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/html&gt;</code>
+</pre>
+          </div>
+        </li>
+
+        <li>Mostrar la información en forma de párrafos:
+          <p class="captura"><img alt="XSLT" src="140610_xml_xslt_2.png" width="570" height="510" /></p>
+
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;html&gt;
+  &lt;h1&gt;Florencia, capital del arte&lt;/h1&gt;
+
+  &lt;h2&gt;Artistas florentinos&lt;/h2&gt;
+    &lt;p&gt;Miguel Ángel Buonarroti ( pintor, escultor, arquitecto, ) nació en 1475 y murió en 1564.&lt;/p&gt;
+    &lt;p&gt;Giorgio Vasari ( pintor, arquitecto, ) nació en 1511 y murió en 1574.&lt;/p&gt;
+    &lt;p&gt;Lorenzo Ghiberti ( orfebre, escultor, ) nació en 1378 y murió en 1455.&lt;/p&gt;
+    &lt;p&gt;Donato di Niccolò di Betto Bardi ( escultor, ) nació en 1386 y murió en 1466.&lt;/p&gt;
+
+  &lt;h2&gt;Obras&lt;/h2&gt;
+    &lt;p&gt;"Baco", de Miguel Angel, se encuentra en Bargello&lt;/p&gt;
+    &lt;p&gt;"David", de Miguel Angel, se encuentra en Accademia&lt;/p&gt;
+    &lt;p&gt;"David", de Donatello, se encuentra en Bargello&lt;/p&gt;
+    &lt;p&gt;"Sacrificio de Isaac", de Ghiberti, se encuentra en Bargello&lt;/p&gt;
+    &lt;p&gt;"Tondo Doni", de Miguel Angel, se encuentra en Uffizi&lt;/p&gt;
+    &lt;p&gt;"Uffizi", de Vasari, se encuentra en Uffizi&lt;/p&gt;
+
+&lt;/html&gt;</code>
+</pre>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <footer>
+      <p class="ultmod">Última modificación de esta página: 10 de junio de 2014</p>
+
+      <p class="licencia"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../../varios/iconos/icono_cc_by_sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
+        Esta página forma parte del curso <a href="http://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a> por <a href="http://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
+        que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.</p>
+    </footer>
+  </body>
+</html>

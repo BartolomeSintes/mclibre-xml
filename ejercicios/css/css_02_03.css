@@ -1,0 +1,32 @@
+ies {
+  font-family: sans-serif;
+}
+
+nombreCentro {
+  display: block;
+  font-size: 150%;
+  margin: 10px;
+}
+
+web {
+  display: block;
+  margin: 10px;
+}
+
+ciclo {
+  display: block;
+  counter-reset: contador;
+  margin-bottom: 10px;
+}
+
+nombre:before, grado:before, decretoTitulo:before {
+  content: counter(contador, lower-alpha) ". ";
+}
+
+
+nombre, grado, decretoTitulo {
+  display: block;
+  margin-left: 40px;
+  counter-increment: contador;
+  list-style: lower-alpha inside;
+}

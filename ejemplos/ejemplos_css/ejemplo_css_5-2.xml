@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="ejemplo_css_5-2.css"?>
+<libro xmlns="http://www.w3.org/1999/xhtml">
+  <titulo class="color">La vida está en otra parte</titulo>
+  <autor id="grande">Milan Kundera</autor>
+  <fechaPublicacion año="1973"/>
+</libro>

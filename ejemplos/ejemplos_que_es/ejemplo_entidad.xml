@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE autor [
+  <!ENTITY yo "Bartolomé Sintes Marco">
+  <!ELEMENT autor (#PCDATA)>
+]>
+<autor>&yo;</autor>

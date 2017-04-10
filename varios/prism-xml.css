@@ -1,0 +1,59 @@
+/* PRISM.CSS
+   Bartolomé Sintes Marco
+   http://www.mclibre.org
+
+   Hoja de estilo para prism.js
+
+   6 de mayo de 2016
+*/
+
+/* Los estilos para trozos sueltos están en la hoja de estilo de los apuntes */
+
+/* Estilo para XML imitando a XML Copy Editor */
+/* Tengo pendiente comprobar los nombres de las clases en prism */
+
+code.language-xml { font-weight: bold; font-size: 120%; line-height: 120%;}
+code.xml-malformado, code.xml-invalido { font-weight: bold; font-size: 120%; line-height: 120%;}
+
+code.language-xml .tag         { color: #0000FF; } /* any tag from "<" till ">"              */
+code.language-xml .punctuation { color: #446FBD; } /*                                        */
+code.language-xml .attr-name   { color: #FC0204; } /* tag's attribute with or without value  */
+code.language-xml .attr-value  { color: #000000; } /* attribute's value                      */
+code.language-xml .comment     { color: #808080; } /* comment                                */
+code.language-xml .pi          { color: #0000FF; } /* processing instruction (<? ... ?>)     */
+code.language-xml .doctype     { color: #0000FF; } /* <!DOCTYPE ... > declaration            */
+code.language-xml .cdata       { color: #FF0000; } /* CDATA section                          */
+code.language-xml .prolog      { color: #0000FF; } /* processing instruction (<? ... ?>)     */
+
+/* Estilo para CSS imitando a XML Copy Editor */
+/* Todvía no pasado a Prism del todo */
+
+code.language-css { font-weight: bold; font-size: 115%; line-height: 120%;}
+
+code.language-css .selector           { color: #446FBD; }          /* tag in selectors                   */
+code.language-css .hljs-id            { color: #446FBD; }          /* #some_name in selectors            */
+code.language-css .hljs-class         { color: #446FBD; }          /* .some_name in selectors            */
+code.language-css .hljs-at_rule       { color: #8757AD; }          /* @-rule till first "{" or ";"       */
+code.language-css .hljs-attr_selector { color: rgb( 63,127,127); } /* attribute selector ([])            */
+code.language-css .hljs-pseudo        { color: #535353; }          /* pseudo classes/elements            */
+code.language-css .hljs-comment       { color: #535353; }          /* comment                            */
+code.language-css .hljs-rules         { color: #000000; }          /* everything from "{" till "}"       */
+code.language-css .property           { color: #8757AD; }          /* property name inside a rule        */
+code.language-css .hljs-value         { color: #E88501; }          /* property value inside a rule       */
+code.language-css .hljs-number        { color: #6D8600; }          /* number within a value              */
+code.language-css .hljs-string        { color: #E88501; }          /* string within a value              */
+code.language-css .hljs-hexcolor      { color: #E88501; }          /* hex color (#FFFFFF) within a value */
+code.language-css .hljs-function      { color: rgb( 42,  0,255); } /* CSS function within a value        */
+code.language-css .hljs-important     { color: rgb( 63,127,127); } /* "!important" symbol                */
+
+/* Estilo para HTML imitando a Brackets */
+
+code.language-html { font-weight: bold; font-size: 120%; line-height: 120%;}
+
+code.language-html .tag        { color: #446FBD; } /* any tag from "<" till ">"              */
+code.language-html .attr-name  { color: #6D8600; } /* tag's attribute with or without value  */
+code.language-html .attr-value { color: #E88501; } /* attribute's value                      */
+code.language-html .comment    { color: #535353; } /* comment                                */
+code.language-html .pi         { color: #535353; } /* processing instruction (<? ... ?>)     */
+code.language-html .doctype    { color: #535353; } /* <!DOCTYPE ... > declaration            */
+code.language-html .cdata      { color: #E88501; } /* CDATA section                          */

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Examen 11/07/14. Exámenes. XML. Bartolomé Sintes Marco</title>
+    <link href="../../varios/xml.css" rel="stylesheet" type="text/css" title="Estilo mclibre" />
+    <link rel="icon" href="../../varios/favicon.ico" />
+    <link rel="stylesheet" href="../../varios/prism-xml.css" />
+    <script type="text/javascript" src="../../varios/prism.js"></script>
+  </head>
+
+  <body>
+    <h1>Examen 11 de julio de 2014</h1>
+
+    <nav>
+      <p>
+        <a href="../../index.html"><img src="../../varios/iconos/icono_xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48" /></a>
+        <a href="#"><img src="../../varios/iconos/icono_arrow_circle_up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36" /></a>
+        <a href="../examenes.html"><img src="../../varios/iconos/icono_school.svg" alt="Exámenes" title="Exámenes" width="36" height="36" /></a>
+      </p>
+
+      <h2>Examen 11/07/14</h2>
+
+      <div class="toc">
+        <ol>
+          <li><a href="#ejercicio-1">XPath</a></li>
+          <li><a href="#ejercicio-2">XSLT</a></li>
+        </ol>
+      </div>
+    </nav>
+
+    <p>Resuelva los siguientes ejercicios guardando las respuestas en una carpeta cuyo nombre contenga su nombre y apellidos.</p>
+
+    <section id="ejercicio-1">
+      <h2>Ejercicio 1. XPath</h2>
+
+      <p>Dado el siguiente documento XML, escriba las expresiones XPath que devuelvan <strong>exactamente</strong> la respuesta indicadas en los cuadros. Escriba todas las expresiones XPath en un único fichero de texto, numerando las respuestas.</p>
+
+      <div class="codigo">
+        <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;geografia&gt;
+  &lt;continentes&gt;
+    &lt;continente nombre="Europa"&gt;
+      &lt;pais&gt;España&lt;/pais&gt;
+      &lt;pais&gt;Francia&lt;/pais&gt;
+      &lt;pais&gt;Suiza&lt;/pais&gt;
+    &lt;/continente&gt;
+    &lt;continente nombre="América"&gt;
+      &lt;pais&gt;México&lt;/pais&gt;
+      &lt;pais&gt;Argentina&lt;/pais&gt;
+      &lt;pais&gt;Uruguay&lt;/pais&gt;
+    &lt;/continente&gt;
+  &lt;/continentes&gt;
+  &lt;paises&gt;
+    &lt;pais nombre="España"&gt;
+      &lt;sistema&gt;monarquía&lt;/sistema&gt;
+      &lt;superficie&gt;504645&lt;/superficie&gt;
+      &lt;moneda&gt;euro&lt;/moneda&gt;
+      &lt;moneda antigua="antigua"&gt;peseta&lt;/moneda&gt;
+      &lt;idioma&gt;español&lt;/idioma&gt;
+    &lt;/pais&gt;
+    &lt;pais nombre="Francia"&gt;
+      &lt;sistema&gt;república&lt;/sistema&gt;
+      &lt;superficie&gt;675417&lt;/superficie&gt;
+      &lt;moneda&gt;euro&lt;/moneda&gt;
+      &lt;moneda antigua="antigua"&gt;franco francés&lt;/moneda&gt;
+      &lt;idioma&gt;francés&lt;/idioma&gt;
+    &lt;/pais&gt;
+    &lt;pais nombre="Suiza"&gt;
+      &lt;sistema&gt;república&lt;/sistema&gt;
+      &lt;superficie&gt;41290&lt;/superficie&gt;
+      &lt;moneda&gt;franco suizo&lt;/moneda&gt;
+      &lt;idioma&gt;francés&lt;/idioma&gt;
+    &lt;/pais&gt;
+    &lt;pais nombre="México"&gt;
+      &lt;sistema&gt;república&lt;/sistema&gt;
+      &lt;superficie&gt;1972550&lt;/superficie&gt;
+      &lt;moneda&gt;peso mejicano&lt;/moneda&gt;
+      &lt;idioma&gt;español&lt;/idioma&gt;
+    &lt;/pais&gt;
+    &lt;pais nombre="Argentina"&gt;
+      &lt;sistema&gt;república&lt;/sistema&gt;
+      &lt;superficie&gt;2780400&lt;/superficie&gt;
+      &lt;moneda&gt;peso argentino&lt;/moneda&gt;
+      &lt;idioma&gt;español&lt;/idioma&gt;
+    &lt;/pais&gt;
+    &lt;pais nombre="Jamaica"&gt;
+      &lt;sistema&gt;monarquía&lt;/sistema&gt;
+      &lt;superficie&gt;10991&lt;/superficie&gt;
+      &lt;moneda&gt;dólar jamaiquino&lt;/moneda&gt;
+      &lt;idioma&gt;inglés&lt;/idioma&gt;
+    &lt;/pais&gt;
+  &lt;/paises&gt;
+&lt;/geografia&gt;</code>
+</pre>
+      </div>
+
+      <ol>
+        <li>Nombres de los países:
+          <div class="codigo">
+            <pre>
+<code class="language-xml"> <span class="xml-attr">nombre</span>="España"
+ <span class="xml-attr">nombre</span>="Francia"
+ <span class="xml-attr">nombre</span>="Suiza"
+ <span class="xml-attr">nombre</span>="México"
+ <span class="xml-attr">nombre</span>="Argentina"
+ <span class="xml-attr">nombre</span>="Jamaica"</code>
+</pre>
+          </div>
+        </li>
+
+        <li>Nombre de los países de Europa:
+          <div class="codigo">
+            <pre>
+<code class="language-xml">España
+Francia
+Suiza</code>
+</pre>
+          </div>
+        </li>
+
+        <li>Nombre de las monedas de los países de más de un millón de kilómetros cuadrados:
+          <div class="codigo">
+            <pre>
+<code class="language-xml"> peso mejicano
+ peso argentino</code>
+</pre>
+          </div>
+        </li>
+
+        <li>Nombre de los países más pequeños que Francia:
+          <div class="codigo">
+            <pre>
+<code class="language-xml"> <span class="xml-attr">nombre</span>="España"
+ <span class="xml-attr">nombre</span>="Suiza"
+ <span class="xml-attr">nombre</span>="Jamaica"</code>
+</pre>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="ejercicio-2">
+      <h2>Ejercicio 2. XSLT</h2>
+
+      <p>Dado el siguiente documento XML, escriba y enlace las hojas de estilo XSLT que devuelvan la respuesta deseada.</p>
+
+      <div class="codigo">
+        <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;geografia&gt;
+  &lt;continentes&gt;
+    &lt;continente nombre="Europa"&gt;
+      &lt;pais&gt;España&lt;/pais&gt;
+      &lt;pais&gt;Francia&lt;/pais&gt;
+      &lt;pais&gt;Suiza&lt;/pais&gt;
+    &lt;/continente&gt;
+    &lt;continente nombre="América"&gt;
+      &lt;pais&gt;México&lt;/pais&gt;
+      &lt;pais&gt;Argentina&lt;/pais&gt;
+      &lt;pais&gt;Uruguay&lt;/pais&gt;
+    &lt;/continente&gt;
+  &lt;/continentes&gt;
+  &lt;paises&gt;
+    &lt;pais nombre="España"&gt;
+      &lt;sistema&gt;monarquía&lt;/sistema&gt;
+      &lt;superficie&gt;504645&lt;/superficie&gt;
+      &lt;moneda&gt;euro&lt;/moneda&gt;
+      &lt;moneda antigua="antigua"&gt;peseta&lt;/moneda&gt;
+      &lt;idioma&gt;español&lt;/idioma&gt;
+    &lt;/pais&gt;
+    &lt;pais nombre="Francia"&gt;
+      &lt;sistema&gt;república&lt;/sistema&gt;
+      &lt;superficie&gt;675417&lt;/superficie&gt;
+      &lt;moneda&gt;euro&lt;/moneda&gt;
+      &lt;moneda antigua="antigua"&gt;franco francés&lt;/moneda&gt;
+      &lt;idioma&gt;francés&lt;/idioma&gt;
+    &lt;/pais&gt;
+    &lt;pais nombre="Suiza"&gt;
+      &lt;sistema&gt;república&lt;/sistema&gt;
+      &lt;superficie&gt;41290&lt;/superficie&gt;
+      &lt;moneda&gt;franco suizo&lt;/moneda&gt;
+      &lt;idioma&gt;francés&lt;/idioma&gt;
+    &lt;/pais&gt;
+    &lt;pais nombre="México"&gt;
+      &lt;sistema&gt;república&lt;/sistema&gt;
+      &lt;superficie&gt;1972550&lt;/superficie&gt;
+      &lt;moneda&gt;peso mejicano&lt;/moneda&gt;
+      &lt;idioma&gt;español&lt;/idioma&gt;
+    &lt;/pais&gt;
+    &lt;pais nombre="Argentina"&gt;
+      &lt;sistema&gt;república&lt;/sistema&gt;
+      &lt;superficie&gt;2780400&lt;/superficie&gt;
+      &lt;moneda&gt;peso argentino&lt;/moneda&gt;
+      &lt;idioma&gt;español&lt;/idioma&gt;
+    &lt;/pais&gt;
+    &lt;pais nombre="Jamaica"&gt;
+      &lt;sistema&gt;monarquía&lt;/sistema&gt;
+      &lt;superficie&gt;10991&lt;/superficie&gt;
+      &lt;moneda&gt;dólar jamaiquino&lt;/moneda&gt;
+      &lt;idioma&gt;inglés&lt;/idioma&gt;
+    &lt;/pais&gt;
+  &lt;/paises&gt;
+&lt;/geografia&gt;</code>
+</pre>
+      </div>
+
+      <ol>
+        <li>Lista
+          <p class="captura"><img alt="XSLT" src="140711_xml_ej2_xslt_1.png" width="311" height="322" /></p>
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;html&gt;
+&lt;h1&gt;Países del mundo&lt;/h1&gt;
+
+&lt;h2&gt;Europa&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;España&lt;/li&gt;
+  &lt;li&gt;Francia&lt;/li&gt;
+  &lt;li&gt;Suiza&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;América&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;México&lt;/li&gt;
+  &lt;li&gt;Argentina&lt;/li&gt;
+  &lt;li&gt;Uruguay&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/html&gt;</code>
+</pre>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <footer>
+      <p class="ultmod">Última modificación de esta página: 11 de julio de 2014</p>
+
+      <p class="licencia"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../../varios/iconos/icono_cc_by_sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
+        Esta página forma parte del curso <a href="http://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a> por <a href="http://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
+        que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.</p>
+    </footer>
+  </body>
+</html>

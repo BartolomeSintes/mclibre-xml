@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios. DTD. XML. Bartolomé Sintes Marco</title>
+    <link href="../varios/xml.css" rel="stylesheet" type="text/css" title="Estilo mclibre" />
+    <link rel="icon" href="../varios/favicon.ico" />
+    <link rel="stylesheet" href="../varios/prism-xml.css" />
+    <script type="text/javascript" src="../varios/prism.js"></script>
+  </head>
+
+  <body>
+    <h1>DTD - Ejercicios</h1>
+
+    <nav>
+      <p>
+        <a href="../index.html"><img src="../varios/iconos/icono_xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48" /></a>
+        <a href="#"><img src="../varios/iconos/icono_arrow_circle_up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36" /></a>
+      </p>
+
+      <h2>DTD - Ejercicios</h2>
+
+      <div class="toc">
+        <ul>
+          <li><a href="#ejercicio-1">1 Errores en elem. sin atrib.</a></li>
+          <li><a href="#ejercicio-2">2 Errores en DTD sin atrib.</a></li>
+          <li><a href="#ejercicio-3">3 Errores en elem. con atrib.</a></li>
+          <li><a href="#ejercicio-4">4 Errores en DTD con atrib.</a></li>
+          <li><a href="#ejercicio-5">5 DTDs</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <p>Estos ejercicios corresponden a lo explicado en la lección <a href="../lecciones/xml_dtd.html">DTD</a>.</p>
+
+    <p>Se pueden consultar las <a href="dtd_soluciones.html">soluciones de estos ejercicios</a>.</p>
+
+    <section id="ejercicio-1">
+      <h2>DTD - Ejercicio 1 - Elementos sin atributos - Corregir errores en los elementos</h2>
+
+      <p>Los siguientes documentos no son válidos porque contienen uno o dos errores (los errores <strong>no</strong> están en la DTD interna). Corrija los errores y compruebe con XML Copy Editor que ya son documentos válidos.</p>
+
+      <section id="ejercicio-1-1">
+        <h3><a href="dtd_soluciones.html#ejercicio-1-1"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>DTD - Ejercicio 1-1 - Números</h3>
+
+        <div class="codigo">
+          <pre>
+<code class="lang-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;!DOCTYPE numeros [
+  &lt;!ELEMENT numeros (#PCDATA)&gt;
+]&gt;
+
+&lt;numeros&gt;
+  &lt;numero&gt;25&lt;/numero&gt;
+&lt;/numeros&gt;</code>
+</pre>
+        </div>
+      </section>
+
+      <section id="ejercicio-1-2">
+        <h3><a href="dtd_soluciones.html#ejercicio-1-2"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>DTD - Ejercicio 1-2 - Letras</h3>
+
+        <div class="codigo">
+          <pre>
+<code class="lang-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;!DOCTYPE letras [
+  &lt;!ELEMENT letras (letra)&gt;
+  &lt;!ELEMENT letra (#PCDATA)&gt;
+]&gt;
+
+&lt;letras&gt;
+  &lt;letra&gt;m&lt;/letra&gt;
+  &lt;letra&gt;uve doble&lt;/letra&gt;
+&lt;/letras&gt;</code>
+</pre>
+        </div>
+      </section>
+
+      <section id="ejercicio-1-3">
+        <h3><a href="dtd_soluciones.html#ejercicio-1-3"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>DTD - Ejercicio 1-3 - Colores</h3>
+
+        <div class="codigo">
+          <pre>
+<code class="lang-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;!DOCTYPE colores [
+  &lt;!ELEMENT colores (color*)&gt;
+  &lt;!ELEMENT color (#PCDATA)&gt;
+]&gt;
+
+&lt;colores&gt;
+  &lt;color&gt;azul marino&lt;/color&gt;
+  negro
+  &lt;color&gt;amarillo&lt;/color&gt;
+&lt;/colores&gt;</code>
+</pre>
+        </div>
+      </section>
+
+      <section id="ejercicio-1-4">
+        <h3><a href="dtd_soluciones.html#ejercicio-1-4"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>DTD - Ejercicio 1-4 - Flores</h3>
+
+        <div class="codigo">
+          <pre>
+<code class="lang-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;!DOCTYPE flores [
+  &lt;!ELEMENT flores (flor+)&gt;
+  &lt;!ELEMENT flor (#PCDATA)&gt;
+]&gt;
+
+&lt;flores&gt;
+&lt;/flores&gt;</code>
+</pre>
+        </div>
+      </section>
+
+      <section id="ejercicio-1-5">
+        <h3><a href="dtd_soluciones.html#ejercicio-1-5"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>DTD - Ejercicio 1-5 - Animales</h3>
+
+        <div class="codigo">
+          <pre>
+<code class="lang-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;!DOCTYPE animales [
+  &lt;!ELEMENT animales (animal*)&gt;
+  &lt;!ELEMENT animal (#PCDATA)&gt;
+]&gt;
+
+&lt;animales&gt;
+  &lt;perro&gt;Caniche&lt;/perro&gt;
+  &lt;gato&gt;Siamés&lt;/gato&gt;
+&lt;/animales&gt;</code>
+</pre>
+        </div>
+      </section>
+
+      <section id="ejercicio-1-6">
+        <h3><a href="dtd_soluciones.html#ejercicio-1-6"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>DTD - Ejercicio 1-6 - Escritores</h3>
+
+        <div class="codigo">
+          <pre>
+<code class="lang-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;!DOCTYPE escritores [
+  &lt;!ELEMENT escritores (escritor*)&gt;
+  &lt;!ELEMENT escritor (nombre, nacimiento)&gt;
+  &lt;!ELEMENT nombre (#PCDATA)&gt;
+  &lt;!ELEMENT nacimiento (#PCDATA)&gt;
+]&gt;
+
+&lt;escritores&gt;
+  &lt;escritor&gt;
+    &lt;nombre&gt;Mario Vargas LLosa&lt;/nombre&gt;
+    &lt;nacimiento&gt;28 de marzo de 1936&lt;/nacimiento&gt;
+  &lt;/escritor&gt;
+  &lt;escritor&gt;
+    &lt;nacimiento&gt;1 de abril de 1929&lt;/nacimiento&gt;
+    &lt;nombre&gt;Milan Kundera&lt;/nombre&gt;
+  &lt;/escritor&gt;
+&lt;/escritores&gt;</code>
+</pre>
+        </div>
+      </section>
+
+      <section id="ejercicio-1-7">
+        <h3><a href="dtd_soluciones.html#ejercicio-1-7"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>DTD - Ejercicio 1-7 - Músicos</h3>
+
+        <div class="codigo">
+          <pre>
+<code class="lang-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;!DOCTYPE musicos [
+  &lt;!ELEMENT musicos (musico*)&gt;
+  &lt;!ELEMENT musico ((nombre | apodo), fechaNacimiento)&gt;
+  &lt;!ELEMENT nombre (#PCDATA)&gt;
+  &lt;!ELEMENT apodo (#PCDATA)&gt;
+  &lt;!ELEMENT fechaNacimiento (#PCDATA)&gt;
+]&gt;
+
+&lt;musicos&gt;
+  &lt;musico&gt;
+    &lt;nombre&gt;Antonio Vivaldi&lt;/nombre&gt;
+    &lt;apodo&gt;El cura pelirrojillo&lt;/apodo&gt;
+    &lt;fechaNacimiento&gt;4 de marzo de 1678&lt;/fechaNacimiento&gt;
+  &lt;/musico&gt;
+  &lt;musico&gt;
+    &lt;nombre&gt;Johann Sebastian Bach&lt;/nombre&gt;
+    &lt;apodo&gt;El viejo peluca&lt;/apodo&gt;
+    &lt;fechaNacimiento&gt;21 de marzo de 1685&lt;/fechaNacimiento&gt;
+  &lt;/musico&gt;
+&lt;/musicos&gt;</code>
+</pre>
+        </div>
+      </section>
+
+      <section id="ejercicio-1-8">
+        <h3><a href="dtd_soluciones.html#ejercicio-1-8"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>DTD - Ejercicio 1-8 - Teléfonos de emergencia</h3>
+
+        <div class="codigo">
+          <pre>
+<code class="lang-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;!DOCTYPE agenda [
+  &lt;!ELEMENT agenda (contacto*)&gt;
+  &lt;!ELEMENT contacto (nombre, telefonoFijo*, telefonoMovil+)&gt;
+  &lt;!ELEMENT nombre (#PCDATA)&gt;
+  &lt;!ELEMENT telefonoFijo (#PCDATA)&gt;
+  &lt;!ELEMENT telefonoMovil (#PCDATA)&gt;
+]&gt;
+
+&lt;agenda&gt;
+  &lt;contacto&gt;
+    &lt;nombre&gt;Ayuntamiento&lt;/nombre&gt;
+    &lt;telefonoFijo&gt;010&lt;/telefonoFijo&gt;
+  &lt;/contacto&gt;
+  &lt;contacto&gt;
+    &lt;nombre&gt;Emergencias&lt;/nombre&gt;
+    &lt;telefonoFijo&gt;112 (Unión Europea)&lt;/telefonoFijo&gt;
+    &lt;telefonoMovil&gt;Desconocido&lt;/telefonoMovil&gt;
+    &lt;telefonoFijo&gt;911 (Estados Unidos)&lt;/telefonoFijo&gt;
+  &lt;/contacto&gt;
+&lt;/agenda&gt;</code>
+</pre>
+        </div>
+      </section>
+
+      <section id="ejercicio-1-9">
+        <h3><a href="dtd_soluciones.html#ejercicio-1-9"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>DTD - Ejercicio 1-9 - El sistema solar</h3>
+
+        <div class="codigo">
+          <pre>
+<code class="lang-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;!DOCTYPE sistemaSolar [
+  &lt;!ELEMENT sistemaSolar (cuerpo*)&gt;
+  &lt;!ELEMENT cuerpo (planeta|satelite|asteroide)&gt;
+  &lt;!ELEMENT planeta (#PCDATA)&gt;
+  &lt;!ELEMENT satelite (#PCDATA)&gt;
+  &lt;!ELEMENT asteroide (#PCDATA)&gt;
+]&gt;
+
+&lt;sistemaSolar&gt;
+  &lt;cuerpo&gt;
+    &lt;planeta&gt;Tierra&lt;/planeta&gt;
+    &lt;satelite&gt;Luna&lt;/satelite&gt;
+  &lt;/cuerpo&gt;
+  &lt;asteroide&gt;Ceres&lt;/asteroide&gt;
+&lt;/sistemaSolar&gt;</code>
+</pre>
+        </div>
+      </section>
+    </section>
+
+    <section id="ejercicio-2">
+      <h2>DTD - Ejercicio 2 - Elementos sin atributos - Corregir errores en la DTD</h2>
+
+      <p>Los siguientes documentos no son válidos porque contienen errores (los errores <strong>están</strong> en la DTD interna). Corrija los errores y compruebe con XML Copy Editor que ya son documentos válidos. Casi siempre habrá varias maneras de corregir la DTD, intente elegir la más sencilla.</p>
+
+      <section id="ejercicio-2-1">
+        <h3><a href="dtd_soluciones.html#ejercicio-2-1"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>DTD - Ejercicio 2-1 - Marcadores</h3>
+
+        <div class="codigo">
+          <pre>
+<code class="lang-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;!DOCTYPE favoritos [
+  &lt;!ELEMENT favoritos (marcador)&gt;
+  &lt;!ELEMENT marcador (nombre, uri)&gt;
+  &lt;!ELEMENT nombre (#PCDATA)&gt;
+  &lt;!ELEMENT uri (#PCDATA)&gt;
+]&gt;
+
+&lt;marcadores&gt;
+  &lt;marcador&gt;
+    &lt;nombre&gt;W3C&lt;/nombre&gt;
+    &lt;uri&gt;http://www.w3.org/&lt;/uri&gt;
+  &lt;/marcador&gt;
+  &lt;marcador&gt;
+    &lt;nombre&gt;Web Hypertext Application Technology Working Group (WHATWG)&lt;/nombre&gt;
+    &lt;uri&gt;http://www.whatwg.org/&lt;/uri&gt;
+  &lt;/marcador&gt;
+&lt;/marcadores&gt;</code>
+</pre>
+        </div>
+      </section>
+
+      <section id="ejercicio-2-2">
+        <h3><a href="dtd_soluciones.html#ejercicio-2-2"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>DTD - Ejercicio 2-2 - Efemérides</h3>
+
+        <div class="codigo">
+          <pre>
+<code class="lang-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;!DOCTYPE efemerides [
+  &lt;!ELEMENT efemerides (efemeride)&gt;
+  &lt;!ELEMENT efemeride (fecha, hecho)&gt;
+]&gt;
+
+&lt;efemerides&gt;
+  &lt;efemeride&gt;
+    &lt;fecha&gt;20 de julio de 1969&lt;/fecha&gt;
+    &lt;hecho&gt;Llegada del hombre a la Luna&lt;/hecho&gt;
+  &lt;/efemeride&gt;
+  &lt;efemeride&gt;
+    &lt;fecha&gt;12 de octubre de 1492&lt;/fecha&gt;
+    &lt;hecho&gt;Llegada de Colón a América&lt;/hecho&gt;
+  &lt;/efemeride&gt;
+  &lt;efemeride&gt;
+    &lt;fecha&gt;6 de abril de 1909&lt;/fecha&gt;
+    &lt;hecho&gt;llegada de Robert Peary al Polo Norte&lt;/hecho&gt;
+  &lt;/efemeride&gt;
+&lt;/efemerides&gt;</code>
+</pre>
+        </div>
+      </section>
+
+      <section id="ejercicio-2-3">
+        <h3><a href="dtd_soluciones.html#ejercicio-2-3"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>DTD - Ejercicio 2-3 - Aeropuertos</h3>
+
+        <div class="codigo">
+          <pre>
+<code class="lang-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;!DOCTYPE aeropuertos [
+  &lt;!ELEMENT aeropuertos (aeropuerto*)&gt;
+  &lt;!ELEMENT aeropuerto (nombre, cerrado)&gt;
+  &lt;!ELEMENT nombre (#PCDATA)&gt;
+  &lt;!ELEMENT cerrado (#PCDATA)&gt;
+]&gt;
+
+&lt;aeropuertos&gt;
+  &lt;aeropuerto&gt;
+    &lt;nombre&gt;Berlín Schönefeld (SFX)&lt;/nombre&gt;
+  &lt;/aeropuerto&gt;
+  &lt;aeropuerto&gt;
+    &lt;nombre&gt;Berlín Tempelhof (THF)&lt;/nombre&gt;
+    &lt;cerrado /&gt;
+ &lt;/aeropuerto&gt;
+&lt;/aeropuertos&gt;</code>
+</pre>
+        </div>
+      </section>
+
+      <section id="ejercicio-2-4">
+        <h3><a href="dtd_soluciones.html#ejercicio-2-4"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>DTD - Ejercicio 2-4 - Vuelos</h3>
+
+        <div class="codigo">
+          <pre>
+<code class="lang-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;!DOCTYPE vuelos [
+  &lt;!ELEMENT vuelos (vuelo*)&gt;
+  &lt;!ELEMENT vuelo (origen, destino)&gt;
+  &lt;!ELEMENT origen (#PCDATA)&gt;
+  &lt;!ELEMENT destino (#PCDATA)&gt;
+]&gt;
+
+&lt;vuelos&gt;
+  &lt;vuelo&gt;
+    &lt;origen&gt;Valencia (VLC)&lt;/origen&gt;
+    &lt;destino&gt;Londres Heathrow (LHR)&lt;/destino&gt;
+  &lt;/vuelo&gt;
+  &lt;vuelo&gt;
+    &lt;destino&gt;Berlín Schönefeld (SFX)&lt;/destino&gt;
+    &lt;origen&gt;Paris Charles de Gaulle (CDG)&lt;/origen&gt;
+  &lt;/vuelo&gt;
+&lt;/vuelos&gt;</code>
+</pre>
+        </div>
+      </section>
+
+      <section id="ejercicio-2-5">
+        <h3><a href="dtd_soluciones.html#ejercicio-2-5"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>DTD - Ejercicio 2-5 - Reyes españoles</h3>
+
+        <div class="codigo">
+          <pre>
+<code class="lang-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;!DOCTYPE reyesEspañoles [
+  &lt;!ELEMENT reyesEspañoles (rey*, reina*)&gt;
+  &lt;!ELEMENT rey (nombre, padre, madre)&gt;
+  &lt;!ELEMENT nombre (#PCDATA)&gt;
+  &lt;!ELEMENT padre (#PCDATA)&gt;
+  &lt;!ELEMENT madre (#PCDATA)&gt;
+]&gt;
+
+&lt;reyesEspañoles&gt;
+  &lt;rey&gt;
+    &lt;nombre&gt;Felipe III&lt;/nombre&gt;
+    &lt;padre&gt;Felipe II&lt;/padre&gt;
+    &lt;madre&gt;Ana de Austria&lt;/madre&gt;
+  &lt;/rey&gt;
+  &lt;reina&gt;
+    &lt;nombre&gt;Juana la Loca&lt;/nombre&gt;
+    &lt;padre&gt;Fernando el Católico&lt;/padre&gt;
+    &lt;madre&gt;Isabel la Católica&lt;/madre&gt;
+  &lt;/reina&gt;
+  &lt;rey&gt;
+    &lt;nombre&gt;Carlos I&lt;/nombre&gt;
+    &lt;padre&gt;Felipe el Hermoso&lt;/padre&gt;
+    &lt;madre&gt;Juan la Loca&lt;/madre&gt;
+  &lt;/rey&gt;
+&lt;/reyesEspañoles&gt;</code>
+</pre>
+        </div>
+      </section>
+
+      <section id="ejercicio-2-6">
+        <h3><a href="dtd_soluciones.html#ejercicio-2-6"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>DTD - Ejercicio 2-6 - Países</h3>
+
+        <div class="codigo">
+          <pre>
+<code class="lang-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;!DOCTYPE paises [
+  &lt;!ELEMENT pais (nombre, unionEuropea, otan)&gt;
+  &lt;!ELEMENT nombre EMPTY&gt;
+  &lt;!ELEMENT unionEuropea EMPTY&gt;
+  &lt;!ELEMENT otan EMPTY&gt;
+]&gt;
+
+&lt;paises&gt;
+  &lt;pais&gt;
+    &lt;nombre&gt;España&lt;/nombre&gt;
+    &lt;unionEuropea /&gt;
+    &lt;otan /&gt;
+  &lt;/pais&gt;
+  &lt;pais&gt;
+    &lt;nombre&gt;Noruega&lt;/nombre&gt;
+    &lt;otan /&gt;
+  &lt;/pais&gt;
+  &lt;pais&gt;
+    &lt;nombre&gt;Austria&lt;/nombre&gt;
+    &lt;unionEuropea /&gt;
+  &lt;/pais&gt;
+&lt;/paises&gt;</code>
+</pre>
+        </div>
+      </section>
+
+      <section id="ejercicio-2-7">
+        <h3><a href="dtd_soluciones.html#ejercicio-2-7"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>DTD - Ejercicio 2-7 - Códigos de colores</h3>
+
+        <div class="codigo">
+          <pre>
+<code class="lang-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;!DOCTYPE colores [
+  &lt;!ELEMENT colores (color*)&gt;
+  &lt;!ELEMENT nombreSvg (#PCDATA)&gt;
+  &lt;!ELEMENT rgb (#PCDATA)&gt;
+  &lt;!ELEMENT cmyk (#PCDATA)&gt;
+]&gt;
+
+&lt;colores&gt;
+  &lt;color&gt;
+    &lt;nombreSvg&gt;Purple&lt;/nombreSvg&gt;
+    &lt;codigo&gt;
+      &lt;rgb&gt;#800080&lt;/rgb&gt;
+    &lt;/codigo&gt;
+  &lt;/color&gt;
+  &lt;color&gt;
+    &lt;nombreSvg&gt;Purple&lt;/nombreSvg&gt;
+    &lt;codigo&gt;
+      &lt;cmyk&gt;#00FF007F&lt;/cmyk&gt;
+    &lt;/codigo&gt;
+  &lt;/color&gt;
+&lt;/colores&gt;</code>
+</pre>
+        </div>
+      </section>
+
+      <section id="ejercicio-2-8">
+        <h3><a href="dtd_soluciones.html#ejercicio-2-8"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>DTD - Ejercicio 2-8 - Contabilidad</h3>
+
+        <div class="codigo">
+          <pre>
+<code class="lang-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;!DOCTYPE contabilidad [
+  &lt;!ELEMENT contabilidad ((ingreso | gasto)*)&gt;
+  &lt;!ELEMENT fecha (#PCDATA)&gt;
+  &lt;!ELEMENT cantidad (#PCDATA)&gt;
+  &lt;!ELEMENT concepto (#PCDATA)&gt;
+]&gt;
+
+&lt;contabilidad&gt;
+  &lt;apunte&gt;
+    &lt;ingreso /&gt;
+    &lt;fecha&gt;24 de febrero de 2011&lt;/fecha&gt;
+    &lt;cantidad&gt;1800,00 &euro;&lt;/cantidad&gt;
+    &lt;concepto&gt;Salario&lt;/concepto&gt;
+  &lt;/apunte&gt;
+  &lt;apunte&gt;
+    &lt;gasto /&gt;
+    &lt;fecha&gt;28 de febrero de 2011&lt;/fecha&gt;
+    &lt;cantidad&gt;74,25 &euro;&lt;/cantidad&gt;
+    &lt;concepto&gt;Recibo luz&lt;/concepto&gt;
+  &lt;/apunte&gt;
+&lt;/contabilidad&gt;</code>
+</pre>
+        </div>
+      </section>
+
+      <section id="ejercicio-2-9">
+        <h3><a href="dtd_soluciones.html#ejercicio-2-9"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>DTD - Ejercicio 2-9 - Mensajes</h3>
+
+        <div class="codigo">
+          <pre>
+<code class="lang-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;!DOCTYPE mensajes [
+  &lt;!ELEMENT mensajes (mensaje)&gt;
+  &lt;!ELEMENT de (#PCDATA)&gt;
+  &lt;!ELEMENT para (#PCDATA)&gt;
+  &lt;!ELEMENT hora (#PCDATA)&gt;
+  &lt;!ELEMENT texto (#PCDATA)&gt;
+  &lt;!ELEMENT strong (#PCDATA)&gt;
+]&gt;
+
+&lt;mensajes&gt;
+  &lt;mensaje&gt;
+    &lt;de&gt;Pepe (pepe@example.com)&lt;/de&gt;
+    &lt;para&gt;Juan (juan@example.com)&lt;/para&gt;
+    &lt;hora&gt;28/02/2011 17:48:23,61&lt;/hora&gt;
+    &lt;texto&gt;¿Hola, Juan, qué haces?&lt;/texto&gt;
+  &lt;/mensaje&gt;
+  &lt;mensaje&gt;
+    &lt;de&gt;Juan (juan@example.com)&lt;/de&gt;
+    &lt;para&gt;Pepe (pepe@example.com)&lt;/para&gt;
+    &lt;hora&gt;28/02/2011 17:54:20,87&lt;/hora&gt;
+    &lt;texto&gt;Aquí, aprendiendo &lt;strong&gt;XML&lt;/strong&gt;&lt;/texto&gt;
+  &lt;/mensaje&gt;
+&lt;/mensajes&gt;</code>
+</pre>
+        </div>
+      </section>
+    </section>
+
+    <section id="ejercicio-3">
+      <h2>DTD - Ejercicio 3 - Elementos con atributos - Corregir errores en los elementos</h2>
+
+      <p>Los siguientes documentos no son válidos porque contienen uno o dos errores (los errores <strong>no</strong> están en la DTD interna). Corrija los errores y compruebe con XML Copy Editor que ya son documentos válidos.</p>
+
+      <section id="ejercicio-3-1">
+        <h3><a href="dtd_soluciones.html#ejercicio-3-1"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>DTD - Ejercicio 3-1 - Datos personales</h3>
+
+        <div class="codigo">
+          <pre>
+<code class="lang-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;!DOCTYPE persona [
+  &lt;!ELEMENT persona EMPTY&gt;
+  &lt;!ATTLIST persona nombre CDATA #IMPLIED&gt;
+]&gt;
+
+&lt;persona dni="03141592E" /&gt;</code>
+</pre>
+        </div>
+      </section>
+
+      <section id="ejercicio-3-2">
+        <h3><a href="dtd_soluciones.html#ejercicio-3-2"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>DTD - Ejercicio 3-2 - Película</h3>
+
+        <div class="codigo">
+          <pre>
+<code class="lang-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;!DOCTYPE pelicula [
+  &lt;!ELEMENT pelicula EMPTY&gt;
+  &lt;!ATTLIST pelicula titulo CDATA #IMPLIED&gt;
+]&gt;
+
+&lt;pelicula titulo="La diligencia" genero="oeste" /&gt;</code>
+</pre>
+        </div>
+      </section>
+
+      <section id="ejercicio-3-3">
+        <h3><a href="dtd_soluciones.html#ejercicio-3-3"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>DTD - Ejercicio 3-3 - Cuadros</h3>
+
+        <div class="codigo">
+          <pre>
+<code class="lang-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;!DOCTYPE cuadros [
+  &lt;!ELEMENT cuadros (cuadro*)&gt;
+  &lt;!ELEMENT cuadro EMPTY&gt;
+  &lt;!ATTLIST cuadro titulo ID #REQUIRED&gt;
+  &lt;!ATTLIST cuadro autor CDATA #REQUIRED&gt;
+]&gt;
+
+&lt;cuadros&gt;
+  &lt;cuadro titulo="Adán y Eva" autor="Alberto Durero" /&gt;
+  &lt;cuadro autor="Lucas Cranach, el viejo" titulo="Adán y Eva" /&gt;
+&lt;/cuadros&gt;</code>
+</pre>
+        </div>
+      </section>
+
+      <section id="ejercicio-3-4">
+        <h3><a href="dtd_soluciones.html#ejercicio-3-4"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>DTD - Ejercicio 3-4 - Lista de la compra</h3>
+
+        <div class="codigo">
+          <pre>
+<code class="lang-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;!DOCTYPE listaCompra [
+  &lt;!ELEMENT listaCompra (item*)&gt;
+  &lt;!ELEMENT item EMPTY&gt;
+  &lt;!ATTLIST item nombre CDATA #REQUIRED&gt;
+  &lt;!ATTLIST item cantidad CDATA #REQUIRED&gt;
+]&gt;
+
+&lt;listaCompra&gt;
+  &lt;leche cantidad="12 litros" &gt;&lt;/leche&gt;
+  &lt;pan cantidad="3 barras de cuarto" /&gt;
+&lt;/listaCompra&gt;</code>
+</pre>
+        </div>
+      </section>
+
+      <section id="ejercicio-3-5">
+        <h3><a href="dtd_soluciones.html#ejercicio-3-5"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>DTD - Ejercicio 3-5 - Jugadores de fútbol</h3>
+
+        <div class="codigo">
+          <pre>
+<code class="lang-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;!DOCTYPE futbol [
+  &lt;!ELEMENT futbol (jugador*)&gt;
+  &lt;!ELEMENT jugador EMPTY&gt;
+  &lt;!ATTLIST jugador nombre NMTOKENS #REQUIRED&gt;
+  &lt;!ATTLIST jugador codigo ID #REQUIRED&gt;
+]&gt;
+
+&lt;futbol&gt;
+  &lt;jugador nombre="Alfredo Di Stéfano" codigo="1"/&gt;
+  &lt;jugador nombre="Edson Arantes do Nascimento, Pelé" codigo="2" /&gt;
+  &lt;jugador nombre="Diego Armando Maradona" codigo="3" /&gt;
+  &lt;jugador nombre="Johan Cruyff" codigo="4" /&gt;
+&lt;/futbol&gt;</code>
+</pre>
+        </div>
+      </section>
+
+      <section id="ejercicio-3-6">
+        <h3><a href="dtd_soluciones.html#ejercicio-3-6"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>DTD - Ejercicio 3-6 - Jugadores y equipos de fútbol</h3>
+
+        <div class="codigo">
+          <pre>
+<code class="lang-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;!DOCTYPE futbol [
+  &lt;!ELEMENT futbol ((jugador|equipo)*)&gt;
+  &lt;!ELEMENT jugador EMPTY&gt;
+  &lt;!ATTLIST jugador nombre NMTOKENS #REQUIRED&gt;
+  &lt;!ATTLIST jugador codigo ID #REQUIRED&gt;
+  &lt;!ELEMENT equipo EMPTY&gt;
+  &lt;!ATTLIST equipo nombre CDATA #REQUIRED&gt;
+  &lt;!ATTLIST equipo jugadores IDREFS #IMPLIED&gt;
+]&gt;
+
+&lt;futbol&gt;
+  &lt;jugador nombre="Alfredo Di Stéfano" codigo="ads"/&gt;
+  &lt;jugador nombre="Edison Arantes do Nascimento" codigo="ean" /&gt;
+  &lt;jugador nombre="Diego Armando Maradona" codigo="dam" /&gt;
+  &lt;jugador nombre="Johan Cruyff" codigo="jc" /&gt;
+  &lt;equipo nombre="Società Sportiva Calcio Napoli" jugadores="Maradona" /&gt;
+  &lt;equipo nombre="Futbol Club Barcelona" jugadores="Cruyff, Maradona" /&gt;
+&lt;/futbol&gt;</code>
+</pre>
+        </div>
+      </section>
+    </section>
+
+    <section id="ejercicio-4">
+      <h2>DTD - Ejercicio 4 - Elementos con atributos - Corregir errores en la DTD</h2>
+
+      <p>Los siguientes documentos no son válidos porque contienen errores (los errores <strong>están</strong> en la DTD interna). Corrija los errores y compruebe con XML Copy Editor que ya son documentos válidos. Casi siempre habrá varias maneras de corregir la DTD, intente elegir la más sencilla.</p>
+
+      <section id="ejercicio-4-1">
+        <h3><a href="dtd_soluciones.html#ejercicio-4-1"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>DTD - Ejercicio 4-1 - Libro</h3>
+
+        <div class="codigo">
+          <pre>
+    <code class="lang-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;!DOCTYPE libro [
+  &lt;!ELEMENT libro EMPTY&gt;
+  &lt;!ATTLIST libro autor NMTOKEN #REQUIRED&gt;
+]&gt;
+
+&lt;libro autor="Mario Vargas LLosa" /&gt;</code>
+</pre>
+        </div>
+      </section>
+
+      <section id="ejercicio-4-2">
+        <h3><a href="dtd_soluciones.html#ejercicio-4-2"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>DTD - Ejercicio 4-2 - Inventores</h3>
+
+        <div class="codigo">
+          <pre>
+<code class="lang-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;!DOCTYPE inventores [
+  &lt;!ELEMENT inventores&gt;
+  &lt;!ELEMENT inventor EMPTY&gt;
+  &lt;!ATTLIST inventor invento CDATA #REQUIRED&gt;
+  &lt;!ATTLIST inventor nombre ID #REQUIRED&gt;
+]&gt;
+
+&lt;inventores&gt;
+  &lt;inventor nombre="Robert Adler" invento="Mando a distancia" /&gt;
+  &lt;inventor nombre="Laszlo Josef Biro" invento="Bolígrafo" /&gt;
+  &lt;inventor nombre="Josephine Garis Cochran" invento="Lavaplatos" /&gt;
+  &lt;inventor invento="Fuego" /&gt;
+&lt;/inventores&gt;</code>
+</pre>
+        </div>
+      </section>
+
+      <section id="ejercicio-4-3">
+        <h3><a href="dtd_soluciones.html#ejercicio-4-3"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>DTD - Ejercicio 4-3 - Cosas por hacer</h3>
+
+        <div class="codigo">
+          <pre>
+<code class="lang-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;!DOCTYPE cosasPorHacer [
+  &lt;!ELEMENT cosasPorHacer (cosa)&gt;
+  &lt;!ELEMENT cosa EMPTY&gt;
+  &lt;!ATTLIST cosa fecha CDATA #REQUIRED&gt;
+  &lt;!ATTLIST cosa asunto CDATA #REQUIRED&gt;
+  &lt;!ATTLIST cosa fechaLimite CDATA #REQUIRED&gt;
+]&gt;
+
+&lt;cosasPorHacer&gt;
+  &lt;cosa fecha="20 de febrero de 2011" fechaLimite="1 de marzo de 2011"&gt;
+  Preparar ejercicios de DTDs&lt;/cosa&gt;
+  &lt;cosa fecha="21 de febrero de 2011" fechaLimite="5 de marzo de 2011"&gt;
+  Preparar tema XSLT&lt;/cosa&gt;
+&lt;/cosasPorHacer&gt;</code>
+</pre>
+        </div>
+      </section>
+
+      <section id="ejercicio-4-4">
+        <h3><a href="dtd_soluciones.html#ejercicio-4-4"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>DTD - Ejercicio 4-4 - Resoluciones de pantalla</h3>
+
+        <div class="codigo">
+          <pre>
+<code class="lang-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;!DOCTYPE resoluciones [
+  &lt;!ELEMENT resoluciones EMPTY&gt;
+  &lt;!ATTLIST resoluciones nombre NMTOKEN #REQUIRED&gt;
+  &lt;!ATTLIST resoluciones alto CDATA #REQUIRED&gt;
+  &lt;!ATTLIST resoluciones ancho CDATA #REQUIRED&gt;
+]&gt;
+
+&lt;resoluciones&gt;
+  &lt;resolucion nombre="VGA" alto="480" ancho="640" /&gt;
+  &lt;resolucion nombre="XGA" alto="1024" ancho="768" /&gt;
+  &lt;resolucion nombre="HD 1080" alto="1920" ancho="1080" /&gt;
+&lt;/resoluciones&gt;</code>
+</pre>
+        </div>
+      </section>
+
+      <section id="ejercicio-4-5">
+        <h3><a href="dtd_soluciones.html#ejercicio-4-5"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>DTD - Ejercicio 4-5 - Álbumes de Mortadelo y Filemón</h3>
+
+        <div class="codigo">
+          <pre>
+<code class="lang-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;!DOCTYPE albumesMortadelo [
+  &lt;!ELEMENT albumesMortadelo (album*)&gt;
+  &lt;!ELEMENT album (nombre, fecha)&gt;
+  &lt;!ATTLIST album nombre CDATA #REQUIRED&gt;
+  &lt;!ATTLIST album fecha(1969,1970,1971,1972,1973,1974) #REQUIRED&gt;
+]&gt;
+
+&lt;albumesMortadelo&gt;
+  &lt;album nombre="El sulfato atómico" fecha="1969"/&gt;
+  &lt;album nombre="La caja de diez cerrojos" fecha="1971"/&gt;
+  &lt;album nombre="El otro yo del profesor Bacterio" fecha="1973"/&gt;
+  &lt;album nombre="Los cacharros majaretas" fecha="1974"/&gt;
+&lt;/albumesMortadelo&gt;</code>
+</pre>
+        </div>
+      </section>
+    </section>
+
+    <section id="ejercicio-5">
+      <h2><a href="dtd_soluciones.html#ejercicio-5"><img src="../varios/iconos/icono_solucion.svg" alt="Solución del ejercicio" title="Solución del ejercicio" width="48" height="48" class="d noprint" /></a>DTD - Ejercicio 5 - DTDs alternativos</h2>
+
+      <p>Se quiere definir un lenguaje de marcas para representar los resultados de una liga de fútbol. La información que se quiere almacenar de cada partido es:</p>
+
+      <ul>
+        <li>el nombre del equipo local</li>
+        <li>el nombre del equipo visitante</li>
+        <li>los goles marcados por el equipo local</li>
+        <li>los goles marcados por el equipo visitante</li>
+      </ul>
+
+      <p>Escribe tres documentos que incluyan los siguientes resultados:</p>
+
+      <ul>
+        <li>Nottingham Presa: 0 - Inter de Mitente: 1</li>
+        <li>Vodka Juniors: 3 - Sparta da Risa: 3</li>
+        <li>Water de Munich: 4 - Esteaua es del grifo: 2</li>
+      </ul>
+
+      <p>Cada documento incluirá un DTD diferente para representar ese lenguaje de marcas:</p>
+
+      <ul>
+        <li>una DTD en la que no haya atributos, sino únicamente etiquetas</li>
+        <li>una DTD en la que los goles sean atributos</li>
+        <li>una DTD en la que toda la información se guarde en forma de atributos</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p class="ultmod">Última modificación de esta página: 27 de abril de 2015</p>
+
+      <p class="licencia"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../varios/iconos/icono_cc_by_sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
+        Esta página forma parte del curso <a href="http://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a> por <a href="http://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
+        que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.</p>
+    </footer>
+  </body>
+</html>

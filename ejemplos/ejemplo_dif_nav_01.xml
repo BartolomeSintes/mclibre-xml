@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="ejemplo_dif_nav_01.css" title="Estilo"?>
+<listas>
+  <lista>
+    <elemento>Ejemplo</elemento>
+    <elemento>Ejemplo</elemento>
+    <elemento>Ejemplo</elemento>
+  </lista>
+  <lista>
+    <elemento>Ejemplo</elemento>
+    <elemento>Ejemplo</elemento>
+    <elemento>Ejemplo</elemento>
+  </lista>
+</listas>

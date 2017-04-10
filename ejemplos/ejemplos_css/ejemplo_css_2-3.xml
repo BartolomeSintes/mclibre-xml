@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<libro  xmlns="http://www.w3.org/1999/xhtml">
+  <h1>La vida está en otra parte</h1>
+  <autor>Milan Kundera</autor>
+  <personaje>Jaromil</personaje>
+  <fechaPublicacion año="1973"/>
+</libro>
