@@ -1,76 +1,249 @@
-/* XML: LENGUAJE DE MARCAS EXTENSIBLE
-   Bartolomé Sintes Marco
-   http://www.mclibre.org
+@charset "utf-8";
 
-   Hoja de estilo para el curso XML
+/* XML: LENGUAJE DE MARCAS EXTENSIBLE       */
+/* Bartolome Sintes Marco                   */
+/* http://www.mclibre.org                   */
+/*                                          */
+/* CSS curso: XML							*/
+/*                                          */
+/* 25 de abril de 2017                      */
+/*                                          */
 
-   5 de diciembre de 2016
-*/
+/* CSS común */
 
-html { font-family: sans-serif; background-color: white; text-align: justify; }
+html {
+  background-color: white;
+  font-family: sans-serif;
+  text-align: justify;
+}
 
-section { clear: both; border-top: solid 2px black; padding-top: 0; margin-top: 1em;}
-section section { border-top: solid 1px black; }
+section {
+  clear: both;
+  border-top: solid 2px black;
+  margin-top: 1em;
+  padding-top: 0;
+}
 
-footer { margin-top: 2em; }
+section section {
+  border-top: solid 1px black;
+}
 
-.captura img { border: black 2px dotted; padding: 5px;}
-.captura { text-align: center; }
-.clear { clear: both; }
-.derecha { text-align: right; }
-.incompleto { color: red; background-color: #FFFFFF; }
-.resaltado { border: red 2px solid; padding: 1px; font-weight: bold; }
+footer {
+  margin-top: 2em;
+}
 
-h1 { font-size: 200%; text-align: center; margin-left: 75px; font-weight: bold;}
-h1#indice { margin-left: 150px; }
-h2 { font-size: 120%; }
-h3 { font-size: 105%; }
-h4 { font-size: 100%; font-weight: normal; text-decoration: underline;}
-h2, h3, h4 { clear: both; }
+.captura img {
+  border: black 2px dotted;
+  padding: 5px;
+}
 
-p { margin:5px 0px; }
-p.aviso { margin:10px; padding: 10px; border-left: 2px red solid; color:red; }
-p.centrado { text-align: center; }
-p.derecha { text-align: right; }
-p.ultmod { clear: both; text-align: left; border-top: black 1px solid; margin-top: 10px; padding-top: 2px;}
-p.licencia { text-align: left; }
+.captura {
+  text-align: center;
+}
 
-hr { width: 100%; clear: both; }
-hr.corta { width: 50%; text-align: center; clear: both; }
+.clear {
+  clear: both;
+}
 
-img#vpp { position: absolute; top: 5px; left: 5px; border:none; }
-img.d { float: right; margin-left: 10px; margin-bottom: 5px; }
-img.i { float: left; margin-right: 10px; }
-img.vmedio { vertical-align: middle; }
+.derecha {
+  text-align: right;
+}
 
-div.codigo { border: #7D7D7D 2px solid; padding: 0px 10px; margin: 5px 20px; }
-div.ejercicio { border: #7D7D7D 2px solid; padding: 0px 10px; margin: 5px 20px; }
+.incompleto {
+  background-color: #FFFFFF;
+  color: red;
+}
 
-pre { white-space: pre-wrap; }
+.resaltado {
+  border: red 2px solid;
+  padding: 1px;
+  font-weight: bold;
+}
 
-table.indice h2 { margin: 0px; }
-td { vertical-align: top; }
-table.conborde, table.conborde td, table.conborde th { border: black 1px solid; }
-table.sinborde td, td.sinborde { border: none; }
-table.centrado { margin-left: auto; margin-right: auto; }
-td.centrado, th.centrado, tbody.centrado { text-align: center; }
-tr.negativo { background-color: #eee; }
+h1 {
+  margin-left: 75px;
+  font-size: 200%;
+  font-weight: bold;
+  text-align: center;
+}
+
+h1#indice {
+  margin-left: 150px;
+}
+
+h2 {
+  font-size: 120%;
+}
+
+h3 {
+  font-size: 105%;
+}
+
+h4 {
+  font-size: 100%;
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+h2, h3, h4 {
+  clear: both;
+}
+
+p {
+  margin:5px 0;
+}
+
+p.aviso {
+  border-left: 2px red solid;
+  margin: 10px;
+  padding: 10px;
+  color:red;
+}
+
+p.centrado {
+  text-align: center;
+}
+
+p.derecha {
+  text-align: right;
+}
+
+p.ultmod {
+  clear: both;
+  border-top: black 1px solid;
+  margin-top: 10px;
+  padding-top: 2px;
+  text-align: left;
+}
+
+p.licencia {
+  text-align: left;
+}
+
+hr {
+  clear: both;
+  width: 100%;
+}
+
+hr.corta {
+  clear: both;
+  width: 50%;
+  text-align: center;
+}
+
+img#vpp {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  border:none;
+}
+
+img.d {
+  float: right;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+img.i {
+  float: left;
+  margin-right: 10px;
+}
+
+img.vmedio {
+  vertical-align: middle;
+}
+
+div.codigo {
+  border: #7D7D7D 2px solid;
+  margin: 5px 20px;
+  padding: 0 10px;
+}
+
+div.ejercicio {
+  border: #7D7D7D 2px solid;
+  margin: 5px 20px;
+  padding: 0 10px;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+table.indice h2 {
+  margin: 0;
+}
+
+td {
+  vertical-align: top;
+}
+
+table.conborde, table.conborde td, table.conborde th {
+  border: black 1px solid;
+}
+
+table.sinborde td, td.sinborde {
+  border: none;
+}
+
+table.centrado {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+td.centrado, th.centrado, tbody.centrado {
+  text-align: center;
+}
+
+tr.negativo {
+  background-color: #eee;
+}
 
 table.franjas thead tr, table.franjas tbody tr:nth-child(even) {
   background-color: #eee;
   color: black;
 }
 
-table.ejemplo { table-layout: auto; width: 100%; text-align: left; border-spacing: 5px; }
-table.ejemplo col.icono { width: 40px; vertical-align: top;}
-td.codigo { border: #7D7D7D 2px solid; padding: 0px 5px; }
-td.resul { border: #7D7D7D 2px solid; padding: 4px; text-align: left; font-family: serif; }
+table.ejemplo {
+  table-layout: auto;
+  width: 100%;
+  text-align: left;
+  border-spacing: 5px;
+}
 
-ul { margin-top: 0px; }
-li { clear: both; }
+table.ejemplo col.icono {
+  width: 40px;
+  vertical-align: top;
+}
 
-object.ejercicio { width: 90%; height: 400px; }
-object.ejemplo { width: 90%; height: 200px; }
+td.codigo {
+  border: #7D7D7D 2px solid;
+  padding: 0 5px;
+}
+
+td.resul {
+  border: #7D7D7D 2px solid;
+  padding: 4px;
+  font-family: serif;
+  text-align: left;
+}
+
+ul {
+  margin-top: 0;
+}
+
+li {
+  clear: both;
+}
+
+object.ejercicio {
+  width: 90%;
+  height: 400px;
+}
+
+object.ejemplo {
+  width: 90%;
+  height: 200px;
+}
 
 /* Clases para fragmentos de código en texto */
 .xml-tag  { font-weight: bold; color: #0000FF; } /* any tag from "<" till ">"              */
@@ -89,71 +262,186 @@ object.ejemplo { width: 90%; height: 200px; }
 .css-valor       { font-weight: bold; color: #E88501; }
 .css-unidad      { font-weight: bold; color: #E88501;}
 
-.ff-atajo-teclado { font-family: monospace; font-weight: bold; font-size: 120%; }
-.ff-menu { background-color: #D4D0C8; font-family: serif;}
-.ie-menu { background-color: #D4D0C8; font-family: serif;}
+.soft-menu {
+  background-color: #D4D0C8;
+  font-family: serif;
+}
 
 /* Menú  */
 
 @media screen {
-  html { margin-left: 4em; margin-right: 4em; }
+  html {
+    margin-left: 4em;
+    margin-right: 4em;
+  }
+
   div#menu {
-    position: fixed; top: 0; left: 0; width: 1em;
-    font-size: 300%; padding-left: 0.2em; }
-  div#menu p { margin: 5px 0 0; }
-  div#menu a { text-decoration: none; color: black; }
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 1em;
+    padding-left: 0.2em;
+    font-size: 300%;
+  }
+
+  div#menu p {
+    margin: 5px 0 0;
+  }
+
+  div#menu a {
+    color: black;
+    text-decoration: none;
+  }
 }
 
 @media print {
-  html { margin-left: 0; margin-right: 0; }
-  div#menu { display: none; }
+  html {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  div#menu {
+    display: none;
+  }
 }
 
 /* Pantallas pequeñas */
 @media screen and (max-width: 768px) {
-  html { margin-left: 2em; margin-right: 2em; }
+  html {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+
   nav {
-    position: fixed; top: 0; left: 0;
-    font-size: 80%; padding-left: 0.2em; text-align: left; width: 14.5em; }
-  nav h2 { display: none; }
-  nav p { font-size: 350%; margin: 5px 0 0; }
-  nav a { text-decoration: none; color: black; }
-  nav div.toc { display: none; }
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 14.5em;
+    padding-left: 0.2em;
+    font-size: 80%;
+    text-align: left;
+  }
+
+  nav h2 {
+    display: none;
+  }
+
+  nav p {
+    margin: 5px 0 0;
+    font-size: 350%;
+  }
+
+  nav a {
+    color: black;
+    text-decoration: none;
+  }
+
+  nav div.toc {
+    display: none;
+  }
+
   table.ejemplo td, table.indice td {
     display: block;
-    margin-bottom: 5px;
     width: 100%;
+    margin-bottom: 5px;
   }
+
   pre {
-    white-space: pre-wrap;
     text-align: left;
+    white-space: pre-wrap;
   }
 }
 
 /* Pantallas grandes */
 @media screen and (min-width: 768px) {
-  html { margin-left: 12em; margin-right: 4em; }
+  html {
+    margin-left: 12em;
+    margin-right: 4em;
+  }
+
   nav {
-    position: fixed; top: 0; left: 0;
-    font-size: 80%; padding-left: 0.2em; text-align: left; width: 14.5em; }
-  nav h2 { font-size: 110%; text-align: left; margin: 0; padding: 0; }
-  nav p { font-size: 350%; margin: 5px 0 0; }
-  nav a { text-decoration: none; color: black; }
-  nav ul, nav ol { padding-left: 1em; margin-top: 0}
-  nav ul li, nav ol li { margin: 0 0 0.1em 0.2em; }
-  nav ul ul, nav ol ul { padding-left: 0.5em; margin: 0; }
-  nav ul ul li, nav ol ul li { margin: 0; }
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 14.5em;
+    padding-left: 0.2em;
+    font-size: 80%;
+    text-align: left;
+  }
+
+  nav h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 110%;
+    text-align: left;
+  }
+
+  nav p {
+    margin: 5px 0 0;
+    font-size: 350%;
+  }
+
+  nav a {
+    color: black;
+    text-decoration: none;
+  }
+
+  nav ul, nav ol {
+    margin-top: 0;
+    padding-left: 1em;
+  }
+
+  nav ul li, nav ol li {
+    margin: 0 0 0.1em 0.2em;
+  }
+
+  nav ul ul, nav ol ul {
+    margin: 0;
+    padding-left: 0.5em;
+  }
+
+  nav ul ul li, nav ol ul li {
+    margin: 0;
+  }
 }
 
 /* Impresora */
 @media print {
-  html { margin-left: 5px; margin-right: 0; margin-top: 0; }
-  div#menu { display: none; }
-  nav p { display: none; }
-  nav h2 { display: none; }
-  code { font-size: 100% !important; }
-  pre { white-space: pre-wrap !important; }
-  p.volver-principio { display: none; }
-  tr { page-break-inside:avoid; }
-  .noprint { display: none }
+  html {
+    margin-left: 5px;
+    margin-right: 0;
+    margin-top: 0;
+  }
+
+  div#menu {
+    display: none;
+  }
+
+  nav p {
+    display: none;
+  }
+
+  nav h2 {
+    display: none;
+  }
+
+  code {
+    font-size: 100% !important;
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  p.volver-principio {
+    display: none;
+  }
+
+  tr {
+    page-break-inside:avoid;
+  }
+
+  .noprint {
+    display: none
+  }
 }
