@@ -103,15 +103,13 @@
 
       <p>La diferencia es que la etiqueta <span class="html-eti">&lt;link /&gt;</span> forma parte del encabezamiento (etiqueta <span class="html-eti">&lt;head&gt;</span>), mientras que la instrucción de procesamiento <span class="xml-pi">&lt;?xml-stylesheet ... ?&gt;</span> va al principio del documento, después de la declaración XML, como muestra el siguiente ejemplo:</p>
 
-      <table class="ejemplo">
-        <tbody>
-          <tr>
-            <td>Ejemplo de enlace a CSS en HTML5</td>
-            <td>Ejemplo de enlace a CSS en XML</td>
-          </tr>
-          <tr>
-            <td class="codigo">
-              <pre>
+      <div class="filaflex">
+        <div>Ejemplo de enlace a CSS en HTML5</div>
+        <div>Ejemplo de enlace a CSS en XML</div>
+      </div>
+      <div class="filaflex">
+        <div class="codigo">
+          <pre>
 <code class="lang-html">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;es&quot;&gt;
 &lt;head&gt;
@@ -124,9 +122,9 @@
 &lt;/body&gt;
 &lt;/html&gt;</code>
 </pre>
-            </td>
-            <td class="codigo">
-              <pre>
+        </div>
+        <div class="codigo">
+          <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 <span class="resaltado">&lt;?xml-stylesheet <span class="attr-name">href</span>=<span class="attr-value">"ejemplo.css"</span>?&gt;</span>
 &lt;libro&gt;
@@ -135,10 +133,8 @@
   &lt;fechaPublicacion año="1973"/&gt;
 &lt;/libro&gt;</code>
 </pre>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+        </div>
+      </div>
 
       <hr class="corta" />
 
