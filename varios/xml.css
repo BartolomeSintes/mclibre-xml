@@ -152,7 +152,7 @@ img.vmedio {
   vertical-align: middle;
 }
 
-div.codigo {
+div.codigo, div.resul {
   border: #7D7D7D 2px solid;
   margin: 5px 20px;
   padding: 0 10px;
@@ -258,12 +258,31 @@ div.filaflex {
   margin-bottom: 10px;
 }
 
-div.filaflex div.codigo, div.filaflex div.resul, div.filaflex div {
+div.filaflex.cabecera {
+  margin-bottom: -5px;
+  padding-bottom: 0;
+}
+
+div.filaflex div:not([class="icono"]) {
   width: 100px;
   flex-basis: content;
   flex-grow: 1;
-  margin: 0 3px 0 3px;
+  margin: 3px;
   padding: 2px 10px 0;
+}
+
+div.filaflex div.columnaflex {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  margin: 0;
+  padding: 0;
+}
+
+div.filaflex div.columnaflex div {
+  width: auto;
 }
 
 div.filaflex div.icono {
