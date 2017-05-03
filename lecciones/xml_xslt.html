@@ -212,25 +212,23 @@
 
             <p>En el ejemplo siguiente, el resultado incluye el contenido de los nodos <span class="xml-tag">&lt;título&gt;</span> y <span class="xml-tag">&lt;autor&gt;</span> puesto que no hay ninguna plantilla.</p>
 
-            <table class="ejemplo">
-              <col /><col /><col class="icono" />
-              <tbody>
-                <tr>
-                  <td>XSLT</td>
-                  <td>Resultado</td>
-                  <td>Enlace</td>
-                </tr>
-                <tr>
-                  <td class="codigo">
-                    <pre>
+            <div class="filaflex cabecera">
+              <div>XSLT</div>
+              <div>Resultado</div>
+              <div class="icono">Enlace</div>
+            </div>
+
+            <div class="filaflex cabecera">
+              <div class="codigo">
+                <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
 
 &lt;/xsl:stylesheet&gt;</code>
 </pre>
-                  </td>
-                  <td class="resul">
-                    <pre>
+              </div>
+              <div class="resul">
+                <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 
     La vida está en otra parte
@@ -242,27 +240,23 @@
     Conversación en la catedral
     Mario Vargas Llosa</code>
 </pre>
-                  </td>
-                  <td><a href="../ejemplos/ejemplos_xslt/ejemplo_xslt_01-1.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></td>
-                </tr>
-              </tbody>
-            </table>
+              </div>
+              <div class="icono"><a href="../ejemplos/ejemplos_xslt/ejemplo_xslt_01-1.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+            </div>
           </li>
           <li>Si hay una plantilla vacía, el procesador sustituye el nodo y todos sus subelementos por nada y no extrae el texto contenido por ese nodo o sus subelementos.<br />
 
             <p>En el ejemplo siguiente, el resultado incluye el contenido de los nodos <span class="xml-tag">&lt;titulo&gt;</span>, ya que no hay regla para ellos, pero los de <span class="xml-tag">&lt;autor&gt;</span> se pierden porque la plantilla es vacía.</p>
 
-            <table class="ejemplo">
-              <col /><col /><col class="icono" />
-              <tbody>
-                <tr>
-                  <td>XSLT</td>
-                  <td>Resultado</td>
-                  <td>Enlace</td>
-                </tr>
-                <tr>
-                  <td class="codigo">
-                    <pre>
+            <div class="filaflex cabecera">
+              <div>XSLT</div>
+              <div>Resultado</div>
+              <div class="icono">Enlace</div>
+            </div>
+
+            <div class="filaflex cabecera">
+              <div class="codigo">
+                <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
 
@@ -270,8 +264,8 @@
   &lt;/xsl:template&gt;
 
 &lt;/xsl:stylesheet&gt;</code></pre>
-                  </td>
-                  <td class="resul"><pre><code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+              </div>
+              <div class="resul"><pre><code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 
     La vida está en otra parte
 
@@ -279,27 +273,23 @@
 
     Conversación en la catedral</code>
 </pre>
-                  </td>
-                  <td><a href="../ejemplos/ejemplos_xslt/ejemplo_xslt_01-2.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></td>
-                </tr>
-              </tbody>
-            </table>
+              </div>
+              <div class="icono"><a href="../ejemplos/ejemplos_xslt/ejemplo_xslt_01-2.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+            </div>
           </li>
           <li>En el caso más extremo, si la plantilla vacía se aplica al nodo raíz, el procesador sustituye el nodo raíz y todos sus descendientes por nada y no extrae el texto contenido en ningún subelemento.<br />
 
             <p>En el ejemplo siguiente, el resultado no incluye nada porque la única plantilla ha sustituido el nodo raíz y todos sus subelementos.</p>
 
-            <table class="ejemplo">
-              <col /><col /><col class="icono" />
-              <tbody>
-                <tr>
-                  <td>XSLT</td>
-                  <td>Resultado</td>
-                  <td>Enlace</td>
-                </tr>
-                <tr>
-                  <td class="codigo">
-                    <pre>
+            <div class="filaflex cabecera">
+              <div>XSLT</div>
+              <div>Resultado</div>
+              <div class="icono">Enlace</div>
+            </div>
+
+            <div class="filaflex cabecera">
+              <div class="codigo">
+                <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
 
@@ -308,14 +298,12 @@
 
 &lt;/xsl:stylesheet&gt;</code>
 </pre>
-                  </td>
-                  <td class="resul">
-                    <pre><code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;</code></pre>
-                  </td>
-                  <td><a href="../ejemplos/ejemplos_xslt/ejemplo_xslt_01-3.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></td>
-                </tr>
-              </tbody>
-            </table>
+              </div>
+              <div class="resul">
+                <pre><code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;</code></pre>
+              </div>
+              <div class="icono"><a href="../ejemplos/ejemplos_xslt/ejemplo_xslt_01-3.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+            </div>
           </li>
         </ul>
       </section>
@@ -327,17 +315,15 @@
         <ul>
           <li>En el ejemplo siguiente, los títulos de los libros se han perdido, porque el nodo <span class="xml-tag">&lt;libro&gt;</span> (y sus subnodos <span class="xml-tag">&lt;autor&gt;</span> y <span class="xml-tag">&lt;titulo&gt;</span>) se sustituye por el contenido del nodo <span class="xml-tag">&lt;autor&gt;</span>.
 
-            <table class="ejemplo">
-              <col /><col /><col class="icono" />
-              <tbody>
-                <tr>
-                  <td>XSLT</td>
-                  <td>Resultado</td>
-                  <td>Enlace</td>
-                </tr>
-                <tr>
-                  <td class="codigo">
-                    <pre>
+            <div class="filaflex cabecera">
+              <div>XSLT</div>
+              <div>Resultado</div>
+              <div class="icono">Enlace</div>
+            </div>
+
+            <div class="filaflex cabecera">
+              <div class="codigo">
+                <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
 
@@ -347,34 +333,30 @@
 
 &lt;/xsl:stylesheet&gt;</code>
 </pre>
-                  </td>
-                  <td class="resul">
-                    <pre>
+              </div>
+              <div class="resul">
+                <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 
   Milan Kundera
   Mario Vargas Llosa
   Mario Vargas Llosa</code>
 </pre>
-                  </td>
-                  <td><a href="../ejemplos/ejemplos_xslt/ejemplo_xslt_02-1.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></td>
-                </tr>
-              </tbody>
-            </table>
+              </div>
+              <div class="icono"><a href="../ejemplos/ejemplos_xslt/ejemplo_xslt_02-1.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+            </div>
           </li>
           <li>En el ejemplo siguiente, se obtienen el titulo y el autor de los libros, pero uno a continuación de otro. Los saltos de línea se crean tras cada aplicación de la regla (es decir, a cada libro), pero no en el interior de la regla.
 
-            <table class="ejemplo">
-              <col /><col /><col class="icono" />
-              <tbody>
-                <tr>
-                  <td>XSLT</td>
-                  <td>Resultado</td>
-                  <td>Enlace</td>
-                </tr>
-                <tr>
-                  <td class="codigo">
-                    <pre>
+            <div class="filaflex cabecera">
+              <div>XSLT</div>
+              <div>Resultado</div>
+              <div class="icono">Enlace</div>
+            </div>
+
+            <div class="filaflex cabecera">
+              <div class="codigo">
+                <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
 
@@ -384,32 +366,28 @@
   &lt;/xsl:template&gt;
 
 &lt;/xsl:stylesheet&gt;</code></pre>
-                  </td>
-                  <td class="resul"><pre><code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+              </div>
+              <div class="resul"><pre><code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 
   La vida está en otra parteMilan Kundera
   Pantaleón y las visitadorasMario Vargas Llosa
   Conversación en la catedralMario Vargas Llosa</code>
 </pre>
-                  </td>
-                  <td><a href="../ejemplos/ejemplos_xslt/ejemplo_xslt_02-2.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></td>
-                </tr>
-              </tbody>
-            </table>
+              </div>
+              <div class="icono"><a href="../ejemplos/ejemplos_xslt/ejemplo_xslt_02-2.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+            </div>
           </li>
           <li>En el ejemplo siguiente, los autores se obtienen gracias a la regla que extrae el contenido del nodo (el carácter punto "." hace referencia al propio elemento) y los títulos se obtienen porque al no haber reglas para ese nodo se extrae el contenido. El resultado es el mismo que el del ejemplo 1-1, pero por motivos distintos.
 
-            <table class="ejemplo">
-              <col /><col /><col class="icono" />
-              <tbody>
-                <tr>
-                  <td>XSLT</td>
-                  <td>Resultado</td>
-                  <td>Enlace</td>
-                </tr>
-                <tr>
-                  <td class="codigo">
-                    <pre>
+            <div class="filaflex cabecera">
+              <div>XSLT</div>
+              <div>Resultado</div>
+              <div class="icono">Enlace</div>
+            </div>
+
+            <div class="filaflex cabecera">
+              <div class="codigo">
+                <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
 
@@ -418,8 +396,8 @@
   &lt;/xsl:template&gt;
 
 &lt;/xsl:stylesheet&gt;</code></pre>
-                  </td>
-                  <td class="resul"><pre><code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+              </div>
+              <div class="resul"><pre><code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 
     La vida está en otra parte
     Milan Kundera
@@ -430,11 +408,9 @@
     Conversación en la catedral
     Mario Vargas Llosa</code>
 </pre>
-                  </td>
-                  <td><a href="../ejemplos/ejemplos_xslt/ejemplo_xslt_02-3.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></td>
-                </tr>
-              </tbody>
-            </table>
+              </div>
+              <div class="icono"><a href="../ejemplos/ejemplos_xslt/ejemplo_xslt_02-3.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+            </div>
           </li>
         </ul>
 
@@ -443,17 +419,15 @@
         <ul>
           <li>En el ejemplo siguiente, las fechas de publicación se obtienen gracias a la regla que extraen el valor del atributo y los títulos y autores se obtienen porque al no haber reglas para ese nodo se extrae el contenido.
 
-            <table class="ejemplo">
-              <col /><col /><col class="icono" />
-              <tbody>
-                <tr>
-                  <td>XSLT</td>
-                  <td>Resultado</td>
-                  <td>Enlace</td>
-                </tr>
-                <tr>
-                  <td class="codigo">
-                    <pre>
+            <div class="filaflex cabecera">
+              <div>XSLT</div>
+              <div>Resultado</div>
+              <div class="icono">Enlace</div>
+            </div>
+
+            <div class="filaflex cabecera">
+              <div class="codigo">
+                <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
 
@@ -463,9 +437,9 @@
 
 &lt;/xsl:stylesheet&gt;</code>
 </pre>
-                  </td>
-                  <td class="resul">
-                    <pre>
+              </div>
+              <div class="resul">
+                <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 
     La vida está en otra parte
@@ -480,11 +454,9 @@
     Mario Vargas Llosa
     1969</code>
 </pre>
-                  </td>
-                  <td><a href="../ejemplos/ejemplos_xslt/ejemplo_xslt_02-4.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></td>
-                </tr>
-              </tbody>
-            </table>
+              </div>
+              <div class="icono"><a href="../ejemplos/ejemplos_xslt/ejemplo_xslt_02-4.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+            </div>
           </li>
         </ul>
       </section>
@@ -497,17 +469,15 @@
         <ul>
           <li>En el ejemplo siguiente se obtienen los nombres de los autores porque la regla selecciona el nodo <span class="xml-tag">&lt;libro&gt;</span> como en el ejemplo, 2-1, pero además generamos las etiquetas <span class="html-eti">&lt;p&gt;</span>. El resultado sigue sin verse bien en el navegador, porque aunque hay etiquetas <span class="html-eti">&lt;p&gt;</span>, falta la etiqueta global <span class="html-eti">&lt;html&gt;</span>.
 
-            <table class="ejemplo">
-              <col /><col /><col class="icono" />
-              <tbody>
-                <tr>
-                  <td>XSLT</td>
-                  <td>Resultado</td>
-                  <td>Enlace</td>
-                </tr>
-                <tr>
-                  <td class="codigo">
-                    <pre>
+            <div class="filaflex cabecera">
+              <div>XSLT</div>
+              <div>Resultado</div>
+              <div class="icono">Enlace</div>
+            </div>
+
+            <div class="filaflex cabecera">
+              <div class="codigo">
+                <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
 
@@ -517,20 +487,18 @@
 
 &lt;/xsl:stylesheet&gt;</code>
 </pre>
-                  </td>
-                  <td class="resul">
-                    <pre>
+              </div>
+              <div class="resul">
+                <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 
 &lt;p&gt;Milan Kundera&lt;/p&gt;
 &lt;p&gt;Mario Vargas Llosa&lt;/p&gt;
 &lt;p&gt;Mario Vargas Llosa&lt;/p&gt;</code>
 </pre>
-                  </td>
-                  <td><a href="../ejemplos/ejemplos_xslt/ejemplo_xslt_03-1.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></td>
-                </tr>
-              </tbody>
-            </table>
+              </div>
+              <div class="icono"><a href="../ejemplos/ejemplos_xslt/ejemplo_xslt_03-1.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+            </div>
           </li>
         </ul>
 
@@ -538,17 +506,15 @@
         <ul>
           <li>En el ejemplo siguiente se obtienen los nombres de los autores y los títulos de los libros porque la regla selecciona el nodo <span class="xml-tag">&lt;libro&gt;</span> como en el ejemplo, 2-1, pero además generamos las etiquetas <span class="html-eti">&lt;p&gt;</span>. El resultado sigue sin verse bien en el navegador, porque aunque hay etiquetas <span class="html-eti">&lt;p&gt;</span>, falta la etiqueta global <span class="html-eti">&lt;html&gt;</span>.
 
-            <table class="ejemplo">
-              <col /><col /><col class="icono" />
-              <tbody>
-                <tr>
-                  <td>XSLT</td>
-                  <td>Resultado</td>
-                  <td>Enlace</td>
-                </tr>
-                <tr>
-                  <td class="codigo">
-                    <pre>
+            <div class="filaflex cabecera">
+              <div>XSLT</div>
+              <div>Resultado</div>
+              <div class="icono">Enlace</div>
+            </div>
+
+            <div class="filaflex cabecera">
+              <div class="codigo">
+                <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
 
@@ -559,9 +525,9 @@
 
 &lt;/xsl:stylesheet&gt;</code>
 </pre>
-                  </td>
-                  <td class="resul">
-                    <pre>
+              </div>
+              <div class="resul">
+                <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 
 &lt;p&gt;Milan Kundera&lt;/p&gt;
@@ -573,25 +539,21 @@
 &lt;p&gt;Mario Vargas Llosa&lt;/p&gt;
 &lt;p&gt;Conversación en la catedral&lt;/p&gt;</code>
 </pre>
-                  </td>
-                  <td><a href="../ejemplos/ejemplos_xslt/ejemplo_xslt_03-2.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></td>
-                </tr>
-              </tbody>
-            </table>
+              </div>
+              <div class="icono"><a href="../ejemplos/ejemplos_xslt/ejemplo_xslt_03-2.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+            </div>
           </li>
           <li><p>Los siguientes ejemplos intentan conseguir el mismo resultado que el ejemplo anterior (ejemplo 3-2), pero utilizando dos reglas, y no lo consiguen:</p>
 
-            <table class="ejemplo">
-              <col /><col /><col class="icono" />
-              <tbody>
-                <tr>
-                  <td>XSLT</td>
-                  <td>Resultado</td>
-                  <td>Enlace</td>
-                </tr>
-                <tr>
-                  <td class="codigo">
-                    <pre>
+            <div class="filaflex cabecera">
+              <div>XSLT</div>
+              <div>Resultado</div>
+              <div class="icono">Enlace</div>
+            </div>
+
+            <div class="filaflex cabecera">
+              <div class="codigo">
+                <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
 
@@ -605,9 +567,9 @@
 
 &lt;/xsl:stylesheet&gt;</code>
 </pre>
-                  </td>
-                  <td class="resul">
-                    <pre>
+              </div>
+              <div class="resul">
+                <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 
 &lt;p&gt;La vida está en otra parte&lt;/p&gt;
@@ -616,23 +578,19 @@
 
 &lt;p&gt;Conversación en la catedral&lt;/p&gt;</code>
 </pre>
-                  </td>
-                  <td><a href="../ejemplos/ejemplos_xslt/ejemplo_xslt_03-3.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></td>
-                </tr>
-              </tbody>
-            </table>
+              </div>
+              <div class="icono"><a href="../ejemplos/ejemplos_xslt/ejemplo_xslt_03-3.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+            </div>
 
-            <table class="ejemplo">
-              <col /><col /><col class="icono" />
-              <tbody>
-                <tr>
-                  <td>XSLT</td>
-                  <td>Resultado</td>
-                  <td>Enlace</td>
-                </tr>
-                <tr>
-                  <td class="codigo">
-                    <pre>
+            <div class="filaflex cabecera">
+              <div>XSLT</div>
+              <div>Resultado</div>
+              <div class="icono">Enlace</div>
+            </div>
+
+            <div class="filaflex cabecera">
+              <div class="codigo">
+                <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
 
@@ -646,9 +604,9 @@
 
 &lt;/xsl:stylesheet&gt;</code>
 </pre>
-                  </td>
-                  <td class="resul">
-                    <pre>
+              </div>
+              <div class="resul">
+                <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 
 &lt;p&gt;Milan Kundera&lt;/p&gt;
@@ -657,11 +615,9 @@
 
 &lt;p&gt;Mario Vargas Llosa&lt;/p&gt;</code>
 </pre>
-                  </td>
-                  <td><a href="../ejemplos/ejemplos_xslt/ejemplo_xslt_03-4.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></td>
-                </tr>
-              </tbody>
-            </table>
+              </div>
+              <div class="icono"><a href="../ejemplos/ejemplos_xslt/ejemplo_xslt_03-4.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+            </div>
 
             <p>¿Por qué en un caso se obtienen sólo los títulos y en el otro sólo los autores? Porque el procesador XSLT sólo aplica una regla a cada nodo. Si tenemos dos reglas para el mismo nodo, el procesador sólo aplica una de ellas (la última, en este caso).</p>
           </li>
@@ -671,17 +627,15 @@
         <ul>
           <li>En el ejemplo siguiente se generan frases a partir del contenido de los nodos.
 
-            <table class="ejemplo">
-              <col /><col /><col class="icono" />
-              <tbody>
-                <tr>
-                  <td>XSLT</td>
-                  <td>Resultado</td>
-                  <td>Enlace</td>
-                </tr>
-                <tr>
-                  <td class="codigo">
-                    <pre>
+            <div class="filaflex cabecera">
+              <div>XSLT</div>
+              <div>Resultado</div>
+              <div class="icono">Enlace</div>
+            </div>
+
+            <div class="filaflex cabecera">
+              <div class="codigo">
+                <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
 
@@ -691,9 +645,9 @@
 
 &lt;/xsl:stylesheet&gt;</code>
 </pre>
-                  </td>
-                  <td class="resul">
-                    <pre>
+              </div>
+              <div class="resul">
+                <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 
 &lt;p&gt;Milan Kundera escribió "La vida está en otra parte"&lt;/p&gt;
@@ -702,11 +656,9 @@
 
 &lt;p&gt;Mario Vargas Llosa escribió "Conversación en la catedral"&lt;/p&gt;</code>
 </pre>
-                  </td>
-                  <td><a href="../ejemplos/ejemplos_xslt/ejemplo_xslt_03-5.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></td>
-                </tr>
-              </tbody>
-            </table>
+              </div>
+              <div class="icono"><a href="../ejemplos/ejemplos_xslt/ejemplo_xslt_03-5.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+            </div>
           </li>
         </ul>
       </section>
@@ -719,17 +671,15 @@
         <ul>
           <li>En el ejemplo siguiente, se genera la etiqueta <span class="html-eti">&lt;html&gt;</span> además de unos párrafos con los nombres de los autores. Este ejemplo sí que se puede ver en el navegador ya que se interpreta como html.
 
-            <table class="ejemplo">
-              <col /><col /><col class="icono" />
-              <tbody>
-                <tr>
-                  <td>XSLT</td>
-                  <td>Resultado</td>
-                  <td>Enlace</td>
-                </tr>
-                <tr>
-                  <td class="codigo">
-                    <pre>
+            <div class="filaflex cabecera">
+              <div>XSLT</div>
+              <div>Resultado</div>
+              <div class="icono">Enlace</div>
+            </div>
+
+            <div class="filaflex cabecera">
+              <div class="codigo">
+                <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
 
@@ -746,9 +696,9 @@
 
 &lt;/xsl:stylesheet&gt;</code>
 </pre>
-                  </td>
-                  <td class="resul">
-                    <pre>
+              </div>
+              <div class="resul">
+                <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;html&gt;&lt;h1&gt;Autores&lt;/h1&gt;
   &lt;p&gt;Milan Kundera&lt;/p&gt;
@@ -756,11 +706,9 @@
   &lt;p&gt;Mario Vargas Llosa&lt;/p&gt;
 &lt;/html&gt;</code>
         </pre>
-                  </td>
-                  <td><a href="../ejemplos/ejemplos_xslt/ejemplo_xslt_04-1.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></td>
-                </tr>
-              </tbody>
-            </table>
+              </div>
+              <div class="icono"><a href="../ejemplos/ejemplos_xslt/ejemplo_xslt_04-1.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+            </div>
 
             <p>La primera regla sustituye el elemento raíz (y todos sus subelementos) por las etiquetas <span class="html-eti">&lt;html&gt;</span> y <span class="html-eti">&lt;h1&gt;</span>, pero además aplica a los subelementos las reglas que les son aplicables. En este caso, sólo hay una regla para los elementos <span class="xml-tag">&lt;libro&gt;</span> que generan los párrafos.</p>
           </li>
@@ -783,17 +731,15 @@
         <ul>
           <li>En el ejemplo anterior (del <a href="#xslt-apply-templates">apartado sobre la instrucción <span class="xsl-i">&lt;xsl:apply-templates&gt;</span></a>) la etiqueta <span class="html-eti">&lt;h1&gt;</span> se generaba en la misma línea que la etiqueta <span class="html-eti">&lt;html&gt;</span>, pero en el ejemplo siguiente se generan en líneas distintas (y las etiquetas se muestran sangradas) al utilizar la instrucción <span class="xsl-i">&lt;xsl:strip-space&gt;</span>:
 
-            <table class="ejemplo">
-              <col /><col /><col class="icono" />
-              <tbody>
-                <tr>
-                  <td>XSLT</td>
-                  <td>Resultado</td>
-                  <td>Enlace</td>
-                </tr>
-                <tr>
-                  <td class="codigo">
-                    <pre>
+            <div class="filaflex cabecera">
+              <div>XSLT</div>
+              <div>Resultado</div>
+              <div class="icono">Enlace</div>
+            </div>
+
+            <div class="filaflex cabecera">
+              <div class="codigo">
+                <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
   <span class="resaltado">&lt;xsl:strip-space elements="*" /&gt;</span>
@@ -811,9 +757,9 @@
 
 &lt;/xsl:stylesheet&gt;</code>
 </pre>
-                  </td>
-                  <td class="resul">
-                    <pre>
+              </div>
+              <div class="resul">
+                <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;html&gt;
   &lt;h1&gt;Autores&lt;/h1&gt;
@@ -822,11 +768,9 @@
   &lt;p&gt;Mario Vargas Llosa&lt;/p&gt;
 &lt;/html&gt;</code>
         </pre>
-                  </td>
-                  <td><a href="../ejemplos/ejemplos_xslt/ejemplo_xslt_05-1.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></td>
-                </tr>
-              </tbody>
-            </table>
+              </div>
+              <div class="icono"><a href="../ejemplos/ejemplos_xslt/ejemplo_xslt_05-1.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+            </div>
           </li>
         </ul>
 
@@ -839,17 +783,15 @@
         <ul>
           <li>En el ejemplo anterior (del <a href="#xslt-apply-templates">apartado sobre la instrucción <span class="xsl-i">&lt;xsl:apply-templates&gt;</span></a>) la etiqueta <span class="html-eti">&lt;h1&gt;</span> se generaba en la misma línea que la etiqueta <span class="html-eti">&lt;html&gt;</span>, pero en el ejemplo siguiente se generan en líneas distintas al añadir un salto de línea con la entidad de carácter &amp;#10; (y un par de espacios para aliner la etiqueta <span class="html-eti">&lt;h1&gt;</span> con las etiquetas <span class="html-eti">&lt;p&gt;</span>):
 
-            <table class="ejemplo">
-              <col /><col /><col class="icono" />
-              <tbody>
-                <tr>
-                  <td>XSLT</td>
-                  <td>Resultado</td>
-                  <td>Enlace</td>
-                </tr>
-                <tr>
-                  <td class="codigo">
-                    <pre>
+            <div class="filaflex cabecera">
+              <div>XSLT</div>
+              <div>Resultado</div>
+              <div class="icono">Enlace</div>
+            </div>
+
+            <div class="filaflex cabecera">
+              <div class="codigo">
+                <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
 
@@ -867,9 +809,9 @@
 
 &lt;/xsl:stylesheet&gt;</code>
 </pre>
-                  </td>
-                  <td class="resul">
-                    <pre>
+              </div>
+              <div class="resul">
+                <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;html&gt;
   &lt;h1&gt;Autores&lt;/h1&gt;
@@ -878,11 +820,9 @@
   &lt;p&gt;Mario Vargas Llosa&lt;/p&gt;
 &lt;/html&gt;</code>
         </pre>
-                  </td>
-                  <td><a href="../ejemplos/ejemplos_xslt/ejemplo_xslt_05-2.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></td>
-                </tr>
-              </tbody>
-            </table>
+              </div>
+              <div class="icono"><a href="../ejemplos/ejemplos_xslt/ejemplo_xslt_05-2.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+            </div>
           </li>
         </ul>
 
@@ -909,19 +849,17 @@
         <ul>
           <li>No se puede utilizar la instrucción <span class="xsl-i">&lt;xsl:value-of&gt;</span> como en el ejemplo incorrecto siguiente:
 
-            <table class="ejemplo">
-              <col class="icono" /><col /><col /><col class="icono" />
-              <tbody>
-                <tr>
-                  <td></td>
-                  <td>XSLT</td>
-                  <td>Resultado</td>
-                  <td>Enlace</td>
-                </tr>
-                <tr>
-                  <td><img src="../varios/iconos/icono_okno.svg" alt="Incorrecto" title="Incorrecto" width="40" height="40" /></td>
-                  <td class="codigo">
-                    <pre>
+            <div class="filaflex cabecera">
+              <div class="icono"><img src="../varios/iconos/icono_transparente.svg" alt="Hueco" width="40" height="4" /></div>
+              <div>XSLT</div>
+              <div>Resultado</div>
+              <div class="icono">Enlace</div>
+            </div>
+
+            <div class="filaflex cabecera">
+              <div class="icono"><img src="../varios/iconos/icono_okno.svg" alt="Incorrecto" title="Incorrecto" width="40" height="40" /></div>
+              <div class="codigo">
+                <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
 
@@ -931,28 +869,24 @@
 
 &lt;/xsl:stylesheet&gt;</code>
 </pre>
-                  </td>
-                  <td class="resul"><pre>Error at line 5, column 19: not well-formed (invalid  token)</pre></td>
-                  <td><a href="../ejemplos/ejemplos_xslt/ejemplo_xslt_06-1.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></td>
-                </tr>
-              </tbody>
-            </table>
+              </div>
+              <div class="resul"><pre>Error at line 5, column 19: not well-formed (invalid  token)</pre></div>
+              <div class="icono"><a href="../ejemplos/ejemplos_xslt/ejemplo_xslt_06-1.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+            </div>
 
             <p>En este caso el problema no es debido a la utilización de comillas dobles (también daría error si se hubieran utilizado comillas simples o entidades), sino que es necesario utilizar la instrucción <span class="xsl-i">&lt;xsl:attribute&gt;</span>.</p>
           </li>
           <li>Para generar un atributo en una etiqueta, es necesario utilizar la instrucción <span class="xsl-i">&lt;xsl:attribute&gt;</span>, como en el ejemplo siguiente:
 
-            <table class="ejemplo">
-              <col /><col /><col class="icono" />
-              <tbody>
-                <tr>
-                  <td>XSLT</td>
-                  <td>Resultado</td>
-                  <td>Enlace</td>
-                </tr>
-                <tr>
-                  <td class="codigo">
-                    <pre>
+            <div class="filaflex cabecera">
+              <div>XSLT</div>
+              <div>Resultado</div>
+              <div class="icono">Enlace</div>
+            </div>
+
+            <div class="filaflex cabecera">
+              <div class="codigo">
+                <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
 
@@ -967,36 +901,32 @@
 
 &lt;/xsl:stylesheet&gt;</code>
 </pre>
-                  </td>
-                  <td class="resul">
-                    <pre>
+              </div>
+              <div class="resul">
+                <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;p&gt;
   &lt;img src="cc_bysa_88x31.png"/&gt;
 &lt;/p&gt;</code>
 </pre>
-                  </td>
-                  <td><a href="../ejemplos/ejemplos_xslt/ejemplo_xslt_06-2.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></td>
-                </tr>
-              </tbody>
-            </table>
+              </div>
+              <div class="icono"><a href="../ejemplos/ejemplos_xslt/ejemplo_xslt_06-2.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+            </div>
             <p>En la hoja de estilo XSLT, la etiqueta <span class="html-eti">&lt;img&gt;</span> se escribe con apertura y cierre, aunque en el resultado aparece como etiqueta monoatómica.</p>
 
             <p>De todas formas, el navegador no mostraría todavía la imagen, puesto que no interpreta la etiqueta <span class="html-eti">&lt;img&gt;</span> como la etiqueta de imagen del html.</p>
           </li>
           <li>Como en ejemplos anteriores, para que la imagen se muestre en el navegador sería necesario generar también la etiqueta <span class="html-eti">&lt;html&gt;</span>:
 
-            <table class="ejemplo">
-              <col /><col /><col class="icono" />
-              <tbody>
-                <tr>
-                  <td>XSLT</td>
-                  <td>Resultado</td>
-                  <td>Enlace</td>
-                </tr>
-                <tr>
-                  <td class="codigo">
-                    <pre>
+            <div class="filaflex cabecera">
+              <div>XSLT</div>
+              <div>Resultado</div>
+              <div class="icono">Enlace</div>
+            </div>
+
+            <div class="filaflex cabecera">
+              <div class="codigo">
+                <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
 
@@ -1017,19 +947,17 @@
 
 &lt;/xsl:stylesheet&gt;</code>
 </pre>
-                  </td>
-                  <td class="resul">
-                    <pre>
+              </div>
+              <div class="resul">
+                <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;html&gt;
   &lt;p&gt;&lt;img src="cc_bysa_88x31.png"/&gt;&lt;/p&gt;
 &lt;/html&gt;</code>
 </pre>
-                  </td>
-                  <td><a href="../ejemplos/ejemplos_xslt/ejemplo_xslt_06-3.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></td>
-                </tr>
-              </tbody>
-            </table>
+              </div>
+              <div class="icono"><a href="../ejemplos/ejemplos_xslt/ejemplo_xslt_06-3.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+            </div>
           </li>
         </ul>
       </section>

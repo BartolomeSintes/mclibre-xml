@@ -148,10 +148,9 @@
 
         <p><strong>En XML Copy editor</strong>, la siguiente hoja de estilo genera un resultado correcto, pero con un formato distinto al del enunciado (saltos de línea y espacios).</p>
 
-        <table class="ejemplo">
-          <tr>
-            <td class="codigo">
-              <pre>
+        <div class="filaflex">
+          <div class="codigo">
+            <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
 
@@ -171,9 +170,9 @@
 
 &lt;/xsl:stylesheet&gt;</code>
 </pre>
-            </td>
-            <td class="codigo">
-              <pre>
+          </div>
+          <div class="codigo">
+            <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 
 
@@ -185,16 +184,14 @@
   &lt;/table&gt;
 &lt;/html&gt;</code>
 </pre>
-            </td>
-          </tr>
-        </table>
+          </div>
+        </div>
 
         <p>Para que el formato fuera como en el enunciado, bastaría con añadir la instrucción <span class="xsl-i">&lt;xsl:strip-space&gt;</span>:</p>
 
-        <table class="ejemplo">
-          <tr>
-            <td class="codigo">
-              <pre>
+        <div class="filaflex">
+          <div class="codigo">
+            <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
   &lt;xsl:strip-space elements=&quot;*&quot; /&gt;
@@ -215,9 +212,9 @@
 
 &lt;/xsl:stylesheet&gt;</code>
 </pre>
-            </td>
-            <td class="codigo">
-              <pre>
+          </div>
+          <div class="codigo">
+            <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;html&gt;
   &lt;table border=&quot;1&quot;&gt;
@@ -234,16 +231,14 @@
 &lt;/html&gt;
 </code>
 </pre>
-            </td>
-          </tr>
-        </table>
+          </div>
+        </div>
 
         <p><strong>En Notepad++ con XML Tools</strong>, la siguiente hoja de estilo genera un resultado correcto, pero con un formato distinto al del enunciado (saltos de línea y espacios).</p>
 
-        <table class="ejemplo">
-          <tr>
-            <td class="codigo">
-              <pre>
+        <div class="filaflex">
+          <div class="codigo">
+            <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
 
@@ -263,25 +258,23 @@
 
 &lt;/xsl:stylesheet&gt;</code>
 </pre>
-            </td>
-            <td class="codigo">
-              <pre>
+          </div>
+          <div class="codigo">
+            <pre>
 <code class="language-xml">&lt;html&gt;&lt;table border=&quot;1&quot;&gt;
     &lt;tr&gt;&lt;td&gt;Administración de Sistemas Informáticos en Red&lt;/td&gt;&lt;/tr&gt;
     &lt;tr&gt;&lt;td&gt;Desarrollo de Aplicaciones Web&lt;/td&gt;&lt;/tr&gt;
     &lt;tr&gt;&lt;td&gt;Sistemas Microinformáticos y Redes&lt;/td&gt;&lt;/tr&gt;
   &lt;/table&gt;&lt;/html&gt;</code>
 </pre>
-            </td>
-          </tr>
-        </table>
+          </div>
+        </div>
 
         <p>Para que el formato fuera como en el enunciado, habría que añadir instrucciones<span class="xsl-i">&lt;xsl:text&gt;</span> en los sitios necesarios:</p>
 
-        <table class="ejemplo">
-          <tr>
-            <td class="codigo">
-              <pre>
+        <div class="filaflex">
+          <div class="codigo">
+            <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; version=&quot;1.0&quot;&gt;
 
@@ -305,9 +298,9 @@
 &lt;/xsl:stylesheet&gt;
 </code>
 </pre>
-            </td>
-            <td class="codigo">
-              <pre>
+          </div>
+          <div class="codigo">
+            <pre>
 <code class="language-xml">&lt;html&gt;
   &lt;table border=&quot;1&quot;&gt;
     &lt;tr&gt;
@@ -323,9 +316,8 @@
 &lt;/html&gt;
 </code>
 </pre>
-            </td>
-          </tr>
-        </table>
+          </div>
+        </div>
       </section>
     </section>
 

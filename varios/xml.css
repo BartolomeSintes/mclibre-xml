@@ -6,7 +6,7 @@
 /*                                          */
 /* CSS curso: XML							*/
 /*                                          */
-/* 2 de mayo de 2017                        */
+/* 3 de mayo de 2017                        */
 /*                                          */
 
 /* CSS común */
@@ -99,7 +99,7 @@ p.aviso {
   color:red;
 }
 
-p.centrado {
+.centrado {
   text-align: center;
 }
 
@@ -166,10 +166,6 @@ div.ejercicio {
 
 pre {
   white-space: pre-wrap;
-}
-
-table.indice h2 {
-  margin: 0;
 }
 
 td {
@@ -263,9 +259,17 @@ div.filaflex.cabecera {
   padding-bottom: 0;
 }
 
+div.filaflex.nogrow div:not([class="icono"]) {
+  width: auto;
+  flex-grow: 0;
+}
+
+div.nogrow h2 {
+  margin: 0;
+}
+
 div.filaflex div:not([class="icono"]) {
   width: 100px;
-  flex-basis: content;
   flex-grow: 1;
   margin: 3px;
   padding: 2px 10px 0;
@@ -343,7 +347,7 @@ div.filaflex pre {
     display: none;
   }
 
-  table.ejemplo td, table.indice td {
+  table.ejemplo td {
     display: block;
     width: 100%;
     margin-bottom: 5px;
@@ -353,6 +357,19 @@ div.filaflex pre {
     text-align: left;
     white-space: pre-wrap;
   }
+
+  div.filaflex {
+    display: block;
+  }
+
+  div.filaflex.cabecera {
+    display: none;
+  }
+
+   div.filaflex div:not([class="icono"]) {
+    width: auto;
+  }
+}
 }
 
 /* Pantallas grandes */

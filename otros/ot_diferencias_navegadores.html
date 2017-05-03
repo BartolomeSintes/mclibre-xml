@@ -49,24 +49,23 @@
 
         <p>Firefox no aumenta los contadores al mostrar elementos como listas ordenadas, pero Internet Explorer y Chrome lo hacen correctamente.</p>
 
-        <table class="ejemplo">
-          <col class="icono" /><col /><col /><col class="icono" />
-          <tbody>
-            <tr>
-              <td></td>
-              <td>XML / CSS</td>
-              <td>Resultado</td>
-              <td>Enlace</td>
-            </tr>
-            <tr>
-              <td rowspan="2">
-                <img src="../varios/iconos/icono_ff_X.svg" alt="Incorrecto en Firefox" title="Incorrecto en Firefox" width="44" height="32" />
-                <img src="../varios/iconos/icono_ie.svg" alt="Correcto en Internet Explorer" title="Correcto en Internet Explorer" width="33" height="32" />
-                <img src="../varios/iconos/icono_gc.svg" alt="Correcto en Chrome" title="Correcto en Chrome" width="32" height="32" /></td>
-              <td class="codigo">
-                <pre>
-<code class="language-xml">/* ejemplo_dif_nav_01.xml */
-&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+        <div class="filaflex cabecera">
+          <div class="icono"><img src="../varios/iconos/icono_transparente.svg" alt="Hueco" width="40" height="4" /></div>
+          <div>XML / CSS</div>
+          <div>Resultado</div>
+          <div class="icono">Enlace</div>
+        </div>
+
+        <div class="filaflex">
+          <div class="icono">
+            <img src="../varios/iconos/icono_ff_X.svg" alt="Incorrecto en Firefox" title="Incorrecto en Firefox" width="44" height="32" /><br />
+            <img src="../varios/iconos/icono_ie.svg" alt="Correcto en Internet Explorer" title="Correcto en Internet Explorer" width="33" height="32" /><br />
+            <img src="../varios/iconos/icono_gc.svg" alt="Correcto en Chrome" title="Correcto en Chrome" width="32" height="32" />
+          </div>
+          <div class="columnaflex">
+            <div class="codigo">
+              <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;?xml-stylesheet href="ejemplo_dif_nav_01.css" title="Estilo"?&gt;
 &lt;listas&gt;
   &lt;lista&gt;
@@ -81,15 +80,10 @@
   &lt;/lista&gt;l
 &lt;/listas&gt;</code>
 </pre>
-              </td>
-              <td class="resul" rowspan="2"><object type="application/xml" data="../ejemplos/ejemplo_dif_nav_01.xml" class="ejemplo">ERROR (no puede mostrarse el objeto)</object></td>
-              <td rowspan="2"><a href="../ejemplos/ejemplo_dif_nav_01.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></td>
-            </tr>
-            <tr>
-              <td class="codigo">
-                <pre>
-<code class="language-css">/* ejemplo_dif_nav_01.css */
-lista {
+            </div>
+            <div class="codigo">
+              <pre>
+<code class="language-css">lista {
   display: block;
   margin-bottom: 10px;
 }
@@ -100,10 +94,11 @@ elemento {
   margin-left: 20px;
 }</code>
 </pre>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+            </div>
+          </div>
+          <div class="resul"><object type="application/xml" data="../ejemplos/ejemplo_dif_nav_01.xml" class="ejemplo">ERROR (no puede mostrarse el objeto)</object></div>
+          <div class="icono"><a href="../ejemplos/ejemplo_dif_nav_01.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+        </div>
       </section>
 
       <section id="class-id">
@@ -113,24 +108,23 @@ elemento {
 
         <p><strong>Nota</strong>: No sé si está definido en alguna recomendación que es lo que tendrían que hacer los navegadores en este caso.</p>
 
-        <table class="ejemplo">
-          <col class="icono" /><col /><col><col /><col class="icono" />
-          <tbody>
-            <tr>
-              <td></td>
-              <td>XML</td>
-              <td>CSS</td>
-              <td>Resultado</td>
-              <td>Enlace</td>
-            </tr>
-            <tr>
-              <td>
-                <img src="../varios/iconos/icono_ff_X.svg" alt="Incorrecto en Firefox" title="Incorrecto en Firefox" width="44" height="32" />
-                <img src="../varios/iconos/icono_ie_X.svg" alt="Incorrecto en Internet Explorer" title="Incorrecto en Internet Explorer" width="44" height="32" />
-                <img src="../varios/iconos/icono_gc_X.svg" alt="Incorrecto en Chrome" title="Incorrecto en Chrome" width="44" height="32" />
-              </td>
-              <td class="codigo">
-                <pre>
+
+        <div class="filaflex cabecera">
+          <div class="icono"><img src="../varios/iconos/icono_transparente.svg" alt="Hueco" width="40" height="4" /></div>
+          <div>XML</div>
+          <div>CSS</div>
+          <div>Resultado</div>
+          <div class="icono">Enlace</div>
+        </div>
+
+        <div class="filaflex">
+          <div class="icono">
+            <img src="../varios/iconos/icono_ff_X.svg" alt="Incorrecto en Firefox" title="Incorrecto en Firefox" width="44" height="32" /><br />
+            <img src="../varios/iconos/icono_ie_X.svg" alt="Incorrecto en Internet Explorer" title="Incorrecto en Internet Explorer" width="44" height="32" /><br />
+            <img src="../varios/iconos/icono_gc_X.svg" alt="Incorrecto en Chrome" title="Incorrecto en Chrome" width="44" height="32" />
+          </div>
+          <div class="codigo">
+            <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 <span class="resaltado">&lt;?xml-stylesheet <span class="attr-name">href</span>=<span class="attr-value">"ejemplo.css"</span>?&gt;</span>
 &lt;libro&gt;
@@ -139,9 +133,9 @@ elemento {
   &lt;fechaPublicacion año="1973"/&gt;
 &lt;/libro&gt;</code>
 </pre>
-              </td>
-              <td class="codigo">
-                <pre>
+          </div>
+          <div class="codigo">
+            <pre>
 <code class="lang-css">.color {
   color: red;
 }
@@ -150,31 +144,25 @@ elemento {
   font-size: 200%;
 }</code>
 </pre>
-              </td>
-              <td class="resul"><object type="application/xml" data="../ejemplos/ejemplos_css/ejemplo_css_5-1.xml">ERROR (no puede mostrarse el objeto)</object></td>
-              <td><a href="../ejemplos/ejemplos_css/ejemplo_css_5-1.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></td>
-            </tr>
-          </tbody>
-        </table>
+          </div>
+          <div class="resul"><object type="application/xml" data="../ejemplos/ejemplos_css/ejemplo_css_5-1.xml">ERROR (no puede mostrarse el objeto)</object></div>
+          <div class="icono"><a href="../ejemplos/ejemplos_css/ejemplo_css_5-1.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+        </div>
 
-        <table class="ejemplo">
-          <tbody class="centrado">
-            <tr>
-              <td>
-                <p>Firefox</p>
-                <p class="captura"><img alt="Ejemplo Documento xml en Firefox" src="../img/ejemplos/css/css_5-1_ff.png" width="365" height="50" /></p>
-              </td>
-              <td>
-                <p>Google Chrome</p>
-                <p class="captura"><img alt="Ejemplo Documento xml en Google Chrome" src="../img/ejemplos/css/css_5-1_gc.png" width="365" height="50" /></p>
-              </td>
-              <td>
-                <p>Internet Explorer</p>
-                <p class="captura"><img alt="Ejemplo Documento xml en Internet Explorer" src="../img/ejemplos/css/css_5-1_ie.png" width="365" height="50" /></p>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="filaflex centrado">
+          <div>
+            <p>Firefox</p>
+            <p class="captura"><img alt="Ejemplo Documento xml en Firefox" src="../img/ejemplos/css/css_5-1_ff.png" width="365" height="50" /></p>
+          </div>
+          <div>
+            <p>Google Chrome</p>
+            <p class="captura"><img alt="Ejemplo Documento xml en Google Chrome" src="../img/ejemplos/css/css_5-1_gc.png" width="365" height="50" /></p>
+          </div>
+          <div>
+            <p>Internet Explorer</p>
+            <p class="captura"><img alt="Ejemplo Documento xml en Internet Explorer" src="../img/ejemplos/css/css_5-1_ie.png" width="365" height="50" /></p>
+          </div>
+        </div>
       </section>
     </section>
 
