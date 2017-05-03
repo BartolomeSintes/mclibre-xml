@@ -339,18 +339,16 @@ autor {
         </li>
         <li>Un documento XML puede enlazar a hojas de estilo alternativas, que en Firefox se pueden seleccionar mediante el menú <span class="soft-menu">Ver &gt; Estilo de página</span> y en Internet Explorer mediante el menú <span class="soft-menu">Ver &gt; Estilo</span>.
 
-          <table class="ejemplo">
-            <col /><col /><col /><col class="icono" />
-            <tbody>
-              <tr>
-                <td>XML</td>
-                <td>CSS</td>
-                <td>Resultado</td>
-                <td class="icono">Enlace</td>
-              </tr>
-              <tr>
-                <td class="codigo" rowspan="2">
-                  <pre>
+          <div class="filaflex cabecera">
+            <div>XML</div>
+            <div>CSS</div>
+            <div>Resultado</div>
+            <div class="icono">Enlace</div>
+          </div>
+
+          <div class="filaflex">
+            <div class="codigo">
+              <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 <span class="resaltado">&lt;?xml-stylesheet <span class="attr-name">href</span>=<span class="attr-value">"ejemplo_2-8-1.css"</span> title=<span class="attr-value">"Estilo"</span>?&gt;</span>
 <span class="resaltado">&lt;?xml-stylesheet <span class="attr-name">alternate</span>=<span class="attr-value">"yes"</span> <span class="attr-name">href</span>=<span class="attr-value">"ejemplo_2-8-2.css"</span>
@@ -361,30 +359,29 @@ autor {
   &lt;fechaPublicacion año="1973"/&gt;
 &lt;/libro&gt;</code>
 </pre>
-                </td>
-                <td class="codigo">
-                  <pre>
+            </div>
+            <div class="columnaflex">
+              <div class="codigo">
+                <pre>
 <code class="lang-css">/* ejemplo_2-8-1.css */
 titulo {
   color: red;
 }</code>
 </pre>
-                </td>
-                <td class="resul" rowspan="2"><object type="application/xml" data="../ejemplos/ejemplos_css/ejemplo_css_2-8.xml">ERROR (no puede mostrarse el objeto)</object></td>
-                <td rowspan="2"><a href="../ejemplos/ejemplos_css/ejemplo_css_2-8.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></td>
-              </tr>
-              <tr>
-                <td class="codigo">
-                  <pre>
+              </div>
+              <div class="codigo">
+                <pre>
 <code class="lang-css">/* ejemplo_2-8-2.css */
 autor {
    font-size: 200%;
 }</code>
 </pre>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+              </div>
+            </div>
+
+            <div class="resul"><object type="application/xml" data="../ejemplos/ejemplos_css/ejemplo_css_2-8.xml">ERROR (no puede mostrarse el objeto)</object></div>
+            <div class="icono"><a href="../ejemplos/ejemplos_css/ejemplo_css_2-8.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+          </div>
         </li>
       </ul>
     </section>
