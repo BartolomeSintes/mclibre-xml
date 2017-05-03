@@ -430,94 +430,81 @@ autor {
 &lt;/biblioteca&gt;</code>
 </pre>
         </div>
+
         <ul>
           <li>El único elemento de bloque es <span class="xml-tag">&lt;libro&gt;</span>:
 
-            <table class="ejemplo">
-              <col /><col /><col class="icono" />
-              <tbody>
-                <tr>
-                  <td>CSS</td>
-                  <td>Resultado</td>
-                  <td class="icono">Enlace</td>
-                </tr>
-                <tr>
-                  <td class="codigo">
-                    <pre>
+            <div class="filaflex cabecera">
+              <div>CSS</div>
+              <div>Resultado</div>
+              <div class="icono">Enlace</div>
+            </div>
+
+            <div class="filaflex">
+              <div class="codigo">
+                <pre>
 <code class="lang-css">libro {
   display: block;
 }</code>
 </pre>
-                  </td>
-                  <td class="resul"><object type="application/xml" data="../ejemplos/ejemplos_css/ejemplo_css_3-1.xml" class="ejemplo">ERROR (no puede mostrarse el objeto)</object></td>
-                  <td class="icono"><a href="../ejemplos/ejemplos_css/ejemplo_css_3-1.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></td>
-                </tr>
-              </tbody>
-            </table>
+              </div>
+              <div class="resul"><object type="application/xml" data="../ejemplos/ejemplos_css/ejemplo_css_3-1.xml" class="ejemplo">ERROR (no puede mostrarse el objeto)</object></div>
+              <div class="icono"><a href="../ejemplos/ejemplos_css/ejemplo_css_3-1.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+            </div>
           </li>
           <li><span class="xml-tag">&lt;titulo&gt;</span>, <span class="xml-tag">&lt;autor&gt;</span> y <span class="xml-tag">&lt;fechaPublicacion&gt;</span> son bloques:
 
-            <table class="ejemplo">
-              <col /><col /><col class="icono" />
-              <tbody>
-                <tr>
-                  <td>CSS</td>
-                  <td>Resultado</td>
-                  <td class="icono">Enlace</td>
-                </tr>
-                <tr>
-                  <td class="codigo">
-                    <pre>
+            <div class="filaflex cabecera">
+              <div>CSS</div>
+              <div>Resultado</div>
+              <div class="icono">Enlace</div>
+            </div>
+
+            <div class="filaflex">
+              <div class="codigo">
+                <pre>
 <code class="lang-css">titulo, autor, fechaPublicacion {
   display: block;
 }</code>
 </pre>
-                  </td>
-                  <td class="resul"><object type="application/xml" data="../ejemplos/ejemplos_css/ejemplo_css_3-2.xml" class="ejemplo">ERROR (no puede mostrarse el objeto)</object></td>
-                  <td class="icono"><a href="../ejemplos/ejemplos_css/ejemplo_css_3-2.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></td>
-                </tr>
-              </tbody>
-            </table>
+              </div>
+              <div class="resul"><object type="application/xml" data="../ejemplos/ejemplos_css/ejemplo_css_3-2.xml" class="ejemplo">ERROR (no puede mostrarse el objeto)</object></div>
+              <div class="icono"><a href="../ejemplos/ejemplos_css/ejemplo_css_3-2.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+            </div>
           </li>
           <li>Mostrando el documento como una lista no ordenada:
 
-            <table class="ejemplo">
-              <col /><col /><col class="icono" />
-              <tbody>
-                <tr>
-                  <td>CSS</td>
-                  <td>Resultado</td>
-                  <td class="icono">Enlace</td>
-                </tr>
-                <tr>
-                  <td class="codigo">
-                    <pre>
+            <div class="filaflex cabecera">
+              <div>CSS</div>
+              <div>Resultado</div>
+              <div class="icono">Enlace</div>
+            </div>
+
+            <div class="filaflex">
+              <div class="codigo">
+                <pre>
 <code class="lang-css">titulo, autor, fechaPublicacion {
   display: list-item;
   list-style: disc inside;
   margin-left: 20px;
 }</code>
 </pre>
-                  </td>
-                  <td class="resul"><object type="application/xml" data="../ejemplos/ejemplos_css/ejemplo_css_3-3.xml" class="ejemplo">ERROR (no puede mostrarse el objeto)</object></td>
-                  <td class="icono"><a href="../ejemplos/ejemplos_css/ejemplo_css_3-3.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></td>
-                </tr>
-              </tbody>
-            </table>
+              </div>
+              <div class="resul"><object type="application/xml" data="../ejemplos/ejemplos_css/ejemplo_css_3-3.xml" class="ejemplo">ERROR (no puede mostrarse el objeto)</object></div>
+              <div class="icono"><a href="../ejemplos/ejemplos_css/ejemplo_css_3-3.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+            </div>
           </li>
           <li>Mostrando el documento como una lista ordenada (en el apartado siguiente se comenta con más detalle este caso):
 
-            <table class="ejemplo">
-              <col /><col /><col class="icono" />
-              <tbody>
-                <tr>
-                  <td>CSS</td>
-                  <td>Resultado</td>
-                  <td class="icono">Enlace</td>
-                </tr>
-                <tr>
-                  <td class="codigo">
-                    <pre>
+            <div class="filaflex">
+              <div>CSS</div>
+              <div>Resultado</div>
+              <div class="icono">Enlace</div>
+            </div>
+
+            <div class="filaflex">
+              <div class="codigo">
+                <pre>
 <code class="lang-css">biblioteca {
   counter-reset: contador;
 }
@@ -537,26 +524,22 @@ autor, fechaPublicacion {
   margin-left: 25px;
 }</code>
 </pre>
-                  </td>
-                  <td class="resul"><object type="application/xml" data="../ejemplos/ejemplos_css/ejemplo_css_3-4.xml" class="ejemplo">ERROR (no puede mostrarse el objeto)</object></td>
-                  <td class="icono"><a href="../ejemplos/ejemplos_css/ejemplo_css_3-4.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></td>
-                </tr>
-              </tbody>
-            </table>
+              </div>
+              <div class="resul"><object type="application/xml" data="../ejemplos/ejemplos_css/ejemplo_css_3-4.xml" class="ejemplo">ERROR (no puede mostrarse el objeto)</object></div>
+              <div class="icono"><a href="../ejemplos/ejemplos_css/ejemplo_css_3-4.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+            </div>
           </li>
           <li>Mostrando el documento como una tabla:
 
-            <table class="ejemplo">
-              <col /><col /><col class="icono" />
-              <tbody>
-                <tr>
-                  <td>CSS</td>
-                  <td>Resultado</td>
-                  <td class="icono">Enlace</td>
-                </tr>
-                <tr>
-                  <td class="codigo">
-                    <pre>
+            <div class="filaflex cabecera">
+              <div>CSS</div>
+              <div>Resultado</div>
+              <div class="icono">Enlace</div>
+            </div>
+
+            <div class="filaflex">
+              <div class="codigo">
+                <pre>
 <code class="lang-css">biblioteca {
   display: table;
   border-spacing: 10px;
@@ -572,12 +555,10 @@ titulo, autor, fechaPublicacion {
   display: table-cell;
 }</code>
 </pre>
-                  </td>
-                  <td class="resul"><object type="application/xml" data="../ejemplos/ejemplos_css/ejemplo_css_3-5.xml" class="ejemplo">ERROR (no puede mostrarse el objeto)</object></td>
-                  <td class="icono"><a href="../ejemplos/ejemplos_css/ejemplo_css_3-5.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></td>
-                </tr>
-              </tbody>
-            </table>
+              </div>
+              <div class="resul"><object type="application/xml" data="../ejemplos/ejemplos_css/ejemplo_css_3-5.xml" class="ejemplo">ERROR (no puede mostrarse el objeto)</object></div>
+              <div class="icono"><a href="../ejemplos/ejemplos_css/ejemplo_css_3-5.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+            </div>
           </li>
         </ul>
       </section>
@@ -587,35 +568,31 @@ titulo, autor, fechaPublicacion {
 
         <p>Si queremos mostrar elementos en forma de lista ordenada, hay que tener en cuenta que Firefox no muestra correctamente los contadores de las listas ordenadas:</p>
 
-        <table class="ejemplo">
-          <col class="icono" /><col /><col /><col class="icono" />
-          <tbody>
-            <tr>
-              <td></td>
-              <td>CSS</td>
-              <td>Resultado</td>
-              <td class="icono">Enlace</td>
-            </tr>
-            <tr>
-              <td>
-                <img src="../varios/iconos/icono_ff_X.svg" alt="Incorrecto en Firefox" title="Incorrecto en Firefox" width="44" height="32" />
-                <img src="../varios/iconos/icono_ie.svg" alt="Correcto en Internet Explorer" title="Correcto en Internet Explorer" width="33" height="32" />
-                <img src="../varios/iconos/icono_gc.svg" alt="Correcto en Chrome" title="Correcto en Chrome" width="32" height="32" />
-              </td>
-              <td class="codigo">
-                <pre>
+        <div class="filaflex cabecera">
+          <div class="icono"><img src="../varios/iconos/icono_transparente.svg" alt="Hueco" width="40" height="40" /></div>
+          <div>CSS</div>
+          <div>Resultado</div>
+          <div class="icono">Enlace</div>
+        </div>
+
+        <div class="filaflex">
+          <div class="icono">
+            <img src="../varios/iconos/icono_ff_X.svg" alt="Incorrecto en Firefox" title="Incorrecto en Firefox" width="44" height="32" /><br />
+            <img src="../varios/iconos/icono_ie.svg" alt="Correcto en Internet Explorer" title="Correcto en Internet Explorer" width="33" height="32" /><br />
+            <img src="../varios/iconos/icono_gc.svg" alt="Correcto en Chrome" title="Correcto en Chrome" width="32" height="32" />
+          </div>
+          <div class="codigo">
+            <pre>
 <code class="lang-css">titulo, autor, fechaPublicacion  {
   display: list-item;
   list-style: upper-alpha inside;
   margin-left: 0;
 }</code>
 </pre>
-              </td>
-              <td class="resul"><object type="application/xml" data="../ejemplos/ejemplos_css/ejemplo_css_4-1.xml" class="ejemplo">ERROR (no puede mostrarse el objeto)</object></td>
-              <td class="icono"><a href="../ejemplos/ejemplos_css/ejemplo_css_4-1.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></td>
-            </tr>
-          </tbody>
-        </table>
+          </div>
+          <div class="resul"><object type="application/xml" data="../ejemplos/ejemplos_css/ejemplo_css_4-1.xml" class="ejemplo">ERROR (no puede mostrarse el objeto)</object></div>
+          <div class="icono"><a href="../ejemplos/ejemplos_css/ejemplo_css_4-1.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+        </div>
 
         <p><strong>Nota</strong>: Firefox no aumenta el valor del contador, como se comenta en la <a href="../otros/ot_diferencias_navegadores.html#listas-ordenadas">lección de diferencias entre navegadores</a>.</p>
 

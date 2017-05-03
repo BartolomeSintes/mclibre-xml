@@ -249,6 +249,7 @@
 
           <p>En el caso del documento guardado como UTF-8 pero que declara ser ISO-8859-1, también le afecta que haya o no <a href="https://es.wikipedia.org/wiki/Marca_de_orden_de_bytes_%28BOM%29">marca de orden de bytes</a> (BOM).</p>
 
+
           <p>La marca de orden de bytes son los primeros caracteres de un fichero UTF. Estos caracteres indican:</p>
           <ul>
             <li>el orden de los bytes en los formatos de 16 o 32 bytes. Cuando la codificación de un carácter ocupa más de un byte, los bytes que lo forman pueden estar en el orden natural de lectura (big endian) o en el contrario (little endian). Por ejemplo el carácter A, cuyo código es 0041, se puede guardar en UTF-16 como 00 41 (big endian) o como 41 00 (little endian).</li>
@@ -256,6 +257,8 @@
           </ul>
 
           <p>En el caso de los archivos UTF-8, la marca de orden de bytes son los tres caracteres EF BB BF (que corresponden a los caracteres <strong>ï»¿</strong>). Pero como en un archivo UTF-8 no se necesita indicar el orden de los bytes, puesto que cada carácter ocupa solamente un byte, la marca es opcional, es decir, que hay archivos UTF-8 con BOM y archivos UTF-8 sin BOM. Los editores (como Eclipse PDT) no muestran estos caracteres y, suelen respetarlos al guardar de nuevo al archivo, pero otros (como el Bloc de notas de Windows) guardan los archivos UTF-8 siempre con BOM. Para ver esos caracteres, se puede utilizar un <a href="http://www.cdlibre.org/consultar/catalogo/Utilidades_Editores-hexadecimales.html">editor hexadecimal</a>, que muestra todos los caracteres sin excepción.</p>
+
+          <p>El ejemplo siguiente muestra como los navegadores son capaces de mostrar correctamente el contenido si el archivo está guardado como UTF-8 con BOM. El motivo es que aunque el archivo declara que está guardado como ISO-8859-1, el navegador detecta el BOM y deduce que se trata de un archivo UTF-8:</p>
 
           <div class="filaflex">
             <div class="icono"><img src="../varios/iconos/icono_oksi.svg" alt="Correcto" title="Correcto" width="40" height="40" /></div>
@@ -269,8 +272,10 @@
 </pre>
             </div>
             <div class="resul"><object type="application/xml" data="http://www.mclibre.org/consultar/especiales/xml/ejemplo_utf_iso_sibom.xml" class="ejemplo">ERROR (no puede mostrarse el objeto)</object></div>
-            <div class="icono"><a href="../ejemplos/ejemplos_utf_iso/ejemplo_utf_iso_sibom.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+            <div class="icono"><a href="http://www.mclibre.org/consultar/especiales/xml/ejemplo_utf_iso_sibom.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
           </div>
+
+          <p>El ejemplo siguiente muestra como los navegadores no son capaces de mostrar correctamente el contenido si el archivo está guardado como UTF-8 sin BOM. El archivo se muestra como si fuera ISO-8859-1 ya que el archivo declara que está guardado como ISO-8859-1 y el navegador no detecta un BOM que le indique que realmente está guardado como UTF-8:</p>
 
           <div class="filaflex">
             <div class="icono"><img src="../varios/iconos/icono_okno.svg" alt="Incorrecto" title="Incorrecto" width="40" height="40" /></div>
