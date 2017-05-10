@@ -91,11 +91,23 @@
 
       <p>XPath considera un documento XML como un árbol de nodos. En Informática, un árbol es una estructura de datos que equivale a un árbol matemático. En Matemáticas un árbol es un caso particular de grafo. Los siguientes términos definidos en teoría de grafos se utilizan también en Informática y en XPath:</p>
       <ul>
-        <li><img alt="Grafo dirigido" src="../img/grafos/grafos_grafo_dirigido.png" width="283" height="140" class="derecha" /><img alt="Grafo" src="../img/grafos/grafos_grafo.png" width="291" height="149" class="derecha" /> Un <strong>grafo</strong> es un conjunto de objetos llamados nodos o vértices unidos por enlaces llamados arcos o aristas. Un <strong>grafo dirigido</strong> es un grafo en el que los arcos tienen dirección.</li>
-        <li><img alt="Nodo padre y nodo hijo" src="../img/grafos/grafos_padre_hijo.png" width="204" height="94" class="izquierda" />Cuando dos nodos están unidos por un arco con dirección, el <strong>nodo padre</strong> es el nodo del que parte el arco y el <strong>nodo hijo</strong> es el nodo al que llega el arco.</li>
-        <li><img alt="Árbol dirigido" src="../img/grafos/grafos_arbol_dirigido.png" width="231" height="187" class="derecha" /><img alt="Árbol" src="../img/grafos/grafos_arbol.png" width="202" height="187" class="derecha" />Un <strong>árbol</strong> es un grafo en el que cualquier pareja de vértices están conectada por un único camino (es decir, que no hay ciclos). Un <strong>árbol dirigido</strong> es un árbol en el que las aristas tienen dirección y todos los nodos menos uno tienen un único padre.</li>
-        <li><img alt="Nodo raíz y nodos hermanos" src="../img/grafos/grafos_raiz_hermanos.png" width="305" height="225" class="izquierda" />El <strong>nodo raíz</strong> de un árbol dirigido es el único nodo sin padre. Los <strong>nodos hermanos</strong> son los nodos que tienen el mismo padre.</li>
-        <li><img alt="Nodos ascendientes" src="../img/grafos/grafos_ascendientes.png" width="273" height="200" class="derecha" /><img alt="Nodos descendientes" src="../img/grafos/grafos_descendientes.png" width="250" height="214" class="derecha" />Los <strong>nodos descendientes</strong> de un nodo son todos los nodos a los que se llega desde el nodo: los hijos, los hijos de los hijos, etc. Los <strong>nodos ascendientes</strong> de un nodo son todos los nodos de los que un nodo es descendiente: el padre, el padre del padre, etc.</li>
+        <li>Un <strong>grafo</strong> es un conjunto de objetos llamados nodos o vértices unidos por enlaces llamados arcos o aristas.
+          <p><img src="../img/grafos/grafos_grafo.svg" alt="Grafo" height="150" /></p></li>
+        <li>Un <strong>grafo dirigido</strong> es un grafo en el que los arcos tienen dirección.
+          <p><img src="../img/grafos/grafos_grafo_dirigido.svg" alt="Grafo dirigido" height="150" /></p></li>
+        <li>Cuando dos nodos están unidos por un arco con dirección, el <strong>nodo padre</strong> es el nodo del que parte el arco y el <strong>nodo hijo</strong> es el nodo al que llega el arco.
+          <p><img src="../img/grafos/grafos_padre_hijo.svg" alt="Nodo padre y nodo hijo" height="103" /></p></li>
+        <li>Un <strong>árbol</strong> es un grafo en el que cualquier pareja de vértices están conectada por un único camino (es decir, que no hay ciclos). Un <strong>árbol dirigido</strong> es un árbol en el que las aristas tienen dirección y todos los nodos menos uno tienen un único padre.
+          <p>
+            <img src="../img/grafos/grafos_arbol.svg" alt="Árbol" height="200" />
+            <img src="../img/grafos/grafos_arbol_dirigido.svg" alt="Árbol dirigido" height="200" />
+          </p></li>
+        <li>El <strong>nodo raíz</strong> de un árbol dirigido es el único nodo sin padre. Los <strong>nodos hermanos</strong> son los nodos que tienen el mismo padre.
+          <p><img src="../img/grafos/grafos_raiz_hermanos.svg" alt="Nodo raíz y nodos hermanos" height="240" /></p></li>
+        <li>Los <strong>nodos descendientes</strong> de un nodo son todos los nodos a los que se llega desde el nodo: los hijos, los hijos de los hijos, etc.
+          <p><img src="../img/grafos/grafos_descendientes.svg" alt="Nodos descendientes" height="240" /></p></li>
+        <li>Los <strong>nodos ascendientes</strong> de un nodo son todos los nodos de los que un nodo es descendiente: el padre, el padre del padre, etc.
+          <p><img src="../img/grafos/grafos_ascendientes.svg" alt="Nodos ascendientes" height="240" /></p></li>
       </ul>
 
       <section id="tipos-nodos">
@@ -141,7 +153,7 @@
 
         <p>se puede representar mediante el siguiente grafo:</p>
 
-        <p class="centrado"><img alt="Árbol de documento XML" src="../img/grafos/grafos_documento.png" width="700" height="525" /></p>
+        <p class="centrado"><img src="../img/grafos/grafos_documento.svg" alt="Árbol de documento XML" height="520" /></p>
 
         <p>Los nodos atributos y de texto no son como los nodos elemento. Por ejemplo, los nodos atributo y de texto no pueden tener descendientes. En realidad el nodo atributo ni siquiera se considera como hijo, sino como una etiqueta adosada al elemento. El texto contenido por una etiqueta sí que se considera hijo del elemento, aunque las expresiones XPath suelen trabajar con nodos elemento y para referirse a los atributos o al texto se utilizan notaciones especiales.</p>
       </section>
@@ -282,6 +294,7 @@
             </div>
           </li>
           <li><strong>/..</strong>: indica el elemento padre.
+            <p><strong>Nota</strong>: En el resultado de los ejemplos siguientes se obtienen únicamente los nodos que tienen el atributo <span class="xml-attr">fechaNacimiento</span>.</p>
 
             <div class="filaflex">
               <div class="codigo">/biblioteca/libro/autor/@fechaNacimiento/..</div>
@@ -310,7 +323,6 @@
 </pre>
               </div>
             </div>
-            <p><strong>Nota</strong>: En estos ejemplos se seleccionan únicamente los nodos que tienen el atributo <span class="xml-attr">fechaNacimiento</span>.</p>
           </li>
           <li><strong>|</strong>: permite indicar varios recorridos.
 
@@ -471,22 +483,6 @@
                   </div>
                 </div>
               </li>
-              <li>Se pueden escribir varios predicados seguidos, cada uno de los cuales restringe los resultados del anterior, como si estuvieran encadenados por la operación lógica and.<br />
-                En el ejemplo siguiente se seleccionan los libros escritos por Mario Vargas Llosa y publicados en 1973:
-
-                <div class="filaflex">
-                  <div class="codigo">//libro[autor="Mario Vargas Llosa"][fechaPublicacion/@año="1973"]</div>
-                  <div class="codigo">
-                    <pre>
-<code class="language-xml">&lt;libro&gt;
-  &lt;titulo&gt;Pantaleón y las visitadoras&lt;/titulo&gt;
-  &lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;
-  &lt;fechaPublicacion año="1973"/&gt;
-&lt;/libro&gt;</code>
-</pre>
-                  </div>
-                </div>
-              </li>
               <li>Un predicado puede contener condiciones compuestas.<br />
                 En los ejemplos siguientes se seleccionan, respectivamente , los libros escritos por Mario Vargas Llosa <strong>y</strong> publicados en 1973 (primer ejemplo) y los libros escritos por Mario Vargas Llosa <strong>o</strong> publicados en 1973 (segundo ejemplo):
 
@@ -521,6 +517,22 @@
   &lt;titulo&gt;Conversación en la catedral&lt;/titulo&gt;
   &lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;
   &lt;fechaPublicacion año="1969"/&gt;
+&lt;/libro&gt;</code>
+</pre>
+                  </div>
+                </div>
+              </li>
+              <li>Se pueden escribir varios predicados seguidos, cada uno de los cuales restringe los resultados del anterior, como si estuvieran encadenados por la operación lógica and.<br />
+                En el ejemplo siguiente se seleccionan los libros escritos por Mario Vargas Llosa y publicados en 1973:
+
+                <div class="filaflex">
+                  <div class="codigo">//libro[autor="Mario Vargas Llosa"][fechaPublicacion/@año="1973"]</div>
+                  <div class="codigo">
+                    <pre>
+<code class="language-xml">&lt;libro&gt;
+  &lt;titulo&gt;Pantaleón y las visitadoras&lt;/titulo&gt;
+  &lt;autor fechaNacimiento="28/03/1936"&gt;Mario Vargas Llosa&lt;/autor&gt;
+  &lt;fechaPublicacion año="1973"/&gt;
 &lt;/libro&gt;</code>
 </pre>
                   </div>
