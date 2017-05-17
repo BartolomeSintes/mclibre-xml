@@ -314,7 +314,7 @@ autor {
             <div class="codigo">
               <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
-<span class="resaltado">&lt;?xml-stylesheet <span class="attr-name">href</span>=<span class="attr-value">"ejemplo_2-7.css"</span> title=<span class="attr-value">"Estilo"</span>?&gt;</span>
+<span class="resaltado">&lt;?xml-stylesheet <span class="attr-name">href</span>=<span class="attr-value">"ejemplo_2-7.css"</span> <span class="attr-name">title</span>=<span class="attr-value">"Estilo"</span>?&gt;</span>
 &lt;libro&gt;
   &lt;titulo&gt;La vida está en otra parte&lt;/titulo&gt;
   &lt;autor&gt;Milan Kundera&lt;/autor&gt;
@@ -335,6 +335,7 @@ autor {
 
         </li>
         <li>Un documento XML puede enlazar a hojas de estilo alternativas, que en Firefox se pueden seleccionar mediante el menú <span class="soft-menu">Ver &gt; Estilo de página</span> y en Internet Explorer mediante el menú <span class="soft-menu">Ver &gt; Estilo</span>.
+          <p>Para ser tratadas como hojas de estilo alternativas, basta con que los enlaces incluyan el atributo <span class="html-atri">title</span>. La primera hoja de estilo enlazada es la hoja de estilo predeterminada y el resto, alternativas. </p>
 
           <div class="filaflex cabecera">
             <div>XML</div>
@@ -347,9 +348,8 @@ autor {
             <div class="codigo">
               <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
-<span class="resaltado">&lt;?xml-stylesheet <span class="attr-name">href</span>=<span class="attr-value">"ejemplo_2-8-1.css"</span> title=<span class="attr-value">"Estilo"</span>?&gt;</span>
-<span class="resaltado">&lt;?xml-stylesheet <span class="attr-name">alternate</span>=<span class="attr-value">"yes"</span> <span class="attr-name">href</span>=<span class="attr-value">"ejemplo_2-8-2.css"</span>
-  <span class="attr-name">title</span>=<span class="attr-value">"Otro estilo"</span>?&gt;</span>
+<span class="resaltado">&lt;?xml-stylesheet <span class="attr-name">href</span>=<span class="attr-value">"ejemplo_2-8-1.css"</span> <span class="attr-name">title</span>=<span class="attr-value">"Estilo"</span>?&gt;</span>
+<span class="resaltado">&lt;?xml-stylesheet <span class="attr-name">href</span>=<span class="attr-value">"ejemplo_2-8-2.css"</span> <span class="attr-name">title</span>=<span class="attr-value">"Otro estilo"</span>?&gt;</span>
 &lt;libro&gt;
   &lt;titulo&gt;La vida está en otra parte&lt;/titulo&gt;
   &lt;autor&gt;Milan Kundera&lt;/autor&gt;
@@ -378,6 +378,51 @@ autor {
 
             <div class="resul"><object type="application/xml" data="../ejemplos/ejemplos_css/ejemplo_css_2-8.xml">ERROR (no puede mostrarse el objeto)</object></div>
             <div class="icono"><a href="../ejemplos/ejemplos_css/ejemplo_css_2-8.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+          </div>
+        </li>
+        <li>Si se quiere indicar explícitamente qué hoja de estilo son las alternativas, se puede incluir el atributo <span class="html-atri">alternate</span> con el valor <span class="html-atri-valor">yes</span>.
+
+          <div class="filaflex cabecera">
+            <div>XML</div>
+            <div>CSS</div>
+            <div>Resultado</div>
+            <div class="icono">Enlace</div>
+          </div>
+
+          <div class="filaflex">
+            <div class="codigo">
+              <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+<span class="resaltado">&lt;?xml-stylesheet <span class="attr-name">href</span>=<span class="attr-value">"ejemplo_2-9-1.css"</span> <span class="attr-name">title</span>=<span class="attr-value">"Estilo"</span>?&gt;</span>
+<span class="resaltado">&lt;?xml-stylesheet <span class="attr-name">alternate</span>=<span class="attr-value">"yes"</span> <span class="attr-name">href</span>=<span class="attr-value">"ejemplo_2-9-2.css"</span> <span class="attr-name">title</span>=<span class="attr-value">"Otro estilo"</span>?&gt;</span>
+&lt;libro&gt;
+  &lt;titulo&gt;La vida está en otra parte&lt;/titulo&gt;
+  &lt;autor&gt;Milan Kundera&lt;/autor&gt;
+  &lt;fechaPublicacion año="1973"/&gt;
+&lt;/libro&gt;</code>
+</pre>
+            </div>
+            <div class="columnaflex">
+              <div class="codigo">
+                <pre>
+<code class="lang-css">/* ejemplo_2-9-1.css */
+titulo {
+  color: red;
+}</code>
+</pre>
+              </div>
+              <div class="codigo">
+                <pre>
+<code class="lang-css">/* ejemplo_2-9-2.css */
+autor {
+   font-size: 200%;
+}</code>
+</pre>
+              </div>
+            </div>
+
+            <div class="resul"><object type="application/xml" data="../ejemplos/ejemplos_css/ejemplo_css_2-9.xml">ERROR (no puede mostrarse el objeto)</object></div>
+            <div class="icono"><a href="../ejemplos/ejemplos_css/ejemplo_css_2-9.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
           </div>
         </li>
       </ul>
@@ -938,7 +983,7 @@ autor, fechaPublicacion {
     </section>
 
     <footer>
-      <p class="ultmod">Última modificación de esta página: 5 de mayo de 2015</p>
+      <p class="ultmod">Última modificación de esta página: 17 de mayo de 2017</p>
 
       <p class="licencia"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../varios/iconos/icono_cc_by_sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
         Esta página forma parte del curso <a href="http://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a> por <a href="http://www.mclibre.org/">Bartolomé Sintes Marco</a><br />

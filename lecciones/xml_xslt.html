@@ -58,11 +58,33 @@
 
       <p>XSLT se utiliza para obtener a partir de un documento XML otros documentos (XML o no). A un documento XML se le pueden aplicar distintas hojas de estilo XSLT para obtener distintos resultados y una misma hoja de estilo XSLT se puede aplicar a distintos documentos XML.</p>
 
-      <p>El lenguaje XSLT está normalizado por el W3C que ha publicado dos versiones de este lenguaje:</p>
+      <p>El lenguaje XSLT está normalizado por el W3C, que ha publicado dos versiones de este lenguaje:</p>
       <ul>
         <li>noviembre de 1999: <a href="http://www.w3.org/TR/1999/REC-xslt-19991116">XSLT 1.0</a> </li>
         <li>enero de 2007: <a href="http://www.w3.org/TR/2007/REC-xslt20-20070123/">XSLT 2.0</a> </li>
       </ul>
+
+      <p class="centrado">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="850" viewBox="-50 -60 850 120">
+          <line x1="-50" y1="0" x2="950" y2="0" stroke-width="3" stroke="red" />
+          <line x1="0" y1="-30" x2="0" y2="30" stroke-width="2" stroke-dasharray="5,5" stroke="black" />
+          <text x="0" y="-40" text-anchor="middle" style="font-size: 100%">1995</text>
+          <line x1="150" y1="-30" x2="150" y2="30" stroke-width="2" stroke-dasharray="5,5" stroke="black" />
+          <text x="150" y="-40" text-anchor="middle" style="font-size: 100%">2000</text>
+          <line x1="300" y1="-30" x2="300" y2="30" stroke-width="2" stroke-dasharray="5,5" stroke="black" />
+          <text x="300" y="-40" text-anchor="middle" style="font-size: 100%">2005</text>
+          <line x1="450" y1="-30" x2="450" y2="30" stroke-width="2" stroke-dasharray="5,5" stroke="black" />
+          <text x="450" y="-40" text-anchor="middle" style="font-size: 100%">2010</text>
+          <line x1="600" y1="-30" x2="600" y2="30" stroke-width="2" stroke-dasharray="5,5" stroke="black" />
+          <text x="600" y="-40" text-anchor="middle" style="font-size: 100%">2015</text>
+          <line x1="750" y1="-30" x2="750" y2="30" stroke-width="2" stroke-dasharray="5,5" stroke="black" />
+          <text x="750" y="-40" text-anchor="middle" style="font-size: 100%">2020</text>
+          <circle cx="146" cy="0" r="7" fill="red" />
+          <text x="146" y="-15" text-anchor="middle" fill="red" style="font-size: 100%; font-weight: bold">XSLT 1.0</text>
+          <circle cx="362" cy="0" r="7" fill="red" />
+          <text x="362" y="-15" text-anchor="middle" fill="red" style="font-size: 100%; font-weight: bold">XSLT 2.0</text>
+        </svg>
+      </p>
 
       <p>Aunque hay incompatibilidades entre estas dos versiones, lo que se cuenta en esta lección es válido para ambas versiones.</p>
 
@@ -74,8 +96,14 @@
       <p>XSLT es un lenguaje declarativo. Por ello, las hojas de estilo XSLT no se escriben como una secuencia de instrucciones, sino como una colección de plantillas (template rules). Cada plantilla establece cómo se transforma un determinado elemento (definido mediante expresiones XPath). La transformación del documento se realiza de la siguiente manera:</p>
       <ul>
         <li>El procesador analiza el documento y construye el árbol del documento.</li>
-        <li>El procesador va recorriendo todos los nodos desde el nodo raíz, aplicando a cada nodo una plantilla, sustituyendo el nodo por el resultado.</li>
-        <li>Cuando el procesador ha recorrido todos los nodos, se ha terminado la transformación.</li>
+        <li>El procesador recorre el árbol del documento desde el nodo raíz.</li>
+        <li>En cada nodo recorrido, el procesador aplica o no alguna plantilla:
+          <ul>
+            <li>Si a un nodo no se le puede aplicar ninguna plantilla, su contenido se incluye en el documento final (el texto del nodo, no el de los nodos descendientes). A continuación, el procesador recorre sus nodos hijos.</li>
+            <li>Si a un nodo se le puede aplicar una plantilla, se aplica la plantilla. La plantilla puede generar texto que se incluye en el documento final. En principio, el procesador no recorre sus nodos hijos, salvo que la plantilla indique al procesador que sí que deben recorrerse los nodos hijos.</li>
+          </ul>
+        </li>
+        <li>Cuando el procesador ha recorrido el árbol, se ha terminado la transformación.</li>
       </ul>
 
       <hr class="corta" />
@@ -128,7 +156,7 @@
 
       <hr class="corta" />
 
-      <p>Cuando se aplica una plantilla a un nodo, el nodo y todos sus descendientes se sutituyen por el resultado de la aplicación de la plantilla, lo que nos haría perder a los descendientes. Si antes de aplicar la plantilla a un nodo se quiere aplicar a los descendientes las plantillas que les correspondan, hay que utilizar la instrucción <span class="xsl-i">&lt;xsl:apply-templates /&gt;</span>, como en el ejemplo siguiente:</p>
+      <p>Cuando se aplica una plantilla a un nodo, en principio no se recorren los nodos descendientes. Para indicar que sí queremos recorrer los nodos descendientes y aplicarles  las plantillas que les correspondan, hay que utilizar la instrucción <span class="xsl-i">&lt;xsl:apply-templates /&gt;</span>, como en el ejemplo siguiente:</p>
 
       <div class="codigo">
         <pre>
@@ -203,12 +231,12 @@
 </pre>
       </div>
 
-      <p>Si los ejemplos de esta página se abren en el navegador, el resultado no coincide en casi todos los casos con el que se muestra en esta página ya que los navegadores no respetan los saltos de línea ni los espacios en blanco, ni muestran las etiquetas. Los resultados que se muestran en esta página se pueden obtener con XML Copy Editor.</p>
+      <p>Si los ejemplos de esta página se abren en el navegador, el resultado no coincide en casi todos los casos con el que se muestra en esta página ya que los navegadores no respetan los saltos de línea ni los espacios en blanco, ni muestran las etiquetas. Los resultados que se muestran en esta página son los que se obtienen con XML Copy Editor.</p>
 
       <section id="xslt-plantilla-vacia">
         <h3>Plantillas vacías o no existentes</h3>
         <ul>
-          <li>Si no hay plantillas, el procesador simplemente extrae el texto contenido por los nodos.<br />
+          <li>Si no hay plantillas, el procesador simplemente recorre todos los nodos y extrae el texto contenido por cada nodo.<br />
 
             <p>En el ejemplo siguiente, el resultado incluye el contenido de los nodos <span class="xml-tag">&lt;título&gt;</span> y <span class="xml-tag">&lt;autor&gt;</span> puesto que no hay ninguna plantilla.</p>
 
@@ -244,7 +272,7 @@
               <div class="icono"><a href="../ejemplos/ejemplos_xslt/ejemplo_xslt_01-1.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
             </div>
           </li>
-          <li>Si hay una plantilla vacía, el procesador sustituye el nodo y todos sus subelementos por nada y no extrae el texto contenido por ese nodo o sus subelementos.<br />
+          <li>Si hay una plantilla vacía, el procesador no genera ningún resultado en el documento final ni recorre los nodos hijos.<br />
 
             <p>En el ejemplo siguiente, el resultado incluye el contenido de los nodos <span class="xml-tag">&lt;titulo&gt;</span>, ya que no hay regla para ellos, pero los de <span class="xml-tag">&lt;autor&gt;</span> se pierden porque la plantilla es vacía.</p>
 
@@ -277,9 +305,7 @@
               <div class="icono"><a href="../ejemplos/ejemplos_xslt/ejemplo_xslt_01-2.xml"><img src="../varios/iconos/icono_enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
             </div>
           </li>
-          <li>En el caso más extremo, si la plantilla vacía se aplica al nodo raíz, el procesador sustituye el nodo raíz y todos sus descendientes por nada y no extrae el texto contenido en ningún subelemento.<br />
-
-            <p>En el ejemplo siguiente, el resultado no incluye nada porque la única plantilla ha sustituido el nodo raíz y todos sus subelementos.</p>
+          <li>En el caso más extremo, si la plantilla vacía se aplica al nodo raíz, el procesador no genera ningún resultado en el documento final ni recorre ningún nodo hijo.<br />
 
             <div class="filaflex cabecera">
               <div>XSLT</div>
@@ -313,7 +339,7 @@
 
         <p>La instrucción <span class="xsl-i">&lt;xsl:value-of&gt;</span> extrae el contenido del nodo seleccionado.</p>
         <ul>
-          <li>En el ejemplo siguiente, los títulos de los libros se han perdido, porque el nodo <span class="xml-tag">&lt;libro&gt;</span> (y sus subnodos <span class="xml-tag">&lt;autor&gt;</span> y <span class="xml-tag">&lt;titulo&gt;</span>) se sustituye por el contenido del nodo <span class="xml-tag">&lt;autor&gt;</span>.
+          <li>En el ejemplo siguiente, el documento final contiene los autores de los libros porque la plantilla los genera con la instrucción <span class="xsl-i">&lt;xsl:value-of&gt;</span>. Como se ha aplicado una plantilla al nodo <span class="xml-tag">&lt;libro&gt;</span>, sus hijos (<span class="xml-tag">&lt;titulo&gt;</span>, <span class="xml-tag">&lt;autor&gt;</span> y <span class="xml-tag">&lt;fechaPublicacion&gt;</span>) no se recorren. Por eso, los títulos de los libros no aparecen en el documento final.
 
             <div class="filaflex cabecera">
               <div>XSLT</div>
@@ -776,7 +802,7 @@
 
         <h4>La instrucción <span class="xsl-i">&lt;xsl:text&gt;</span></h4>
 
-        <p><strong>En el caso de Notepad++ con XML Tools</strong> se puede mejorar el formato de presentación de los resultados, insertando líneas en blanco innecesarias y sangrando los elementos anidados, utilzando la instrucción <span class="xsl-i">&lt;xsl:text&gt;</span>. Pero debe ternerse en cuenta que esta instrucción no permite eliminar líneas en blanco que se producen en otros procesadores (como en XML Copy Editor)./p>
+        <p><strong>En el caso de Notepad++ con XML Tools</strong>, se puede mejorar el formato de presentación de los resultados, insertando líneas en blanco innecesarias y sangrando los elementos anidados, utilizando la instrucción <span class="xsl-i">&lt;xsl:text&gt;</span>. Pero debe tenerse en cuenta que esta instrucción no permite eliminar líneas en blanco que se producen en otros procesadores (como en XML Copy Editor).</p>
 
         <p>La instrucción <span class="xsl-i">&lt;xsl:text&gt;</span> permite generar texto que no se puede generar simplemente añadiéndolo (saltos de líneas y espacios en blanco, por ejemplo).</p>
 
@@ -964,7 +990,7 @@
     </section>
 
     <footer>
-      <p class="ultmod">Última modificación de esta página: 16 de mayo de 2015</p>
+      <p class="ultmod">Última modificación de esta página: 17 de mayo de 2017</p>
 
       <p class="licencia"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../varios/iconos/icono_cc_by_sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
         Esta página forma parte del curso <a href="http://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a> por <a href="http://www.mclibre.org/">Bartolomé Sintes Marco</a><br />

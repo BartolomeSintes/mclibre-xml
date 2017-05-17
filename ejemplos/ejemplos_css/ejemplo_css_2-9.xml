@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet href="ejemplo_css_2-8-1.css"  title="Estilo"?>
-<?xml-stylesheet href="ejemplo_css_2-8-2.css" title="Otro estilo"?>
+<?xml-stylesheet href="ejemplo_css_2-9-1.css"  title="Estilo"?>
+<?xml-stylesheet alternate="yes" href="ejemplo_css_2-9-2.css" title="Otro estilo"?>
 <libro>
   <titulo>La vida está en otra parte</titulo>
   <autor>Milan Kundera</autor>
