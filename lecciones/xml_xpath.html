@@ -884,7 +884,7 @@ Mario Vargas Llosa</code>
         <p>Estas dos expresiones se pueden unir en una única expresión, sustituyendo en la segunda expresión el valor 1973 por la primera expresión:</p>
 
         <div class="filaflex">
-          <div class="codigo">//libro[fechaPublicacion/@año=<span class="resaltado">//libro[titulo="La vida está en otra parte"]/fechaPublicacion/@año</span>]/titulo</div>
+          <div class="codigo">//libro[fechaPublicacion/@año=<span class="codigo-resaltado">//libro[titulo="La vida está en otra parte"]/fechaPublicacion/@año</span>]/titulo</div>
           <div class="codigo">
             <pre>
 <code class="language-xml">&lt;titulo&gt;La vida está en otra parte&lt;/titulo&gt;
@@ -896,7 +896,7 @@ Mario Vargas Llosa</code>
         <p>Como cada una de las expresiones puede escribirse de varias maneras, en realidad hay muchas formas de encontrar la respuesta. Por ejemplo, en la solución siguiente los predicados se encuentran al final del eje en cada subexpresión:</p>
 
         <div class="filaflex">
-          <div class="codigo">//titulo[../fechaPublicacion/@año=<span class="resaltado">//@año[../../titulo="La vida está en otra parte"]</span>]</div>
+          <div class="codigo">//titulo[../fechaPublicacion/@año=<span class="codigo-resaltado">//@año[../../titulo="La vida está en otra parte"]</span>]</div>
           <div class="codigo">
             <pre>
 <code class="language-xml">&lt;titulo&gt;La vida está en otra parte&lt;/titulo&gt;
@@ -935,7 +935,7 @@ Mario Vargas Llosa</code>
         <p>Estas dos expresiones se pueden unir en una única expresión, sustituyendo en la segunda expresión el valor "Mario Vargas Llosa" por la primera expresión:</p>
 
         <div class="filaflex">
-          <div class="codigo">//libro[autor=<span class="resaltado">//libro[titulo="Pantaleón y las visitadoras"]/autor/text()</span>]/titulo</div>
+          <div class="codigo">//libro[autor=<span class="codigo-resaltado">//libro[titulo="Pantaleón y las visitadoras"]/autor/text()</span>]/titulo</div>
           <div class="codigo">
             <pre>
 <code class="language-xml">&lt;titulo&gt;Pantaleón y las visitadoras&lt;/titulo&gt;
@@ -949,7 +949,7 @@ Mario Vargas Llosa</code>
         <p>Incluso se puede omitir la selección de nodos /text() de la segunda expresión y escribir la expresión XPath así:</p>
 
         <div class="filaflex">
-          <div class="codigo">//libro[autor=<span class="resaltado">//libro[titulo="Pantaleón y las visitadoras"]/autor</span>]/titulo</div>
+          <div class="codigo">//libro[autor=<span class="codigo-resaltado">//libro[titulo="Pantaleón y las visitadoras"]/autor</span>]/titulo</div>
           <div class="codigo">
             <pre>
 <code class="language-xml">&lt;titulo&gt;Pantaleón y las visitadoras&lt;/titulo&gt;

@@ -181,7 +181,7 @@
 
 &lt;colores&gt;
   &lt;color&gt;azul marino&lt;/color&gt;
-  <span class="resaltado">&lt;color&gt;</span>negro<span class="resaltado">&lt;/color&gt;</span>
+  <span class="codigo-resaltado">&lt;color&gt;</span>negro<span class="codigo-resaltado">&lt;/color&gt;</span>
   &lt;color&gt;amarillo&lt;/color&gt;
 &lt;/colores&gt;</code>
 </pre>
@@ -210,7 +210,7 @@
 ]&gt;
 
 &lt;flores&gt;
-  <span class="resaltado">&lt;flor&gt;Rosa&lt;/flor&gt;</span>
+  <span class="codigo-resaltado">&lt;flor&gt;Rosa&lt;/flor&gt;</span>
 &lt;/flores&gt;</code>
 </pre>
             </div>
@@ -238,8 +238,8 @@
 ]&gt;
 
 &lt;animales&gt;
-  <span class="resaltado">&lt;animal&gt;</span>Perro Caniche<span class="resaltado">&lt;/animal&gt;</span>
-  <span class="resaltado">&lt;animal&gt;</span>Gato Siamés<span class="resaltado">&lt;/animal&gt;</span>
+  <span class="codigo-resaltado">&lt;animal&gt;</span>Perro Caniche<span class="codigo-resaltado">&lt;/animal&gt;</span>
+  <span class="codigo-resaltado">&lt;animal&gt;</span>Gato Siamés<span class="codigo-resaltado">&lt;/animal&gt;</span>
 &lt;/animales&gt;</code>
 </pre>
             </div>
@@ -354,7 +354,7 @@
   &lt;contacto&gt;
     &lt;nombre&gt;Ayuntamiento&lt;/nombre&gt;
     &lt;telefonoFijo&gt;010&lt;/telefonoFijo&gt;
-    <span class="resaltado">&lt;telefonoMovil&gt;&lt;/telefonoMovil&gt;</span>
+    <span class="codigo-resaltado">&lt;telefonoMovil&gt;&lt;/telefonoMovil&gt;</span>
   &lt;/contacto&gt;
   &lt;contacto&gt;
     &lt;nombre&gt;Emergencias&lt;/nombre&gt;
@@ -401,13 +401,13 @@
 &lt;sistemaSolar&gt;
   &lt;cuerpo&gt;
     &lt;planeta&gt;Tierra&lt;/planeta&gt;
-  <span class="resaltado">&lt;/cuerpo&gt;</span>
-  <span class="resaltado">&lt;cuerpo&gt;</span>
+  <span class="codigo-resaltado">&lt;/cuerpo&gt;</span>
+  <span class="codigo-resaltado">&lt;cuerpo&gt;</span>
     &lt;satelite&gt;Luna&lt;/satelite&gt;
   &lt;/cuerpo&gt;
-  <span class="resaltado">&lt;cuerpo&gt;</span>
+  <span class="codigo-resaltado">&lt;cuerpo&gt;</span>
     &lt;asteroide&gt;Ceres&lt;/asteroide&gt;
-  <span class="resaltado">&lt;/cuerpo&gt;</span>
+  <span class="codigo-resaltado">&lt;/cuerpo&gt;</span>
 &lt;/sistemaSolar&gt;</code>
 </pre>
             </div>
@@ -433,8 +433,8 @@
             <div class="codigo">
               <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
-&lt;!DOCTYPE <span class="resaltado">marcadores</span> [
-  <span class="resaltado">&lt;!ELEMENT marcadores (marcador+)&gt;</span>
+&lt;!DOCTYPE <span class="codigo-resaltado">marcadores</span> [
+  <span class="codigo-resaltado">&lt;!ELEMENT marcadores (marcador+)&gt;</span>
   &lt;!ELEMENT marcador (nombre, uri)&gt;
   &lt;!ELEMENT nombre (#PCDATA)&gt;
   &lt;!ELEMENT uri (#PCDATA)&gt;
@@ -483,10 +483,10 @@
               <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;!DOCTYPE efemerides [
-  &lt;!ELEMENT efemerides (efemeride<span class="resaltado">*</span>)&gt;
+  &lt;!ELEMENT efemerides (efemeride<span class="codigo-resaltado">*</span>)&gt;
   &lt;!ELEMENT efemeride (fecha, hecho)&gt;
-  <span class="resaltado">&lt;!ELEMENT fecha (#PCDATA)&gt;</span>
-  <span class="resaltado">&lt;!ELEMENT hecho (#PCDATA)&gt;</span>
+  <span class="codigo-resaltado">&lt;!ELEMENT fecha (#PCDATA)&gt;</span>
+  <span class="codigo-resaltado">&lt;!ELEMENT hecho (#PCDATA)&gt;</span>
 ]&gt;
 
 &lt;efemerides&gt;
@@ -525,7 +525,7 @@
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;!DOCTYPE aeropuertos [
   &lt;!ELEMENT aeropuertos (aeropuerto*)&gt;
-  &lt;!ELEMENT aeropuerto (nombre, cerrado<span class="resaltado">?</span>)&gt;
+  &lt;!ELEMENT aeropuerto (nombre, cerrado<span class="codigo-resaltado">?</span>)&gt;
   &lt;!ELEMENT nombre (#PCDATA)&gt;
   &lt;!ELEMENT cerrado (#PCDATA)&gt;
 ]&gt;
@@ -561,7 +561,7 @@
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;!DOCTYPE vuelos [
   &lt;!ELEMENT vuelos (vuelo*)&gt;
-  &lt;!ELEMENT vuelo <span class="resaltado">((origen, destino)|(destino, origen))</span>&gt;
+  &lt;!ELEMENT vuelo <span class="codigo-resaltado">((origen, destino)|(destino, origen))</span>&gt;
   &lt;!ELEMENT origen (#PCDATA)&gt;
   &lt;!ELEMENT destino (#PCDATA)&gt;
 ]&gt;
@@ -603,9 +603,9 @@
               <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;!DOCTYPE reyesEspañoles [
-  &lt;!ELEMENT reyesEspañoles (<span class="resaltado">(rey|reina)*</span>)&gt;
+  &lt;!ELEMENT reyesEspañoles (<span class="codigo-resaltado">(rey|reina)*</span>)&gt;
   &lt;!ELEMENT rey (nombre, padre, madre)&gt;
-  <span class="resaltado">&lt;!ELEMENT reina (nombre, padre, madre)&gt;</span>
+  <span class="codigo-resaltado">&lt;!ELEMENT reina (nombre, padre, madre)&gt;</span>
   &lt;!ELEMENT nombre (#PCDATA)&gt;
   &lt;!ELEMENT padre (#PCDATA)&gt;
   &lt;!ELEMENT madre (#PCDATA)&gt;
@@ -661,9 +661,9 @@
               <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;!DOCTYPE paises [
-  <span class="resaltado">&lt;!ELEMENT paises (pais*)&gt;</span>
-  &lt;!ELEMENT pais (nombre, unionEuropea<span class="resaltado">?</span>, otan<span class="resaltado">?</span>)&gt;
-  &lt;!ELEMENT nombre <span class="resaltado">(#PCDATA)</span>&gt;
+  <span class="codigo-resaltado">&lt;!ELEMENT paises (pais*)&gt;</span>
+  &lt;!ELEMENT pais (nombre, unionEuropea<span class="codigo-resaltado">?</span>, otan<span class="codigo-resaltado">?</span>)&gt;
+  &lt;!ELEMENT nombre <span class="codigo-resaltado">(#PCDATA)</span>&gt;
   &lt;!ELEMENT unionEuropea EMPTY&gt;
   &lt;!ELEMENT otan EMPTY&gt;
 ]&gt;
@@ -711,9 +711,9 @@
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;!DOCTYPE colores [
   &lt;!ELEMENT colores (color*)&gt;
-  <span class="resaltado">&lt;!ELEMENT color (nombreSvg, codigo)&gt;</span>
+  <span class="codigo-resaltado">&lt;!ELEMENT color (nombreSvg, codigo)&gt;</span>
   &lt;!ELEMENT nombreSvg (#PCDATA)&gt;
-  <span class="resaltado">&lt;!ELEMENT codigo (rgb|cmyk)&gt;</span>
+  <span class="codigo-resaltado">&lt;!ELEMENT codigo (rgb|cmyk)&gt;</span>
   &lt;!ELEMENT rgb (#PCDATA)&gt;
   &lt;!ELEMENT cmyk (#PCDATA)&gt;
 ]&gt;
@@ -766,9 +766,9 @@
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;!DOCTYPE contabilidad [
   &lt;!ELEMENT contabilidad (apunte*)&gt;
-  <span class="resaltado">&lt;!ELEMENT apunte ((ingreso | gasto)*, fecha, cantidad, concepto)&gt;</span>
-  <span class="resaltado">&lt;!ELEMENT ingreso EMPTY&gt;</span>
-  <span class="resaltado">&lt;!ELEMENT gasto EMPTY&gt;</span>
+  <span class="codigo-resaltado">&lt;!ELEMENT apunte ((ingreso | gasto)*, fecha, cantidad, concepto)&gt;</span>
+  <span class="codigo-resaltado">&lt;!ELEMENT ingreso EMPTY&gt;</span>
+  <span class="codigo-resaltado">&lt;!ELEMENT gasto EMPTY&gt;</span>
   &lt;!ELEMENT fecha (#PCDATA)&gt;
   &lt;!ELEMENT cantidad (#PCDATA)&gt;
   &lt;!ELEMENT concepto (#PCDATA)&gt;
@@ -821,12 +821,12 @@
               <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;!DOCTYPE mensajes [
-  &lt;!ELEMENT mensajes (mensaje<span class="resaltado">*</span>)&gt;
-  <span class="resaltado">&lt;!ELEMENT mensaje (de, para, hora, texto)&gt;</span>
+  &lt;!ELEMENT mensajes (mensaje<span class="codigo-resaltado">*</span>)&gt;
+  <span class="codigo-resaltado">&lt;!ELEMENT mensaje (de, para, hora, texto)&gt;</span>
   &lt;!ELEMENT de (#PCDATA)&gt;
   &lt;!ELEMENT para (#PCDATA)&gt;
   &lt;!ELEMENT hora (#PCDATA)&gt;
-  &lt;!ELEMENT texto <span class="resaltado">ANY</span>&gt;
+  &lt;!ELEMENT texto <span class="codigo-resaltado">ANY</span>&gt;
   &lt;!ELEMENT strong (#PCDATA)&gt;
 ]&gt;
 
@@ -873,7 +873,7 @@
   &lt;!ATTLIST persona nombre CDATA #IMPLIED&gt;
 ]&gt;
 
-<span class="resaltado">&lt;persona /&gt;</span></code>
+<span class="codigo-resaltado">&lt;persona /&gt;</span></code>
 </pre>
             </div>
           </li>
@@ -899,7 +899,7 @@
   &lt;!ATTLIST pelicula titulo CDATA #IMPLIED&gt;
 ]&gt;
 
-<span class="resaltado">&lt;pelicula titulo="La diligencia" /&gt;</span></code>
+<span class="codigo-resaltado">&lt;pelicula titulo="La diligencia" /&gt;</span></code>
 </pre>
             </div>
           </li>
@@ -934,8 +934,8 @@
 ]&gt;
 
 &lt;cuadros&gt;
-  &lt;cuadro titulo="<span class="resaltado">Adán_y_Eva_1</span>" autor="Alberto Durero" /&gt;
-  &lt;cuadro autor="Lucas Cranach, el viejo" titulo="<span class="resaltado">Adán_y_Eva_2</span>" /&gt;
+  &lt;cuadro titulo="<span class="codigo-resaltado">Adán_y_Eva_1</span>" autor="Alberto Durero" /&gt;
+  &lt;cuadro autor="Lucas Cranach, el viejo" titulo="<span class="codigo-resaltado">Adán_y_Eva_2</span>" /&gt;
 &lt;/cuadros&gt;</code>
 </pre>
             </div>
@@ -965,8 +965,8 @@
 ]&gt;
 
 &lt;listaCompra&gt;
-  <span class="resaltado">&lt;item nombre="leche" cantidad="12 litros" /&gt;</span>
-  <span class="resaltado">&lt;item nombre="pan" cantidad="3 barras de cuarto" /&gt;</span>
+  <span class="codigo-resaltado">&lt;item nombre="leche" cantidad="12 litros" /&gt;</span>
+  <span class="codigo-resaltado">&lt;item nombre="pan" cantidad="3 barras de cuarto" /&gt;</span>
 &lt;/listaCompra&gt;</code>
 </pre>
             </div>
@@ -1002,10 +1002,10 @@
 ]&gt;
 
 &lt;futbol&gt;
-  &lt;jugador nombre="Alfredo Di Stéfano" codigo="<span class="resaltado">N1</span>"/&gt;
-  &lt;jugador nombre="<span class="resaltado">Edson Arantes do Nascimento - Pelé</span>" codigo="N2" /&gt;
-  &lt;jugador nombre="Diego Armando Maradona" codigo="<span class="resaltado">N3</span>" /&gt;
-  &lt;jugador nombre="Johan Cruyff" codigo="<span class="resaltado">N4</span>" /&gt;
+  &lt;jugador nombre="Alfredo Di Stéfano" codigo="<span class="codigo-resaltado">N1</span>"/&gt;
+  &lt;jugador nombre="<span class="codigo-resaltado">Edson Arantes do Nascimento - Pelé</span>" codigo="N2" /&gt;
+  &lt;jugador nombre="Diego Armando Maradona" codigo="<span class="codigo-resaltado">N3</span>" /&gt;
+  &lt;jugador nombre="Johan Cruyff" codigo="<span class="codigo-resaltado">N4</span>" /&gt;
 &lt;/futbol&gt;</code>
 </pre>
             </div>
@@ -1048,8 +1048,8 @@
   &lt;jugador nombre="Edison Arantes do Nascimento" codigo="ean" /&gt;
   &lt;jugador nombre="Diego Armando Maradona" codigo="dam" /&gt;
   &lt;jugador nombre="Johan Cruyff" codigo="jc" /&gt;
-  &lt;equipo nombre="Società Sportiva Calcio Napoli" jugadores="<span class="resaltado">dam</span>" /&gt;
-  &lt;equipo nombre="Futbol Club Barcelona" jugadores="<span class="resaltado">jc dam</span>" /&gt;
+  &lt;equipo nombre="Società Sportiva Calcio Napoli" jugadores="<span class="codigo-resaltado">dam</span>" /&gt;
+  &lt;equipo nombre="Futbol Club Barcelona" jugadores="<span class="codigo-resaltado">jc dam</span>" /&gt;
 &lt;/futbol&gt;</code>
 </pre>
             </div>
@@ -1077,7 +1077,7 @@
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;!DOCTYPE libro [
   &lt;!ELEMENT libro EMPTY&gt;
-  &lt;!ATTLIST libro autor <span class="resaltado">NMTOKENS</span> #REQUIRED&gt;
+  &lt;!ATTLIST libro autor <span class="codigo-resaltado">NMTOKENS</span> #REQUIRED&gt;
 ]&gt;
 
 &lt;libro autor="Mario Vargas LLosa" /&gt;</code>
@@ -1114,10 +1114,10 @@
               <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;!DOCTYPE inventores [
-  &lt;!ELEMENT inventores <span class="resaltado">(inventor*)</span>&gt;
+  &lt;!ELEMENT inventores <span class="codigo-resaltado">(inventor*)</span>&gt;
   &lt;!ELEMENT inventor EMPTY&gt;
   &lt;!ATTLIST inventor invento CDATA #REQUIRED&gt;
-  &lt;!ATTLIST inventor nombre <span class="resaltado">CDATA</span>  <span class="resaltado">#IMPLIED</span>&gt;
+  &lt;!ATTLIST inventor nombre <span class="codigo-resaltado">CDATA</span>  <span class="codigo-resaltado">#IMPLIED</span>&gt;
 ]&gt;
 
 &lt;inventores&gt;
@@ -1159,8 +1159,8 @@
               <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;!DOCTYPE cosasPorHacer [
-  &lt;!ELEMENT cosasPorHacer (cosa<span class="resaltado">*</span>)&gt;
-  &lt;!ELEMENT cosa <span class="resaltado">(#PCDATA)</span>&gt;
+  &lt;!ELEMENT cosasPorHacer (cosa<span class="codigo-resaltado">*</span>)&gt;
+  &lt;!ELEMENT cosa <span class="codigo-resaltado">(#PCDATA)</span>&gt;
   &lt;!ATTLIST cosa fecha CDATA #REQUIRED&gt;
   &lt;!ATTLIST cosa fechaLimite CDATA #REQUIRED&gt;
 ]&gt;
@@ -1210,11 +1210,11 @@
               <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;!DOCTYPE resoluciones [
-  &lt;!ELEMENT resoluciones <span class="resaltado">(resolucion*)</span>&gt;
-  <span class="resaltado">&lt;!ELEMENT resolucion EMPTY&gt;</span>
-  &lt;!ATTLIST <span class="resaltado">resolucion</span> nombre <span class="resaltado">CDATA</span> #REQUIRED&gt;
-  &lt;!ATTLIST <span class="resaltado">resolucion</span> alto CDATA #REQUIRED&gt;
-  &lt;!ATTLIST <span class="resaltado">resolucion</span> ancho CDATA #REQUIRED&gt;
+  &lt;!ELEMENT resoluciones <span class="codigo-resaltado">(resolucion*)</span>&gt;
+  <span class="codigo-resaltado">&lt;!ELEMENT resolucion EMPTY&gt;</span>
+  &lt;!ATTLIST <span class="codigo-resaltado">resolucion</span> nombre <span class="codigo-resaltado">CDATA</span> #REQUIRED&gt;
+  &lt;!ATTLIST <span class="codigo-resaltado">resolucion</span> alto CDATA #REQUIRED&gt;
+  &lt;!ATTLIST <span class="codigo-resaltado">resolucion</span> ancho CDATA #REQUIRED&gt;
 ]&gt;
 
 &lt;resoluciones&gt;
@@ -1250,9 +1250,9 @@
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;!DOCTYPE albumesMortadelo [
   &lt;!ELEMENT albumesMortadelo (album*)&gt;
-  &lt;!ELEMENT album <span class="resaltado">EMPTY</span>&gt;
+  &lt;!ELEMENT album <span class="codigo-resaltado">EMPTY</span>&gt;
   &lt;!ATTLIST album nombre CDATA #REQUIRED&gt;
-  &lt;!ATTLIST album fecha <span class="resaltado">(1969|1970|1971|1972|1973|1974)</span> #REQUIRED&gt;
+  &lt;!ATTLIST album fecha <span class="codigo-resaltado">(1969|1970|1971|1972|1973|1974)</span> #REQUIRED&gt;
 ]&gt;
 
 &lt;albumesMortadelo&gt;

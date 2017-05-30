@@ -12,8 +12,8 @@
 /* Estilo para XML imitando a XML Copy Editor */
 /* Tengo pendiente comprobar los nombres de las clases en prism */
 
-code.language-xml { font-weight: bold; font-size: 120%; line-height: 120%;}
-code.xml-malformado, code.xml-invalido { font-weight: bold; font-size: 120%; line-height: 120%;}
+code.language-xml { _font-weight: bold; _font-size: 120%; _line-height: 120%;}
+code.xml-malformado, code.xml-invalido { _font-weight: bold; _font-size: 120%; _line-height: 120%;}
 
 code.language-xml .tag         { color: #0000FF; } /* any tag from "<" till ">"              */
 code.language-xml .punctuation { color: #446FBD; } /*                                        */
@@ -28,7 +28,7 @@ code.language-xml .prolog      { color: #0000FF; } /* processing instruction (<?
 /* Estilo para CSS imitando a XML Copy Editor */
 /* Todvía no pasado a Prism del todo */
 
-code.language-css { font-weight: bold; font-size: 115%; line-height: 120%;}
+code.language-css { _font-weight: bold; _font-size: 115%; _line-height: 120%;}
 
 code.language-css .selector           { color: #446FBD; }          /* tag in selectors                   */
 code.language-css .hljs-id            { color: #446FBD; }          /* #some_name in selectors            */
@@ -48,7 +48,7 @@ code.language-css .hljs-important     { color: rgb( 63,127,127); } /* "!importan
 
 /* Estilo para HTML imitando a Brackets */
 
-code.language-html { font-weight: bold; font-size: 120%; line-height: 120%;}
+code.language-html { _font-weight: bold; _font-size: 120%; _line-height: 120%;}
 
 code.language-html .tag        { color: #446FBD; } /* any tag from "<" till ">"              */
 code.language-html .attr-name  { color: #6D8600; } /* tag's attribute with or without value  */

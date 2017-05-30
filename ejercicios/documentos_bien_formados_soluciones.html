@@ -61,18 +61,18 @@
 
           <div class="codigo">
             <pre>
-<code class="language-xml">    &lt;deporte <span class="resaltado">nombre="</span>Atletismo<span class="resaltado">"</span> /&gt;
+<code class="language-xml">    &lt;deporte <span class="codigo-resaltado">nombre="</span>Atletismo<span class="codigo-resaltado">"</span> /&gt;
  ...
-    &lt;deporte <span class="resaltado">nombre="</span>Natación<span class="resaltado">"</span> /&gt;</code>
+    &lt;deporte <span class="codigo-resaltado">nombre="</span>Natación<span class="codigo-resaltado">"</span> /&gt;</code>
 </pre>
           </div>
           <p>o como texto dentro de la etiqueta:</p>
 
           <div class="codigo">
             <pre>
-<code  class="language-xml">    <span class="resaltado">&lt;deporte&gt;Atletismo&lt;/deporte&gt;</span>
+<code  class="language-xml">    <span class="codigo-resaltado">&lt;deporte&gt;Atletismo&lt;/deporte&gt;</span>
  ...
-    <span class="resaltado">&lt;deporte&gt;Natación&lt;/deporte&gt;</span></code>
+    <span class="codigo-resaltado">&lt;deporte&gt;Natación&lt;/deporte&gt;</span></code>
 </pre>
           </div>
         </li>
@@ -88,7 +88,7 @@
 <code class="language-xml">  &lt;deportista&gt;
     &lt;deporte Atletismo /&gt;
     &lt;nombre&gt;Jesse Owens&lt;/nombre&gt;
-  <span class="resaltado">&lt;/deportista&gt;</span>
+  <span class="codigo-resaltado">&lt;/deportista&gt;</span>
   &lt;deportista&gt;
  ...</code>
 </pre>
@@ -129,12 +129,12 @@
           <div class="codigo">
             <pre>
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
-<span class="resaltado">&lt;peliculas&gt;</span>
+<span class="codigo-resaltado">&lt;peliculas&gt;</span>
   &lt;pelicula&gt;
     &lt;titulo&gt;Con faldas y a lo loco&lt;/titulo&gt;
  ...
   &lt;autor /&gt;barto&lt;/autor&gt;
-<span class="resaltado">&lt;/peliculas&gt;</span>
+<span class="codigo-resaltado">&lt;/peliculas&gt;</span>
 </pre>
           </div>
         </li>
@@ -146,7 +146,7 @@
           <p>Se podría corregir borrando la barra: </p>
 
           <div class="codigo">
-            <pre><span class="resaltado">&lt;autor&gt;</span>barto&lt;/autor&gt;</pre>
+            <pre><span class="codigo-resaltado">&lt;autor&gt;</span>barto&lt;/autor&gt;</pre>
           </div>
         </li>
         <li>Una posible solución sería entonces:
@@ -183,7 +183,7 @@
           <p>Se podría corregir modificando la etiqueta de apertura o la de cierre, por ejemplo: </p>
 
           <div class="codigo">
-            <pre>  <span class="resaltado">&lt;titulo&gt;</span>XML explicado a los niños&lt;/titulo&gt;</pre>
+            <pre>  <span class="codigo-resaltado">&lt;titulo&gt;</span>XML explicado a los niños&lt;/titulo&gt;</pre>
           </div>
         </li>
         <li>Los caracteres :// no están permitidos en las etiquetas
@@ -194,7 +194,7 @@
           <p>Se podría corregir eliminando esos caracteres, por ejemplo: </p>
 
           <div class="codigo">
-            <pre>   <span class="resaltado">&lt;http&gt;</span>www.example.org<span class="resaltado">&lt;/http&gt;</span></pre>
+            <pre>   <span class="codigo-resaltado">&lt;http&gt;</span>www.example.org<span class="codigo-resaltado">&lt;/http&gt;</span></pre>
           </div>
         </li>
         <li>Una posible solución sería entonces:
@@ -228,17 +228,17 @@
           <p>Se podría corregir modificando la etiqueta de apertura o la de cierre, por ejemplo: </p>
 
           <div class="codigo">
-            <pre> <span class="resaltado">&lt;geografia_mundial&gt;</span>
+            <pre> <span class="codigo-resaltado">&lt;geografia_mundial&gt;</span>
  ...
-<span class="resaltado">&lt;/geografia_mundial&gt;</span>
+<span class="codigo-resaltado">&lt;/geografia_mundial&gt;</span>
 </pre>
           </div>
           <p>o</p>
 
           <div class="codigo">
-            <pre> <span class="resaltado">&lt;geografia-mundial&gt;</span>
+            <pre> <span class="codigo-resaltado">&lt;geografia-mundial&gt;</span>
  ...
-<span class="resaltado">&lt;/geografia-mundial&gt;</span>
+<span class="codigo-resaltado">&lt;/geografia-mundial&gt;</span>
 </pre>
           </div>
         </li>
@@ -250,7 +250,7 @@
           <p>Se podría corregir escribiendo el valor en el interior de la etiqueta, por ejemplo: </p>
 
           <div class="codigo">
-            <pre><span class="resaltado">&lt;capital&gt;Madrid&lt;/capital&gt;</span></pre>
+            <pre><span class="codigo-resaltado">&lt;capital&gt;Madrid&lt;/capital&gt;</span></pre>
           </div>
         </li>
         <li>Una posible solución sería entonces:
@@ -283,13 +283,13 @@
           <p>Se podría corregir uniendo los atributos en un único atributo, por ejemplo: </p>
 
           <div class="codigo">
-            <pre>   &lt;programa nombre="Firefox" <span class="resaltado">licencia="GPL MPL"</span> /&gt;</pre>
+            <pre>   &lt;programa nombre="Firefox" <span class="codigo-resaltado">licencia="GPL MPL"</span> /&gt;</pre>
           </div>
           <p>o duplicando las etiquetas, por ejemplo:</p>
 
           <div class="codigo">
-            <pre>   &lt;programa nombre="Firefox" <span class="resaltado">licencia="GPL"</span> /&gt;
-   &lt;programa nombre="Firefox" <span class="resaltado">licencia="MPL"</span> /&gt;</pre>
+            <pre>   &lt;programa nombre="Firefox" <span class="codigo-resaltado">licencia="GPL"</span> /&gt;
+   &lt;programa nombre="Firefox" <span class="codigo-resaltado">licencia="MPL"</span> /&gt;</pre>
           </div>
         </li>
         <li>Los valores de los atributos deben ir entre comillas:
@@ -300,7 +300,7 @@
           <p>Se podría corregir añadiendo comillas, por ejemplo: </p>
 
           <div class="codigo">
-            <pre>    &lt;programa nombre="Inkscape" licencia=<span class="resaltado">"</span>GPL<span class="resaltado">"</span> /&gt;</pre>
+            <pre>    &lt;programa nombre="Inkscape" licencia=<span class="codigo-resaltado">"</span>GPL<span class="codigo-resaltado">"</span> /&gt;</pre>
           </div>
         </li>
         <li>Una posible solución sería entonces:
@@ -331,12 +331,12 @@
           <p>Se podría corregir añadiendo un nombre de atributo, por ejemplo: </p>
 
           <div class="codigo">
-            <pre>   &lt;pais <span class="resaltado">nombre="</span>España<span class="resaltado">"</span> /&gt;</pre>
+            <pre>   &lt;pais <span class="codigo-resaltado">nombre="</span>España<span class="codigo-resaltado">"</span> /&gt;</pre>
           </div>
           <p>o escribiendo el valor como contenido de la etiqueta, por ejemplo:</p>
 
           <div class="codigo">
-            <pre>   <span class="resaltado">&lt;pais&gt;España&lt;/pais&gt;</span></pre>
+            <pre>   <span class="codigo-resaltado">&lt;pais&gt;España&lt;/pais&gt;</span></pre>
           </div>
         </li>
         <li>Los nombres de etiquetas no pueden empezar por un número:
@@ -347,12 +347,12 @@
           <p>Se podría corregir añadiendo un nombre de etiqueta, por ejemplo: </p>
 
           <div class="codigo">
-            <pre>     &lt;<span class="resaltado">año valor="</span>1982<span class="resaltado">"</span> /&gt;</pre>
+            <pre>     &lt;<span class="codigo-resaltado">año valor="</span>1982<span class="codigo-resaltado">"</span> /&gt;</pre>
           </div>
           <p>o escribiendo el valor como contenido de una etiqueta, por ejemplo:</p>
 
           <div class="codigo">
-            <pre>   <span class="resaltado">&lt;año&gt;1982&lt;/año&gt;</span></pre>
+            <pre>   <span class="codigo-resaltado">&lt;año&gt;1982&lt;/año&gt;</span></pre>
           </div>
         </li>
         <li>Una posible solución sería entonces:
@@ -384,7 +384,7 @@
           <p>Se podría corregir escribiendo la entidad de carácter correspondiente, por ejemplo: </p>
 
           <div class="codigo">
-            <pre>  &lt;bicicleta velocidad="v<span class="resaltado">&amp;lt;</span>100km/h" /&gt;</pre>
+            <pre>  &lt;bicicleta velocidad="v<span class="codigo-resaltado">&amp;lt;</span>100km/h" /&gt;</pre>
           </div>
         </li>
         <li>Los nombre de atributos no pueden contener espacios:
@@ -395,7 +395,7 @@
           <p>Se podría corregir modificando el nombre del atributo, por ejemplo:</p>
 
           <div class="codigo">
-            <pre>  &lt;patinete <span class="resaltado">velocidad-maxima</span>="50 km/h"</pre>
+            <pre>  &lt;patinete <span class="codigo-resaltado">velocidad-maxima</span>="50 km/h"</pre>
           </div>
         </li>
         <li>Las etiquetas deben terminar por el carácter superior a (&gt;):
@@ -406,7 +406,7 @@
           <p>Se podría corregir añadiendo los caracteres /&gt; finales, por ejemplo: </p>
 
           <div class="codigo">
-            <pre>  &lt;patinete velocidad-maxima="50 km/h" <span class="resaltado">/&gt;</span></pre>
+            <pre>  &lt;patinete velocidad-maxima="50 km/h" <span class="codigo-resaltado">/&gt;</span></pre>
           </div>
         </li>
         <li>Una posible solución sería entonces:
