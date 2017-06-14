@@ -12,8 +12,8 @@
 /* Estilo para XML imitando a XML Copy Editor */
 /* Tengo pendiente comprobar los nombres de las clases en prism */
 
-code.language-xml { _font-weight: bold; _font-size: 120%; _line-height: 120%;}
-code.xml-malformado, code.xml-invalido { _font-weight: bold; _font-size: 120%; _line-height: 120%;}
+code.language-xml { }
+code.xml-malformado, code.xml-invalido { }
 
 code.language-xml .tag         { color: #0000FF; } /* any tag from "<" till ">"              */
 code.language-xml .punctuation { color: #446FBD; } /*                                        */
