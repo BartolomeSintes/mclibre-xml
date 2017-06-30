@@ -286,9 +286,6 @@ div.codigo, div[class^="resultado"], div[class^="enunciado"] {
   color: black;
 }
 
-div.resultado-xpath { background-color: lightgreen; }
-div.resultado-xslt { background-color: lightcoral; }
-
 div.codigo {
   padding: 0 5px;
   font-family: "Inconsolata", monospace;
