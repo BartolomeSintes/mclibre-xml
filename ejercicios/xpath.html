@@ -82,7 +82,11 @@
 
     <p>Se pueden consultar la <a href="xpath-soluciones.html">soluciones de estos ejercicios</a>.</p>
 
-    <p><strong>Nota</strong>: Los ejercicios de esta página están basados en los <a href="http://geneura.ugr.es/~victor/cursillos/xml/XPath/ejercicios_xpath.html">ejercicios de XPath de Víctor Manuel Rivas Santos</a>, que pueden realizarse como ejercicios de ampliación (los últimos ejercicios son más difíciles que los de esta página). Si se resuelven esos ejercicios en la página web, en las expresiones hay que utilizar comillas simples en vez de comillas dobles. Las soluciones de esos ejercicios se pueden ver en el código fuente de la página.</p>
+    <p><strong>Notas</strong>:</p>
+    <ul>
+      <li>Los ejercicios de esta página están basados en los ejercicios de XPath de Víctor Manuel Rivas Santos, que pueden realizarse como ejercicios de ampliación (los últimos ejercicios son más difíciles que los de esta página). Si se resuelven esos ejercicios en la página web, en las expresiones hay que utilizar comillas simples en vez de comillas dobles. Las soluciones de esos ejercicios se pueden ver en el código fuente de la página.</li>
+      <li>Los ejercicios de Víctor Manuel Rivas Santos ya no están disponibles en su ubicación original, pero se pueden consultar en <a href="https://web.archive.org/web/20170314060149/http://geneura.ugr.es/~victor/cursillos/xml/XPath/ejercicios_xpath.html">Internet Archive (copia del 14 de marzo de 2017)</a>.</li>
+    </ul>
 
     <section id="ejercicio-1">
       <h2>XPath - Ejercicio 1 - Expresiones simples</h2>
@@ -372,14 +376,15 @@ Lenguajes de marcas y sistemas de gestión de información</code>
 </pre>
         </div>
       </section>
+    </section>
 
-      <section id="ejercicio-3">
-        <h2>XPath - Ejercicio 3 - Expresiones anidadas</h2>
+    <section id="ejercicio-3">
+      <h2>XPath - Ejercicio 3 - Expresiones anidadas</h2>
 
-        <p>Dado el siguiente documento XML, escriba las expresiones XPath que devuelvan la respuesta deseada (mostrada en los cuadros).</p>
+      <p>Dado el siguiente documento XML, escriba las expresiones XPath que devuelvan la respuesta deseada (mostrada en los cuadros).</p>
 
-        <div class="codigo">
-          <pre>
+      <div class="codigo">
+        <pre>
 <code class="lang-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;ies&gt;
   &lt;nombre&gt;IES Abastos&lt;/nombre&gt;
@@ -430,46 +435,44 @@ Lenguajes de marcas y sistemas de gestión de información</code>
   &lt;/modulos&gt;
 &lt;/ies&gt;</code>
 </pre>
+      </div>
+
+      <section id="ejercicio-3-1">
+        <h3>XPath - Ejercicio 3-1</h3>
+
+        <p>Nombre de los módulos del ciclo "Sistemas Microinformáticos y Redes" (en la expresión final no deben aparecer las siglas SMR):</p>
+
+        <div class="resultado-xpath">
+          <pre><code class="language-xml">Aplicaciones web</code></pre>
         </div>
+      </section>
 
-        <section id="ejercicio-3-1">
-          <h3>XPath - Ejercicio 3-1</h3>
+      <section id="ejercicio-3-2">
+        <h3>XPath - Ejercicio 3-2</h3>
 
-          <p>Nombre de los módulos del ciclo "Sistemas Microinformáticos y Redes" (en la expresión final no deben aparecer las siglas SMR):</p>
+        <p>Nombre de los ciclos que incluyen el módulo "Lenguajes de marcas y sistemas de gestión de información":</p>
 
-          <div class="resultado-xpath">
-            <pre><code class="language-xml">Aplicaciones web</code></pre>
-          </div>
-        </section>
-
-        <section id="ejercicio-3-2">
-          <h3>XPath - Ejercicio 3-2</h3>
-
-          <p>Nombre de los ciclos que incluyen el módulo "Lenguajes de marcas y sistemas de gestión de información":</p>
-
-          <div class="resultado-xpath">
-            <pre>
+        <div class="resultado-xpath">
+          <pre>
 <code class="language-xml">Administración de Sistemas Informáticos en Red
 Desarrollo de Aplicaciones Web</code>
 </pre>
-          </div>
-        </section>
+        </div>
+      </section>
 
-        <section id="ejercicio-3-3">
-          <h3>XPath - Ejercicio 3-3</h3>
+      <section id="ejercicio-3-3">
+        <h3>XPath - Ejercicio 3-3</h3>
 
-          <p>Nombre de los módulos de ciclos de Grado Superior:</p>
+        <p>Nombre de los módulos de ciclos de Grado Superior:</p>
 
-          <div class="resultado-xpath">
-            <pre>
+        <div class="resultado-xpath">
+          <pre>
 <code class="language-xml">Gestión de bases de datos
 Lenguajes de marcas y sistemas de gestión de información
 Implantación de aplicaciones web</code>
 </pre>
-          </div>
-        </section>
-
-        </li>
+        </div>
+      </section>
 
       <section id="ejercicio-3-4">
         <h3>XPath - Ejercicio 3-4</h3>
