@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="ejemplo_xslt_02-4.xsl"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ejemplo-xslt-02-4.xsl"?>
 <biblioteca>
   <libro>
     <titulo>La vida está en otra parte</titulo>
