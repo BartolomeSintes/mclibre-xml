@@ -1,688 +1,688 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Soluciones. XPath. XML. Bartolomé Sintes Marco</title>
-    <link href="../varios/xml.css" rel="stylesheet" type="text/css" title="mclibre" />
-    <link rel="icon" href="../varios/favicon.ico" />
-    <link rel="stylesheet" href="../varios/prism-xml.css" />
-    <script src="../varios/prism.js"></script>
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soluciones. XPath. XML. Bartolomé Sintes Marco</title>
+  <link href="../varios/xml.css" rel="stylesheet" type="text/css" title="mclibre" />
+  <link rel="icon" href="../varios/favicon.ico" />
+  <link rel="stylesheet" href="../varios/prism-xml.css" />
+  <script src="../varios/prism.js"></script>
+</head>
 
-  <body>
-    <h1>XPath - Soluciones</h1>
+<body>
+  <h1>XPath - Soluciones</h1>
 
-    <nav>
-      <p>
-        <a href="../index.html"><img src="../varios/iconos/icono-xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48" /></a>
-        <a href="#"><img src="../varios/iconos/icono-arrow-circle-up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36" /></a>
-      </p>
+  <nav>
+    <p>
+      <a href="../index.html"><img src="../varios/iconos/icono-xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48" /></a>
+      <a href="#"><img src="../varios/iconos/icono-arrow-circle-up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36" /></a>
+    </p>
 
-      <div class="toc">
-        <h2>XPath - Soluciones</h2>
+    <div class="toc">
+      <h2>XPath - Soluciones</h2>
 
-        <h3><a href="xpath.html">Enunciados</a></h3>
-        <ol>
-          <li><a href="xpath.html#ejercicio-1">Expresiones simples</a><br />
-            <a href="xpath.html#ejercicio-1-1">1</a> -
-            <a href="xpath.html#ejercicio-1-2">2</a> -
-            <a href="xpath.html#ejercicio-1-3">3</a> -
-            <a href="xpath.html#ejercicio-1-4">4</a> -
-            <a href="xpath.html#ejercicio-1-5">5</a> -
-            <a href="xpath.html#ejercicio-1-6">6</a> -
-            <a href="xpath.html#ejercicio-1-7">7</a> -
-            <a href="xpath.html#ejercicio-1-8">8</a> -
-            <a href="xpath.html#ejercicio-1-9">9</a></li>
-          <li><a href="xpath.html#ejercicio-2">Expresiones simples</a><br />
-            <a href="xpath.html#ejercicio-2-1">1</a> -
-            <a href="xpath.html#ejercicio-2-2">2</a> -
-            <a href="xpath.html#ejercicio-2-3">3</a> -
-            <a href="xpath.html#ejercicio-2-4">4</a> -
-            <a href="xpath.html#ejercicio-2-5">5</a> -
-            <a href="xpath.html#ejercicio-2-6">6</a></li>
-          <li><a href="xpath.html#ejercicio-3">Expresiones anidadas</a><br />
-            <a href="xpath.html#ejercicio-3-1">1</a> -
-            <a href="xpath.html#ejercicio-3-2">2</a> -
-            <a href="xpath.html#ejercicio-3-3">3</a> -
-            <a href="xpath.html#ejercicio-3-4">4</a> -
-            <a href="xpath.html#ejercicio-3-5">5</a></li>
-        </ol>
+      <h3><a href="xpath.html">Enunciados</a></h3>
+      <ol>
+        <li><a href="xpath.html#ejercicio-1">Expresiones simples</a><br />
+          <a href="xpath.html#ejercicio-1-1">1</a> -
+          <a href="xpath.html#ejercicio-1-2">2</a> -
+          <a href="xpath.html#ejercicio-1-3">3</a> -
+          <a href="xpath.html#ejercicio-1-4">4</a> -
+          <a href="xpath.html#ejercicio-1-5">5</a> -
+          <a href="xpath.html#ejercicio-1-6">6</a> -
+          <a href="xpath.html#ejercicio-1-7">7</a> -
+          <a href="xpath.html#ejercicio-1-8">8</a> -
+          <a href="xpath.html#ejercicio-1-9">9</a></li>
+        <li><a href="xpath.html#ejercicio-2">Expresiones simples</a><br />
+          <a href="xpath.html#ejercicio-2-1">1</a> -
+          <a href="xpath.html#ejercicio-2-2">2</a> -
+          <a href="xpath.html#ejercicio-2-3">3</a> -
+          <a href="xpath.html#ejercicio-2-4">4</a> -
+          <a href="xpath.html#ejercicio-2-5">5</a> -
+          <a href="xpath.html#ejercicio-2-6">6</a></li>
+        <li><a href="xpath.html#ejercicio-3">Expresiones anidadas</a><br />
+          <a href="xpath.html#ejercicio-3-1">1</a> -
+          <a href="xpath.html#ejercicio-3-2">2</a> -
+          <a href="xpath.html#ejercicio-3-3">3</a> -
+          <a href="xpath.html#ejercicio-3-4">4</a> -
+          <a href="xpath.html#ejercicio-3-5">5</a></li>
+      </ol>
 
-        <h3>Soluciones</h3>
-        <ol>
-          <li><a href="#ejercicio-1">Expresiones simples</a><br />
-            <a href="#ejercicio-1-1">1</a> -
-            <a href="#ejercicio-1-2">2</a> -
-            <a href="#ejercicio-1-3">3</a> -
-            <a href="#ejercicio-1-4">4</a> -
-            <a href="#ejercicio-1-5">5</a> -
-            <a href="#ejercicio-1-6">6</a> -
-            <a href="#ejercicio-1-7">7</a> -
-            <a href="#ejercicio-1-8">8</a> -
-            <a href="#ejercicio-1-9">9</a></li>
-          <li><a href="#ejercicio-2">Expresiones simples</a><br />
-            <a href="#ejercicio-2-1">1</a> -
-            <a href="#ejercicio-2-2">2</a> -
-            <a href="#ejercicio-2-3">3</a> -
-            <a href="#ejercicio-2-4">4</a> -
-            <a href="#ejercicio-2-5">5</a> -
-            <a href="#ejercicio-2-6">6</a></li>
-          <li><a href="#ejercicio-3">Expresiones anidadas</a><br />
-            <a href="#ejercicio-3-1">1</a> -
-            <a href="#ejercicio-3-2">2</a> -
-            <a href="#ejercicio-3-3">3</a> -
-            <a href="#ejercicio-3-4">4</a> -
-            <a href="#ejercicio-3-5">5</a></li>
-        </ol>
+      <h3>Soluciones</h3>
+      <ol>
+        <li><a href="#ejercicio-1">Expresiones simples</a><br />
+          <a href="#ejercicio-1-1">1</a> -
+          <a href="#ejercicio-1-2">2</a> -
+          <a href="#ejercicio-1-3">3</a> -
+          <a href="#ejercicio-1-4">4</a> -
+          <a href="#ejercicio-1-5">5</a> -
+          <a href="#ejercicio-1-6">6</a> -
+          <a href="#ejercicio-1-7">7</a> -
+          <a href="#ejercicio-1-8">8</a> -
+          <a href="#ejercicio-1-9">9</a></li>
+        <li><a href="#ejercicio-2">Expresiones simples</a><br />
+          <a href="#ejercicio-2-1">1</a> -
+          <a href="#ejercicio-2-2">2</a> -
+          <a href="#ejercicio-2-3">3</a> -
+          <a href="#ejercicio-2-4">4</a> -
+          <a href="#ejercicio-2-5">5</a> -
+          <a href="#ejercicio-2-6">6</a></li>
+        <li><a href="#ejercicio-3">Expresiones anidadas</a><br />
+          <a href="#ejercicio-3-1">1</a> -
+          <a href="#ejercicio-3-2">2</a> -
+          <a href="#ejercicio-3-3">3</a> -
+          <a href="#ejercicio-3-4">4</a> -
+          <a href="#ejercicio-3-5">5</a></li>
+      </ol>
+    </div>
+  </nav>
+
+  <p>Se ofrecen a continuación unas posibles soluciones de los <a href="xpath.html">ejercicios de XPath</a>. Estos ejercicios se pueden resolver de varias maneras. En las soluciones siguientes se proponen algunas posibilidades, pero otras son aceptables.</p>
+
+  <section id="ejercicio-1">
+    <h2>XPath - Ejercicio 1 - Expresiones simples</h2>
+
+    <section id="ejercicio-1-1">
+      <h3>XPath - Ejercicio 1-1 - Solución</h3>
+
+      <p>Nombre del Instituto:</p>
+
+      <div class="codigo">
+        <pre><code class="language-xml">&lt;nombre&gt;IES Abastos&lt;/nombre&gt;</code></pre>
       </div>
-    </nav>
+      <p>Solución:</p>
 
-    <p>Se ofrecen a continuación unas posibles soluciones de los <a href="xpath.html">ejercicios de XPath</a>. Estos ejercicios se pueden resolver de varias maneras. En las soluciones siguientes se proponen algunas posibilidades, pero otras son aceptables.</p>
+      <div class="codigo">
+        <pre>//ies/nombre</pre>
+      </div>
+    </section>
 
-    <section id="ejercicio-1">
-      <h2>XPath - Ejercicio 1 - Expresiones simples</h2>
+    <section id="ejercicio-1-2">
+      <h3>XPath - Ejercicio 1-2 - Solución</h3>
 
-      <section id="ejercicio-1-1">
-        <h3>XPath - Ejercicio 1-1 - Solución</h3>
+      <p>Página web del Instituto:</p>
 
-        <p>Nombre del Instituto:</p>
+      <div class="codigo">
+        <pre><code class="language-xml">http://www.iesabastos.org</code></pre>
+      </div>
+      <p>Solución:</p>
 
-        <div class="codigo">
-          <pre><code class="language-xml">&lt;nombre&gt;IES Abastos&lt;/nombre&gt;</code></pre>
-        </div>
-        <p>Solución:</p>
+      <div class="codigo">
+        <pre>//web/text()</pre>
+      </div>
+    </section>
 
-        <div class="codigo">
-          <pre>//ies/nombre</pre>
-        </div>
-      </section>
+    <section id="ejercicio-1-3">
+      <h3>XPath - Ejercicio 1-3 - Solución</h3>
 
-      <section id="ejercicio-1-2">
-        <h3>XPath - Ejercicio 1-2 - Solución</h3>
+      <p>Nombre de los Ciclos Formativos:</p>
 
-        <p>Página web del Instituto:</p>
-
-        <div class="codigo">
-          <pre><code class="language-xml">http://www.iesabastos.org</code></pre>
-        </div>
-        <p>Solución:</p>
-
-        <div class="codigo">
-          <pre>//web/text()</pre>
-        </div>
-      </section>
-
-      <section id="ejercicio-1-3">
-        <h3>XPath - Ejercicio 1-3 - Solución</h3>
-
-        <p>Nombre de los Ciclos Formativos:</p>
-
-        <div class="codigo">
-          <pre>
+      <div class="codigo">
+        <pre>
 <code class="language-xml">Administración de Sistemas Informáticos en Red
 Desarrollo de Aplicaciones Web
 Sistemas Microinformáticos y Redes</code>
 </pre>
-        </div>
-        <p>Solución:</p>
+      </div>
+      <p>Solución:</p>
 
-        <div class="codigo">
-          <pre>//ciclo/nombre/text()</pre>
-        </div>
-      </section>
+      <div class="codigo">
+        <pre>//ciclo/nombre/text()</pre>
+      </div>
+    </section>
 
-      <section id="ejercicio-1-4">
-        <h3>XPath - Ejercicio 1-4 - Solución</h3>
+    <section id="ejercicio-1-4">
+      <h3>XPath - Ejercicio 1-4 - Solución</h3>
 
-        <p>Siglas por las que se conocen los Ciclos Formativos:</p>
+      <p>Siglas por las que se conocen los Ciclos Formativos:</p>
 
-        <div class="codigo">
-          <pre>
+      <div class="codigo">
+        <pre>
 <code class="language-xml"> <span class="xml-attr">id</span>="ASIR"
  <span class="xml-attr">id</span>="DAW"
  <span class="xml-attr">id</span>="SMR"</code>
 </pre>
-        </div>
+      </div>
 
-        <p>Soluciones:</p>
+      <p>Soluciones:</p>
 
-        <div class="codigo">
-          <pre>//@id</pre>
-        </div>
+      <div class="codigo">
+        <pre>//@id</pre>
+      </div>
 
-        <div class="codigo">
-          <pre>//ciclo/@*</pre>
-        </div>
-      </section>
+      <div class="codigo">
+        <pre>//ciclo/@*</pre>
+      </div>
+    </section>
 
-      <section id="ejercicio-1-5">
-        <h3>XPath - Ejercicio 1-5 - Solución</h3>
+    <section id="ejercicio-1-5">
+      <h3>XPath - Ejercicio 1-5 - Solución</h3>
 
-        <p>Años en los que se publicaron los decretos de título de los Ciclos Formativos:</p>
+      <p>Años en los que se publicaron los decretos de título de los Ciclos Formativos:</p>
 
-        <div class="codigo">
-          <pre>
+      <div class="codigo">
+        <pre>
 <code class="language-xml"> <span class="xml-attr">año</span>="2009"
  <span class="xml-attr">año</span>="2010"
  <span class="xml-attr">año</span>="2008"</code>
 </pre>
-        </div>
+      </div>
 
-        <p>Solución:</p>
+      <p>Solución:</p>
 
-        <div class="codigo">
-          <pre>//@año</pre>
-        </div>
-      </section>
+      <div class="codigo">
+        <pre>//@año</pre>
+      </div>
+    </section>
 
-      <section id="ejercicio-1-6">
-        <h3>XPath - Ejercicio 1-6 - Solución</h3>
+    <section id="ejercicio-1-6">
+      <h3>XPath - Ejercicio 1-6 - Solución</h3>
 
-        <p>Ciclos Formativos de Grado Medio (se trata de obtener el elemento &lt;ciclo&gt; completo):</p>
+      <p>Ciclos Formativos de Grado Medio (se trata de obtener el elemento &lt;ciclo&gt; completo):</p>
 
-        <div class="codigo">
-          <pre>
+      <div class="codigo">
+        <pre>
 <code class="language-xml">&lt;ciclo id="SMR"&gt;
   &lt;nombre&gt;Sistemas Microinformáticos y Redes&lt;/nombre&gt;
   &lt;grado&gt;Medio&lt;/grado&gt;
   &lt;decretoTitulo año="2008"/&gt;
 &lt;/ciclo&gt;</code>
 </pre>
-        </div>
+      </div>
 
-        <p>Soluciones:</p>
+      <p>Soluciones:</p>
 
-        <ul>
-          <li>un paso de búsqueda:
+      <ul>
+        <li>un paso de búsqueda:
 
-            <div class="codigo">
-              <pre>//ciclo[grado="Medio"]</pre>
-            </div>
-          </li>
-          <li>dos pasos de búsqueda:
+          <div class="codigo">
+            <pre>//ciclo[grado="Medio"]</pre>
+          </div>
+        </li>
+        <li>dos pasos de búsqueda:
 
-            <div class="codigo">
-              <pre>//grado[.="Medio"]/..</pre>
-            </div>
-          </li>
-        </ul>
-      </section>
+          <div class="codigo">
+            <pre>//grado[.="Medio"]/..</pre>
+          </div>
+        </li>
+      </ul>
+    </section>
 
-      <section id="ejercicio-1-7">
-        <h3>XPath - Ejercicio 1-7 - Solución</h3>
+    <section id="ejercicio-1-7">
+      <h3>XPath - Ejercicio 1-7 - Solución</h3>
 
-        <p>Nombre de los Ciclos Formativos de Grado Superior:</p>
+      <p>Nombre de los Ciclos Formativos de Grado Superior:</p>
 
-        <div class="codigo">
-          <pre>
+      <div class="codigo">
+        <pre>
 <code class="language-xml">&lt;nombre&gt;Administración de Sistemas Informáticos en Red&lt;/nombre&gt;
 &lt;nombre&gt;Desarrollo de Aplicaciones Web&lt;/nombre&gt;</code>
 </pre>
-        </div>
-        <p>Soluciones:<br />
-        </p>
-        <ul>
-          <li>un paso de búsqueda:
+      </div>
+      <p>Soluciones:<br />
+      </p>
+      <ul>
+        <li>un paso de búsqueda:
 
-            <div class="codigo">
-              <pre>//nombre[../grado="Superior"]</pre>
-            </div>
-          </li>
-          <li>dos pasos de búsqueda:
+          <div class="codigo">
+            <pre>//nombre[../grado="Superior"]</pre>
+          </div>
+        </li>
+        <li>dos pasos de búsqueda:
 
-            <div class="codigo">
-              <pre>//ciclo[grado="Superior"]/nombre</pre>
-            </div>
+          <div class="codigo">
+            <pre>//ciclo[grado="Superior"]/nombre</pre>
+          </div>
 
-            <div class="codigo">
-              <pre>//grado[.="Superior"]/../nombre</pre>
-            </div>
-          </li>
-        </ul>
-      </section>
+          <div class="codigo">
+            <pre>//grado[.="Superior"]/../nombre</pre>
+          </div>
+        </li>
+      </ul>
+    </section>
 
-      <section id="ejercicio-1-8">
-        <h3>XPath - Ejercicio 1-8 - Solución</h3>
+    <section id="ejercicio-1-8">
+      <h3>XPath - Ejercicio 1-8 - Solución</h3>
 
-        <p>Nombre de los Ciclos Formativos anteriores a 2010:</p>
+      <p>Nombre de los Ciclos Formativos anteriores a 2010:</p>
 
-        <div class="codigo">
-          <pre>
+      <div class="codigo">
+        <pre>
 <code class="language-xml">Administración de Sistemas Informáticos en Red
 Sistemas Microinformáticos y Redes</code>
 </pre>
-        </div>
-        <p>Soluciones:</p>
-        <ul>
-          <li>un paso de búsqueda:
+      </div>
+      <p>Soluciones:</p>
+      <ul>
+        <li>un paso de búsqueda:
 
-            <div class="codigo">
-              <pre>//nombre[../decretoTitulo/@año&lt;2010]/text()</pre>
-            </div>
-          </li>
-          <li>dos pasos de búsqueda:
+          <div class="codigo">
+            <pre>//nombre[../decretoTitulo/@año&lt;2010]/text()</pre>
+          </div>
+        </li>
+        <li>dos pasos de búsqueda:
 
-            <div class="codigo">
-              <pre>//@año[.&lt;2010]/../../nombre/text()</pre>
-            </div>
+          <div class="codigo">
+            <pre>//@año[.&lt;2010]/../../nombre/text()</pre>
+          </div>
 
-            <div class="codigo">
-              <pre>//decretoTitulo[@año&lt;2010]/../nombre/text()</pre>
-            </div>
-          </li>
-        </ul>
-      </section>
+          <div class="codigo">
+            <pre>//decretoTitulo[@año&lt;2010]/../nombre/text()</pre>
+          </div>
+        </li>
+      </ul>
+    </section>
 
-      <section id="ejercicio-1-9">
-        <h3>XPath - Ejercicio 1-9 - Solución</h3>
+    <section id="ejercicio-1-9">
+      <h3>XPath - Ejercicio 1-9 - Solución</h3>
 
-        <p>Nombre de los Ciclos Formativos de 2008 o 2010:</p>
+      <p>Nombre de los Ciclos Formativos de 2008 o 2010:</p>
 
-        <div class="codigo">
-          <pre>
+      <div class="codigo">
+        <pre>
 <code class="language-xml">Desarrollo de Aplicaciones Web
 Sistemas Microinformáticos y Redes</code>
 </pre>
-        </div>
-        <p>Soluciones:</p>
-        <ul>
-          <li>un paso de búsqueda:
+      </div>
+      <p>Soluciones:</p>
+      <ul>
+        <li>un paso de búsqueda:
 
-            <div class="codigo">
-              <pre>//nombre[../decretoTitulo/@año=2008 or ../decretoTitulo/@año=2010]/text()</pre>
-            </div>
-          </li>
-          <li>dos pasos de búsqueda:
+          <div class="codigo">
+            <pre>//nombre[../decretoTitulo/@año=2008 or ../decretoTitulo/@año=2010]/text()</pre>
+          </div>
+        </li>
+        <li>dos pasos de búsqueda:
 
-            <div class="codigo">
-              <pre>(//@año[.=2008]|//@año[.=2010])/../../nombre/text()</pre>
-            </div>
+          <div class="codigo">
+            <pre>(//@año[.=2008]|//@año[.=2010])/../../nombre/text()</pre>
+          </div>
 
-            <div class="codigo">
-              <pre>//decretoTitulo[@año=2008 or @año=2010]/../nombre/text()</pre>
-            </div>
-          </li>
-        </ul>
-      </section>
+          <div class="codigo">
+            <pre>//decretoTitulo[@año=2008 or @año=2010]/../nombre/text()</pre>
+          </div>
+        </li>
+      </ul>
     </section>
+  </section>
 
-    <section id="ejercicio-2">
-      <h2>XPath - Ejercicio 2 - Expresiones simples</h2>
+  <section id="ejercicio-2">
+    <h2>XPath - Ejercicio 2 - Expresiones simples</h2>
 
-      <section id="ejercicio-2-1">
-        <h3>XPath - Ejercicio 2-1 - Solución</h3>
+    <section id="ejercicio-2-1">
+      <h3>XPath - Ejercicio 2-1 - Solución</h3>
 
-        <p>Nombre de los módulos que se imparten en el Instituto:</p>
+      <p>Nombre de los módulos que se imparten en el Instituto:</p>
 
-        <div class="codigo">
-          <pre>
+      <div class="codigo">
+        <pre>
 <code class="language-xml">Aplicaciones web
 Gestión de bases de datos
 Lenguajes de marcas y sistemas de gestión de información
 Implantación de aplicaciones web</code>
 </pre>
-        </div>
+      </div>
 
-        <p>Solución:</p>
+      <p>Solución:</p>
 
-        <div class="codigo">
-          <pre>//nombre/text()</pre>
-        </div>
-      </section>
+      <div class="codigo">
+        <pre>//nombre/text()</pre>
+      </div>
+    </section>
 
-      <section id="ejercicio-2-2">
-        <h3>XPath - Ejercicio 2-2 - Solución</h3>
+    <section id="ejercicio-2-2">
+      <h3>XPath - Ejercicio 2-2 - Solución</h3>
 
-        <p>Nombre de los módulos del ciclo ASIR:</p>
+      <p>Nombre de los módulos del ciclo ASIR:</p>
 
-        <div class="codigo">
-          <pre>
+      <div class="codigo">
+        <pre>
 <code class="language-xml">Gestión de bases de datos
 Lenguajes de marcas y sistemas de gestión de información
 Implantación de aplicaciones web</code>
 </pre>
-        </div>
+      </div>
 
-        <p>Solución:</p>
+      <p>Solución:</p>
 
-        <ul>
-          <li>un paso de búsqueda:
+      <ul>
+        <li>un paso de búsqueda:
 
-            <div class="codigo">
-              <pre>//nombre[../ciclo="ASIR"]/text()</pre>
-            </div>
-          </li>
-          <li>dos pasos de búsqueda:
+          <div class="codigo">
+            <pre>//nombre[../ciclo="ASIR"]/text()</pre>
+          </div>
+        </li>
+        <li>dos pasos de búsqueda:
 
-            <div class="codigo">
-              <pre>//modulo[ciclo="ASIR"]/nombre/text()</pre>
-            </div>
+          <div class="codigo">
+            <pre>//modulo[ciclo="ASIR"]/nombre/text()</pre>
+          </div>
 
-            <div class="codigo">
-              <pre>//ciclo[.="ASIR"]/../nombre/text()</pre>
-            </div>
-          </li>
-        </ul>
-      </section>
+          <div class="codigo">
+            <pre>//ciclo[.="ASIR"]/../nombre/text()</pre>
+          </div>
+        </li>
+      </ul>
+    </section>
 
-      <section id="ejercicio-2-3">
-        <h3>XPath - Ejercicio 2-3 - Solución</h3>
+    <section id="ejercicio-2-3">
+      <h3>XPath - Ejercicio 2-3 - Solución</h3>
 
-        <p>Nombre de los módulos que se imparten en el segundo curso de cualquier ciclo:</p>
+      <p>Nombre de los módulos que se imparten en el segundo curso de cualquier ciclo:</p>
 
-        <div class="codigo">
-          <pre>
+      <div class="codigo">
+        <pre>
 <code class="language-xml">Aplicaciones web
 Implantación de aplicaciones web</code>
 </pre>
-        </div>
-        <p>Solución:</p>
-        <ul>
-          <li>un paso de búsqueda:
+      </div>
+      <p>Solución:</p>
+      <ul>
+        <li>un paso de búsqueda:
 
-            <div class="codigo">
-              <pre>//nombre[../curso=2]/text()</pre>
-            </div>
-          </li>
-          <li>dos pasos de búsqueda:
+          <div class="codigo">
+            <pre>//nombre[../curso=2]/text()</pre>
+          </div>
+        </li>
+        <li>dos pasos de búsqueda:
 
-            <div class="codigo">
-              <pre>//modulo[curso=2]/nombre/text()</pre>
-            </div>
+          <div class="codigo">
+            <pre>//modulo[curso=2]/nombre/text()</pre>
+          </div>
 
-            <div class="codigo">
-              <pre>//curso[.=2]/../nombre/text()</pre>
-            </div>
-          </li>
-        </ul>
-      </section>
+          <div class="codigo">
+            <pre>//curso[.=2]/../nombre/text()</pre>
+          </div>
+        </li>
+      </ul>
+    </section>
 
-      <section id="ejercicio-2-4">
-        <h3>XPath - Ejercicio 2-4 - Solución</h3>
+    <section id="ejercicio-2-4">
+      <h3>XPath - Ejercicio 2-4 - Solución</h3>
 
-        <p>Nombre de los módulos de menos de 5 horas semanales:</p>
+      <p>Nombre de los módulos de menos de 5 horas semanales:</p>
 
-        <div class="codigo">
-          <pre>
+      <div class="codigo">
+        <pre>
 <code class="language-xml">Aplicaciones web
 Lenguajes de marcas y sistemas de gestión de información</code>
 </pre>
-        </div>
-        <p>Solución:</p>
-        <ul>
-          <li>un paso de búsqueda:
+      </div>
+      <p>Solución:</p>
+      <ul>
+        <li>un paso de búsqueda:
 
-            <div class="codigo">
-              <pre>//nombre[../horasSemanales&lt;5]/text()</pre>
-            </div>
-          </li>
-          <li>dos pasos de búsqueda:
+          <div class="codigo">
+            <pre>//nombre[../horasSemanales&lt;5]/text()</pre>
+          </div>
+        </li>
+        <li>dos pasos de búsqueda:
 
-            <div class="codigo">
-              <pre>//modulo[horasSemanales&lt;5]/nombre/text()</pre>
-            </div>
+          <div class="codigo">
+            <pre>//modulo[horasSemanales&lt;5]/nombre/text()</pre>
+          </div>
 
-            <div class="codigo">
-              <pre>//horasSemanales[.&lt;5]/../nombre/text()</pre>
-            </div>
-          </li>
-        </ul>
-      </section>
+          <div class="codigo">
+            <pre>//horasSemanales[.&lt;5]/../nombre/text()</pre>
+          </div>
+        </li>
+      </ul>
+    </section>
 
-      <section id="ejercicio-2-5">
-        <h3>XPath - Ejercicio 2-5 - Solución</h3>
+    <section id="ejercicio-2-5">
+      <h3>XPath - Ejercicio 2-5 - Solución</h3>
 
-        <p>Nombre de los módulos que se imparten en el primer curso de ASIR:</p>
+      <p>Nombre de los módulos que se imparten en el primer curso de ASIR:</p>
 
-        <div class="codigo">
-          <pre>
+      <div class="codigo">
+        <pre>
 <code class="language-xml">Gestión de bases de datos
 Lenguajes de marcas y sistemas de gestión de información</code>
 </pre>
-        </div>
-        <p>Solución:</p>
-        <ul>
-          <li>un paso de búsqueda:
+      </div>
+      <p>Solución:</p>
+      <ul>
+        <li>un paso de búsqueda:
 
-            <div class="codigo">
-              <pre>//nombre[../ciclo="ASIR" and ../curso=1]/text()</pre>
-            </div>
-          </li>
-          <li>dos pasos de búsqueda:
+          <div class="codigo">
+            <pre>//nombre[../ciclo="ASIR" and ../curso=1]/text()</pre>
+          </div>
+        </li>
+        <li>dos pasos de búsqueda:
 
-            <div class="codigo">
-              <pre>//modulo[ciclo="ASIR" and curso=1]/nombre/text()</pre>
-            </div>
-          </li>
-        </ul>
-      </section>
+          <div class="codigo">
+            <pre>//modulo[ciclo="ASIR" and curso=1]/nombre/text()</pre>
+          </div>
+        </li>
+      </ul>
+    </section>
 
-      <section id="ejercicio-2-6">
-        <h3>XPath - Ejercicio 2-6 - Solución</h3>
+    <section id="ejercicio-2-6">
+      <h3>XPath - Ejercicio 2-6 - Solución</h3>
 
-        <p>Horas semanales de los módulos de más de 3 horas semanales (4, 5, 5).</p>
+      <p>Horas semanales de los módulos de más de 3 horas semanales (4, 5, 5).</p>
 
-        <div class="codigo">
-          <pre>
+      <div class="codigo">
+        <pre>
 <code class="language-xml">4
 5
 5</code>
 </pre>
-        </div>
-        <p>Soluciones</p>
-        <ul>
-          <li>un paso de búsqueda:
+      </div>
+      <p>Soluciones</p>
+      <ul>
+        <li>un paso de búsqueda:
 
-            <div class="codigo">
-              <pre>//horasSemanales[.&gt;3]/text()</pre>
-            </div>
-          </li>
-          <li>dos pasos de búsqueda:
+          <div class="codigo">
+            <pre>//horasSemanales[.&gt;3]/text()</pre>
+          </div>
+        </li>
+        <li>dos pasos de búsqueda:
 
-            <div class="codigo">
-              <pre>//modulo[horasSemanales&gt;3]/horasSemanales/text()</pre>
-            </div>
-          </li>
-        </ul>
-      </section>
+          <div class="codigo">
+            <pre>//modulo[horasSemanales&gt;3]/horasSemanales/text()</pre>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </section>
+
+  <section id="ejercicio-3">
+    <h2>XPath - Ejercicio 3 - Expresiones anidadas</h2>
+
+    <section id="ejercicio-3-1">
+      <h3>XPath - Ejercicio 3-1 - Solución</h3>
+
+      <p>Nombre de los módulos del ciclo "Sistemas Microinformáticos y Redes" (en la expresión final no deben aparecer las siglas SMR):</p>
+
+      <div class="codigo">
+        <pre><code class="language-xml">Aplicaciones web</code></pre>
+      </div>
+
+      <p>Solución:</p>
+
+      <ul>
+        <li>siglas del ciclo "Sistemas Microinformáticos y Redes":
+
+          <div class="codigo">
+            <pre>//ciclo[nombre="Sistemas Microinformáticos y Redes"]/@id</pre>
+          </div>
+        </li>
+        <li>módulos del ciclo SMR:
+
+          <div class="codigo">
+            <pre>//modulo[ciclo="<span class="codigo-resaltado">SMR</span>"]/nombre/text()</pre>
+          </div>
+        </li>
+        <li>sustituyendo la primera en la segunda:
+
+          <div class="codigo">
+            <pre>//modulo[ciclo=//ciclo[nombre="Sistemas Microinformáticos y Redes"]/@id]/nombre/text()</pre>
+          </div>
+        </li>
+      </ul>
     </section>
 
-    <section id="ejercicio-3">
-      <h2>XPath - Ejercicio 3 - Expresiones anidadas</h2>
+    <section id="ejercicio-3-2">
+      <h3>XPath - Ejercicio 3-2 - Solución</h3>
 
-      <section id="ejercicio-3-1">
-        <h3>XPath - Ejercicio 3-1 - Solución</h3>
+      <p>Nombre de los ciclos que incluyen el módulo "Lenguajes de marcas y sistemas de gestión de información":</p>
 
-        <p>Nombre de los módulos del ciclo "Sistemas Microinformáticos y Redes" (en la expresión final no deben aparecer las siglas SMR):</p>
-
-        <div class="codigo">
-          <pre><code class="language-xml">Aplicaciones web</code></pre>
-        </div>
-
-        <p>Solución:</p>
-
-        <ul>
-          <li>siglas del ciclo "Sistemas Microinformáticos y Redes":
-
-            <div class="codigo">
-              <pre>//ciclo[nombre="Sistemas Microinformáticos y Redes"]/@id</pre>
-            </div>
-          </li>
-          <li>módulos del ciclo SMR:
-
-            <div class="codigo">
-              <pre>//modulo[ciclo="<span class="codigo-resaltado">SMR</span>"]/nombre/text()</pre>
-            </div>
-          </li>
-          <li>sustituyendo la primera en la segunda:
-
-            <div class="codigo">
-              <pre>//modulo[ciclo=//ciclo[nombre="Sistemas Microinformáticos y Redes"]/@id]/nombre/text()</pre>
-            </div>
-          </li>
-        </ul>
-      </section>
-
-      <section id="ejercicio-3-2">
-        <h3>XPath - Ejercicio 3-2 - Solución</h3>
-
-        <p>Nombre de los ciclos que incluyen el módulo "Lenguajes de marcas y sistemas de gestión de información":</p>
-
-        <div class="codigo">
-          <pre>
+      <div class="codigo">
+        <pre>
 <code class="language-xml">Administración de Sistemas Informáticos en Red
 Desarrollo de Aplicaciones Web</code>
 </pre>
-        </div>
+      </div>
 
-        <p>Solución:</p>
+      <p>Solución:</p>
 
-        <ul>
-          <li>siglas de los ciclos que incluyen el módulo "Lenguajes de marcas y sistemas de gestión de información":
+      <ul>
+        <li>siglas de los ciclos que incluyen el módulo "Lenguajes de marcas y sistemas de gestión de información":
 
-            <div class="codigo">
-              <pre>//modulo[nombre="Lenguajes de marcas y sistemas de gestión de información"]/ciclo/text()</pre>
-            </div>
-          </li>
-          <li>nombre de los ciclos ASIR o DAW:
+          <div class="codigo">
+            <pre>//modulo[nombre="Lenguajes de marcas y sistemas de gestión de información"]/ciclo/text()</pre>
+          </div>
+        </li>
+        <li>nombre de los ciclos ASIR o DAW:
 
-            <div class="codigo">
-              <pre>//ciclo[@id="<span class="codigo-resaltado">ASIR</span>"]/nombre/text()</pre>
-            </div>
+          <div class="codigo">
+            <pre>//ciclo[@id="<span class="codigo-resaltado">ASIR</span>"]/nombre/text()</pre>
+          </div>
 
-            <div class="codigo">
-              <pre>//ciclo[@id="<span class="codigo-resaltado">DAW</span>"]/nombre/text()</pre>
-            </div>
-          </li>
-          <li>sustituyendo la primera en la segunda:
+          <div class="codigo">
+            <pre>//ciclo[@id="<span class="codigo-resaltado">DAW</span>"]/nombre/text()</pre>
+          </div>
+        </li>
+        <li>sustituyendo la primera en la segunda:
 
-            <div class="codigo">
-              <pre>//ciclo[@id=<span class="codigo-resaltado">//modulo[nombre="Lenguajes de marcas y sistemas de gestión de información"]/ciclo</span>]/nombre/text()</pre>
-            </div>
-          </li>
-        </ul>
-      </section>
+          <div class="codigo">
+            <pre>//ciclo[@id=<span class="codigo-resaltado">//modulo[nombre="Lenguajes de marcas y sistemas de gestión de información"]/ciclo</span>]/nombre/text()</pre>
+          </div>
+        </li>
+      </ul>
+    </section>
 
-      <section id="ejercicio-3-3">
-        <h3>XPath - Ejercicio 3-3 - Solución</h3>
+    <section id="ejercicio-3-3">
+      <h3>XPath - Ejercicio 3-3 - Solución</h3>
 
-        <p>Nombre de los módulos de ciclos de Grado Superior:</p>
+      <p>Nombre de los módulos de ciclos de Grado Superior:</p>
 
-        <div class="codigo">
-          <pre>
+      <div class="codigo">
+        <pre>
 <code class="language-xml">Gestión de bases de datos
 Lenguajes de marcas y sistemas de gestión de información
 Implantación de aplicaciones web</code>
 </pre>
-        </div>
+      </div>
 
-        <p>Solución:</p>
+      <p>Solución:</p>
 
-        <ul>
-          <li>siglas de los ciclos de grado superior:
+      <ul>
+        <li>siglas de los ciclos de grado superior:
 
-            <div class="codigo">
-              <pre>//ciclo[grado="Superior"]/@id</pre>
-            </div>
-          </li>
-          <li>módulos de los ciclos ASIR o DAW:
+          <div class="codigo">
+            <pre>//ciclo[grado="Superior"]/@id</pre>
+          </div>
+        </li>
+        <li>módulos de los ciclos ASIR o DAW:
 
-            <div class="codigo">
-              <pre>//modulo[ciclo="<span class="codigo-resaltado">ASIR</span>"]/nombre/text()</pre>
-            </div>
+          <div class="codigo">
+            <pre>//modulo[ciclo="<span class="codigo-resaltado">ASIR</span>"]/nombre/text()</pre>
+          </div>
 
-            <div class="codigo">
-              <pre>//modulo[ciclo="<span class="codigo-resaltado">DAW</span>"]/nombre/text()</pre>
-            </div>
-          </li>
-          <li>sustituyendo la primera en la segunda:
+          <div class="codigo">
+            <pre>//modulo[ciclo="<span class="codigo-resaltado">DAW</span>"]/nombre/text()</pre>
+          </div>
+        </li>
+        <li>sustituyendo la primera en la segunda:
 
-            <div class="codigo">
-              <pre>//modulo[ciclo=<span class="codigo-resaltado">//ciclo[grado="Superior"]/@id</span>]/nombre/text()</pre>
-            </div>
-          </li>
-        </ul>
-      </section>
+          <div class="codigo">
+            <pre>//modulo[ciclo=<span class="codigo-resaltado">//ciclo[grado="Superior"]/@id</span>]/nombre/text()</pre>
+          </div>
+        </li>
+      </ul>
+    </section>
 
-      <section id="ejercicio-3-4">
-        <h3>XPath - Ejercicio 3-4 - Solución</h3>
+    <section id="ejercicio-3-4">
+      <h3>XPath - Ejercicio 3-4 - Solución</h3>
 
-        <p>Nombre de los módulos de ciclos cuyo título se aprobó en 2008:</p>
+      <p>Nombre de los módulos de ciclos cuyo título se aprobó en 2008:</p>
 
-        <div class="codigo">
-          <pre><code class="language-xml">Aplicaciones web</code></pre>
-        </div>
-        <p>Solución:</p>
-        <ul>
-          <li>siglas de los ciclos cuyo título se aprobó en 2008:
+      <div class="codigo">
+        <pre><code class="language-xml">Aplicaciones web</code></pre>
+      </div>
+      <p>Solución:</p>
+      <ul>
+        <li>siglas de los ciclos cuyo título se aprobó en 2008:
 
-            <div class="codigo">
-              <pre>//decretoTitulo[@año=2008]/../@id</pre>
-            </div>
-          </li>
-          <li>módulos del ciclo SMR:
+          <div class="codigo">
+            <pre>//decretoTitulo[@año=2008]/../@id</pre>
+          </div>
+        </li>
+        <li>módulos del ciclo SMR:
 
-            <div class="codigo">
-              <pre>//modulo[ciclo="<span class="codigo-resaltado">SMR</span>"]/nombre/text()</pre>
-            </div>
-          </li>
-          <li>sustituyendo la primera en la segunda:
+          <div class="codigo">
+            <pre>//modulo[ciclo="<span class="codigo-resaltado">SMR</span>"]/nombre/text()</pre>
+          </div>
+        </li>
+        <li>sustituyendo la primera en la segunda:
 
-            <div class="codigo">
-              <pre>//modulo[ciclo=<span class="codigo-resaltado">//decretoTitulo[@año=2008]/../@id</span>]/nombre/text()</pre>
-            </div>
-          </li>
-        </ul>
-      </section>
+          <div class="codigo">
+            <pre>//modulo[ciclo=<span class="codigo-resaltado">//decretoTitulo[@año=2008]/../@id</span>]/nombre/text()</pre>
+          </div>
+        </li>
+      </ul>
+    </section>
 
-      <section id="ejercicio-3-5">
-        <h3>XPath - Ejercicio 3-5 - Solución</h3>
+    <section id="ejercicio-3-5">
+      <h3>XPath - Ejercicio 3-5 - Solución</h3>
 
-        <p>Grado de los ciclos con módulos de primer curso:</p>
+      <p>Grado de los ciclos con módulos de primer curso:</p>
 
-        <div class="codigo">
-          <pre>
+      <div class="codigo">
+        <pre>
 <code class="language-xml">Superior
 Superior</code>
 </pre>
-        </div>
+      </div>
 
-        <p>Solución:</p>
+      <p>Solución:</p>
 
-        <ul>
-          <li>siglas de los ciclos con módulos de primer curso:
+      <ul>
+        <li>siglas de los ciclos con módulos de primer curso:
 
-            <div class="codigo">
-              <pre>//modulo[curso=1]/ciclo</pre>
-            </div>
-          </li>
-          <li>Grados de los ciclos ASIR o DAW:
+          <div class="codigo">
+            <pre>//modulo[curso=1]/ciclo</pre>
+          </div>
+        </li>
+        <li>Grados de los ciclos ASIR o DAW:
 
-            <div class="codigo">
-              <pre>//ciclo[@id="<span class="codigo-resaltado">ASIR</span>"]/grado/text()</pre>
-            </div>
+          <div class="codigo">
+            <pre>//ciclo[@id="<span class="codigo-resaltado">ASIR</span>"]/grado/text()</pre>
+          </div>
 
-            <div class="codigo">
-              <pre>//ciclo[@id="<span class="codigo-resaltado">DAW</span>"]/grado/text()</pre>
-            </div>
-          </li>
-          <li>sustituyendo la primera en la segunda:
+          <div class="codigo">
+            <pre>//ciclo[@id="<span class="codigo-resaltado">DAW</span>"]/grado/text()</pre>
+          </div>
+        </li>
+        <li>sustituyendo la primera en la segunda:
 
-            <div class="codigo">
-              <pre>//ciclo[@id=<span class="codigo-resaltado">//modulo[curso=1]/ciclo</span>]/grado/text()</pre>
-            </div>
-          </li>
-        </ul>
-      </section>
+          <div class="codigo">
+            <pre>//ciclo[@id=<span class="codigo-resaltado">//modulo[curso=1]/ciclo</span>]/grado/text()</pre>
+          </div>
+        </li>
+      </ul>
     </section>
+  </section>
 
-    <footer>
-      <p class="ultmod">Última modificación de esta página: 11 de mayo de 2015</p>
+  <footer>
+    <p class="ultmod">Última modificación de esta página: 11 de mayo de 2015</p>
 
-      <p class="licencia"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../varios/iconos/icono-cc-by-sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
-        Esta página forma parte del curso <a href="http://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a> por <a href="http://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
-        que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.</p>
-    </footer>
-  </body>
+    <p class="licencia"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../varios/iconos/icono-cc-by-sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
+      Esta página forma parte del curso <a href="http://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a> por <a href="http://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
+      que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.</p>
+  </footer>
+</body>
 </html>

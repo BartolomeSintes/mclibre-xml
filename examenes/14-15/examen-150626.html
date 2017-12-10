@@ -1,44 +1,44 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Examen 26/06/15. Exámenes. XML. Bartolomé Sintes Marco</title>
-    <link href="../../varios/xml.css" rel="stylesheet" type="text/css" title="mclibre" />
-    <link rel="icon" href="../../varios/favicon.ico" />
-    <link rel="stylesheet" href="../../varios/prism-xml.css" />
-    <script src="../../varios/prism.js"></script>
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Examen 26/06/15. Exámenes. XML. Bartolomé Sintes Marco</title>
+  <link href="../../varios/xml.css" rel="stylesheet" type="text/css" title="mclibre" />
+  <link rel="icon" href="../../varios/favicon.ico" />
+  <link rel="stylesheet" href="../../varios/prism-xml.css" />
+  <script src="../../varios/prism.js"></script>
+</head>
 
-  <body>
-    <h1>Examen 26 de junio de 2015</h1>
+<body>
+  <h1>Examen 26 de junio de 2015</h1>
 
-    <nav>
-      <p>
-        <a href="../../index.html"><img src="../../varios/iconos/icono-xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48" /></a>
-        <a href="#"><img src="../../varios/iconos/icono-arrow-circle-up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36" /></a>
-        <a href="../examenes.html"><img src="../../varios/iconos/icono-school.svg" alt="Exámenes" title="Exámenes" width="36" height="36" /></a>
-      </p>
+  <nav>
+    <p>
+      <a href="../../index.html"><img src="../../varios/iconos/icono-xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48" /></a>
+      <a href="#"><img src="../../varios/iconos/icono-arrow-circle-up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36" /></a>
+      <a href="../examenes.html"><img src="../../varios/iconos/icono-school.svg" alt="Exámenes" title="Exámenes" width="36" height="36" /></a>
+    </p>
 
-      <div class="toc">
-        <h2>Examen 26/06/15</h2>
+    <div class="toc">
+      <h2>Examen 26/06/15</h2>
 
-        <ol>
-          <li><a href="#ejercicio-1">CSS</a></li>
-          <li><a href="#ejercicio-2">XPath</a></li>
-        </ol>
-      </div>
-    </nav>
+      <ol>
+        <li><a href="#ejercicio-1">CSS</a></li>
+        <li><a href="#ejercicio-2">XPath</a></li>
+      </ol>
+    </div>
+  </nav>
 
-    <p>Resuelva los siguientes ejercicios guardando las respuestas en una carpeta cuyo nombre contenga su nombre y apellidos.</p>
+  <p>Resuelva los siguientes ejercicios guardando las respuestas en una carpeta cuyo nombre contenga su nombre y apellidos.</p>
 
-    <section id="ejercicio-1">
-      <h2>Ejercicio 1. CSS</h2>
+  <section id="ejercicio-1">
+    <h2>Ejercicio 1. CSS</h2>
 
-      <p>Escriba la hoja de estilo CSS para que el siguiente documento se vea en el navegador como muestra la imagen.</p>
+    <p>Escriba la hoja de estilo CSS para que el siguiente documento se vea en el navegador como muestra la imagen.</p>
 
-      <div class="codigo">
-        <pre>
+    <div class="codigo">
+      <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;pintores&gt;
   &lt;titulo&gt;Pintores universales&lt;/titulo&gt;
@@ -62,22 +62,22 @@
   &lt;/pintor&gt;
 &lt;/pintores&gt;</code>
 </pre>
-      </div>
+    </div>
 
-      <p>Captura del navegador (resolución 800 x 600):</p>
+    <p>Captura del navegador (resolución 800 x 600):</p>
 
-      <p class="captura">
-        <img src="150626-css.png" alt="XML y CSS" width="785" height="276" />
-      </p>
-    </section>
+    <p class="captura">
+      <img src="150626-css.png" alt="XML y CSS" width="785" height="276" />
+    </p>
+  </section>
 
-    <section id="ejercicio-2">
-      <h2>Ejercicio 2. XPath</h2>
+  <section id="ejercicio-2">
+    <h2>Ejercicio 2. XPath</h2>
 
-      <p>Dado el siguiente documento XML, escriba las expresiones XPath que devuelvan <strong>exactamente</strong> la respuesta indicadas en los cuadros. Escriba todas las expresiones XPath en un único fichero de texto, numerando las respuestas.</p>
+    <p>Dado el siguiente documento XML, escriba las expresiones XPath que devuelvan <strong>exactamente</strong> la respuesta indicadas en los cuadros. Escriba todas las expresiones XPath en un único fichero de texto, numerando las respuestas.</p>
 
-      <div class="codigo">
-        <pre>
+    <div class="codigo">
+      <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;arte&gt;
   &lt;museos&gt;
@@ -127,50 +127,50 @@
   &lt;/cuadros&gt;
 &lt;/arte&gt;</code>
 </pre>
-      </div>
+    </div>
 
-      <ol>
-        <li>Nombre de los museos:
-          <div class="resultado-xpath">
-            <pre>
+    <ol>
+      <li>Nombre de los museos:
+        <div class="resultado-xpath">
+          <pre>
 <code class="language-xml">Museo del Prado
 Musée du Louvre</code>
 </pre>
-          </div>
-        </li>
+        </div>
+      </li>
 
-        <li>Fecha de nacimiento de los pintores españoles:
-          <div class="resultado-xpath">
-            <pre>
+      <li>Fecha de nacimiento de los pintores españoles:
+        <div class="resultado-xpath">
+          <pre>
 <code class="language-xml">&lt;nacido&gt;1746&lt;/nacido&gt;
 &lt;nacido&gt;1599&lt;/nacido&gt;</code>
 </pre>
-          </div>
-        </li>
+        </div>
+      </li>
 
-        <li>Edad a la que murió Velázquez:
-          <div class="resultado-xpath">
-            <pre><code class="language-xml"> 61</code></pre>
-          </div>
-        </li>
+      <li>Edad a la que murió Velázquez:
+        <div class="resultado-xpath">
+          <pre><code class="language-xml"> 61</code></pre>
+        </div>
+      </li>
 
-        <li>Nombre completo de los pintores de cuadros pintados en el siglo XVII:
-          <div class="resultado-xpath">
-            <pre>
+      <li>Nombre completo de los pintores de cuadros pintados en el siglo XVII:
+        <div class="resultado-xpath">
+          <pre>
 <code class="language-xml">Diego Rodríguez de Silva y Velázquez
 Johannes Vermeer van Delft</code>
 </pre>
-          </div>
-        </li>
-      </ol>
-    </section>
+        </div>
+      </li>
+    </ol>
+  </section>
 
-    <footer>
-      <p class="ultmod">Última modificación de esta página: 26 de junio de 2015</p>
+  <footer>
+    <p class="ultmod">Última modificación de esta página: 26 de junio de 2015</p>
 
-      <p class="licencia"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../../varios/iconos/icono-cc-by-sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
-        Esta página forma parte del curso <a href="http://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a> por <a href="http://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
-        que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.</p>
-    </footer>
-  </body>
+    <p class="licencia"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../../varios/iconos/icono-cc-by-sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
+      Esta página forma parte del curso <a href="http://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a> por <a href="http://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
+      que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.</p>
+  </footer>
+</body>
 </html>

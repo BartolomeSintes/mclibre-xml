@@ -1,45 +1,45 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Examen 10/06/13. Exámenes. XML. Bartolomé Sintes Marco</title>
-    <link href="../../varios/xml.css" rel="stylesheet" type="text/css" title="mclibre" />
-    <link rel="icon" href="../../varios/favicon.ico" />
-    <link rel="stylesheet" href="../../varios/prism-xml.css" />
-    <script src="../../varios/prism.js"></script>
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Examen 10/06/13. Exámenes. XML. Bartolomé Sintes Marco</title>
+  <link href="../../varios/xml.css" rel="stylesheet" type="text/css" title="mclibre" />
+  <link rel="icon" href="../../varios/favicon.ico" />
+  <link rel="stylesheet" href="../../varios/prism-xml.css" />
+  <script src="../../varios/prism.js"></script>
+</head>
 
-  <body>
-    <h1>Examen 10 de junio de 2013</h1>
+<body>
+  <h1>Examen 10 de junio de 2013</h1>
 
-    <nav>
-      <p>
-        <a href="../../index.html"><img src="../../varios/iconos/icono-xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48" /></a>
-        <a href="#"><img src="../../varios/iconos/icono-arrow-circle-up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36" /></a>
-        <a href="../examenes.html"><img src="../../varios/iconos/icono-school.svg" alt="Exámenes" title="Exámenes" width="36" height="36" /></a>
-      </p>
+  <nav>
+    <p>
+      <a href="../../index.html"><img src="../../varios/iconos/icono-xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48" /></a>
+      <a href="#"><img src="../../varios/iconos/icono-arrow-circle-up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36" /></a>
+      <a href="../examenes.html"><img src="../../varios/iconos/icono-school.svg" alt="Exámenes" title="Exámenes" width="36" height="36" /></a>
+    </p>
 
-      <div class="toc">
-        <h2>Examen 10/06/13</h2>
+    <div class="toc">
+      <h2>Examen 10/06/13</h2>
 
-        <ol>
-          <li><a href="#ejercicio-1">DTD</a></li>
-          <li><a href="#ejercicio-2">XPath</a></li>
-          <li><a href="#ejercicio-3">XSLT</a></li>
-        </ol>
-      </div>
-    </nav>
+      <ol>
+        <li><a href="#ejercicio-1">DTD</a></li>
+        <li><a href="#ejercicio-2">XPath</a></li>
+        <li><a href="#ejercicio-3">XSLT</a></li>
+      </ol>
+    </div>
+  </nav>
 
-    <p>Resuelva los siguientes ejercicios guardando las respuestas en una carpeta cuyo nombre contenga su nombre y apellidos.</p>
+  <p>Resuelva los siguientes ejercicios guardando las respuestas en una carpeta cuyo nombre contenga su nombre y apellidos.</p>
 
-    <section id="ejercicio-1">
-      <h2>Ejercicio 1. DTD</h2>
+  <section id="ejercicio-1">
+    <h2>Ejercicio 1. DTD</h2>
 
-      <p>Escriba la DTD correspondiente al documento siguiente:</p>
+    <p>Escriba la DTD correspondiente al documento siguiente:</p>
 
-      <div class="codigo">
-        <pre>
+    <div class="codigo">
+      <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;cine&gt;
   &lt;directores&gt;
@@ -65,22 +65,22 @@
   &lt;/peliculas&gt;
 &lt;/cine&gt;</code>
 </pre>
-      </div>
+    </div>
 
-      <p>teniendo en cuenta que:</p>
-      <ul>
-        <li>la DTD debe admitir que primero aparezcan los directores y luego las películas (como en el ejemplo), o al revés.</li>
-        <li>las únicas informaciones obligatorias son la etiqueta con el nombre de los directores y el atributo con el título en español de las películas</li>
-      </ul>
-    </section>
+    <p>teniendo en cuenta que:</p>
+    <ul>
+      <li>la DTD debe admitir que primero aparezcan los directores y luego las películas (como en el ejemplo), o al revés.</li>
+      <li>las únicas informaciones obligatorias son la etiqueta con el nombre de los directores y el atributo con el título en español de las películas</li>
+    </ul>
+  </section>
 
-    <section id="ejercicio-2">
-      <h2>Ejercicio 2. XPath</h2>
+  <section id="ejercicio-2">
+    <h2>Ejercicio 2. XPath</h2>
 
-      <p>Dado el siguiente documento XML, escriba las expresiones XPath que devuelvan <strong>exactamente</strong> la respuesta indicadas en los cuadros. Escriba todas las expresiones XPath en un único fichero de texto, numerando las respuestas.</p>
+    <p>Dado el siguiente documento XML, escriba las expresiones XPath que devuelvan <strong>exactamente</strong> la respuesta indicadas en los cuadros. Escriba todas las expresiones XPath en un único fichero de texto, numerando las respuestas.</p>
 
-      <div class="codigo">
-        <pre>
+    <div class="codigo">
+      <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;cine&gt;
   &lt;directores&gt;
@@ -126,59 +126,59 @@
   &lt;/peliculas&gt;
 &lt;/cine&gt;</code>
 </pre>
-      </div>
-      <ol>
-        <li>Título de las películas en inglés:
+    </div>
+    <ol>
+      <li>Título de las películas en inglés:
 
-          <div class="resultado-xpath">
-            <pre>
+        <div class="resultado-xpath">
+          <pre>
 <code class="language-xml">Goodfellas
 Thelma y Louise
 The Prestige
 Inception
 The Cabin in the Woods</code>
 </pre>
-          </div>
-        </li>
-        <li>Título en español de las películas estrenadas antes de 2005:
+        </div>
+      </li>
+      <li>Título en español de las películas estrenadas antes de 2005:
 
-          <div class="resultado-xpath">
-            <pre>
+        <div class="resultado-xpath">
+          <pre>
 <code class="language-xml"> <span class="xml-attr">titulo</span>="Uno de los nuestros"
  <span class="xml-attr">titulo</span>="Thelma y Louise"</code>
 </pre>
-          </div>
-        </li>
-        <li>Títulos de las películas de directores nacidos en EEUU:
+        </div>
+      </li>
+      <li>Títulos de las películas de directores nacidos en EEUU:
 
-          <div class="resultado-xpath">
-            <pre>
+        <div class="resultado-xpath">
+          <pre>
 <code class="language-xml">&lt;titulo&gt;Goodfellas&lt;/titulo&gt;
 &lt;titulo&gt;The Cabin in the Woods&lt;/titulo&gt;</code>
 </pre>
-          </div>
-        </li>
-        <li>Compositor de las películas del director nacido en 1970:
+        </div>
+      </li>
+      <li>Compositor de las películas del director nacido en 1970:
 
-          <div class="resultado-xpath">
-            <pre>
+        <div class="resultado-xpath">
+          <pre>
 <code class="language-xml">David Julyan
 Hans Zimmer</code>
 </pre>
-          </div>
-        </li>
-      </ol>
-    </section>
+        </div>
+      </li>
+    </ol>
+  </section>
 
-    <section id="ejercicio-3">
-      <h2>Ejercicio 3. XSLT</h2>
+  <section id="ejercicio-3">
+    <h2>Ejercicio 3. XSLT</h2>
 
-      <p>Dado el siguiente documento XML, escriba y enlace las hojas de estilo XSLT que devuelvan la respuesta deseada (una para cada caso).</p>
+    <p>Dado el siguiente documento XML, escriba y enlace las hojas de estilo XSLT que devuelvan la respuesta deseada (una para cada caso).</p>
 
-      <p>Para cada apartado, prepare dos ficheros (fichero xml y fichero xsl enlazado).</p>
+    <p>Para cada apartado, prepare dos ficheros (fichero xml y fichero xsl enlazado).</p>
 
-      <div class="codigo">
-        <pre>
+    <div class="codigo">
+      <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;cine&gt;
   &lt;directores&gt;
@@ -224,15 +224,15 @@ Hans Zimmer</code>
   &lt;/peliculas&gt;
 &lt;/cine&gt;</code>
 </pre>
-      </div>
-      <ol>
-        <li>Párrafos
-          <p class="captura">
-            <img src="130610-xml-ej3-xslt-1.png" alt="XSLT" width="483" height="512" />
-          </p>
+    </div>
+    <ol>
+      <li>Párrafos
+        <p class="captura">
+          <img src="130610-xml-ej3-xslt-1.png" alt="XSLT" width="483" height="512" />
+        </p>
 
-          <div class="resultado-xslt">
-            <pre>
+        <div class="resultado-xslt">
+          <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;html&gt;
  &lt;h1&gt;Enciclopedia del cine&lt;/h1&gt;
@@ -252,17 +252,17 @@ Hans Zimmer</code>
 &lt;p&gt;La película &lt;strong&gt;La cabaña en el bosque&lt;/strong&gt; fue dirigida por Drew Goddard.&lt;/p&gt;
 &lt;/html&gt;</code>
 </pre>
-          </div>
-        </li>
-      </ol>
-    </section>
+        </div>
+      </li>
+    </ol>
+  </section>
 
-    <footer>
-      <p class="ultmod">Última modificación de esta página: 10 de junio de 2013</p>
+  <footer>
+    <p class="ultmod">Última modificación de esta página: 10 de junio de 2013</p>
 
-      <p class="licencia"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../../varios/iconos/icono-cc-by-sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
-        Esta página forma parte del curso <a href="http://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a> por <a href="http://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
-        que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.</p>
-    </footer>
-  </body>
+    <p class="licencia"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../../varios/iconos/icono-cc-by-sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
+      Esta página forma parte del curso <a href="http://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a> por <a href="http://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
+      que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.</p>
+  </footer>
+</body>
 </html>

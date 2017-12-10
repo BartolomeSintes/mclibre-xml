@@ -1,63 +1,63 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Examen 27/05/13. Exámenes. XML. Bartolomé Sintes Marco</title>
-    <link href="../../varios/xml.css" rel="stylesheet" type="text/css" title="mclibre" />
-    <link rel="icon" href="../../varios/favicon.ico" />
-    <link rel="stylesheet" href="../../varios/prism-xml.css" />
-    <script src="../../varios/prism.js"></script>
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Examen 27/05/13. Exámenes. XML. Bartolomé Sintes Marco</title>
+  <link href="../../varios/xml.css" rel="stylesheet" type="text/css" title="mclibre" />
+  <link rel="icon" href="../../varios/favicon.ico" />
+  <link rel="stylesheet" href="../../varios/prism-xml.css" />
+  <script src="../../varios/prism.js"></script>
+</head>
 
-  <body>
-    <h1>Examen 27 de mayo de 2013</h1>
+<body>
+  <h1>Examen 27 de mayo de 2013</h1>
 
-    <nav>
-      <p>
-        <a href="../../index.html"><img src="../../varios/iconos/icono-xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48" /></a>
-        <a href="#"><img src="../../varios/iconos/icono-arrow-circle-up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36" /></a>
-        <a href="../examenes.html"><img src="../../varios/iconos/icono-school.svg" alt="Exámenes" title="Exámenes" width="36" height="36" /></a>
-      </p>
+  <nav>
+    <p>
+      <a href="../../index.html"><img src="../../varios/iconos/icono-xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48" /></a>
+      <a href="#"><img src="../../varios/iconos/icono-arrow-circle-up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36" /></a>
+      <a href="../examenes.html"><img src="../../varios/iconos/icono-school.svg" alt="Exámenes" title="Exámenes" width="36" height="36" /></a>
+    </p>
 
-      <div class="toc">
-        <h2>Examen 27/05/13</h2>
+    <div class="toc">
+      <h2>Examen 27/05/13</h2>
 
-        <ol>
-          <li><a href="#ejercicio-1">WFD</a></li>
-          <li><a href="#ejercicio-2">DTD</a></li>
-          <li><a href="#ejercicio-3">CSS</a></li>
-          <li><a href="#ejercicio-4">XPath</a></li>
-          <li><a href="#ejercicio-5">XSLT</a></li>
-        </ol>
-      </div>
-    </nav>
+      <ol>
+        <li><a href="#ejercicio-1">WFD</a></li>
+        <li><a href="#ejercicio-2">DTD</a></li>
+        <li><a href="#ejercicio-3">CSS</a></li>
+        <li><a href="#ejercicio-4">XPath</a></li>
+        <li><a href="#ejercicio-5">XSLT</a></li>
+      </ol>
+    </div>
+  </nav>
 
-    <p>Resuelva los siguientes ejercicios guardando las respuestas en una carpeta cuyo nombre contenga su nombre y apellidos.</p>
+  <p>Resuelva los siguientes ejercicios guardando las respuestas en una carpeta cuyo nombre contenga su nombre y apellidos.</p>
 
-    <section id="ejercicio-1">
-      <h2>Ejercicio 1. Documentos bien formados</h2>
+  <section id="ejercicio-1">
+    <h2>Ejercicio 1. Documentos bien formados</h2>
 
-      <p>El siguiente documento no está bien formado porque contiene errores. Corrija los errores (si para corregir algún error hay que inventarse una etiqueta o atributo, utilice un nombre que tenga relación con la información contenida en el documento).</p>
+    <p>El siguiente documento no está bien formado porque contiene errores. Corrija los errores (si para corregir algún error hay que inventarse una etiqueta o atributo, utilice un nombre que tenga relación con la información contenida en el documento).</p>
 
-      <div class="codigo">
-        <pre>
+    <div class="codigo">
+      <pre>
 <code class="xml-malformado">&lt;documento /&gt;
 &lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
   &lt;contenido importante&gt;Ejemplo de documento&lt;/contenido&gt;
   &lt;contenido &lt;!-- Ejemplo de comentario --&gt;&gt;Otro ejemplo&lt;/contenido&gt;
 &lt;/documento&gt;</code>
 </pre>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="ejercicio-2">
-      <h2>Ejercicio 2. DTD</h2>
+  <section id="ejercicio-2">
+    <h2>Ejercicio 2. DTD</h2>
 
-      <p>Escriba la DTD correspondiente al documento siguiente:</p>
+    <p>Escriba la DTD correspondiente al documento siguiente:</p>
 
-      <div class="codigo">
-        <pre>
+    <div class="codigo">
+      <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;arbol&gt;
   &lt;lugares&gt;
@@ -83,23 +83,23 @@
   &lt;/personas&gt;
 &lt;/arbol&gt;</code>
 </pre>
-      </div>
+    </div>
 
-      <p>teniendo en cuenta que:</p>
-      <ul>
-        <li>los lugares de nacimiento de las personas deben estar definidos previamente</li>
-        <li>la DTD debe admitir que primero aparezcan los lugares y luego las personas (como en el ejemplo), o al revés</li>
-        <li>la única información obligatoria es el nombre de las personas</li>
-      </ul>
-    </section>
+    <p>teniendo en cuenta que:</p>
+    <ul>
+      <li>los lugares de nacimiento de las personas deben estar definidos previamente</li>
+      <li>la DTD debe admitir que primero aparezcan los lugares y luego las personas (como en el ejemplo), o al revés</li>
+      <li>la única información obligatoria es el nombre de las personas</li>
+    </ul>
+  </section>
 
-    <section id="ejercicio-3">
-      <h2>Ejercicio 3. CSS</h2>
+  <section id="ejercicio-3">
+    <h2>Ejercicio 3. CSS</h2>
 
-      <p>Escriba la hoja de estilo CSS para que el siguiente documento se vea en el navegador como muestra la imagen.</p>
+    <p>Escriba la hoja de estilo CSS para que el siguiente documento se vea en el navegador como muestra la imagen.</p>
 
-      <div class="codigo">
-        <pre>
+    <div class="codigo">
+      <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;diccionarios&gt;
   &lt;diccionario&gt;
@@ -120,20 +120,20 @@
   &lt;/diccionario&gt;
 &lt;/diccionarios&gt;</code>
 </pre>
-      </div>
+    </div>
 
-      <p class="captura">
-        <img src="130527-xml-ej3-css-1.png" alt="CSS" width="1008" height="250" />
-      </p>
-    </section>
+    <p class="captura">
+      <img src="130527-xml-ej3-css-1.png" alt="CSS" width="1008" height="250" />
+    </p>
+  </section>
 
-    <section id="ejercicio-4">
-      <h2>Ejercicio 4. XPath</h2>
+  <section id="ejercicio-4">
+    <h2>Ejercicio 4. XPath</h2>
 
-      <p>Dado el siguiente documento XML, escriba las expresiones XPath que devuelvan <strong>exactamente</strong> la respuesta indicadas en los cuadros. Escriba todas las expresiones XPath en un único fichero de texto, numerando las respuestas.</p>
+    <p>Dado el siguiente documento XML, escriba las expresiones XPath que devuelvan <strong>exactamente</strong> la respuesta indicadas en los cuadros. Escriba todas las expresiones XPath en un único fichero de texto, numerando las respuestas.</p>
 
-      <div class="codigo">
-        <pre>
+    <div class="codigo">
+      <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;arbol&gt;
   &lt;lugares&gt;
@@ -175,79 +175,79 @@
   &lt;/personas&gt;
 &lt;/arbol&gt;</code>
 </pre>
-      </div>
-      <ol>
-        <li>Nombre de las madres:
+    </div>
+    <ol>
+      <li>Nombre de las madres:
 
-          <div class="resultado-xpath">
-            <pre>
+        <div class="resultado-xpath">
+          <pre>
 <code class="language-xml">Juana Ramírez Dupont
 Jeanne Dupont
 Jeanne Dupont</code>
 </pre>
-          </div>
-        </li>
-        <li>Nombres de los paises:
+        </div>
+      </li>
+      <li>Nombres de los paises:
 
-          <div class="resultado-xpath">
-            <pre>
+        <div class="resultado-xpath">
+          <pre>
 <code class="language-xml"> <span class="xml-attr">pais</span>="España"
  <span class="xml-attr">pais</span>="España"
  <span class="xml-attr">pais</span>="Francia"</code>
  </pre>
-          </div>
-        </li>
-        <li>Nombre de los nacidos después de 1950:
+        </div>
+      </li>
+      <li>Nombre de los nacidos después de 1950:
 
-          <div class="resultado-xpath">
-            <pre>
+        <div class="resultado-xpath">
+          <pre>
 <code class="language-xml">&lt;nombre&gt;Ramón Ramírez Villaescusa&lt;/nombre&gt;
 &lt;nombre&gt;Elena Forte Ramírez&lt;/nombre&gt;</code>
 </pre>
-          </div>
-        </li>
-        <li>Lugar de nacimiento de los hijos de Jeanne Dupont:
+        </div>
+      </li>
+      <li>Lugar de nacimiento de los hijos de Jeanne Dupont:
 
-          <div class="resultado-xpath">
-            <pre>
+        <div class="resultado-xpath">
+          <pre>
 <code class="language-xml"> <span class="xml-attr">lugar</span>="Gandia"
  <span class="xml-attr">lugar</span>="Valencia"</code>
 </pre>
-          </div>
-        </li>
-        <li>Nombre de los nacidos en España:
+        </div>
+      </li>
+      <li>Nombre de los nacidos en España:
 
-          <div class="resultado-xpath">
-            <pre>
+        <div class="resultado-xpath">
+          <pre>
 <code class="language-xml">&lt;nombre&gt;Ramón Ramírez Villaescusa&lt;/nombre&gt;
 &lt;nombre&gt;Elena Forte Ramírez&lt;/nombre&gt;
 &lt;nombre&gt;Pedro Ramírez Dupont&lt;/nombre&gt;
 &lt;nombre&gt;Juana Ramírez Dupont&lt;/nombre&gt;
 &lt;nombre&gt;Juan Ramírez Amigo&lt;/nombre&gt;</code>
 </pre>
-          </div>
-        </li>
-        <li>Nietos (personas de las que se conoce el nombre de alguno de los cuatro abuelos):
+        </div>
+      </li>
+      <li>Nietos (personas de las que se conoce el nombre de alguno de los cuatro abuelos):
 
-          <div class="resultado-xpath">
-            <pre>
+        <div class="resultado-xpath">
+          <pre>
 <code class="language-xml">Ramón Ramírez Villaescusa
 Elena Forte Ramírez</code>
 </pre>
-          </div>
-        </li>
-      </ol>
-    </section>
+        </div>
+      </li>
+    </ol>
+  </section>
 
-    <section id="ejercicio-5">
-      <h2>Ejercicio 5. XSLT</h2>
+  <section id="ejercicio-5">
+    <h2>Ejercicio 5. XSLT</h2>
 
-      <p>Dado el siguiente documento XML, escriba y enlace las hojas de estilo XSLT que devuelvan la respuesta deseada (una para cada caso).</p>
+    <p>Dado el siguiente documento XML, escriba y enlace las hojas de estilo XSLT que devuelvan la respuesta deseada (una para cada caso).</p>
 
-      <p>Para cada apartado, prepare dos ficheros (fichero xml y fichero xsl enlazado).</p>
+    <p>Para cada apartado, prepare dos ficheros (fichero xml y fichero xsl enlazado).</p>
 
-      <div class="codigo">
-        <pre>
+    <div class="codigo">
+      <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;diccionarios&gt;
   &lt;diccionario&gt;
@@ -285,15 +285,15 @@ Elena Forte Ramírez</code>
   &lt;/diccionario&gt;
 &lt;/diccionarios&gt;</code>
 </pre>
-      </div>
-      <ol>
-        <li>Lista de diccionarios
-          <p class="captura">
-            <img src="130527-xml-ej4-xslt-1.png" alt="XSLT" width="1008" height="65" />
-          </p>
+    </div>
+    <ol>
+      <li>Lista de diccionarios
+        <p class="captura">
+          <img src="130527-xml-ej4-xslt-1.png" alt="XSLT" width="1008" height="65" />
+        </p>
 
-          <div class="resultado-xslt">
-            <pre>
+        <div class="resultado-xslt">
+          <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;html&gt;
   &lt;ul&gt;
@@ -302,15 +302,15 @@ Elena Forte Ramírez</code>
   &lt;/ul&gt;
 &lt;/html&gt;</code>
 </pre>
-          </div>
-        </li>
-        <li>Tabla con las palabras en filas
-          <p class="captura">
-            <img src="130527-xml-ej4-xslt-2.png" alt="XSLT" width="1008" height="350" />
-          </p>
+        </div>
+      </li>
+      <li>Tabla con las palabras en filas
+        <p class="captura">
+          <img src="130527-xml-ej4-xslt-2.png" alt="XSLT" width="1008" height="350" />
+        </p>
 
-          <div class="resultado-xslt">
-            <pre>
+        <div class="resultado-xslt">
+          <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;html&gt;
   &lt;h1&gt;Palabras en diccionarios&lt;/h1&gt;
@@ -348,17 +348,17 @@ Elena Forte Ramírez</code>
   &lt;/table&gt;
 &lt;/html&gt;</code>
 </pre>
-          </div>
-        </li>
-      </ol>
-    </section>
+        </div>
+      </li>
+    </ol>
+  </section>
 
-    <footer>
-      <p class="ultmod">Última modificación de esta página: 27 de mayo de 2013</p>
+  <footer>
+    <p class="ultmod">Última modificación de esta página: 27 de mayo de 2013</p>
 
-      <p class="licencia"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../../varios/iconos/icono-cc-by-sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
-        Esta página forma parte del curso <a href="http://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a> por <a href="http://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
-        que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.</p>
-    </footer>
-  </body>
+    <p class="licencia"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../../varios/iconos/icono-cc-by-sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
+      Esta página forma parte del curso <a href="http://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a> por <a href="http://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
+      que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.</p>
+  </footer>
+</body>
 </html>

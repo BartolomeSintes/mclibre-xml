@@ -1,45 +1,45 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Examen 04/09/12. Exámenes. XML. Bartolomé Sintes Marco</title>
-    <link href="../../varios/xml.css" rel="stylesheet" type="text/css" title="mclibre" />
-    <link rel="icon" href="../../varios/favicon.ico" />
-    <link rel="stylesheet" href="../../varios/prism-xml.css" />
-    <script src="../../varios/prism.js"></script>
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Examen 04/09/12. Exámenes. XML. Bartolomé Sintes Marco</title>
+  <link href="../../varios/xml.css" rel="stylesheet" type="text/css" title="mclibre" />
+  <link rel="icon" href="../../varios/favicon.ico" />
+  <link rel="stylesheet" href="../../varios/prism-xml.css" />
+  <script src="../../varios/prism.js"></script>
+</head>
 
-  <body>
-    <h1>Examen 4 de septiembre de 2012</h1>
+<body>
+  <h1>Examen 4 de septiembre de 2012</h1>
 
-    <nav>
-      <p>
-        <a href="../../index.html"><img src="../../varios/iconos/icono-xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48" /></a>
-        <a href="#"><img src="../../varios/iconos/icono-arrow-circle-up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36" /></a>
-        <a href="../examenes.html"><img src="../../varios/iconos/icono-school.svg" alt="Exámenes" title="Exámenes" width="36" height="36" /></a>
-      </p>
+  <nav>
+    <p>
+      <a href="../../index.html"><img src="../../varios/iconos/icono-xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48" /></a>
+      <a href="#"><img src="../../varios/iconos/icono-arrow-circle-up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36" /></a>
+      <a href="../examenes.html"><img src="../../varios/iconos/icono-school.svg" alt="Exámenes" title="Exámenes" width="36" height="36" /></a>
+    </p>
 
-      <div class="toc">
-        <h2>Examen 04/09/12</h2>
+    <div class="toc">
+      <h2>Examen 04/09/12</h2>
 
-        <ol>
-          <li><a href="#ejercicio-1">WFD</a></li>
-          <li><a href="#ejercicio-2">XPath</a></li>
-          <li><a href="#ejercicio-3">XSLT</a></li>
-        </ol>
-      </div>
-    </nav>
+      <ol>
+        <li><a href="#ejercicio-1">WFD</a></li>
+        <li><a href="#ejercicio-2">XPath</a></li>
+        <li><a href="#ejercicio-3">XSLT</a></li>
+      </ol>
+    </div>
+  </nav>
 
-    <p>Resuelva los siguientes ejercicios guardando las respuestas en una carpeta con su nombre y apellidos.</p>
+  <p>Resuelva los siguientes ejercicios guardando las respuestas en una carpeta con su nombre y apellidos.</p>
 
-    <section id="ejercicio-1">
-      <h2>Ejercicio 1. Documentos bien formados</h2>
+  <section id="ejercicio-1">
+    <h2>Ejercicio 1. Documentos bien formados</h2>
 
-      <p>El siguiente documento no está bien formado porque contiene errores. Corrija los errores (si para corregir algún error hay que inventarse una etiqueta o atributo, utilice un nombre que tenga relación con la información contenida en el documento, pero <strong>no</strong> elimine etiquetas).</p>
+    <p>El siguiente documento no está bien formado porque contiene errores. Corrija los errores (si para corregir algún error hay que inventarse una etiqueta o atributo, utilice un nombre que tenga relación con la información contenida en el documento, pero <strong>no</strong> elimine etiquetas).</p>
 
-      <div class="codigo">
-        <pre>
+    <div class="codigo">
+      <pre>
 <code class="xml-malformado">&lt;viajes /&gt;
 &lt;origen=Valencia destino=París&gt;
 &lt;salida 19:00&gt;
@@ -48,16 +48,16 @@
 &lt;salida 11:35&gt;
 &lt;llegada 13:00&gt;</code>
 </pre>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="ejercicio-2">
-      <h2>Ejercicio 2. XPath</h2>
+  <section id="ejercicio-2">
+    <h2>Ejercicio 2. XPath</h2>
 
-      <p>Dado el siguiente documento XML, escriba las expresiones XPath que devuelvan <strong>exactamente</strong> la respuesta indicadas en los cuadros. Escriba todas las expresiones XPath en un único fichero XPath.txt, numerando las respuestas.</p>
+    <p>Dado el siguiente documento XML, escriba las expresiones XPath que devuelvan <strong>exactamente</strong> la respuesta indicadas en los cuadros. Escriba todas las expresiones XPath en un único fichero XPath.txt, numerando las respuestas.</p>
 
-      <div class="codigo">
-        <pre>
+    <div class="codigo">
+      <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;futbol&gt;
   &lt;jugadores&gt;
@@ -100,76 +100,76 @@
   &lt;/plantillas&gt;
 &lt;/futbol&gt;</code>
 </pre>
-      </div>
+    </div>
 
-      <ol>
-        <li>Nombres de los jugadores:
-          <div class="resultado-xpath">
-            <pre>
+    <ol>
+      <li>Nombres de los jugadores:
+        <div class="resultado-xpath">
+          <pre>
 <code class="language-xml"> <span class="xml-attr">nombre</span>="David Villa"
  <span class="xml-attr">nombre</span>="Javier Farinós"
  <span class="xml-attr">nombre</span>="Asier del Horno"
  <span class="xml-attr">nombre</span>="Jordi Alba"</code>
 </pre>
-          </div>
-        </li>
+        </div>
+      </li>
 
-        <li>Nombres de los equipos de fútbol:
-          <div class="resultado-xpath">
-            <pre>
+      <li>Nombres de los equipos de fútbol:
+        <div class="resultado-xpath">
+          <pre>
 <code class="language-xml">Valencia F.C
 Levante U.D.
 F.C. Barcelona</code>
 </pre>
-          </div>
-        </li>
+        </div>
+      </li>
 
-        <li>Nombres de los equipos de la ciudad de Valencia:
-          <div class="resultado-xpath">
-            <pre>
+      <li>Nombres de los equipos de la ciudad de Valencia:
+        <div class="resultado-xpath">
+          <pre>
 <code class="language-xml">Valencia F.C
 Levante U.D.</code>
 </pre>
-          </div>
-        </li>
+        </div>
+      </li>
 
-        <li>Nombres de los jugadores nacidos antes de 1985:
-          <div class="resultado-xpath">
-            <pre>
+      <li>Nombres de los jugadores nacidos antes de 1985:
+        <div class="resultado-xpath">
+          <pre>
 <code class="language-xml"> <span class="xml-attr">nombre</span>="David Villa"
  <span class="xml-attr">nombre</span>="Javier Farinós"
  <span class="xml-attr">nombre</span>="Asier del Horno"</code>
  </pre>
-          </div>
-        </li>
+        </div>
+      </li>
 
-        <li>Equipos en los que ha jugado David Villa:
-          <div class="resultado-xpath">
-            <pre>
+      <li>Equipos en los que ha jugado David Villa:
+        <div class="resultado-xpath">
+          <pre>
 <code class="language-xml"> <span class="xml-attr">equipo</span>="Valencia F.C."
  <span class="xml-attr">equipo</span>="F.C. Barcelona"</code>
 </pre>
-          </div>
-        </li>
+        </div>
+      </li>
 
-        <li>Fecha de nacimiento de los jugadores del Barcelona:
-          <div class="resultado-xpath">
-            <pre>
+      <li>Fecha de nacimiento de los jugadores del Barcelona:
+        <div class="resultado-xpath">
+          <pre>
 <code class="language-xml"> <span class="xml-attr">nacido</span>="1981"
  <span class="xml-attr">nacido</span>="1989"</code>
 </pre>
-          </div>
-        </li>
-      </ol>
-    </section>
+        </div>
+      </li>
+    </ol>
+  </section>
 
-    <section id="ejercicio-3">
-      <h2>Ejercicio 3. XSLT</h2>
+  <section id="ejercicio-3">
+    <h2>Ejercicio 3. XSLT</h2>
 
-      <p>Dado el siguiente documento XML, escriba y enlace las hojas de estilo XSLT que devuelvan la respuesta deseada (una para cada caso).</p>
+    <p>Dado el siguiente documento XML, escriba y enlace las hojas de estilo XSLT que devuelvan la respuesta deseada (una para cada caso).</p>
 
-      <div class="codigo">
-        <pre>
+    <div class="codigo">
+      <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;series_de_television&gt;
   &lt;serie&gt;
@@ -201,12 +201,12 @@ Levante U.D.</code>
   &lt;/serie&gt;
 &lt;/series_de_television&gt;</code>
 </pre>
-      </div>
+    </div>
 
-      <ol>
-        <li>Página web con información básica:
-          <div class="resultado-xslt">
-            <pre>
+    <ol>
+      <li>Página web con información básica:
+        <div class="resultado-xslt">
+          <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;html&gt;
  &lt;h1&gt;Series de televisión&lt;/h1&gt;
@@ -215,12 +215,12 @@ Levante U.D.</code>
  &lt;p&gt;La serie &lt;strong&gt;SuperAgente 86&lt;/strong&gt; se emitió desde 1965 hasta 1970.&lt;/p&gt;
 &lt;/html&gt;</code>
 </pre>
-          </div>
-        </li>
+        </div>
+      </li>
 
-        <li>Cambiar la estructura del documento:
-          <div class="resultado-xslt">
-            <pre>
+      <li>Cambiar la estructura del documento:
+        <div class="resultado-xslt">
+          <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;actores&gt;
   &lt;actor nombre="Dominic West" serie="The Wire"/&gt;
@@ -228,17 +228,17 @@ Levante U.D.</code>
   &lt;actor nombre="Don Adams" serie="SuperAgente 86"/&gt;
 &lt;/actores&gt;</code>
 </pre>
-          </div>
-        </li>
-      </ol>
-    </section>
+        </div>
+      </li>
+    </ol>
+  </section>
 
-    <footer>
-      <p class="ultmod">Última modificación de esta página: 4 de septiembre de 2012</p>
+  <footer>
+    <p class="ultmod">Última modificación de esta página: 4 de septiembre de 2012</p>
 
-      <p class="licencia"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../../varios/iconos/icono-cc-by-sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
-        Esta página forma parte del curso <a href="http://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a> por <a href="http://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
-        que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.</p>
-    </footer>
-  </body>
+    <p class="licencia"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../../varios/iconos/icono-cc-by-sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
+      Esta página forma parte del curso <a href="http://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a> por <a href="http://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
+      que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.</p>
+  </footer>
+</body>
 </html>

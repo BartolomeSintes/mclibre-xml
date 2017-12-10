@@ -1,241 +1,241 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DTD: Definición de Tipo de Documento (Resumen). XML. Bartolomé Sintes Marco</title>
-    <link href="../varios/xml.css" rel="stylesheet" type="text/css" title="mclibre" />
-    <link rel="icon" href="../varios/favicon.ico" />
-    <link rel="stylesheet" href="../varios/prism-xml.css" />
-    <script src="../varios/prism.js"></script>
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DTD: Definición de Tipo de Documento (Resumen). XML. Bartolomé Sintes Marco</title>
+  <link href="../varios/xml.css" rel="stylesheet" type="text/css" title="mclibre" />
+  <link rel="icon" href="../varios/favicon.ico" />
+  <link rel="stylesheet" href="../varios/prism-xml.css" />
+  <script src="../varios/prism.js"></script>
+</head>
 
-  <body>
+<body>
 
-    <h1>DTD: Definición de Tipo de Documento (Resumen)</h1>
+  <h1>DTD: Definición de Tipo de Documento (Resumen)</h1>
 
-    <nav>
-      <p>
-        <a href="../index.html"><img src="../varios/iconos/icono-xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48" /></a>
-        <a href="#"><img src="../varios/iconos/icono-arrow-circle-up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36" /></a>
-      </p>
+  <nav>
+    <p>
+      <a href="../index.html"><img src="../varios/iconos/icono-xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48" /></a>
+      <a href="#"><img src="../varios/iconos/icono-arrow-circle-up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36" /></a>
+    </p>
 
-      <div class="toc">
-        <h2>DTD (Resumen)</h2>
-
-        <ul>
-          <li><a href="#dtd-referencia">Referencia a DTD</a></li>
-          <li><a href="#dtd-declaracion-entidades">Declaración entidades</a></li>
-          <li><a href="#dtd-declaracion-notaciones">Declaración notaciones</a></li>
-          <li><a href="#dtd-declaracion-elementos">Declaración elementos</a></li>
-          <li><a href="#dtd-declaracion-atributos">Declaración atributos</a></li>
-        </ul>
-      </div>
-    </nav>
-
-    <section id="dtd-referencia">
-      <h2>Referencia a DTD</h2>
+    <div class="toc">
+      <h2>DTD (Resumen)</h2>
 
       <ul>
-        <li>DTD en el propio documento
+        <li><a href="#dtd-referencia">Referencia a DTD</a></li>
+        <li><a href="#dtd-declaracion-entidades">Declaración entidades</a></li>
+        <li><a href="#dtd-declaracion-notaciones">Declaración notaciones</a></li>
+        <li><a href="#dtd-declaracion-elementos">Declaración elementos</a></li>
+        <li><a href="#dtd-declaracion-atributos">Declaración atributos</a></li>
+      </ul>
+    </div>
+  </nav>
 
-          <div class="codigo">
-            <pre>
+  <section id="dtd-referencia">
+    <h2>Referencia a DTD</h2>
+
+    <ul>
+      <li>DTD en el propio documento
+
+        <div class="codigo">
+          <pre>
 <code class="lang-xml">&lt;!DOCTYPE nombre [
  ... declaraciones ...
 ]&gt;</code>
 </pre>
-          </div>
-        </li>
-        <li>DTD en un documento externo para una única aplicación:
+        </div>
+      </li>
+      <li>DTD en un documento externo para una única aplicación:
 
-          <div class="codigo">
-            <pre><code class="lang-xml">&lt;!DOCTYPE nombre SYSTEM "uri"&gt;</code></pre>
-          </div>
-          <p>Combinar una DTD externa con una DTD interna:</p>
+        <div class="codigo">
+          <pre><code class="lang-xml">&lt;!DOCTYPE nombre SYSTEM "uri"&gt;</code></pre>
+        </div>
+        <p>Combinar una DTD externa con una DTD interna:</p>
 
-          <div class="codigo">
-            <pre>
+        <div class="codigo">
+          <pre>
 <code class="lang-xml">&lt;!DOCTYPE nombre SYSTEM "uri" [
  ... declaraciones ...
 ]&gt;</code>
 </pre>
-          </div>
-        </li>
-        <li>DTD en un documento externo para varias aplicaciones:
+        </div>
+      </li>
+      <li>DTD en un documento externo para varias aplicaciones:
 
-          <div class="codigo">
-            <pre><code class="lang-xml">&lt;!DOCTYPE nombre PUBLIC "fpi" "uri"&gt;</code></pre>
-          </div>
-          <p>Combinar una DTD externa con una DTD interna:</p>
+        <div class="codigo">
+          <pre><code class="lang-xml">&lt;!DOCTYPE nombre PUBLIC "fpi" "uri"&gt;</code></pre>
+        </div>
+        <p>Combinar una DTD externa con una DTD interna:</p>
 
-          <div class="codigo">
-            <pre>
+        <div class="codigo">
+          <pre>
 <code class="lang-xml">&lt;!DOCTYPE nombre PUBLIC "fpi" "uri" [
  ... declaraciones ...
 ]&gt;</code>
 </pre>
-          </div>
-        </li>
-      </ul>
+        </div>
+      </li>
+    </ul>
 
-      <p>En todos estos casos:</p>
-      <ul>
-        <li>"nombre" es el nombre del tipo de documento XML, que debe coincidir con el nombre del elemento raíz del documento XML.</li>
-        <li>"uri" es el camino (absoluto o relativo) hasta la DTD.</li>
-        <li>"fpi" es un indentificador público formal (Formal Public Identifier).</li>
-      </ul>
-    </section>
+    <p>En todos estos casos:</p>
+    <ul>
+      <li>"nombre" es el nombre del tipo de documento XML, que debe coincidir con el nombre del elemento raíz del documento XML.</li>
+      <li>"uri" es el camino (absoluto o relativo) hasta la DTD.</li>
+      <li>"fpi" es un indentificador público formal (Formal Public Identifier).</li>
+    </ul>
+  </section>
 
-    <section id="dtd-declaracion-entidades">
-      <h2>Declaración de entidades</h2>
-      <ul>
-        <li>Entidades internas:
+  <section id="dtd-declaracion-entidades">
+    <h2>Declaración de entidades</h2>
+    <ul>
+      <li>Entidades internas:
 
-          <div class="codigo">
-            <pre><code  class="language-xml">&lt;!ENTITY nombreEntidad "valorEntidad"&gt;</code></pre>
-          </div>
-        </li>
-        <li>Entidad externa (archivo de texto):
+        <div class="codigo">
+          <pre><code  class="language-xml">&lt;!ENTITY nombreEntidad "valorEntidad"&gt;</code></pre>
+        </div>
+      </li>
+      <li>Entidad externa (archivo de texto):
 
-          <div class="codigo">
-            <pre><code  class="language-xml">&lt;!ENTITY nombreEntidad SYSTEM "uri"&gt;</code></pre>
-          </div>
+        <div class="codigo">
+          <pre><code  class="language-xml">&lt;!ENTITY nombreEntidad SYSTEM "uri"&gt;</code></pre>
+        </div>
 
-          <div class="codigo">
-            <pre><code  class="language-xml">&lt;!ENTITY nombreEntidad PUBLIC "fpi" "uri"&gt;</code></pre>
-          </div>
-        </li>
-        <li>Entidad externa (archivo no de texto):
+        <div class="codigo">
+          <pre><code  class="language-xml">&lt;!ENTITY nombreEntidad PUBLIC "fpi" "uri"&gt;</code></pre>
+        </div>
+      </li>
+      <li>Entidad externa (archivo no de texto):
 
-          <div class="codigo">
-            <pre><code  class="language-xml">&lt;!ENTITY nombreEntidad SYSTEM "uri" NDATA tipo&gt;</code></pre>
-          </div>
+        <div class="codigo">
+          <pre><code  class="language-xml">&lt;!ENTITY nombreEntidad SYSTEM "uri" NDATA tipo&gt;</code></pre>
+        </div>
 
-          <div class="codigo">
-            <pre><code  class="language-xml">&lt;!ENTITY nombreEntidad PUBLIC "fpi" "uri" NDATA tipo&gt;</code></pre>
-          </div>
-        </li>
-        <li>Entidades paramétricas:
+        <div class="codigo">
+          <pre><code  class="language-xml">&lt;!ENTITY nombreEntidad PUBLIC "fpi" "uri" NDATA tipo&gt;</code></pre>
+        </div>
+      </li>
+      <li>Entidades paramétricas:
 
-          <div class="codigo">
-            <pre><code  class="language-xml">&lt;!ENTITY % nombreEntidad "valorEntidad"&gt;</code></pre>
-          </div>
+        <div class="codigo">
+          <pre><code  class="language-xml">&lt;!ENTITY % nombreEntidad "valorEntidad"&gt;</code></pre>
+        </div>
 
-          <div class="codigo">
-            <pre><code  class="language-xml">&lt;!ENTITY % nombreEntidad SYSTEM "uri"&gt;</code></pre>
-          </div>
+        <div class="codigo">
+          <pre><code  class="language-xml">&lt;!ENTITY % nombreEntidad SYSTEM "uri"&gt;</code></pre>
+        </div>
 
-          <div class="codigo">
-            <pre><code  class="language-xml">&lt;!ENTITY % nombreEntidad SYSTEM "uri" NDATA tipo&gt;</code></pre>
-          </div>
-        </li>
-      </ul>
+        <div class="codigo">
+          <pre><code  class="language-xml">&lt;!ENTITY % nombreEntidad SYSTEM "uri" NDATA tipo&gt;</code></pre>
+        </div>
+      </li>
+    </ul>
 
-      <p>En todos estos casos:</p>
-      <ul>
-        <li>"nombreEntidad" es el nombre de la entidad.</li>
-        <li>"valorEntidad" es el valor de la entidad.</li>
-        <li>"uri" es el camino (absoluto o relativo) hasta un archivo.</li>
-        <li>"tipo" es el tipo de archivo (gif, jpg, etc).</li>
-        <li>"fpi" es un indentificador público formal (Formal Public Identifier).</li>
-      </ul>
-    </section>
+    <p>En todos estos casos:</p>
+    <ul>
+      <li>"nombreEntidad" es el nombre de la entidad.</li>
+      <li>"valorEntidad" es el valor de la entidad.</li>
+      <li>"uri" es el camino (absoluto o relativo) hasta un archivo.</li>
+      <li>"tipo" es el tipo de archivo (gif, jpg, etc).</li>
+      <li>"fpi" es un indentificador público formal (Formal Public Identifier).</li>
+    </ul>
+  </section>
 
-    <section id="dtd-declaracion-notaciones">
-      <h2>Declaración de notaciones</h2>
+  <section id="dtd-declaracion-notaciones">
+    <h2>Declaración de notaciones</h2>
 
-      <p>Las notaciones se usan en XML para definir las entidades externas que no va a analizar en procesador XML (aunque sí lo hará la aplicación que trate un documento). Para hacer referencia estas entidades no se utiliza la notación habitual (&amp;nombreEntidad;), sino que se utiliza el nombre de la entidad directamente.</p>
-    </section>
+    <p>Las notaciones se usan en XML para definir las entidades externas que no va a analizar en procesador XML (aunque sí lo hará la aplicación que trate un documento). Para hacer referencia estas entidades no se utiliza la notación habitual (&amp;nombreEntidad;), sino que se utiliza el nombre de la entidad directamente.</p>
+  </section>
 
-    <section id="dtd-declaracion-elementos">
-      <h2>Declaración de elementos</h2>
-      <ul>
-        <li>Elementos:
+  <section id="dtd-declaracion-elementos">
+    <h2>Declaración de elementos</h2>
+    <ul>
+      <li>Elementos:
 
-          <div class="codigo">
-            <pre><code  class="language-xml">&lt;!ELEMENT nombreElemento (contenido)&gt;</code></pre>
-          </div>
-        </li>
-        <li>Contenido:
-          <ul>
-            <li><strong>EMPTY</strong>: elemento vacío.</li>
-            <li><strong>(#PCDATA)</strong>: texto </li>
-            <li><strong>ANY</strong>: cualquier cosa.</li>
-            <li><strong>, (coma)</strong>: elementos en el orden indicado.</li>
-            <li><strong>| (o lógico)</strong>: contiene uno de los dos elementos.</li>
-            <li><strong>?</strong>: elemento puede aparecer o no, pero sólo una vez.</li>
-            <li><strong>*</strong>: elemento puede no aparecer o aparecer una o más veces.</li>
-            <li><strong>+</strong>: elemento tiene que aparecer una o más veces (no puede no aparecer).</li>
-            <li><strong>()</strong>: agrupar expresiones.</li>
-          </ul>
-        </li>
-      </ul>
-    </section>
+        <div class="codigo">
+          <pre><code  class="language-xml">&lt;!ELEMENT nombreElemento (contenido)&gt;</code></pre>
+        </div>
+      </li>
+      <li>Contenido:
+        <ul>
+          <li><strong>EMPTY</strong>: elemento vacío.</li>
+          <li><strong>(#PCDATA)</strong>: texto </li>
+          <li><strong>ANY</strong>: cualquier cosa.</li>
+          <li><strong>, (coma)</strong>: elementos en el orden indicado.</li>
+          <li><strong>| (o lógico)</strong>: contiene uno de los dos elementos.</li>
+          <li><strong>?</strong>: elemento puede aparecer o no, pero sólo una vez.</li>
+          <li><strong>*</strong>: elemento puede no aparecer o aparecer una o más veces.</li>
+          <li><strong>+</strong>: elemento tiene que aparecer una o más veces (no puede no aparecer).</li>
+          <li><strong>()</strong>: agrupar expresiones.</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
 
-    <section id="dtd-declaracion-atributos">
-      <h2>Declaración de atributos</h2>
-      <ul>
-        <li>Atributos:
+  <section id="dtd-declaracion-atributos">
+    <h2>Declaración de atributos</h2>
+    <ul>
+      <li>Atributos:
 
-          <div class="codigo">
-            <pre><code  class="language-xml">&lt;!ATTLIST nombreElemento nombreAtributo tipoAtributo valorInicialAtributo &gt;</code></pre>
-          </div>
+        <div class="codigo">
+          <pre><code  class="language-xml">&lt;!ATTLIST nombreElemento nombreAtributo tipoAtributo valorInicialAtributo &gt;</code></pre>
+        </div>
 
-          <div class="codigo">
-            <pre>
+        <div class="codigo">
+          <pre>
 <code  class="language-xml">&lt;!ATTLIST nombreElemento nombreAtributo1 tipoAtributo1 valorInicialAtributo1&gt;
 &lt;!ATTLIST nombreElemento nombreAtributo2 tipoAtributo2 valorInicialAtributo2&gt;</code>
 </pre>
-          </div>
+        </div>
 
-          <div class="codigo">
-            <pre>
+        <div class="codigo">
+          <pre>
 <code  class="language-xml">&lt;!ATTLIST nombreElemento
   nombreAtributo1 tipoAtributo1 valorInicialAtributo1
   nombreAtributo2 tipoAtributo2 valorInicialAtributo2
  &gt;</code>
 </pre>
-          </div>
-          <p>en la que:</p>
-          <ul>
-            <li>"nombreElemento" es el nombre del elemento para el que se define un atributo.</li>
-            <li>"nombreAtributo" es el nombre del atributo.</li>
-            <li>"tipoAtributo" es el tipo de datos .</li>
-            <li>"valorInicialAtributo" es el valor predeterminado del atributo (aunque también puede indicar otras cosas).</li>
-          </ul>
-        </li>
-        <li>Tipos de atributos:
-          <ul>
-            <li><strong>CDATA</strong>: caracteres (sin restricciones).</li>
-            <li><strong>NMTOKEN</strong>: letras, dígitos, y los caracteres punto ".", guión "-", subrayado "_" y dos puntos ":".</li>
-            <li><strong>NMTOKENS</strong>: letras, dígitos, y los caracteres punto ".", guión "-", subrayado "_", dos puntos ":" (como el tipo NMTOKEN) y también espacios en blanco.</li>
-            <li><strong>valores</strong>: valores de una lista. Lista entre paréntesis, con términos separados por una barra vertical "|". términos entre comillas simples o dobles si contienen espacios en blanco.</li>
-            <li><strong>ID</strong>: valor no se puede repetir en otros elementos o atributos.</li>
-            <li><strong>IDREF</strong>: valor debe coincidir con el valor del atributo ID de otro elemento.</li>
-            <li><strong>IDREFS</strong>: valor es una serie de valores separados por espacios que coinciden con el valor del atributo ID de otros elementos.</li>
-            <li><strong>ENTITY</strong>: entidad definida en la DTD.</li>
-            <li><strong>ENTITIES</strong>: alguna de las entidades de una lista de entidades definida en la DTD.</li>
-            <li><strong>NOTATION</strong>: notación definida en la DTD.</li>
-          </ul>
-        </li>
-        <li>Valores iniciales:
-          <ul>
-            <li><strong>#REQUIRED</strong>: el atributo es obligatorio, aunque no se especifica ningún valor predeterminado.</li>
-            <li><strong>#IMPLIED</strong>: el atributo no es obligatorio y no se especifica ningún valor predeterminado.</li>
-            <li><strong>#FIXED valor</strong>: el atributo tiene un valor fijo.</li>
-            <li><strong>valor</strong>: el atributo tiene un valor predeterminado.</li>
-          </ul>
-        </li>
-      </ul>
-    </section>
+        </div>
+        <p>en la que:</p>
+        <ul>
+          <li>"nombreElemento" es el nombre del elemento para el que se define un atributo.</li>
+          <li>"nombreAtributo" es el nombre del atributo.</li>
+          <li>"tipoAtributo" es el tipo de datos .</li>
+          <li>"valorInicialAtributo" es el valor predeterminado del atributo (aunque también puede indicar otras cosas).</li>
+        </ul>
+      </li>
+      <li>Tipos de atributos:
+        <ul>
+          <li><strong>CDATA</strong>: caracteres (sin restricciones).</li>
+          <li><strong>NMTOKEN</strong>: letras, dígitos, y los caracteres punto ".", guión "-", subrayado "_" y dos puntos ":".</li>
+          <li><strong>NMTOKENS</strong>: letras, dígitos, y los caracteres punto ".", guión "-", subrayado "_", dos puntos ":" (como el tipo NMTOKEN) y también espacios en blanco.</li>
+          <li><strong>valores</strong>: valores de una lista. Lista entre paréntesis, con términos separados por una barra vertical "|". términos entre comillas simples o dobles si contienen espacios en blanco.</li>
+          <li><strong>ID</strong>: valor no se puede repetir en otros elementos o atributos.</li>
+          <li><strong>IDREF</strong>: valor debe coincidir con el valor del atributo ID de otro elemento.</li>
+          <li><strong>IDREFS</strong>: valor es una serie de valores separados por espacios que coinciden con el valor del atributo ID de otros elementos.</li>
+          <li><strong>ENTITY</strong>: entidad definida en la DTD.</li>
+          <li><strong>ENTITIES</strong>: alguna de las entidades de una lista de entidades definida en la DTD.</li>
+          <li><strong>NOTATION</strong>: notación definida en la DTD.</li>
+        </ul>
+      </li>
+      <li>Valores iniciales:
+        <ul>
+          <li><strong>#REQUIRED</strong>: el atributo es obligatorio, aunque no se especifica ningún valor predeterminado.</li>
+          <li><strong>#IMPLIED</strong>: el atributo no es obligatorio y no se especifica ningún valor predeterminado.</li>
+          <li><strong>#FIXED valor</strong>: el atributo tiene un valor fijo.</li>
+          <li><strong>valor</strong>: el atributo tiene un valor predeterminado.</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
 
-    <footer>
-      <p class="ultmod">Última modificación de esta página: 21 de febrero de 2012</p>
+  <footer>
+    <p class="ultmod">Última modificación de esta página: 21 de febrero de 2012</p>
 
-      <p class="licencia"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../varios/iconos/icono-cc-by-sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
-        Esta página forma parte del curso <a href="http://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a> por <a href="http://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
-        que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.</p>
-    </footer>
-  </body>
+    <p class="licencia"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../varios/iconos/icono-cc-by-sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
+      Esta página forma parte del curso <a href="http://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a> por <a href="http://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
+      que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.</p>
+  </footer>
+</body>
 </html>

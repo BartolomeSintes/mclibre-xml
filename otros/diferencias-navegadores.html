@@ -1,70 +1,70 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Diferencias entre navegadores. XML. Bartolomé Sintes Marco</title>
-    <link href="../varios/xml.css" rel="stylesheet" type="text/css" title="mclibre" />
-    <link rel="icon" href="../varios/favicon.ico" />
-    <link rel="stylesheet" href="../varios/prism-xml.css" />
-    <script src="../varios/prism.js"></script>
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diferencias entre navegadores. XML. Bartolomé Sintes Marco</title>
+  <link href="../varios/xml.css" rel="stylesheet" type="text/css" title="mclibre" />
+  <link rel="icon" href="../varios/favicon.ico" />
+  <link rel="stylesheet" href="../varios/prism-xml.css" />
+  <script src="../varios/prism.js"></script>
+</head>
 
-  <body>
-    <h1>Diferencias entre navegadores</h1>
+<body>
+  <h1>Diferencias entre navegadores</h1>
 
-    <nav>
-      <p>
-        <a href="../index.html"><img src="../varios/iconos/icono-xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48" /></a>
-        <a href="#"><img src="../varios/iconos/icono-arrow-circle-up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36" /></a>
-      </p>
+  <nav>
+    <p>
+      <a href="../index.html"><img src="../varios/iconos/icono-xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48" /></a>
+      <a href="#"><img src="../varios/iconos/icono-arrow-circle-up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36" /></a>
+    </p>
 
-      <div class="toc">
-        <h2>Navegadores</h2>
+    <div class="toc">
+      <h2>Navegadores</h2>
 
-        <ul>
-          <li><a href="#css">CSS en XML</a>
-            <ul>
-              <li><a href="#listas-ordenadas">Listas ordenadas</a></li>
-              <li><a href="#class-id">atributos <span class="html-atri">class</span> e <span class="html-atri">id</span></a></li>
-            </ul>
-          </li>
-          <li><a href="#xslt">XSLT</a>
-            <ul>
-              <li><a href="#enlazar-xslt">hojas de estilo XSLT</a></li>
-            </ul>
-          </li>
-        </ul>
+      <ul>
+        <li><a href="#css">CSS en XML</a>
+          <ul>
+            <li><a href="#listas-ordenadas">Listas ordenadas</a></li>
+            <li><a href="#class-id">atributos <span class="html-atri">class</span> e <span class="html-atri">id</span></a></li>
+          </ul>
+        </li>
+        <li><a href="#xslt">XSLT</a>
+          <ul>
+            <li><a href="#enlazar-xslt">hojas de estilo XSLT</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <p>Se comentan en esta página algunas diferencias entre navegadores.</p>
+
+  <p>Las capturas de imagen que ilustran las diferencias se han realizado con las últimas versiones disponibles en abril de 2016 (Firefox 46, Internet Explorer 11 y Google Chrome 50). En versiones posteriores, el comportamiento de los navegadores puede ser diferente.</p>
+
+  <section id="css">
+    <h2>CSS en XML</h2>
+
+    <section id="listas-ordenadas">
+      <h3>Listas ordenadas</h3>
+
+      <p>Firefox no aumenta los contadores al mostrar elementos como listas ordenadas, pero Internet Explorer y Chrome lo hacen correctamente.</p>
+
+      <div class="filaflex cabecera">
+        <div class="icono-navegadores-vacio"><img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="40" height="4" /></div>
+        <div>XML / CSS</div>
+        <div>Resultado</div>
+        <div class="icono-enlace">Enlace</div>
       </div>
-    </nav>
-    <p>Se comentan en esta página algunas diferencias entre navegadores.</p>
 
-    <p>Las capturas de imagen que ilustran las diferencias se han realizado con las últimas versiones disponibles en abril de 2016 (Firefox 46, Internet Explorer 11 y Google Chrome 50). En versiones posteriores, el comportamiento de los navegadores puede ser diferente.</p>
-
-    <section id="css">
-      <h2>CSS en XML</h2>
-
-      <section id="listas-ordenadas">
-        <h3>Listas ordenadas</h3>
-
-        <p>Firefox no aumenta los contadores al mostrar elementos como listas ordenadas, pero Internet Explorer y Chrome lo hacen correctamente.</p>
-
-        <div class="filaflex cabecera">
-          <div class="icono-navegadores-vacio"><img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="40" height="4" /></div>
-          <div>XML / CSS</div>
-          <div>Resultado</div>
-          <div class="icono-enlace">Enlace</div>
+      <div class="filaflex">
+        <div class="icono-navegadores">
+          <img src="../varios/iconos/icono-gc.svg" alt="Correcto en Chrome" title="Correcto en Chrome" width="32" height="32" />
+          <img src="../varios/iconos/icono-ff-X.svg" alt="Incorrecto en Firefox" title="Incorrecto en Firefox" width="44" height="32" />
+          <img src="../varios/iconos/icono-ie.svg" alt="Correcto en Internet Explorer" title="Correcto en Internet Explorer" width="33" height="32" />
         </div>
-
-        <div class="filaflex">
-          <div class="icono-navegadores">
-            <img src="../varios/iconos/icono-gc.svg" alt="Correcto en Chrome" title="Correcto en Chrome" width="32" height="32" />
-            <img src="../varios/iconos/icono-ff-X.svg" alt="Incorrecto en Firefox" title="Incorrecto en Firefox" width="44" height="32" />
-            <img src="../varios/iconos/icono-ie.svg" alt="Correcto en Internet Explorer" title="Correcto en Internet Explorer" width="33" height="32" />
-          </div>
-          <div class="columnaflex">
-            <div class="codigo">
-              <pre>
+        <div class="columnaflex">
+          <div class="codigo">
+            <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;?xml-stylesheet href="ejemplo-dif-nav-01.css" title="Estilo"?&gt;
 &lt;listas&gt;
@@ -80,9 +80,9 @@
   &lt;/lista&gt;l
 &lt;/listas&gt;</code>
 </pre>
-            </div>
-            <div class="codigo">
-              <pre>
+          </div>
+          <div class="codigo">
+            <pre>
 <code class="language-css">lista {
   display: block;
   margin-bottom: 10px;
@@ -94,37 +94,37 @@ elemento {
   margin-left: 20px;
 }</code>
 </pre>
-            </div>
           </div>
-          <div class="resultado-object"><object type="application/xml" data="../ejemplos/ejemplo-dif-nav-01.xml">ERROR (no puede mostrarse el objeto)</object></div>
-          <div class="icono-enlace"><a href="../ejemplos/ejemplo-dif-nav-01.xml"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
         </div>
-      </section>
+        <div class="resultado-object"><object type="application/xml" data="../ejemplos/ejemplo-dif-nav-01.xml">ERROR (no puede mostrarse el objeto)</object></div>
+        <div class="icono-enlace"><a href="../ejemplos/ejemplo-dif-nav-01.xml"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+      </div>
+    </section>
 
-      <section id="class-id">
-        <h3>Los atributos <span class="html-atri">class</span> e <span class="html-atri">id</span></h3>
+    <section id="class-id">
+      <h3>Los atributos <span class="html-atri">class</span> e <span class="html-atri">id</span></h3>
 
-        <p>Los navegadores Firefox, Google Chrome e Internet Explorer se comportan cada uno de una manera cuando un documento XML incluye atributos <span class="html-atri">class</span> e <span class="html-atri">id</span> y la hoja de estilo hace referencia a ellos mediante los selectores almohadilla y punto, como muestra el ejemplo siguiente:</p>
+      <p>Los navegadores Firefox, Google Chrome e Internet Explorer se comportan cada uno de una manera cuando un documento XML incluye atributos <span class="html-atri">class</span> e <span class="html-atri">id</span> y la hoja de estilo hace referencia a ellos mediante los selectores almohadilla y punto, como muestra el ejemplo siguiente:</p>
 
-        <p><strong>Nota</strong>: No sé si está definido en alguna recomendación que es lo que tendrían que hacer los navegadores en este caso.</p>
+      <p><strong>Nota</strong>: No sé si está definido en alguna recomendación que es lo que tendrían que hacer los navegadores en este caso.</p>
 
 
-        <div class="filaflex cabecera">
-          <div class="icono-navegadores-vacio"><img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="40" height="4" /></div>
-          <div>XML</div>
-          <div>CSS</div>
-          <div>Resultado</div>
-          <div class="icono-enlace">Enlace</div>
+      <div class="filaflex cabecera">
+        <div class="icono-navegadores-vacio"><img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="40" height="4" /></div>
+        <div>XML</div>
+        <div>CSS</div>
+        <div>Resultado</div>
+        <div class="icono-enlace">Enlace</div>
+      </div>
+
+      <div class="filaflex">
+        <div class="icono-navegadores">
+          <img src="../varios/iconos/icono-gc-X.svg" alt="Incorrecto en Chrome" title="Incorrecto en Chrome" width="44" height="32" />
+          <img src="../varios/iconos/icono-ff-X.svg" alt="Incorrecto en Firefox" title="Incorrecto en Firefox" width="44" height="32" />
+          <img src="../varios/iconos/icono-ie-X.svg" alt="Incorrecto en Internet Explorer" title="Incorrecto en Internet Explorer" width="44" height="32" />
         </div>
-
-        <div class="filaflex">
-          <div class="icono-navegadores">
-            <img src="../varios/iconos/icono-gc-X.svg" alt="Incorrecto en Chrome" title="Incorrecto en Chrome" width="44" height="32" />
-            <img src="../varios/iconos/icono-ff-X.svg" alt="Incorrecto en Firefox" title="Incorrecto en Firefox" width="44" height="32" />
-            <img src="../varios/iconos/icono-ie-X.svg" alt="Incorrecto en Internet Explorer" title="Incorrecto en Internet Explorer" width="44" height="32" />
-          </div>
-          <div class="codigo">
-            <pre>
+        <div class="codigo">
+          <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 <span class="codigo-resaltado">&lt;?xml-stylesheet <span class="attr-name">href</span>=<span class="attr-value">"ejemplo.css"</span>?&gt;</span>
 &lt;libro&gt;
@@ -133,9 +133,9 @@ elemento {
   &lt;fechaPublicacion año="1973"/&gt;
 &lt;/libro&gt;</code>
 </pre>
-          </div>
-          <div class="codigo">
-            <pre>
+        </div>
+        <div class="codigo">
+          <pre>
 <code class="lang-css">.color {
   color: red;
 }
@@ -144,56 +144,56 @@ elemento {
   font-size: 200%;
 }</code>
 </pre>
-          </div>
-          <div class="resultado-object"><object type="application/xml" data="../ejemplos/ejemplos-css/ejemplo-css-5-1.xml">ERROR (no puede mostrarse el objeto)</object></div>
-          <div class="icono-enlace"><a href="../ejemplos/ejemplos-css/ejemplo-css-5-1.xml"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
         </div>
+        <div class="resultado-object"><object type="application/xml" data="../ejemplos/ejemplos-css/ejemplo-css-5-1.xml">ERROR (no puede mostrarse el objeto)</object></div>
+        <div class="icono-enlace"><a href="../ejemplos/ejemplos-css/ejemplo-css-5-1.xml"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+      </div>
 
-        <div class="filaflex mcl-centrado">
-          <div>
-            <p>Firefox</p>
-            <p class="captura">
-              <img src="../img/ejemplos/css/css-5-1-ff.png" alt="Ejemplo Documento xml en Firefox" width="365" height="50" />
-            </p>
-          </div>
-          <div>
-            <p>Google Chrome</p>
-            <p class="captura">
-              <img src="../img/ejemplos/css/css-5-1-gc.png" alt="Ejemplo Documento xml en Google Chrome" width="365" height="50" />
-            </p>
-          </div>
-          <div>
-            <p>Internet Explorer</p>
-            <p class="captura">
-              <img src="../img/ejemplos/css/css-5-1-ie.png" alt="Ejemplo Documento xml en Internet Explorer" width="365" height="50" />
-            </p>
-          </div>
+      <div class="filaflex mcl-centrado">
+        <div>
+          <p>Firefox</p>
+          <p class="captura">
+            <img src="../img/ejemplos/css/css-5-1-ff.png" alt="Ejemplo Documento xml en Firefox" width="365" height="50" />
+          </p>
         </div>
-      </section>
+        <div>
+          <p>Google Chrome</p>
+          <p class="captura">
+            <img src="../img/ejemplos/css/css-5-1-gc.png" alt="Ejemplo Documento xml en Google Chrome" width="365" height="50" />
+          </p>
+        </div>
+        <div>
+          <p>Internet Explorer</p>
+          <p class="captura">
+            <img src="../img/ejemplos/css/css-5-1-ie.png" alt="Ejemplo Documento xml en Internet Explorer" width="365" height="50" />
+          </p>
+        </div>
+      </div>
     </section>
+  </section>
 
-    <section id="xslt">
-      <h2>XSLT</h2>
+  <section id="xslt">
+    <h2>XSLT</h2>
 
-      <section id="enlazar-xslt">
-        <h3>Documentos enlazados con hojas de estilo XSLT</h3>
+    <section id="enlazar-xslt">
+      <h3>Documentos enlazados con hojas de estilo XSLT</h3>
 
-        <p>Si un documento XML enlaza con una hoja de estilo XSLT, al abrir el documento con Firefox e Internet Explorer se muestra siempre el documento transformado, mientras que Google Chrome sólo muestra el documento transformado si se ha servido desde un servidor web (http://...). Si el documento se abre directamente como un archivo local (file://...), Google Chrome muestra un página en blanco.</p>
+      <p>Si un documento XML enlaza con una hoja de estilo XSLT, al abrir el documento con Firefox e Internet Explorer se muestra siempre el documento transformado, mientras que Google Chrome sólo muestra el documento transformado si se ha servido desde un servidor web (http://...). Si el documento se abre directamente como un archivo local (file://...), Google Chrome muestra un página en blanco.</p>
 
-        <hr class="corta" />
+      <hr class="corta" />
 
-        <p>Si un documento XML enlaza con una hoja de estilo XSLT, al abrir el documento con Firefox e Internet Explorer se muestra siempre el documento transformado, mientras que Google Chrome sólo lo muestra si el documento resultante está bien formado.</p>
+      <p>Si un documento XML enlaza con una hoja de estilo XSLT, al abrir el documento con Firefox e Internet Explorer se muestra siempre el documento transformado, mientras que Google Chrome sólo lo muestra si el documento resultante está bien formado.</p>
 
-        <p><strong>Nota</strong>: Google Chrome 42 parece mostrarlo aunque no esté bien formado.</p>
-      </section>
+      <p><strong>Nota</strong>: Google Chrome 42 parece mostrarlo aunque no esté bien formado.</p>
     </section>
+  </section>
 
-    <footer>
-      <p class="ultmod">Última modificación de esta página: 11 de mayo de 2015</p>
+  <footer>
+    <p class="ultmod">Última modificación de esta página: 11 de mayo de 2015</p>
 
-      <p class="licencia"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../varios/iconos/icono-cc-by-sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
-        Esta página forma parte del curso <a href="http://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a> por <a href="http://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
-        que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.</p>
-    </footer>
-  </body>
+    <p class="licencia"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../varios/iconos/icono-cc-by-sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
+      Esta página forma parte del curso <a href="http://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a> por <a href="http://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
+      que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.</p>
+  </footer>
+</body>
 </html>

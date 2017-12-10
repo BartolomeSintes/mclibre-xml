@@ -1,62 +1,62 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Examen 01/06/12 (tarde). Exámenes. XML. Bartolomé Sintes Marco</title>
-    <link href="../../varios/xml.css" rel="stylesheet" type="text/css" title="mclibre" />
-    <link rel="icon" href="../../varios/favicon.ico" />
-    <link rel="stylesheet" href="../../varios/prism-xml.css" />
-    <script src="../../varios/prism.js"></script>
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Examen 01/06/12 (tarde). Exámenes. XML. Bartolomé Sintes Marco</title>
+  <link href="../../varios/xml.css" rel="stylesheet" type="text/css" title="mclibre" />
+  <link rel="icon" href="../../varios/favicon.ico" />
+  <link rel="stylesheet" href="../../varios/prism-xml.css" />
+  <script src="../../varios/prism.js"></script>
+</head>
 
-  <body>
-    <h1>Examen 1 de junio de 2012 (tarde)</h1>
+<body>
+  <h1>Examen 1 de junio de 2012 (tarde)</h1>
 
-    <nav>
-      <p>
-        <a href="../../index.html"><img src="../../varios/iconos/icono-xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48" /></a>
-        <a href="#"><img src="../../varios/iconos/icono-arrow-circle-up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36" /></a>
-        <a href="../examenes.html"><img src="../../varios/iconos/icono-school.svg" alt="Exámenes" title="Exámenes" width="36" height="36" /></a>
-      </p>
+  <nav>
+    <p>
+      <a href="../../index.html"><img src="../../varios/iconos/icono-xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48" /></a>
+      <a href="#"><img src="../../varios/iconos/icono-arrow-circle-up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36" /></a>
+      <a href="../examenes.html"><img src="../../varios/iconos/icono-school.svg" alt="Exámenes" title="Exámenes" width="36" height="36" /></a>
+    </p>
 
-      <div class="toc">
-        <h2>Examen 01/06/12</h2>
+    <div class="toc">
+      <h2>Examen 01/06/12</h2>
 
-        <ol>
-          <li><a href="#ejercicio-1">WFD</a></li>
-          <li><a href="#ejercicio-2">DTD</a></li>
-          <li><a href="#ejercicio-3">XPath</a></li>
-          <li><a href="#ejercicio-4">XSLT</a></li>
-        </ol>
-      </div>
-    </nav>
+      <ol>
+        <li><a href="#ejercicio-1">WFD</a></li>
+        <li><a href="#ejercicio-2">DTD</a></li>
+        <li><a href="#ejercicio-3">XPath</a></li>
+        <li><a href="#ejercicio-4">XSLT</a></li>
+      </ol>
+    </div>
+  </nav>
 
-    <p>Resuelva los siguientes ejercicios guardando las respuestas en una carpeta con su nombre y apellidos.</p>
+  <p>Resuelva los siguientes ejercicios guardando las respuestas en una carpeta con su nombre y apellidos.</p>
 
-    <section id="ejercicio-1">
-      <h2>Ejercicio 1. Documentos bien formados</h2>
+  <section id="ejercicio-1">
+    <h2>Ejercicio 1. Documentos bien formados</h2>
 
-      <p>El siguiente documento no está bien formado porque contiene errores. Corrija los errores (si para corregir algún error hay que inventarse una etiqueta o atributo, utilice un nombre que tenga relación con la información contenida en el documento).</p>
+    <p>El siguiente documento no está bien formado porque contiene errores. Corrija los errores (si para corregir algún error hay que inventarse una etiqueta o atributo, utilice un nombre que tenga relación con la información contenida en el documento).</p>
 
-      <div class="codigo">
-        <pre>
+    <div class="codigo">
+      <pre>
 <code class="xml-malformado">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;invento codigo=I001&gt;fonógrafo
 &lt;inventor id&gt;Thomas Alva Edison
 &lt;/invento&gt;
 &lt;/inventos&gt;</code>
 </pre>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="ejercicio-2">
-      <h2>Ejercicio 2. DTD</h2>
+  <section id="ejercicio-2">
+    <h2>Ejercicio 2. DTD</h2>
 
-      <p>Dada la siguiente DTD:</p>
+    <p>Dada la siguiente DTD:</p>
 
-      <div class="codigo">
-        <pre>
+    <div class="codigo">
+      <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;!DOCTYPE paises [
   &lt;!ELEMENT paises (pais*)&gt;
@@ -70,23 +70,23 @@
   &lt;!ATTLIST gobierno sistema NMTOKEN #IMPLIED&gt;
 ]&gt;</code>
 </pre>
-      </div>
+    </div>
 
-      <p>... escriba un documento válido que contenga la siguiente información:</p>
-      <ul>
-        <li>España es una monarquía, con una superficie de 504.645 km², tiene frontera con Francia y su moneda es el euro y era la peseta.</li>
-        <li>Francia es un república , con una superficie de 675.417 km², tiene frontera con España y Suiza y su moneda es el euro y era el franco francés.</li>
-        <li>Suiza es un república , con una superficie de 41.290 km², tiene frontera con Francia y su moneda es el franco suizo.</li>
-      </ul>
-    </section>
+    <p>... escriba un documento válido que contenga la siguiente información:</p>
+    <ul>
+      <li>España es una monarquía, con una superficie de 504.645 km², tiene frontera con Francia y su moneda es el euro y era la peseta.</li>
+      <li>Francia es un república , con una superficie de 675.417 km², tiene frontera con España y Suiza y su moneda es el euro y era el franco francés.</li>
+      <li>Suiza es un república , con una superficie de 41.290 km², tiene frontera con Francia y su moneda es el franco suizo.</li>
+    </ul>
+  </section>
 
-    <section id="ejercicio-3">
-      <h2>Ejercicio 3. XPath</h2>
+  <section id="ejercicio-3">
+    <h2>Ejercicio 3. XPath</h2>
 
-      <p>Dado el siguiente documento XML, escriba las expresiones XPath que devuelvan <strong>exactamente</strong> la respuesta indicadas en los cuadros. Escriba todas las expresiones XPath en un único fichero NAA_1.txt, numerando las respuestas.</p>
+    <p>Dado el siguiente documento XML, escriba las expresiones XPath que devuelvan <strong>exactamente</strong> la respuesta indicadas en los cuadros. Escriba todas las expresiones XPath en un único fichero NAA_1.txt, numerando las respuestas.</p>
 
-      <div class="codigo">
-        <pre>
+    <div class="codigo">
+      <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;tebeos&gt;
   &lt;autor&gt;Bartolomé Sintes Marco&lt;/autor&gt;
@@ -165,86 +165,86 @@
   &lt;/albumes&gt;
 &lt;/tebeos&gt;</code>
 </pre>
-      </div>
-      <ol>
-        <li>Fecha de la última modificación del documento:
-          <div class="resultado-xpath">
-            <pre><code class="language-xml">20120601</code></pre>
-          </div>
-        </li>
+    </div>
+    <ol>
+      <li>Fecha de la última modificación del documento:
+        <div class="resultado-xpath">
+          <pre><code class="language-xml">20120601</code></pre>
+        </div>
+      </li>
 
-        <li>Fecha de nacimiento de los dibujantes:
-          <div class="resultado-xpath">
-            <pre>
+      <li>Fecha de nacimiento de los dibujantes:
+        <div class="resultado-xpath">
+          <pre>
 <code class="language-xml">&lt;nacimientoFecha&gt;1927&lt;/nacimientoFecha&gt;
 &lt;nacimientoFecha&gt;1923&lt;/nacimientoFecha&gt;</code>
 </pre>
-          </div>
-        </li>
+        </div>
+      </li>
 
-        <li>Fecha de nacimiento de dibujantes y guionistas:
-          <div class="resultado-xpath">
-            <pre>
+      <li>Fecha de nacimiento de dibujantes y guionistas:
+        <div class="resultado-xpath">
+          <pre>
 <code class="language-xml">&lt;nacimientoFecha&gt;1927&lt;/nacimientoFecha&gt;
 &lt;nacimientoFecha&gt;1923&lt;/nacimientoFecha&gt;
 &lt;nacimientoFecha&gt;1926&lt;/nacimientoFecha&gt;</code>
 </pre>
-          </div>
-        </li>
+        </div>
+      </li>
 
-        <li>Nombre de los dibujantes nacidos en Francia:
-          <div class="resultado-xpath">
-            <pre><code class="language-xml">Albert Uderzo</code></pre>
-          </div>
-        </li>
+      <li>Nombre de los dibujantes nacidos en Francia:
+        <div class="resultado-xpath">
+          <pre><code class="language-xml">Albert Uderzo</code></pre>
+        </div>
+      </li>
 
-        <li>Nombre de los autores nacidos en Francia:
-          <div class="resultado-xpath">
-            <pre>
+      <li>Nombre de los autores nacidos en Francia:
+        <div class="resultado-xpath">
+          <pre>
 <code class="language-xml">&lt;nombre&gt;Albert Uderzo&lt;/nombre&gt;
 &lt;nombre&gt;René Goscinny&lt;/nombre&gt;</code>
 </pre>
-          </div>
-        </li>
+        </div>
+      </li>
 
-        <li>Títulos de los álbumes publicados antes de 1970:
-          <div class="resultado-xpath">
-            <pre>
+      <li>Títulos de los álbumes publicados antes de 1970:
+        <div class="resultado-xpath">
+          <pre>
 <code class="language-xml">Astérix, el galo
 Indulto para los Dalton</code>
 </pre>
-          </div>
-        </li>
+        </div>
+      </li>
 
-        <li>Nombre de los personajes que aparecen en "Astérix, el galo":
-          <div class="resultado-xpath">
-            <pre>
+      <li>Nombre de los personajes que aparecen en "Astérix, el galo":
+        <div class="resultado-xpath">
+          <pre>
 <code class="language-xml">Astérix
 Idéfix</code>
 </pre>
-          </div>
-        </li>
+        </div>
+      </li>
 
-        <li>Títulos de los álbumes dibujados por Albert Uderzo:
-          <div class="resultado-xpath">
-            <pre>
+      <li>Títulos de los álbumes dibujados por Albert Uderzo:
+        <div class="resultado-xpath">
+          <pre>
 <code class="language-xml">&lt;titulo&gt;Astérix, el galo&lt;/titulo&gt;
 &lt;titulo&gt;Obélix y compañia&lt;/titulo&gt;</code>
 </pre>
-          </div>
-        </li>
-      </ol>
-    </section>
+        </div>
+      </li>
+    </ol>
+  </section>
 
-    <section id="ejercicio-4">
-      <h2>Ejercicio 4. XSLT</h2>
+  <section id="ejercicio-4">
+    <h2>Ejercicio 4. XSLT</h2>
 
-      <p>Dado el siguiente documento XML, escriba y enlace las hojas de estilo XSLT que devuelvan la respuesta deseada (una para cada caso).</p>
+    <p>Dado el siguiente documento XML, escriba y enlace las hojas de estilo XSLT que devuelvan la respuesta deseada (una para cada caso).</p>
 
-      <p>Los nombres de los ficheros deben ser NAA_4-1.xml y NAA_4-1.xsl, etc.</p>
+    <p>Los nombres de los ficheros deben ser NAA_4-1.xml y NAA_4-1.xsl, etc.</p>
 
-      <div class="codigo">
-        <pre>
+    <div class="codigo">
+      <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;lenguajes fuente="http://www.wikipedia.org" fecha="2012"&gt;
   &lt;lenguaje&gt;
@@ -273,12 +273,12 @@ Idéfix</code>
   &lt;/lenguaje&gt;
 &lt;/lenguajes&gt;</code>
 </pre>
-      </div>
+    </div>
 
-      <ol>
-        <li>Nombres de los lenguajes
-          <div class="resultado-xslt">
-            <pre>
+    <ol>
+      <li>Nombres de los lenguajes
+        <div class="resultado-xslt">
+          <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;lenguajes&gt;
   &lt;lenguaje&gt;C&lt;/lenguaje&gt;
@@ -287,12 +287,12 @@ Idéfix</code>
   &lt;lenguaje&gt;XSLT&lt;/lenguaje&gt;
 &lt;/lenguajes&gt;</code>
 </pre>
-          </div>
-        </li>
+        </div>
+      </li>
 
-        <li>Explicación de los lenguajes en forma de página web:
-          <div class="resultado-xslt">
-            <pre>
+      <li>Explicación de los lenguajes en forma de página web:
+        <div class="resultado-xslt">
+          <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;html&gt;
   &lt;h1&gt;Lenguajes de programación&lt;/h1&gt;
@@ -302,12 +302,12 @@ Idéfix</code>
   &lt;p&gt;James Clark creó el lenguaje XSLT en 1998.&lt;/p&gt;
 &lt;/html&gt;</code>
 </pre>
-          </div>
-        </li>
+        </div>
+      </li>
 
-        <li>Otra explicación de los lenguajes en forma de página web:
-          <div class="resultado-xslt">
-            <pre>
+      <li>Otra explicación de los lenguajes en forma de página web:
+        <div class="resultado-xslt">
+          <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 &lt;html&gt;
   &lt;p&gt;El lenguaje C es compilado.&lt;/p&gt;
@@ -317,17 +317,17 @@ Idéfix</code>
   &lt;p&gt;Información obtenida de http://www.wikipedia.org en el año 2012&lt;/p&gt;
 &lt;/html&gt;</code>
 </pre>
-          </div>
-        </li>
-      </ol>
-    </section>
+        </div>
+      </li>
+    </ol>
+  </section>
 
-    <footer>
-      <p class="ultmod">Última modificación de esta página: 1 de junio de 2012</p>
+  <footer>
+    <p class="ultmod">Última modificación de esta página: 1 de junio de 2012</p>
 
-      <p class="licencia"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../../varios/iconos/icono-cc-by-sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
-        Esta página forma parte del curso <a href="http://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a> por <a href="http://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
-        que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.</p>
-    </footer>
-  </body>
+    <p class="licencia"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../../varios/iconos/icono-cc-by-sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
+      Esta página forma parte del curso <a href="http://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a> por <a href="http://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
+      que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.</p>
+  </footer>
+</body>
 </html>
