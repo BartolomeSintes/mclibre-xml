@@ -42,13 +42,135 @@
 
     <p>La Web Semántica fue una iniciativa del W3C creada en 2001 con el objetivo de que los datos disponibles en la Web pudieran ser procesados de forma automática. La idea era que la web de entonces, formada por documentos, se convirtiera en una web formada por datos con significado y que las máquinas pudieran procesar toda esa información.</p>
 
-    <p>Con esa idea se desarrollaron toda una serie de tecnologías (RDF, OWL, SPARQL, GDDRL), pero con el paso del tiempo el interés por la web semántica ha ido decayendo. En diciembre de 2013 los grupos de trabajo dedicados a la web semántica se integraron en la actividad del W3C <a href="https://www.w3.org/2013/data/">Data</a>, pero simplemente como grupo de interés (es decir, sin el objetivo de producir recomendaciones).</p>
+    <p>Con esa idea se desarrollaron toda una serie de tecnologías (RDF, OWL, SPARQL, GDDRL, etc.) que permitieran representar, codificar y consultar la información de forma automática.</p>
+
+    <p>La imagen siguiente (basada en una <a href="https://commons.wikimedia.org/wiki/File:Semantic_web_stack.svg">imagen de la Wikipedia</a>, basada a su vez en una <a href="https://www.w3.org/2007/Talks/0130-sb-W3CTechSemWeb/#(24)">imagen del W3C</a>) ilustra la relación entre estas tecnologías:</p>
+
+    <p class="mcl-centrado">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="405" height="405">
+        <rect height="35" width="395" y="5" x="5" stroke-width="3" stroke="black" fill="none" />
+        <text text-anchor="middle" font-size="14" y="28" x="201">Interfaz de usuario y aplicaciones</text>
+        <rect height="35" width="260" y="50" x="140" stroke-width="3" stroke="black" fill="#88aa00" />
+        <text text-anchor="middle" font-size="14" y="73" x="273">Confianza</text>
+        <path fill="#bcd35f" stroke="black" stroke-width="3" d="m95,95h260v80h-35v-45h-225l0,-35z" />
+        <text text-anchor="middle" font-size="14" y="117" x="225">Demostraciones</text>
+        <rect height="305" width="35" y="95" x="365" stroke-width="3" stroke="black" fill="#d4aa00" />
+        <text transform="rotate(90 384,248) " text-anchor="middle" font-size="14" y="253" x="384">Criptografía</text>
+        <rect height="35" width="260" y="140" x="50" stroke-width="3" stroke="black" fill="#bcd35f" />
+        <text text-anchor="middle" font-size="14" y="163" x="200">Lógica</text>
+        <rect height="80" width="80" y="185" x="5" stroke-width="3" stroke="black" fill="#e5ff80" />
+        <text text-anchor="middle" font-size="14" y="222" x="46">Consultas:</text>
+        <text text-anchor="middle" font-size="14" y="241" x="46" font-weight="bold">SPARQL</text>
+        <rect height="35" width="125" y="185" x="95" stroke-width="3" stroke="black" fill="#d2d2d2" />
+        <text text-anchor="middle" font-size="14" y="201" x="158">Ontologías:</text>
+        <text text-anchor="middle" font-size="14" y="215" x="158" font-weight="bold">OWL</text>
+        <rect height="35" width="125" y="185" x="230" stroke-width="3" stroke="black" fill="#d2d2d2" />
+        <text text-anchor="middle" font-size="14" y="201" x="288">Reglas:</text>
+        <text text-anchor="middle" font-size="14" y="215" x="288" font-weight="bold">RIF/SWRL</text>
+        <rect height="35" width="260" y="230" x="95" stroke-width="3" stroke="black" fill="#d2d2d2" />
+        <text text-anchor="middle" font-size="14" y="253" x="180">Taxonomías:</text>
+        <text text-anchor="middle" font-size="14" y="253" x="247" font-weight="bold">RDFS</text>
+        <rect height="35" width="350" y="275" x="5" stroke-width="3" stroke="black" fill="#d2d2d2" />
+        <text text-anchor="middle" font-size="14" y="298" x="140">Intercambio de datos:</text>
+        <text text-anchor="middle" font-size="14" y="298" x="231" font-weight="bold">RDF</text>
+        <rect height="35" width="350" y="320" x="5" stroke-width="3" stroke="black" fill="#d4aa00" />
+        <text text-anchor="middle" font-size="14" y="343" x="170">Sintaxis:</text>
+        <text text-anchor="middle" font-size="14" y="343" x="214" font-weight="bold">XML</text>
+        <rect height="35" width="170" y="365" x="5" stroke-width="3" stroke="black" fill="#aa0000" />
+        <text text-anchor="middle" font-size="13" y="388" x="70" stroke-width="0" stroke="black" fill="white">Identificadores:</text>
+        <text text-anchor="middle" font-size="13" y="388" x="133" stroke-width="0" stroke="black" fill="white" font-weight="bold">URI</text>
+        <rect height="35" width="170" y="365" x="185" stroke-width="3" stroke="black" fill="#aa0000" />
+        <text text-anchor="middle" font-size="13" y="388" x="239" stroke-width="0" stroke="black" fill="white">Juego caracteres:</text>
+        <text text-anchor="middle" font-size="13" y="388" x="323" stroke-width="0" stroke="black" fill="white" font-weight="bold">UNICODE</text>
+      </svg>
+    </p>
+
+    <p>Los grupos de trabajo creados por el W3C para desarrollar estas tecnologías aprobaron una primera generación de recomendaciones antes de 2010 y en el caso de las principales tecnologías aprobaron una segunda versión antes de 2014, pero los grupos se han ido cerrando una vez cumplida esa misión.</p>
+
+    <p class="mcl-centrado">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="850" viewBox="-50 -60 850 250">
+          <line x1="-50" y1="60" x2="950" y2="60" stroke-width="3" stroke="red" />
+          <line x1="0" y1="-30" x2="0" y2="190" stroke-width="2" stroke-dasharray="5,5" stroke="black" />
+          <text x="0" y="-40" text-anchor="middle" style="font-size: 100%">1995</text>
+          <line x1="150" y1="-30" x2="150" y2="190" stroke-width="2" stroke-dasharray="5,5" stroke="black" />
+          <text x="150" y="-40" text-anchor="middle" style="font-size: 100%">2000</text>
+          <line x1="300" y1="-30" x2="300" y2="190" stroke-width="2" stroke-dasharray="5,5" stroke="black" />
+          <text x="300" y="-40" text-anchor="middle" style="font-size: 100%">2005</text>
+          <line x1="450" y1="-30" x2="450" y2="190" stroke-width="2" stroke-dasharray="5,5" stroke="black" />
+          <text x="450" y="-40" text-anchor="middle" style="font-size: 100%">2010</text>
+          <line x1="600" y1="-30" x2="600" y2="190" stroke-width="2" stroke-dasharray="5,5" stroke="black" />
+          <text x="600" y="-40" text-anchor="middle" style="font-size: 100%">2015</text>
+          <line x1="750" y1="-30" x2="750" y2="190" stroke-width="2" stroke-dasharray="5,5" stroke="black" />
+          <text x="750" y="-40" text-anchor="middle" style="font-size: 100%">2020</text>
+
+          <text x="10" y="20" text-anchor="start" style="font-size: 100%">Inicio trabajos</text>
+          <text x="10" y="120" text-anchor="start" style="font-size: 100%">Aprobación recomendaciones</text>
+          <circle cx="126" cy="0" r="5" fill="red" />
+          <text x="126" y="-10" text-anchor="start" fill="red" style="font-size: 80%; font-weight: bold">RDF Schema</text>
+          <circle cx="216" cy="0" r="5" fill="red" />
+          <text x="216" y="-10" text-anchor="start" fill="red" style="font-size: 80%; font-weight: bold">RDF</text>
+          <circle cx="226" cy="40" r="5" fill="red" />
+          <text x="226" y="30" text-anchor="start" fill="red" style="font-size: 80%; font-weight: bold">OWL</text>
+          <circle cx="281" cy="0" r="5" fill="red" />
+          <text x="281" y="-10" text-anchor="start" fill="red" style="font-size: 80%; font-weight: bold">SWRL</text>
+          <circle cx="294" cy="40" r="5" fill="red" />
+          <text x="294" y="30" text-anchor="start" fill="red" style="font-size: 80%; font-weight: bold">SPARQL</text>
+          <circle cx="339" cy="0" r="5" fill="red" />
+          <text x="339" y="-10" text-anchor="start" fill="red" style="font-size: 80%; font-weight: bold">RDFa</text>
+          <circle cx="406" cy="0" r="5" fill="red" />
+          <text x="406" y="-10" text-anchor="end" fill="red" style="font-size: 80%; font-weight: bold">RIF</text>
+          <circle cx="426" cy="40" r="5" fill="red" />
+          <text x="426" y="30" text-anchor="end" fill="red" style="font-size: 80%; font-weight: bold">OWL 2</text>
+          <circle cx="444" cy="0" r="5" fill="red" />
+          <text x="444" y="-10" text-anchor="middle" fill="red" style="font-size: 80%; font-weight: bold">SPARQL 1.1</text>
+          <circle cx="474" cy="40" r="5" fill="red" />
+          <text x="474" y="30" text-anchor="middle" fill="red" style="font-size: 80%; font-weight: bold">R2RML</text>
+          <circle cx="489" cy="0" r="5" fill="red" />
+          <text x="489" y="-10" text-anchor="start" fill="red" style="font-size: 80%; font-weight: bold">RDF 1.1</text>
+          <circle cx="499" cy="40" r="5" fill="red" />
+          <text x="499" y="30" text-anchor="start" fill="red" style="font-size: 80%; font-weight: bold">RDFa 1.1</text>
+          <circle cx="584" cy="0" r="5" fill="red" />
+          <text x="584" y="-10" text-anchor="start" fill="red" style="font-size: 80%; font-weight: bold">RDF Schema 1.1</text>
+
+          <circle cx="274" cy="90" r="5" fill="red" />
+          <text x="274" y="80" text-anchor="start" fill="red" style="font-size: 80%; font-weight: bold">RDF Schema</text>
+          <circle cx="274" cy="130" r="5" fill="red" />
+          <text x="274" y="120" text-anchor="start" fill="red" style="font-size: 80%; font-weight: bold">RDF</text>
+          <circle cx="274" cy="170" r="5" fill="red" />
+          <text x="274" y="160" text-anchor="start" fill="red" style="font-size: 80%; font-weight: bold">OWL</text>
+          <circle cx="404" cy="90" r="5" fill="red" />
+          <text x="404" y="80" text-anchor="start" fill="red" style="font-size: 80%; font-weight: bold">SPARQL</text>
+          <circle cx="444" cy="130" r="5" fill="red" />
+          <text x="444" y="120" text-anchor="start" fill="red" style="font-size: 80%; font-weight: bold">OWL 2</text>
+          <circle cx="524" cy="90" r="5" fill="red" />
+          <text x="524" y="80" text-anchor="end" fill="red" style="font-size: 80%; font-weight: bold">RDFa</text>
+          <circle cx="532" cy="130" r="5" fill="red" />
+          <text x="532" y="120" text-anchor="middle" fill="red" style="font-size: 80%; font-weight: bold">R2RML</text>
+          <circle cx="544" cy="170" r="5" fill="red" />
+          <text x="544" y="160" text-anchor="end" fill="red" style="font-size: 80%; font-weight: bold">RIF</text>
+          <circle cx="546" cy="90" r="5" fill="red" />
+          <text x="546" y="80" text-anchor="start" fill="red" style="font-size: 80%; font-weight: bold">SPARQL 1.1</text>
+          <circle cx="574" cy="130" r="5" fill="red" />
+          <text x="574" y="120" text-anchor="start" fill="red" style="font-size: 80%; font-weight: bold">RDF 1.1</text>
+          <circle cx="574" cy="170" r="5" fill="red" />
+          <text x="574" y="160" text-anchor="start" fill="red" style="font-size: 80%; font-weight: bold">RDF Schema 1.1</text>
+
+        </svg>
+      </p>
+
+      <p>Desgraciadamente, con el paso del tiempo el interés por la web semántica ha ido decayendo. Las tecnologías desarrolladas para la web semántica se emplean en muchos sectores y se han integrado en el arsenal de técnicas que se engloban bajo el término Inteligencia Artifical, pero no tienen el papel central que esperaba el W3C.</p>
+
+      <p>En diciembre de 2013 los grupos de trabajo dedicados a la web semántica se integraron en la actividad del W3C <a href="https://www.w3.org/2013/data/">Data</a>, pero simplemente como grupo de interés (es decir, sin el objetivo de producir recomendaciones).</p>
+
+    <p>A posteriori, es fácil reconocer que el objetivo de la web semántica era demasiado ambicioso y que las herramientas propuestas no eran suficientes para poder conseguir su objetivo. Pero tampoco podemos olvidar que la base de la web semántica era el XML y por lo menos desde 2003 la web realmente existente se ha ido alejando cada vez más del XML, lo que imposibilitaba en la práctica todo el proyecto.</p>
 
     <p>Referencias:</p>
     <ul>
       <li><a href="https://www-sop.inria.fr/acacia/cours/essi2006/Scientific%20American_%20Feature%20Article_%20The%20Semantic%20Web_%20May%202001.pdf">Artículo La Web Semántica, de Berners-Lee en Investigación y Ciencia (marzo 2001)</a></li>
       <li><a href="https://people.well.com/user/doctorow/metacrap.htm">Artículo Metacrap, de Cory Doctorow (agosto 2001)</a>, exponiendo las dudas sobre la posiblidad de construir la web semántica</li>
       <li><a href="https://iswc2017.semanticweb.org/">16th International Semantic Web Conference</a> (ISWC 2017, Viena, octubre de 2017)</li>
+      <li><a href="https://www.w3.org/blog/data/">Novedades de W3C Data Activity</a></li>
+      <li><a href="https://www.w3.org/2001/sw/wiki/Main_Page">W3C Semantic Web Wiki</a></li>
     </ul>
   </section>
 
