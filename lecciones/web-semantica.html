@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web semántica. XML. Bartolomé Sintes Marco</title>
+  <link href="../varios/xml.css" rel="stylesheet" type="text/css" title="mclibre" />
+  <link rel="icon" href="../varios/favicon.ico" />
+</head>
+
+<body>
+  <h1>La Web Semántica</h1>
+
+  <nav>
+    <p>
+      <a href="../index.html"><img src="../varios/iconos/icono-xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48" /></a>
+      <a href="#"><img src="../varios/iconos/icono-arrow-circle-up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36" /></a>
+    </p>
+
+    <div class="toc">
+      <h2>Web semántica</h2>
+
+      <ul>
+        <li><a href="#web-semantica">Web semántica</a></li>
+        <li><a href="#recomendaciones">Recomendaciones</a>
+          <ul>
+            <li><a href="#rdf">RDF</a></li>
+            <li><a href="#owl">OWL</a></li>
+            <li><a href="#sparql">SPARQL</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <p>En esta lección se comentan las normas y recomendaciones relacionadas con la web semántica (RDF, OWL, SPARQL, etc.). Las versiones obsoletas se encuentran en la página <a href="xml-normas-obsoletas.html">Normas y recomendaciones obsoletas</a>. Las normas y recomendaciones actuales relacionadas con el XML (XML, XSL, XQuery, etc.) se encuentran en la página <a href="xml-normas.html">Normas y recomendaciones XML</a></p>
+
+  <p class="incompleto"><img src="../varios/iconos/icono-en-construccion.svg" alt="En construcción" title="En construcción" width="55" height="48" />Esta lección se encuentra en elaboración.</p>
+
+  <section id="web-semantica">
+    <h2>La Web Semántica</h2>
+
+    <p>La Web Semántica fue una iniciativa del W3C creada en 2001 con el objetivo de que los datos disponibles en la Web pudieran ser procesados de forma automática. La idea era que la web de entonces, formada por documentos, se convirtiera en una web formada por datos con significado y que las máquinas pudieran procesar toda esa información.</p>
+
+    <p>Con esa idea se desarrollaron toda una serie de tecnologías (RDF, OWL, SPARQL, GDDRL), pero con el paso del tiempo el interés por la web semántica ha ido decayendo. En diciembre de 2013 los grupos de trabajo dedicados a la web semántica se integraron en la actividad del W3C <a href="https://www.w3.org/2013/data/">Data</a>, pero simplemente como grupo de interés (es decir, sin el objetivo de producir recomendaciones).</p>
+
+    <p>Referencias:</p>
+    <ul>
+      <li><a href="https://www-sop.inria.fr/acacia/cours/essi2006/Scientific%20American_%20Feature%20Article_%20The%20Semantic%20Web_%20May%202001.pdf">Artículo La Web Semántica, de Berners-Lee en Investigación y Ciencia (marzo 2001)</a></li>
+      <li><a href="https://people.well.com/user/doctorow/metacrap.htm">Artículo Metacrap, de Cory Doctorow (agosto 2001)</a>, exponiendo las dudas sobre la posiblidad de construir la web semántica</li>
+      <li><a href="https://iswc2017.semanticweb.org/">16th International Semantic Web Conference</a> (ISWC 2017, Viena, octubre de 2017)</li>
+    </ul>
+  </section>
+
+  <section id="recomendaciones">
+    <h2>Normas y recomendaciones Web semántica</h2>
+
+    <p>En este apartado se comentan las últimas versiones de las recomendaciones. Las versiones obsoletas se comentan en el apartado <a href="xml-normas-obsoletas.html">Versiones obsoletas</a>.</p>
+
+    <p>Actividad Data en el W3C: <a href="https://www.w3.org/2013/data/">https://www.w3.org/2013/data/</a> </p>
+
+    <section id="rdf">
+      <h3>RDF (Resource Description Framework)</h3>
+
+      <p>Grupo de trabajo <strong>RDF</strong> en el W3C: <a href="https://www.w3.org/2011/01/rdf-wg-charter">Plan de trabajo (2011-2014)</a></p>
+
+      <p>El grupo de trabajo RDF se cerró en julio de 2014. El grupo de trabajo RDF publicó las siguientes recomendaciones y notas:</p>
+
+      <p>Recomendaciones:</p>
+      <ul>
+        <li>febrero de 2014: <a href="https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/">RDF 1.1 Concepts and Abstract Syntax</a>, editada por Richard Cyganiak, David Wood y Markus Lanthaler</li>
+        <li>febrero de 2014: <a href="https://www.w3.org/TR/2014/REC-rdf11-mt-20140225/">RDF 1.1 Semantics</a>, editada por Patrick J. Hayes y Peter F. Patel-Schneider</li>
+        <li>enero de 2014: <a href="https://www.w3.org/TR/2014/REC-json-ld-20140116/">JSON-LD 1.0 (A JSON-based Serialization for Linked Data)</a>, editada por Manu Sporny y otros</li>
+        <li>enero de 2014: <a href="https://www.w3.org/TR/2014/REC-json-ld-api-20140116/">JSON-LD 1.0 Processing Algorithms and API</a>, editada por Dave Longley y otros</li>
+        <li>febrero de 2014: <a href="https://www.w3.org/TR/2014/REC-turtle-20140225/">RDF 1.1 Turtle (Terse RDF Triple Language)</a>, editada por Eric Prud'hommeaux y Gavin Carothers</li>
+        <li>febrero de 2014: <a href="https://www.w3.org/TR/2014/REC-trig-20140225/">RDF 1.1 TriG (RDF Dataset Language)</a>, editada por Chris Bizer y Richard Cyganiak</li>
+        <li>febrero de 2014: <a href="https://www.w3.org/TR/2014/REC-n-triples-20140225/">RDF 1.1 N-Triples (A line-based syntax for an RDF graph)</a>, editada por Gavin Carothers y Andy Seaborne</li>
+        <li>febrero de 2014: <a href="https://www.w3.org/TR/2014/REC-n-quads-20140225/">RDF 1.1 N-Quads (A line-based syntax for RDF datasets)</a>, editada por Gavin Carothers</li>
+        <li>febrero de 2014: <a href="https://www.w3.org/TR/2014/REC-rdf-syntax-grammar-20140225/">RDF 1.1 XML Syntax</a>, editada por Fabien Gandon y Guus Schreiber</li>
+        <li>febrero de 2014: <a href="https://www.w3.org/TR/2014/REC-rdf-schema-20140225/">RDF Schema 1.1</a>, editada por Dan Brickley y R.V. Guha</li>
+      </ul>
+
+      <p>Notas del grupo de trabajo:</p>
+      <ul>
+        <li>junio de 2014: <a href="https://www.w3.org/TR/2014/NOTE-rdf11-primer-20140624/">RDF 1.1 Primer</a>, editada por Guus Schreiber e Yves Raimond</li>
+        <li>febrero de 2014: <a href="https://www.w3.org/TR/2014/NOTE-rdf11-new-20140225/">What’s New in RDF 1.1</a>, editada por David Wood</li>
+        <li>febrero de 2014: <a href="https://www.w3.org/TR/2014/NOTE-rdf11-datasets-20140225/">RDF 1.1: On Semantics of RDF Datasets</a>, editada por Antoine Zimmermann</li>
+        <li>febrero de 2014: <a href="https://www.w3.org/TR/2014/NOTE-rdf11-testcases-20140225/">RDF 1.1 Test Cases</a>, editada por Gregg Kellogg y Markus Lanthaler</li>
+        <li>noviembre de 2013: <a href="https://www.w3.org/TR/2013/NOTE-rdf-json-20131107/">RDF 1.1 JSON Alternate Serialization (RDF/JSON)</a>, editada por Ian Davis y otros</li>
+      </ul>
+    </section>
+
+    <section id="owl">
+      <h3>OWL (Web Ontology Language)</h3>
+
+      <p>Grupo de trabajo <strong>OWL</strong> en el W3C: <a href="https://www.w3.org/2007/OWL/wiki/OWL_Working_Group">Homepage</a> - <a href="https://www.w3.org/2007/06/OWLCharter.html">Plan de trabajo (2007-2009)</a></p>
+
+      <p>El grupo de trabajo OWL se cerró en diciembre de 2012. El grupo de trabajo OWL publicó las siguientes recomendaciones y notas:</p>
+
+      <p>Recomendaciones:</p>
+      <ul>
+        <li>diciembre de 2012: <a href="http://www.w3.org/TR/2012/REC-owl2-overview-20121211/">OWL 2 Web Ontology Language (Document Overview) (2º edición)</a>, editada por el grupo de trabajo OWL</li>
+        <li>diciembre de 2012: <a href="http://www.w3.org/TR/2012/REC-owl2-syntax-20121211/">OWL 2 Web Ontology Language (Structural Specification and Functional-Style Syntax) (2º edición)</a>, editada por Boris Motik y otros</li>
+        <li>diciembre de 2012: <a href="http://www.w3.org/TR/2012/REC-owl2-mapping-to-rdf-20121211/">OWL 2 Web Ontology Language (Mapping to RDF Graphs) (2º edición)</a>, editada por Peter F. Patel-Schneider y Boris Motik</li>
+        <li>diciembre de 2012: <a href="https://www.w3.org/TR/2012/REC-owl2-direct-semantics-20121211/">OWL 2 Web Ontology Language (Direct Semantics) (2º edición)</a>, editada por Boris Motik y otros</li>
+        <li>diciembre de 2012: <a href="http://www.w3.org/TR/2012/REC-owl2-rdf-based-semantics-20121211/">OWL 2 Web Ontology Language (RDF-Based Semantics) (2º edición)</a>, editada por Michael Schneider</li>
+        <li>diciembre de 2012: <a href="http://www.w3.org/TR/2012/REC-owl2-conformance-20121211/">OWL 2 Web Ontology Language (Conformance) (2º edición)</a>, editada por Michael Smith y otros</li>
+        <li>diciembre de 2012: <a href="http://www.w3.org/TR/2012/REC-owl2-profiles-20121211/">OWL 2 Web Ontology Language (Profiles) (2º edición)</a>, editada por Boris Motik y otros</li>
+        <li>diciembre de 2012: <a href="http://www.w3.org/TR/2012/REC-owl2-primer-20121211/">OWL 2 Web Ontology Language (Primer) (2º edición)</a>, editada por Pascal Hitzler y otros</li>
+        <li>diciembre de 2012: <a href="http://www.w3.org/TR/2012/REC-owl2-new-features-20121211/">OWL 2 Web Ontology Language (New Features and Rationale) (2º edición)</a>, editada por Christine Golbreich y Evan K. Wallace</li>
+        <li>diciembre de 2012: <a href="http://www.w3.org/TR/2012/REC-owl2-quick-reference-20121211/">OWL 2 Web Ontology Language (Quick Reference Guide) (2º edición)</a>, editada por Jie Bao y otros</li>
+        <li>diciembre de 2012: <a href="http://www.w3.org/TR/2012/REC-owl2-xml-serialization-20121211/">OWL 2 Web Ontology Language (XML Serialization) (2º edición)</a>, editada por Boris Motik y otros</li>
+        <li>diciembre de 2012: <a href="http://www.w3.org/TR/2012/REC-rdf-plain-literal-20121211/">rdf:PlainLiteral: A Datatype for RDF Plain Literals (2º edición)</a>, editada por Jie Bao y otros</li>
+      </ul>
+
+      <p>Notas del grupo de trabajo:</p>
+      <ul>
+        <li>diciembre de 2012: <a href="http://www.w3.org/TR/2012/NOTE-owl2-manchester-syntax-20121211/">OWL 2 Web Ontology Language (Manchester Syntax) (2º edición)</a>, editada por Matthew Horridge y Peter F. Patel-Schneider [Nota del grupo de trabajo]</li>
+        <li>diciembre de 2012: <a href="http://www.w3.org/TR/2012/NOTE-owl2-dr-linear-20121211/">OWL 2 Web Ontology Language (Data Range Extension: Linear Equations) (2º edición)</a>, editada por Bijan Parsia y Uli Sattler</li>
+      </ul>
+    </section>
+
+    <section id="sparql">
+      <h3>SPARQL (SPARQL Protocol and RDF Query Language)</h3>
+
+      <p>Grupo de trabajo <strong>SPARQL</strong> en el W3C: <a href="https://www.w3.org/2009/sparql/wiki/Main_Page">Homepage</a> - <a href="https://www.w3.org/2011/05/sparql-charter">Plan de trabajo (2011-2013) - </a> - <a href="https://www.w3.org/2009/05/sparql-phase-II-charter.html">Plan de trabajo (2009-2011) - </a></p>
+
+      <p>El grupo de trabajo SPARQL se cerró en 2013 [fecha no confirmada]. El grupo de trabajo SPARQL publicó las siguientes recomendaciones:</p>
+      <ul>
+        <li>marzo de 2013: <a href="https://www.w3.org/TR/2013/REC-sparql11-overview-20130321/">SPARQL 1.1 Overview</a>, editada por el grupo de trabajo SPARQL</li>
+        <li>marzo de 2013: <a href="https://www.w3.org/TR/2013/REC-sparql11-query-20130321/">SPARQL 1.1 Query Language</a>, editada por Steve Harris y Andy Seaborne</li>
+        <li>marzo de 2013: <a hrf="https://www.w3.org/TR/2013/REC-sparql11-update-20130321/">SPARQL 1.1 Update</a>, editada por Paula Gearon y otros</li>
+        <li>marzo de 2013: <a href="https://www.w3.org/TR/2013/REC-sparql11-service-description-20130321/">SPARQL 1.1 Service Description</a>, editada por Gregory Todd Williams</li>
+        <li>marzo de 2013: <a href="https://www.w3.org/TR/2013/REC-sparql11-federated-query-20130321/">SPARQL 1.1 Federated Query</a>, editada por Eric Prud'hommeaux y Carlos Buil-Aranda</li>
+        <li>marzo de 2013: <a href="https://www.w3.org/TR/2013/REC-sparql11-results-json-20130321/">SPARQL 1.1 Query Results JSON Format</a>, editada por Andy Seaborne</li>
+        <li>marzo de 2013: <a href="https://www.w3.org/TR/2013/REC-sparql11-results-csv-tsv-20130321/">SPARQL 1.1 Query Results CSV and TSV Formats</a>, editada por Andy Seaborne</li>
+        <li>marzo de 2013: <a href="https://www.w3.org/TR/2013/REC-rdf-sparql-XMLres-20130321/">SPARQL Query Results XML Format (2º edición)</a>, editada por Sandro Hawke</li>
+        <li>marzo de 2013: <a href="https://www.w3.org/TR/2013/REC-sparql11-entailment-20130321/">SPARQL 1.1 Entailment Regimes</a>, editada por Birte Glimm y Chimezie Ogbuji</li>
+        <li>marzo de 2013: <a href="https://www.w3.org/TR/2013/REC-sparql11-protocol-20130321/">SPARQL 1.1 Protocol</a>, editada por Lee Feigenbaum y otros</li>
+        <li>marzo de 2013: <a href="https://www.w3.org/TR/2013/REC-sparql11-http-rdf-update-20130321/">SPARQL 1.1 Graph Store HTTP Protocol</a>, editada por Chimezie Ogbuji</li>
+      </ul>
+    </section>
+
+    <section id="grddl">
+      <h3>GRDDL (Gleaning Resource Descriptions from Dialects of Languages)</h3>
+
+      <p>Grupo de trabajo <strong>GRDDL</strong> en el W3C: <a href="https://www.w3.org/2001/sw/grddl-wg/">Homepage</a> - <a href="https://www.w3.org/2006/07/grddl-charter.html">Plan de trabajo (2006-2007)</a></p>
+
+      <p>El grupo de trabajo GRDDL se cerró en diciembre de 2008 <small>[<a href="https://lists.w3.org/Archives/Public/public-grddl-wg/2009Dec/0000.html">fuente</a>]</small>. El grupo de trabajo GRDDL publicó las siguientes recomendaciones y notas del grupo de trabajo:</p>
+
+      <p>Recomendaciones:</p>
+      <ul>
+        <li>septiembre de 2007: <a href="https://www.w3.org/TR/2007/REC-grddl-20070911/">Gleaning Resource Descriptions from Dialects of Languages (GRDDL)</a>, editada por Dan Connolly</li>
+        <li>septiembre de 2007: <a href="https://www.w3.org/TR/2007/REC-grddl-tests-20070911/">GRDDL Test Cases</a>, editada por Chimezie Ogbuji</li>
+      </ul>
+
+      <p>Notas del grupo de trabajo:</p>
+      <ul>
+        <li>abril de 2007: <a href="https://www.w3.org/TR/2007/NOTE-grddl-scenarios-20070406/">GRDDL Use Cases: Scenarios of extracting RDF data from XML documents</a>, editada por Fabien Gandon</li>
+        <li>junio de 2007: <a href="https://www.w3.org/TR/2007/NOTE-grddl-primer-20070628/">GRDDL Primer</a>, editada por Harry Halpin e Ian Davis</li>
+      </ul>
+    </section>
+  </section>
+
+  <footer>
+    <p class="ultmod">Última modificación de esta página: 17 de abril de 2018</p>
+
+    <p class="licencia"><a rel="license " href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../varios/iconos/icono-cc-by-sa.svg " alt="Licencia Creative Commons " title="Licencia Creative Commons BY-SA " width="120 " height="42 " /></a><br />
+      Esta página forma parte del curso <a href="http://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a> por <a href="http://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
+      que se distribuye bajo una <a rel="license " href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.</p>
+  </footer>
+</body>
+</html>
