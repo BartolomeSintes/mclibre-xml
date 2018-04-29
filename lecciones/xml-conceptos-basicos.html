@@ -1,0 +1,414 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conceptos básicos. XML. Bartolomé Sintes Marco</title>
+  <link href="../varios/xml.css" rel="stylesheet" type="text/css" title="mclibre" />
+  <link rel="icon" href="../varios/favicon.ico" />
+  <link rel="stylesheet" href="../varios/prism-xml.css" />
+  <script src="../varios/prism.js" async="async"></script>
+</head>
+
+<body>
+  <h1>Conceptos básicos de XML</h1>
+
+  <nav>
+    <p>
+      <a href="../index.html"><img src="../varios/iconos/icono-xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48" /></a>
+      <a href="#"><img src="../varios/iconos/icono-arrow-circle-up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36" /></a>
+    </p>
+
+    <div class="toc">
+      <h2>Conceptos básicos</h2>
+
+      <ul>
+        <li><a href="#xml-ejemplo">Ejemplo documento XML</a></li>
+        <li><a href="#xml-conceptos">Conceptos y vocabulario</a></li>
+        <li><a href="#xml-bien-formados">Documentos bien formados</a></li>
+        <li><a href="#xml-validos">Documentos válidos</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="xml-ejemplo">
+    <h2>Ejemplo de documento XML</h2>
+
+    <p>Un documento XML es similar a una página web, salvo que los nombres de las etiquetas y atributos no son los del HTML.</p>
+
+    <div class="codigo">
+      <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;paises&gt;
+  &lt;pais&gt;
+    &lt;nombre&gt;España&lt;/nombre&gt;
+    &lt;capital&gt;Madrid&lt;/capital&gt;
+  &lt;/pais&gt;
+  &lt;pais&gt;
+    &lt;nombre&gt;Francia&lt;/nombre&gt;
+    &lt;capital&gt;Paris&lt;/capital&gt;
+  &lt;/pais&gt;
+&lt;/paises&gt;</code>
+</pre>
+    </div>
+
+    <p>Por supuesto, la misma información se puede guardar con otra estructura:</p>
+
+    <div class="codigo">
+      <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;paises&gt;
+  &lt;pais nombre="España" capital="Madrid" /&gt;
+  &lt;pais nombre="Francia" capital="París" /&gt;
+&lt;/paises&gt;</code>
+</pre>
+    </div>
+  </section>
+
+  <section id="xml-conceptos">
+    <h2>Conceptos y vocabulario</h2>
+    <dl>
+      <dt>Documento XML</dt>
+      <dd>Un documento XML es un documento de texto plano (sin formato).</dd>
+      <dt>Procesador XML (<i class="english">XML processor</i>) y aplicación (<i class="english">application</i>)</dt>
+      <dd>Cuando una aplicación necesita leer un documento XML, la aplicación recurre a un procesador XML. El procesador XML (o analizador XML, en inglés <i class="english">XML parser</i>) es el que lee el documento, analiza el contenido y le pasa la información en un formato estructurado a la aplicación. La recomendación XML especifica lo que debe hacer el procesador, pero no entra en lo que hace después la aplicación con esa información.</dd>
+      <dt>Caracteres (<i class="english">characters</i>)</dt>
+      <dd>Los documentos XML pueden estar codificados en distintos juegos de caracteres (UTF-8, ISO-8859-1, etc).</dd>
+      <dt>Marcas (<i class="english">mark-up</i>) y contenido (<i class="english">content</i>)</dt>
+      <dd>El texto que contiene un documento XML se divide en marcas y contenido. Las marcas pueden ser de dos tipos: etiquetas o referencias a entidades. Todo lo que no son marcas es contenido.</dd>
+      <dt>Elementos (<i class="english">elements</i>)</dt>
+      <dd>Un elemento es un componente lógico de un documento que o bien comienza por una etiqueta de apertura y termina por la etiqueta de cierre correspondiente o que consiste en una única etiqueta vacía. El contenido de un elemento es todo lo que se encuentra entre las etiquetas de apertura y cierre, incluso si estos son también elementos en cuyo caso se llaman elementos hijos.</dd>
+      <dt>Etiquetas (<i class="english">tags</i>)</dt>
+      <dd>Una etiqueta es un identificador que empieza por el carácter <span class="xml-tag">&lt;</span> y termina por <span class="xml-tag">&gt;</span>. Existen tres tipos de etiquetas:</dd>
+      <dd>
+        <ul>
+          <li>las etiquetas de apertura (<i class="english">start-tag</i>), que empiezan por el carácter <span class="xml-tag">&lt;</span> y terminan por <span class="xml-tag">&gt;</span>. Por ejemplo:
+
+            <div class="codigo">
+              <pre><code class="language-xml">&lt;apartado&gt;</code></pre>
+            </div>
+          </li>
+          <li>las etiquetas de cierre (<i class="english">end-tag</i>), que empiezan por los caracteres <span class="xml-tag">&lt;/</span> y terminan por <span class="xml-tag">&gt;</span>. Por ejemplo:
+
+            <div class="codigo">
+              <pre><code class="language-xml">&lt;/apartado&gt;</code></pre>
+            </div>
+          </li>
+          <li>las etiquetas vacías (<i class="english">empty tag</i>), que empiezan con el carácter <span class="xml-tag">&lt;</span> y terminan por <span class="xml-tag">/&gt;</span>. Por ejemplo:
+
+            <div class="codigo">
+              <pre><code class="language-xml">&lt;linea /&gt;</code></pre>
+            </div>
+          </li>
+        </ul>
+      </dd>
+      <dt>Atributos (<i class="english">attributes</i>)</dt>
+      <dd>Un atributo es un componente de las etiquetas que consiste en una pareja nombre (<i class="english">name</i>) / valor (<i class="english">value</i>). Se puede encontrar en las etiquetas de apertura o en las etiquetas vacías, pero no en las de cierre. En una etiqueta no puede haber dos atributos con el mismo nombre. La sintaxis es siempre nombreAtributo="valorAtributo". Por ejemplo:</dd>
+      <dd>
+        <div class="codigo">
+          <pre><code class="language-xml">&lt;profesor nombre="Bartolomé" apellidos="Sintes Marco" /&gt;</code></pre>
+        </div>
+      </dd>
+      <dt>Comentarios (<i class="english">comments</i>)</dt>
+      <dd>Un comentario es una etiqueta que comienza por <span class="xml-comment">&lt;!--</span> y acaba por <span class="xml-comment">--&gt;</span>. Los comentarios no pueden estar dentro de otras marcas y no pueden contener los caracteres "--". Dentro de un comentario las entidades de carácter no se reconocen, es decir, sólo se pueden utilizar los caracteres del juego de caracteres del documento. Por ejemplo:</dd>
+      <dd>
+        <div class="codigo">
+          <pre><code class="language-xml">&lt;!-- Esto es un comentario --&gt;</code></pre>
+        </div>
+      </dd>
+      <dt>Declaración XML (<i class="english">XML declaration</i>)</dt>
+      <dd>La declaración XML es una etiqueta que comienza por <span class="xml-tag">&lt;?xml</span> y termina por <span class="xml-tag">?&gt;</span> y que proporciona información sobre el propio documento XML. Aunque no es obligatoria es conveniente que aparezca, y debe aparecer siempre al principio del documento. No es una instrucción de procesamiento, pero tiene la misma sintaxis (empieza por <span class="xml-tag">&lt;?</span> y acaba por <span class="xml-tag">?&gt;</span>).
+        <p>La declaración xml indica el juego de caracteres del documento. El juego de caracteres que se utiliza en este curso es UTF-8:</p>
+
+        <div class="codigo">
+          <pre><code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;</code></pre>
+        </div>
+
+        <p>En XML, el nombre del juego de caracteres se debe escribir en mayúsculas (UTF-8 en vez de utf-8).</p>
+
+        <p>La declaración xml también indica la versión XML utilizada. Aunque existe la versión XML 1.1, la versión más común sigue siendo la versión XML 1.0.</p>
+
+        <p>Se pueden utilizar otros juegos de caracteres, como ISO-8859-1 (Europeo occidental):</p>
+
+        <div class="codigo">
+          <pre><code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"ISO-8859-1"</span>?&gt;</code></pre>
+        </div>
+
+        <p>Es importante que el juego de caracteres que aparece en la declaración sea el juego de caracteres en que realmente está guardado el documento, porque si no el procesador XML puede tener problemas leyendo el documento.</p>
+
+        <div class="filaflex">
+          <div class="icono-ok"><img src="../varios/iconos/icono-oksi.svg" alt="Correcto" title="Correcto" width="40" height="40" /></div>
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;!-- Este texto está guardado como UTF-8 y declara que es UTF-8 --&gt;
+&lt;prueba&gt;
+  &lt;texto&gt;á é í ó ú&lt;/texto&gt;
+&lt;/prueba&gt;</code>
+</pre>
+          </div>
+          <div class="resultado-object"><object type="application/xml" data="../ejemplos/ejemplos-utf-iso/ejemplo-utf-utf.xml">ERROR (no puede mostrarse el objeto)</object></div>
+          <div class="icono-enlace"><a href="../ejemplos/ejemplos-utf-iso/ejemplo-utf-utf.xml"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+        </div>
+
+        <div class="filaflex">
+          <div class="icono-ok"><img src="../varios/iconos/icono-okno.svg" alt="Incorrecto" title="Incorrecto" width="40" height="40" /></div>
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"ISO-8859-1"</span>?&gt;
+&lt;!-- Este texto está guardado como UTF-8 sin BOM y declara que es ISO-8859-1 --&gt;
+&lt;prueba&gt;
+  &lt;texto&gt;á é í ó ú&lt;/texto&gt;
+&lt;/prueba&gt;</code>
+</pre>
+          </div>
+          <div class="resultado-object"><object type="application/xml" data="../ejemplos/ejemplos-utf-iso/ejemplo-utf-iso-nobom.xml">ERROR (no puede mostrarse el objeto)</object></div>
+          <div class="icono-enlace"><a href="../ejemplos/ejemplos-utf-iso/ejemplo-utf-iso-nobom.xml"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+        </div>
+
+        <div class="filaflex">
+          <div class="icono-ok"><img src="../varios/iconos/icono-oksi.svg" alt="Correcto" title="Correcto" width="40" height="40" /></div>
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"ISO-8859-1"</span>?&gt;
+&lt;!-- Este texto está guardado como ISO-8859-1 y declara que es ISO-8859-1 --&gt;
+&lt;prueba&gt;
+  &lt;texto&gt;á é í ó ú&lt;/texto&gt;
+&lt;/prueba&gt;</code>
+</pre>
+          </div>
+          <div class="resultado-object"><object type="application/xml" data="../ejemplos/ejemplos-utf-iso/ejemplo-iso-iso.xml">ERROR (no puede mostrarse el objeto)</object></div>
+          <div class="icono-enlace"><a href="../ejemplos/ejemplos-utf-iso/ejemplo-iso-iso.xml"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+        </div>
+
+        <div class="filaflex">
+          <div class="icono-ok"><img src="../varios/iconos/icono-okno.svg" alt="Incorrecto" title="Incorrecto" width="40" height="40" /></div>
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;!-- Este texto está guardado como ISO-8859-1 y declara que es UTF-8 --&gt;
+&lt;prueba&gt;
+  &lt;texto&gt;á é í ó ú&lt;/texto&gt;
+&lt;/prueba&gt;</code>
+</pre>
+          </div>
+          <div class="resultado-object"><object type="application/xml" data="../ejemplos/ejemplos-utf-iso/ejemplo-iso-utf.xml" style="height: 16em;">ERROR (no puede mostrarse el objeto)</object></div>
+          <div class="icono-enlace"><a href="../ejemplos/ejemplos-utf-iso/ejemplo-iso-utf.xml"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+        </div>
+
+        <p><strong>Nota</strong>:</p>
+
+        <p>En el caso del documento guardado como UTF-8 pero que declara ser ISO-8859-1, también le afecta que haya o no <a href="https://es.wikipedia.org/wiki/Marca_de_orden_de_bytes_%28BOM%29">marca de orden de bytes</a> (BOM).</p>
+
+        <p>La marca de orden de bytes son los primeros caracteres de un fichero UTF. Estos caracteres indican:</p>
+        <ul>
+          <li>el orden de los bytes en los formatos de 16 o 32 bytes. Cuando la codificación de un carácter ocupa más de un byte, los bytes que lo forman pueden estar en el orden natural de lectura (big endian) o en el contrario (little endian). Por ejemplo el carácter A, cuyo código es 0041, se puede guardar en UTF-16 como 00 41 (big endian) o como 41 00 (little endian).</li>
+          <li>el formato del archivo en general. Para saber si un archivo está en formato UTF-8, 16 o 32 (es decir, si cada byte del archivo es un carácter, o los bytes se tienen que tomar de dos en dos, o de cuatro en cuatro), los programas sólo tienen que mirar los primeros bytes del archivo y reconocer la marca correspondiente.</li>
+        </ul>
+
+        <p>En el caso de los archivos UTF-8, la marca de orden de bytes son los tres caracteres EF BB BF (que corresponden a los caracteres <strong>ï»¿</strong>). Pero como en un archivo UTF-8 no se necesita indicar el orden de los bytes, puesto que cada carácter ocupa solamente un byte, la marca es opcional, es decir, que hay archivos UTF-8 con BOM y archivos UTF-8 sin BOM. Los editores (como Eclipse PDT) no muestran estos caracteres y, suelen respetarlos al guardar de nuevo al archivo, pero otros (como el Bloc de notas de Windows) guardan los archivos UTF-8 siempre con BOM. Para ver esos caracteres, se puede utilizar un <a href="http://www.cdlibre.org/consultar/catalogo/Utilidades_Editores-hexadecimales.html">editor hexadecimal</a>, que muestra todos los caracteres sin excepción.</p>
+
+        <p>El ejemplo siguiente muestra como los navegadores son capaces de mostrar correctamente el contenido si el archivo está guardado como UTF-8 con BOM. El motivo es que aunque el archivo declara que está guardado como ISO-8859-1, el navegador detecta el BOM y deduce que se trata de un archivo UTF-8:</p>
+
+        <div class="filaflex">
+          <div class="icono-ok"><img src="../varios/iconos/icono-oksi.svg" alt="Correcto" title="Correcto" width="40" height="40" /></div>
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"ISO-8859-1"</span>?&gt;
+&lt;!-- Este texto está guardado como UTF-8 con BOM y declara que es ISO-8859-1 --&gt;
+&lt;prueba&gt;
+  &lt;texto&gt;á é í ó ú&lt;/texto&gt;
+&lt;/prueba&gt;</code>
+</pre>
+          </div>
+          <div class="resultado-object"><object type="application/xml" data="http://www.mclibre.org/consultar/especiales/xml/ejemplo_utf_iso_sibom.xml">ERROR (no puede mostrarse el objeto)</object></div>
+          <div class="icono-enlace"><a href="http://www.mclibre.org/consultar/especiales/xml/ejemplo_utf_iso_sibom.xml"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+        </div>
+
+        <p>El ejemplo siguiente muestra como los navegadores no son capaces de mostrar correctamente el contenido si el archivo está guardado como UTF-8 sin BOM. El archivo se muestra como si fuera ISO-8859-1 ya que el archivo declara que está guardado como ISO-8859-1 y el navegador no detecta un BOM que le indique que realmente está guardado como UTF-8:</p>
+
+        <div class="filaflex">
+          <div class="icono-ok"><img src="../varios/iconos/icono-okno.svg" alt="Incorrecto" title="Incorrecto" width="40" height="40" /></div>
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"ISO-8859-1"</span>?&gt;
+&lt;!-- Este texto está guardado como UTF-8 sin BOM y declara que es ISO-8859-1 --&gt;
+&lt;prueba&gt;
+  &lt;texto&gt;á é í ó ú&lt;/texto&gt;
+&lt;/prueba&gt;</code>
+</pre>
+          </div>
+          <div class="resultado-object"><object type="application/xml" data="../ejemplos/ejemplos-utf-iso/ejemplo-utf-iso-nobom.xml">ERROR (no puede mostrarse el objeto)</object></div>
+          <div class="icono-enlace"><a href="../ejemplos/ejemplos-utf-iso/ejemplo-utf-iso-nobom.xml"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+        </div>
+      </dd>
+      <dt>Definición de tipo de documento (DTD, <i class="english">Document Type Definition</i>)</dt>
+      <dd>Una DTD es un documento que define la estructura de un documento XML: los elementos, atributos, entidades, notaciones, etc, que pueden aparecer, el orden y el número de veces que pueden aparecer, cuáles pueden ser hijos de cuáles, etc. El procesador XML la utiliza para verificar si un documento es válido, es decir, si el documento cumple las reglas del DTD.</dd>
+      <dt>Declaración de tipo de documento (DOCTYPE,<i class="english"> Document type declaration</i>)</dt>
+      <dd>Una declaración de tipo de documento es una etiqueta que comienza por <span class="xml-tag">&lt;!DOCTYPE</span> y acaba por <span class="xml-tag">&gt;</span> y que indica la(s) DTD(s) que debe utilizar el procesador XML para validar el documento. La DTD puede estar incluida en el propio documento o ser un documento externo. Por ejemplo, el siguiente ejemplo muestra la declaración de tipo de documento que se debe incluir en los documentos XHML 1.0 de tipo strict (en este caso, la DTD es un documento externo):</dd>
+      <dd>
+        <div class="codigo">
+          <pre> <code class="language-xml">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</code></pre>
+        </div>
+      </dd>
+      <dt>Instrucciones de procesamiento (PI, <i class="english">processing instruction</i>)</dt>
+      <dd>Una instrucción de procesamiento en una etiqueta que empieza por "&lt;?" y acaba por "?&gt;" y que contiene instrucciones dirigidas a las aplicaciones que leen el documento. Pueden aparecer en cualquier lugar del documento. Por ejemplo:</dd>
+      <dd>
+        <div class="codigo">
+          <pre><code class="language-xml">&lt;?xml-stylesheet <span class="attr-name">type</span>=<span class="attr-value">"text/xsl"</span> <span class="attr-name">href</span>=<span class="attr-value">"estilo.xsl"</span> ?&gt;</code></pre>
+        </div>
+      </dd>
+      <dt>Entidades de carácter</dt>
+      <dd>En XML se utilizan varias entidades de carácter de HTML, para poder escribir en cadenas de texto los caracteres que delimitan las marcas o las cadenas de texto :
+
+        <table class="tabla-con-borde">
+          <tbody class="mcl-centrado">
+            <tr>
+              <th>Referencia a entidad</th>
+              <th>Carácter</th>
+            </tr>
+            <tr>
+              <td>&amp;lt;</td>
+              <td>&lt;</td>
+            </tr>
+            <tr>
+              <td>&amp;gt;</td>
+              <td>&gt;</td>
+            </tr>
+            <tr>
+              <td>&amp;amp;</td>
+              <td>&amp;</td>
+            </tr>
+            <tr>
+              <td>&amp;apos;</td>
+              <td>'</td>
+            </tr>
+            <tr>
+              <td>&amp;quot;</td>
+              <td>"</td>
+            </tr>
+          </tbody>
+        </table>
+      </dd>
+      <dt>Secciones CDATA (CDATA <i class="english">section</i>)</dt>
+      <dd>Una sección CDATA es una etiqueta que comienza por <span class="xml-attr">&lt;![CDATA[</span> y termina por <span class="xml-attr">]]&gt;</span> y cuyo contenido el procesador XML no interpreta como marcas sino como texto. Es decir, que si aparecen los caracteres especiales (&lt; &amp; " ') en una sección CDATA, el procesador XML no interpreta que empieza una marca, sino que lo considera un carácter más. Se suele utilizar en documentos en los que aparecen muchas veces esos caracteres especiales para no tener que estar utilizando las referencias a entidades (&amp;lt; y &amp;amp;) que dificultan la lectura del documento.
+
+        <div class="filaflex">
+          <div class="icono-ok"><img src="../varios/iconos/icono-okno.svg" alt="Incorrecto" title="Incorrecto" width="40" height="40" /></div>
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;prueba&gt;
+  &lt;texto&gt;Los caracteres &lt; y &amp; no pueden escribirse
+  si no es como comienzo de marcas&lt;/texto&gt;
+&lt;/prueba&gt;</code>
+</pre>
+          </div>
+          <div class="resultado-object"><object type="application/xml" data="../ejemplos/ejemplos-que-es/ejemplo-cdata-1.xml" style="height: 16em;">ERROR (no puede mostrarse el objeto)</object></div>
+          <div class="icono-enlace"><a href="../ejemplos/ejemplos-que-es/ejemplo-cdata-1.xml"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+        </div>
+
+        <div class="filaflex">
+          <div class="icono-ok"><img src="../varios/iconos/icono-oksi.svg" alt="Correcto" title="Correcto" width="40" height="40" /></div>
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;prueba&gt;
+  &lt;texto&gt;Los caracteres &amp;lt; y &amp;amp; no pueden escribirse
+  si no es como comienzo de marcas&lt;/texto&gt;
+&lt;/prueba&gt;</code>
+</pre>
+          </div>
+          <div class="resultado-object"><object type="application/xml" data="../ejemplos/ejemplos-que-es/ejemplo-cdata-2.xml">ERROR (no puede mostrarse el objeto)</object></div>
+          <div class="icono-enlace"><a href="../ejemplos/ejemplos-que-es/ejemplo-cdata-2.xml"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+        </div>
+
+        <div class="filaflex">
+          <div class="icono-ok"><img src="../varios/iconos/icono-oksi.svg" alt="Correcto" title="Correcto" width="40" height="40" /></div>
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;prueba&gt;
+  &lt;texto&gt;&lt;![CDATA["Los caracteres &lt; y &amp; no pueden escribirse
+  si no es como comienzo de marcas"]]&gt;&lt;/texto&gt;
+&lt;/prueba&gt;</code>
+</pre>
+          </div>
+          <div class="resultado-object"><object type="application/xml" data="../ejemplos/ejemplos-que-es/ejemplo-cdata-3.xml">ERROR (no puede mostrarse el objeto)</object></div>
+          <div class="icono-enlace"><a href="../ejemplos/ejemplos-que-es/ejemplo-cdata-3.xml"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+        </div>
+      </dd>
+      <dt>Referencias a entidades</dt>
+      <dd>En XML se pueden definir entidades y utilizarlas como se utilizan las entidades de carácter en el HTML. Una entidad se define mediante una etiqueta que comienza por <span class="xml-tag">&lt;!ENTITY</span> y termina por <span class="xml-tag">&gt;</span> y contiene el nombre y el valor de la entidad. Por ejemplo:
+
+        <p>Como las entidades de carácter del HTML, para hacer referencia a una entidad se escribe sin espacios intermedios el carácter "&amp;", el nombre de la entidad y el carácter ";". Al abrir el documento XML el procesador sustituye la referencia a la entidad por su valor. Por ejemplo:</p>
+
+        <div class="filaflex">
+          <div class="icono-ok"><img src="../varios/iconos/icono-oksi.svg" alt="Correcto" title="Correcto" width="40" height="40" /></div>
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"ISO-8859-1"</span>?&gt;
+&lt;!DOCTYPE autor [
+  <span class="codigo-resaltado">&lt;!ENTITY yo &quot;Bartolomé Sintes Marco&quot;&gt;</span>
+  &lt;!ELEMENT autor (#PCDATA)&gt;
+]&gt;
+<span class="codigo-resaltado">&lt;autor&gt;&amp;yo;&lt;/autor&gt;</span></code>
+</pre>
+          </div>
+          <div class="resultado-object"><object type="application/xml" data="../ejemplos/ejemplos-que-es/ejemplo-entidad.xml">ERROR (no puede mostrarse el objeto)</object></div>
+          <div class="icono-enlace"><a href="../ejemplos/ejemplos-que-es/ejemplo-entidad.xml"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+        </div>
+      </dd>
+    </dl>
+  </section>
+
+  <section id="xml-bien-formados">
+    <h2>Documentos bien formados</h2>
+
+    <p>Un documento XML debe estar bien formado, es decir debe cumplir las reglas de sintaxis de la recomendación XML. Para que un documento esté bien formado, al menos debe cumplir los siguientes puntos:</p>
+    <ul>
+      <li>El documento contiene únicamente caracteres Unicode válidos.</li>
+      <li>Hay un elemento raíz que contiene al resto de elementos.</li>
+      <li>Los nombres de los elementos y de sus atributos no contienen espacios.</li>
+      <li>El primer carácter de un nombre de elemento o de atributo puede ser una letra, dos puntos (:) o subrayado (_).</li>
+      <li>El resto de caracteres pueden ser también números, guiones (-) o puntos (.).</li>
+      <li>Los caracteres "&lt;" y "&amp;" sólo se utilizan como comienzo de marcas.</li>
+      <li>Las etiquetas de apertura, de cierre y vacías están correctamente anidadas (no se solapan) y no falta ni sobra ninguna etiqueta de apertura o cierre.</li>
+      <li>Las etiquetas de cierre coinciden con las de apertura (incluso en el uso de mayúsculas y minúsculas).</li>
+      <li>Las etiquetas de cierre no contienen atributos.</li>
+      <li>Ninguna etiqueta tiene dos atributos con el mismo nombre.</li>
+      <li>Todos los atributos tienen algún valor.</li>
+      <li>Los valores de los atributos están entre comillas.</li>
+      <li>No existen referencias en los valores de los atributos.</li>
+    </ul>
+
+    <p>Si un documento XML no está bien formado, no es un documento XML. Los procesadores XML deben rechazar cualquier documento que contenga errores.</p>
+  </section>
+
+  <section id="xml-validos">
+    <h2>Documentos válidos</h2>
+
+    <p>Un documento XML bien formado puede ser válido. Para ser válido, un documento XML debe:</p>
+    <ul>
+      <li>incluir una referencia a una gramática,</li>
+      <li>incluir únicamente elementos y atributos definidos en la gramática,</li>
+      <li>cumplir las reglas gramaticales definidas en la gramática.</li>
+    </ul>
+
+    <p>Existen varios formas de definir una gramática para documentos XML, las más empleadas son :</p>
+    <ul>
+      <li>DTD (Document Type Definition = Definición de Tipo de Documento). Es el modelo más antiguo, heredado del SGML.</li>
+      <li>XML Schema. Es un modelo creado por el W3C como sucesor de las DTDs.</li>
+      <li>Relax NG. Es un modelo creado por OASIS, más sencillo que XML Schema.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p class="ultmod">Última modificación de esta página: 29 de abril de 2018</p>
+
+    <p class="licencia"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../varios/iconos/icono-cc-by-sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
+      Esta página forma parte del curso <a href="http://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a> por <a href="http://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
+      que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.</p>
+  </footer>
+</body>
+</html>

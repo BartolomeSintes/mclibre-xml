@@ -23,457 +23,144 @@
       <h2>Qué es XML</h2>
 
       <ul>
-        <li><a href="#xml-que-es">Qué es el XML</a></li>
-        <li><a href="#xml-ejemplo">Ejemplo documento XML</a></li>
-        <li><a href="#xml-conceptos">Conceptos y vocabulario</a></li>
-        <li><a href="#xml-bien-formados">Documentos bien formados</a></li>
-        <li><a href="#xml-validos">Documentos válidos</a></li>
+        <li><a href="#xml-historia">Historia del XML</a></li>
         <li><a href="#xml-otras-recomendaciones">Otras recomendaciones</a></li>
       </ul>
     </div>
   </nav>
 
-  <section id="xml-que-es">
-    <h2>Qué es el XML</h2>
+  <section id="xml-historia">
+    <h2>Breve historia del XML</h2>
 
-    <p>El XML (eXtensible Markup Language = Lenguaje de Marcas Extensible) no es un lenguaje de marcas, sino un metalenguaje, es decir, el XML define las reglas generales que debe cumplir un lenguaje de marcas y la manera de definir un lenguaje de marcas.</p>
+    <p>Los primeros lenguajes de marcas se idearon a finales de los 60 para la preparación de documentos de texto (William W. Tunnicliffe, 1967). En los años 70 se crearon varias normas de lenguajes de marcas (GenCode, GML) para su uso en la industria editorial. En 1986, bajo la dirección de Charles Goldfarb, investigador de IBM, se creó el SGML (Standard Generalized Markup Language), una norma extraordinariamente compleja y publicada como norma ISO 8879 en 1986.</p>
 
-    <p>El XML fue creado por el <a href="http://www.w3.org/">W3C</a> a finales de los 90. El W3C se creó en 1994 para tutelar el crecimiento y organización de la web. Su primer trabajo fue normalizar el HTML, el lenguaje de marcas con el que se escriben las páginas web. Al crecer el uso de la web, crecieron las presiones para ampliar el HTML, pero el W3C decidió que la solución no era ampliar el HTML, sino crear unas reglas para que cualquiera pudiera crear lenguajes de marcas adecuados a sus necesidades, pero manteniendo unas estructuras y sintaxis comunes que permitieran compatibilizarlos y tratarlos con las mismas herramientas. Ese conjunto de reglas y tecnologías es el XML, cuya primera versión se publicó en 1998. Posteriormente, el W3C desarrolló numerosas tecnologías para sacar provecho del XML y puso en marcha la iniciativa de la Web semántica para dotar de "inteligencia" a la web.</p>
+    <p>En 1989, <a href="http://www.w3.org/People/Berners-Lee/">Tim Berners-Lee</a> se basó en la sintaxis del SGML para crear el HTML, el lenguaje de marcas de la web. Inicialmente pensada para su uso en el laboratorio europeo CERN, la web se extendió por todo el planeta de una forma fulminante. Para tutelar el crecimiento y organización de la web, en 1994 se creó el <a href="http://www.w3.org/">W3C</a>, un organismo internacional formado por empresas, instituciones e investigadores.</p>
+
+    <p>El primer trabajo del W3C fue normalizar el HTML, incorporando las novedades que aparecían continuamente en los navegadores. Pese a ello, el crecimiento de la web seguía aumentado las presiones para ampliar el HTML para todo tipo de usos. El W3C decidió que la solución no nopdía ser seguir ampliando el HTML, sino crear unas reglas generales para que cualquiera pudiera crear lenguajes de marcas adecuados a sus necesidades, pero manteniendo unas estructuras y sintaxis comunes que permitieran compatibilizarlos y tratarlos con las mismas herramientas. Ese conjunto de reglas es el XML (eXtensible Markup Language = Lenguaje de Marcas Extensible), cuya primera versión se publicó en 1998. Así, el XML no es un lenguaje de marcas, pero sí la base común elegida por el W3C para sus desarrollos posteriores.</p>
+
+    <p>En los primeros años del siglo XXI el W3C planteó una triple línea de trabajo:</p>
+    <ul>
+      <li>desarrollar el XML, creando todo tipo de tecnologías para procesar documentos XML que pudieran aplicarse a cualquier lenguaje de marcas basado en XML</li>
+      <li>como el HTML de los años 90 no cumplía las normas del XML ya que el HTML era anterior al XML, el W3C aprobó en el año 2000 el XHTML, una versión del HTML que sí que cumplía las reglas del XML, poniendo fin al desarrollo del HTML.</li>
+      <li>poner en marcha la iniciativa de la Web semántica para dotar de "inteligencia" a la web, basándose en el XML.</li>
+    </ul>
+
+    <p>Veinte años después, este ambicioso plan ha fracasado. Aunque el W3C cumplió su parte elaborando y aprobando decenas de recomendaciones en esas tres líneas de trabajo, el mercado no las ha adoptado, especialmente en la web.</p>
+
+    <p>Para empezar, los fabricantes de navegadores no aceptaron el XHTML y crearon en 2004 una nueva organización, el <a href="https://whatwg.org/">WHATWG</a>, para continuar el desarrollo del HTML que el W3C había abandonado. En 2007 el W3C reconoció su fracaso y retomó el desarrollo del HTML (incluyendo en él una versión XHTML, basada en XML). En octubre de 2014 el W3C publicó la recomendación HTML 5, que incluye las dos variantes: HTML 5, no basada en XML, y XHTML 5, basada en XML (una tercera variante, llamada HTML políglota ha sido abandonada). Desde entonces se han ido publicando versiones actualizadas del HTML 5, pero realmente el desarrollo del HTML ya no se hace en el seno del W3C, sino en el WHATWG.</p>
+
+    <p>Por otro lado, aunque por unos años el XML se convirtió en la herramienta básica para el intercambio y almacenamiento de información en muchos sectores de la informática, poco a poco el mercado ha ido evolucionando en otras direcciones, empleando tecnologías más sencillas no basadas en el XML.</p>
+
+    <p>Para terminar, la iniciativa de la Web semántica (aún suponiendo que hubiera propuesto las tecnologías adecuadas para permitir el procesamiento inteligente de la información contenida en las páginas web) no ha tenido la menor oportunidad de éxito, puesto que la web no adoptó ninguno de los componentes de la web semántica.</p>
+
+    <p>Reconociendo el fracaso, en 2013 el W3C ya había cerrado prácticamente todos los grupos de trabajo dedicados a la web semántica y en 2018 el W3C también ha cerrado prácticamente todos los grupos de trabajo dedicados al XML. Probablemente el principal motivo del fracaso sea que el XML, con su exigencia de ausencia de errores en los documentos, es demasiado estricto para una web que en gran parte todavía se elabora manualmente.</p>
+
+    <p>Pero aunque la web haya abandonado el XML, el XML se sigue utilizando en muchos ámbitos especializados para el almacenamiento y transmisión de la información, por lo que cuesta creer que su desarrollo en esos ámbitos no sea retomado, dentro o fuera del W3C, en los próximos años.</p>
+
+    <p>Notas:</p>
+    <ul>
+      <li>febrero de 2008: <a href="https://www.tbray.org/ongoing/When/200x/2008/02/10/XML-People">XML People</a>, de Tim Bray (editor de las recomendaciones XML 1.0 y posteriores)</li>
+      <li>febrero de 2018: <a href="https://www.xml.com/articles/2018/02/10/xml-20/">XML is 20</a>, (editor de las recomendaciones XML 1.0 y posteriores)</li>
+    </ul>
+  </section>
+
+  <section id="xml-tecnologías">
+    <h2>Tecnologías XML</h2>
+
+    <p>El W3C y otras organizaciones de normalización han desarrollado numerosas tecnologías XML, definidas en numerosas recomendaciones. El cuadro siguiente muestra algunas de esas tecnologías agrupándolas por temas:</p>
 
     <p class="mcl-centrado">
-      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="850" viewBox="-50 -60 850 120">
-        <line x1="-50" y1="0" x2="950" y2="0" stroke-width="3" stroke="red" />
-        <line x1="0" y1="-30" x2="0" y2="30" stroke-width="2" stroke-dasharray="5,5" stroke="black" />
-        <text x="0" y="-40" text-anchor="middle" style="font-size: 100%">1995</text>
-        <line x1="150" y1="-30" x2="150" y2="30" stroke-width="2" stroke-dasharray="5,5" stroke="black" />
-        <text x="150" y="-40" text-anchor="middle" style="font-size: 100%">2000</text>
-        <line x1="300" y1="-30" x2="300" y2="30" stroke-width="2" stroke-dasharray="5,5" stroke="black" />
-        <text x="300" y="-40" text-anchor="middle" style="font-size: 100%">2005</text>
-        <line x1="450" y1="-30" x2="450" y2="30" stroke-width="2" stroke-dasharray="5,5" stroke="black" />
-        <text x="450" y="-40" text-anchor="middle" style="font-size: 100%">2010</text>
-        <line x1="600" y1="-30" x2="600" y2="30" stroke-width="2" stroke-dasharray="5,5" stroke="black" />
-        <text x="600" y="-40" text-anchor="middle" style="font-size: 100%">2015</text>
-        <line x1="750" y1="-30" x2="750" y2="30" stroke-width="2" stroke-dasharray="5,5" stroke="black" />
-        <text x="750" y="-40" text-anchor="middle" style="font-size: 100%">2020</text>
-        <circle cx="93" cy="0" r="7" fill="red" />
-        <text x="93" y="-15" text-anchor="middle" fill="red" style="font-size: 80%; font-weight: bold">XML 1.0</text>
-        <circle cx="173" cy="0" r="7" fill="red" />
-        <text x="173" y="-15" text-anchor="middle" fill="red" style="font-size: 80%; font-weight: bold">1.0 (2ªed)</text>
-        <circle cx="273" cy="0" r="7" fill="red" />
-        <text x="273" y="-15" text-anchor="middle" fill="red" style="font-size: 80%; font-weight: bold">1.0 (3ªed)</text>
-        <circle cx="273" cy="0" r="7" fill="red" />
-        <text x="273" y="25" text-anchor="middle" fill="red" style="font-size: 80%; font-weight: bold">XML 1.1</text>
-        <circle cx="349" cy="0" r="7" fill="red" />
-        <text x="349" y="-15" text-anchor="middle" fill="red" style="font-size: 80%; font-weight: bold">1.0 (4ªed)</text>
-        <circle cx="349" cy="0" r="7" fill="red" />
-        <text x="349" y="25" text-anchor="middle" fill="red" style="font-size: 80%; font-weight: bold">1.1 (2ªed)</text>
-        <circle cx="417" cy="0" r="7" fill="red" />
-        <text x="417" y="-15" text-anchor="middle" fill="red" style="font-size: 80%; font-weight: bold">1.0 (5ªed)</text>
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="610" height="675">
+        <rect x="105" y="5" width="190" height="270" rx="10" ry="10" stroke-width="3" stroke="black" fill=" hsl(215, 90%, 80%)" />
+        <text x="200" y="30" text-anchor="middle" font-size="24">Servicios web</text>
+        <rect x="115" y="40" width="70" height="40" rx="10" ry="10" stroke-width="3" stroke="black" fill="white" />
+        <text x="150" y="65" text-anchor="middle" font-size="18">SOAP</text>
+        <rect x="195" y="40" width="90" height="40" rx="10" ry="10" stroke-width="3" stroke="black" fill="white" />
+        <text x="240" y="65" text-anchor="middle" font-size="18">WS Policy</text>
+        <rect x="115" y="100" width="170" height="40" rx="10" ry="10" stroke-width="3" stroke="black" fill="white" />
+        <text x="200" y="125" text-anchor="middle" font-size="18">WSDL</text>
+        <rect x="115" y="160" width="170" height="40" rx="10" ry="10" stroke-width="3" stroke="black" fill="white" />
+        <text x="200" y="185" text-anchor="middle" font-size="18">XML Signature</text>
+        <rect x="115" y="220" width="170" height="40" rx="10" ry="10" stroke-width="3" stroke="black" fill="white" />
+        <text x="200" y="245" text-anchor="middle" font-size="18">XML Encryption</text>
+
+        <rect x="305" y="5" width="190" height="270" rx="10" ry="10" stroke-width="3" stroke="black" fill="hsl(252, 29%, 77%)" />
+        <text x="400" y="30" text-anchor="middle" font-size="24">Web semántica</text>
+        <rect x="315" y="40" width="70" height="40" rx="10" ry="10" stroke-width="3" stroke="black" fill="white" />
+        <text x="350" y="65" text-anchor="middle" font-size="18">RDF</text>
+        <rect x="395" y="40" width="90" height="40" rx="10" ry="10" stroke-width="3" stroke="black" fill="white" />
+        <text x="440" y="65" text-anchor="middle" font-size="18">RDFa</text>
+        <rect x="315" y="100" width="90" height="40" rx="10" ry="10" stroke-width="3" stroke="black" fill="white" />
+        <text x="360" y="125" text-anchor="middle" font-size="18">RDF-S</text>
+        <rect x="415" y="100" width="70" height="40" rx="10" ry="10" stroke-width="3" stroke="black" fill="white" />
+        <text x="450" y="125" text-anchor="middle" font-size="18">OWL</text>
+        <rect x="315" y="160" width="170" height="40" rx="10" ry="10" stroke-width="3" stroke="black" fill="white" />
+        <text x="400" y="185" text-anchor="middle" font-size="18">RIF</text>
+        <rect x="315" y="220" width="170" height="40" rx="10" ry="10" stroke-width="3" stroke="black" fill="white" />
+        <text x="400" y="245" text-anchor="middle" font-size="18">SPARQL</text>
+
+        <rect x="5" y="285" width="190" height="185" rx="10" ry="10" stroke-width="3" stroke="black" fill="hsl(120, 50%, 80%)" />
+        <text x="100" y="310" text-anchor="middle" font-size="24">Localización</text>
+        <rect x="30" y="320" width="140" height="40" rx="10" ry="10" stroke-width="3" stroke="black" fill="white" />
+        <text x="100" y="345" text-anchor="middle" font-size="18">XPath</text>
+        <text x="100" y="390" text-anchor="middle" font-size="24">Consultas</text>
+        <rect x="30" y="400" width="140" height="40" rx="10" ry="10" stroke-width="3" stroke="black" fill="white" />
+        <text x="100" y="425" text-anchor="middle" font-size="18">XQuery</text>
+
+        <rect x="205" y="285" width="190" height="185" rx="10" ry="10" stroke-width="3" stroke="black" fill="hsl(120, 50%, 65%)" />
+        <text x="300" y="310" text-anchor="middle" font-size="24">Transformación</text>
+        <rect x="225" y="320" width="150" height="40" rx="10" ry="10" stroke-width="3" stroke="black" fill="white" />
+        <text x="300" y="345" text-anchor="middle" font-size="18">XSLT</text>
+        <rect x="225" y="370" width="150" height="40" rx="10" ry="10" stroke-width="3" stroke="black" fill="white" />
+        <text x="300" y="395" text-anchor="middle" font-size="18">DOM</text>
+        <rect x="225" y="420" width="150" height="40" rx="10" ry="10" stroke-width="3" stroke="black" fill="white" />
+        <text x="300" y="445" text-anchor="middle" font-size="18">SAX</text>
+
+        <rect x="405" y="285" width="190" height="185" rx="10" ry="10" stroke-width="3" stroke="black" fill="hsl(120, 50%, 50%)" />
+        <text x="500" y="310" text-anchor="middle" font-size="24">Enlaces</text>
+        <rect x="430" y="320" width="140" height="40" rx="10" ry="10" stroke-width="3" stroke="black" fill="white" />
+        <text x="500" y="345" text-anchor="middle" font-size="18">XLink</text>
+        <rect x="430" y="375" width="140" height="40" rx="10" ry="10" stroke-width="3" stroke="black" fill="white" />
+        <text x="500" y="400" text-anchor="middle" font-size="18">XPointer</text>
+
+        <rect x="5" y="480" width="600" height="90" rx="10" ry="10" stroke-width="3" stroke="black" fill="hsl(30, 80%, 75%)" />
+        <text x="300" y="505" text-anchor="middle" font-size="24">Modelo de datos / Vocabulario</text>
+        <rect x="20" y="515" width="80" height="40" rx="10" ry="10" stroke-width="3" stroke="black" fill="white" />
+        <text x="60" y="540" text-anchor="middle" font-size="18">XHTML</text>
+        <rect x="115" y="515" width="40" height="40" rx="10" ry="10" stroke-width="3" stroke="black" fill="white" />
+        <text x="135" y="540" text-anchor="middle" font-size="18">FO</text>
+        <rect x="175" y="515" width="70" height="40" rx="10" ry="10" stroke-width="3" stroke="black" fill="white" />
+        <text x="210" y="540" text-anchor="middle" font-size="18">SVG</text>
+        <rect x="260" y="515" width="90" height="40" rx="10" ry="10" stroke-width="3" stroke="black" fill="white" />
+        <text x="305" y="540" text-anchor="middle" font-size="18">DocBook</text>
+        <rect x="370" y="515" width="60" height="40" rx="10" ry="10" stroke-width="3" stroke="black" fill="white" />
+        <text x="400" y="540" text-anchor="middle" font-size="18">XBRL</text>
+        <rect x="450" y="515" width="80" height="40" rx="10" ry="10" stroke-width="3" stroke="black" fill="white" />
+        <text x="490" y="540" text-anchor="middle" font-size="18">BMEcat</text>
+        <rect x="550" y="515" width="40" height="40" rx="10" ry="10" stroke-width="3" stroke="black" fill="white" />
+        <text x="570" y="540" text-anchor="middle" font-size="18">...</text>
+
+        <rect x="5" y="580" width="600" height="90" rx="10" ry="10" stroke-width="3" stroke="black" fill="hsl(60, 100%, 80%)" />
+        <text x="300" y="605" text-anchor="middle" font-size="24">Modelización y validación de datos</text>
+        <rect x="25" y="615" width="100" height="40" rx="10" ry="10" stroke-width="3" stroke="black" fill="white" />
+        <text x="75" y="640" text-anchor="middle" font-size="18">DTD</text>
+        <rect x="155" y="615" width="140" height="40" rx="10" ry="10" stroke-width="3" stroke="black" fill="white" />
+        <text x="225" y="640" text-anchor="middle" font-size="18">XML Schema</text>
+        <rect x="335" y="615" width="100" height="40" rx="10" ry="10" stroke-width="3" stroke="black" fill="white" />
+        <text x="385" y="640" text-anchor="middle" font-size="18">RelaxNG</text>
+        <rect x="465" y="615" width="120" height="40" rx="10" ry="10" stroke-width="3" stroke="black" fill="white" />
+        <text x="525" y="640" text-anchor="middle" font-size="18">Schematron</text>
       </svg>
     </p>
 
-    <p>Lógicamente, el HTML de los años 90 no cumplía las normas del XML ya que el HTML era anterior al XML. El creador del HTML, <a href="http://www.w3.org/People/Berners-Lee/">Tim Berners-Lee</a>, se había basado en el SGML, otro conjunto de reglas para la creación de lenguajes de marcas creado en los años 80 y más complejo que el XML. Una vez creado el XML, el W3C aprobó en el año 2000 el XHTML, una versión del HTML que sí que cumplía las reglas del XML. Durante los primeros años del siglo XXI, el W3C intentó sin éxito que se dejara de utilizar el HTML y en su lugar se utilizara el XHTML.</p>
-
-    <p>En 2007 el W3C reconoció su fracaso y retomó el desarrollo del HTML (aunque siguió incluyendo en él una versión XHTML, basada en XML). En octubre de 2014 se publicó la recomendación HTML 5, que incluye las dos variantes: HTML 5, no basada en XML, y XHTML 5, basada en XML (una tercera variante, llamada HTML políglota ha sido abandonada).</p>
-
-    <p>Pero aunque el XML parecía destinado a convertirse en una herramienta básica para el intercambio y almacenamiento de información en todos los sectores de la informática, el mercado ha ido en otras direcciones, empleando tecnologías más sencillas.</p>
-
-    <p>Y donde cada vez resulta más difícil encontrar al XML es precisamente en la web, donde nació el XML, y ya nadie espera que su uso se recupere. Hasta tal punto que el W3C ha ido cerrando todos los grupos de trabajo dedicados al XML (actualmente -abril de 2018- apenas quedan tres o cuatro grupos sin apenas actividad). Probablemente el principal motivo del fracaso sea que el XML, con su exigencia de ausencia de errores en los documentos, es demasiado estricto para una web que en gran parte todavía se elabora manualmente.</p>
-  </section>
-
-  <section id="xml-ejemplo">
-    <h2>Ejemplo de documento XML</h2>
-
-    <p>Un documento XML es similar a una página web, salvo que los nombres de las etiquetas y atributos no son los del HTML.</p>
-
-    <div class="codigo">
-      <pre>
-<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
-&lt;paises&gt;
-  &lt;pais&gt;
-    &lt;nombre&gt;España&lt;/nombre&gt;
-    &lt;capital&gt;Madrid&lt;/capital&gt;
-  &lt;/pais&gt;
-  &lt;pais&gt;
-    &lt;nombre&gt;Francia&lt;/nombre&gt;
-    &lt;capital&gt;Paris&lt;/capital&gt;
-  &lt;/pais&gt;
-&lt;/paises&gt;</code>
-</pre>
-    </div>
-
-    <p>Por supuesto, la misma información se puede guardar con otra estructura:</p>
-
-    <div class="codigo">
-      <pre>
-<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
-&lt;paises&gt;
-  &lt;pais nombre="España" capital="Madrid" /&gt;
-  &lt;pais nombre="Francia" capital="París" /&gt;
-&lt;/paises&gt;</code>
-</pre>
-    </div>
-  </section>
-
-  <section id="xml-conceptos">
-    <h2>Conceptos y vocabulario</h2>
-    <dl>
-      <dt>Documento XML</dt>
-      <dd>Un documento XML es un documento de texto plano (sin formato).</dd>
-      <dt>Procesador XML (<i class="english">XML processor</i>) y aplicación (<i class="english">application</i>)</dt>
-      <dd>Cuando una aplicación necesita leer un documento XML, la aplicación recurre a un procesador XML. El procesador XML (o analizador XML, en inglés <i class="english">XML parser</i>) es el que lee el documento, analiza el contenido y le pasa la información en un formato estructurado a la aplicación. La recomendación XML especifica lo que debe hacer el procesador, pero no entra en lo que hace después la aplicación con esa información.</dd>
-      <dt>Caracteres (<i class="english">characters</i>)</dt>
-      <dd>Los documentos XML pueden estar codificados en distintos juegos de caracteres (UTF-8, ISO-8859-1, etc).</dd>
-      <dt>Marcas (<i class="english">mark-up</i>) y contenido (<i class="english">content</i>)</dt>
-      <dd>El texto que contiene un documento XML se divide en marcas y contenido. Las marcas pueden ser de dos tipos: etiquetas o referencias a entidades. Todo lo que no son marcas es contenido.</dd>
-      <dt>Elementos (<i class="english">elements</i>)</dt>
-      <dd>Un elemento es un componente lógico de un documento que o bien comienza por una etiqueta de apertura y termina por la etiqueta de cierre correspondiente o que consiste en una única etiqueta vacía. El contenido de un elemento es todo lo que se encuentra entre las etiquetas de apertura y cierre, incluso si estos son también elementos en cuyo caso se llaman elementos hijos.</dd>
-      <dt>Etiquetas (<i class="english">tags</i>)</dt>
-      <dd>Una etiqueta es un identificador que empieza por el carácter <span class="xml-tag">&lt;</span> y termina por <span class="xml-tag">&gt;</span>. Existen tres tipos de etiquetas:</dd>
-      <dd>
-        <ul>
-          <li>las etiquetas de apertura (<i class="english">start-tag</i>), que empiezan por el carácter <span class="xml-tag">&lt;</span> y terminan por <span class="xml-tag">&gt;</span>. Por ejemplo:
-
-            <div class="codigo">
-              <pre><code class="language-xml">&lt;apartado&gt;</code></pre>
-            </div>
-          </li>
-          <li>las etiquetas de cierre (<i class="english">end-tag</i>), que empiezan por los caracteres <span class="xml-tag">&lt;/</span> y terminan por <span class="xml-tag">&gt;</span>. Por ejemplo:
-
-            <div class="codigo">
-              <pre><code class="language-xml">&lt;/apartado&gt;</code></pre>
-            </div>
-          </li>
-          <li>las etiquetas vacías (<i class="english">empty tag</i>), que empiezan con el carácter <span class="xml-tag">&lt;</span> y terminan por <span class="xml-tag">/&gt;</span>. Por ejemplo:
-
-            <div class="codigo">
-              <pre><code class="language-xml">&lt;linea /&gt;</code></pre>
-            </div>
-          </li>
-        </ul>
-      </dd>
-      <dt>Atributos (<i class="english">attributes</i>)</dt>
-      <dd>Un atributo es un componente de las etiquetas que consiste en una pareja nombre (<i class="english">name</i>) / valor (<i class="english">value</i>). Se puede encontrar en las etiquetas de apertura o en las etiquetas vacías, pero no en las de cierre. En una etiqueta no puede haber dos atributos con el mismo nombre. La sintaxis es siempre nombreAtributo="valorAtributo". Por ejemplo:</dd>
-      <dd>
-        <div class="codigo">
-          <pre><code class="language-xml">&lt;profesor nombre="Bartolomé" apellidos="Sintes Marco" /&gt;</code></pre>
-        </div>
-      </dd>
-      <dt>Comentarios (<i class="english">comments</i>)</dt>
-      <dd>Un comentario es una etiqueta que comienza por <span class="xml-comment">&lt;!--</span> y acaba por <span class="xml-comment">--&gt;</span>. Los comentarios no pueden estar dentro de otras marcas y no pueden contener los caracteres "--". Dentro de un comentario las entidades de carácter no se reconocen, es decir, sólo se pueden utilizar los caracteres del juego de caracteres del documento. Por ejemplo:</dd>
-      <dd>
-        <div class="codigo">
-          <pre><code class="language-xml">&lt;!-- Esto es un comentario --&gt;</code></pre>
-        </div>
-      </dd>
-      <dt>Declaración XML (<i class="english">XML declaration</i>)</dt>
-      <dd>La declaración XML es una etiqueta que comienza por <span class="xml-tag">&lt;?xml</span> y termina por <span class="xml-tag">?&gt;</span> y que proporciona información sobre el propio documento XML. Aunque no es obligatoria es conveniente que aparezca, y debe aparecer siempre al principio del documento. No es una instrucción de procesamiento, pero tiene la misma sintaxis (empieza por <span class="xml-tag">&lt;?</span> y acaba por <span class="xml-tag">?&gt;</span>).
-        <p>La declaración xml indica el juego de caracteres del documento. El juego de caracteres que se utiliza en este curso es UTF-8:</p>
-
-        <div class="codigo">
-          <pre><code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;</code></pre>
-        </div>
-
-        <p>En XML, el nombre del juego de caracteres se debe escribir en mayúsculas (UTF-8 en vez de utf-8).</p>
-
-        <p>La declaración xml también indica la versión XML utilizada. Aunque existe la versión XML 1.1, la versión más común sigue siendo la versión XML 1.0.</p>
-
-        <p>Se pueden utilizar otros juegos de caracteres, como ISO-8859-1 (Europeo occidental):</p>
-
-        <div class="codigo">
-          <pre><code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"ISO-8859-1"</span>?&gt;</code></pre>
-        </div>
-
-        <p>Es importante que el juego de caracteres que aparece en la declaración sea el juego de caracteres en que realmente está guardado el documento, porque si no el procesador XML puede tener problemas leyendo el documento.</p>
-
-        <div class="filaflex">
-          <div class="icono-ok"><img src="../varios/iconos/icono-oksi.svg" alt="Correcto" title="Correcto" width="40" height="40" /></div>
-          <div class="codigo">
-            <pre>
-<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
-&lt;!-- Este texto está guardado como UTF-8 y declara que es UTF-8 --&gt;
-&lt;prueba&gt;
-  &lt;texto&gt;á é í ó ú&lt;/texto&gt;
-&lt;/prueba&gt;</code>
-</pre>
-          </div>
-          <div class="resultado-object"><object type="application/xml" data="../ejemplos/ejemplos-utf-iso/ejemplo-utf-utf.xml">ERROR (no puede mostrarse el objeto)</object></div>
-          <div class="icono-enlace"><a href="../ejemplos/ejemplos-utf-iso/ejemplo-utf-utf.xml"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
-        </div>
-
-        <div class="filaflex">
-          <div class="icono-ok"><img src="../varios/iconos/icono-okno.svg" alt="Incorrecto" title="Incorrecto" width="40" height="40" /></div>
-          <div class="codigo">
-            <pre>
-<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"ISO-8859-1"</span>?&gt;
-&lt;!-- Este texto está guardado como UTF-8 sin BOM y declara que es ISO-8859-1 --&gt;
-&lt;prueba&gt;
-  &lt;texto&gt;á é í ó ú&lt;/texto&gt;
-&lt;/prueba&gt;</code>
-</pre>
-          </div>
-          <div class="resultado-object"><object type="application/xml" data="../ejemplos/ejemplos-utf-iso/ejemplo-utf-iso-nobom.xml">ERROR (no puede mostrarse el objeto)</object></div>
-          <div class="icono-enlace"><a href="../ejemplos/ejemplos-utf-iso/ejemplo-utf-iso-nobom.xml"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
-        </div>
-
-        <div class="filaflex">
-          <div class="icono-ok"><img src="../varios/iconos/icono-oksi.svg" alt="Correcto" title="Correcto" width="40" height="40" /></div>
-          <div class="codigo">
-            <pre>
-<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"ISO-8859-1"</span>?&gt;
-&lt;!-- Este texto está guardado como ISO-8859-1 y declara que es ISO-8859-1 --&gt;
-&lt;prueba&gt;
-  &lt;texto&gt;á é í ó ú&lt;/texto&gt;
-&lt;/prueba&gt;</code>
-</pre>
-          </div>
-          <div class="resultado-object"><object type="application/xml" data="../ejemplos/ejemplos-utf-iso/ejemplo-iso-iso.xml">ERROR (no puede mostrarse el objeto)</object></div>
-          <div class="icono-enlace"><a href="../ejemplos/ejemplos-utf-iso/ejemplo-iso-iso.xml"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
-        </div>
-
-        <div class="filaflex">
-          <div class="icono-ok"><img src="../varios/iconos/icono-okno.svg" alt="Incorrecto" title="Incorrecto" width="40" height="40" /></div>
-          <div class="codigo">
-            <pre>
-<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
-&lt;!-- Este texto está guardado como ISO-8859-1 y declara que es UTF-8 --&gt;
-&lt;prueba&gt;
-  &lt;texto&gt;á é í ó ú&lt;/texto&gt;
-&lt;/prueba&gt;</code>
-</pre>
-          </div>
-          <div class="resultado-object"><object type="application/xml" data="../ejemplos/ejemplos-utf-iso/ejemplo-iso-utf.xml" style="height: 16em;">ERROR (no puede mostrarse el objeto)</object></div>
-          <div class="icono-enlace"><a href="../ejemplos/ejemplos-utf-iso/ejemplo-iso-utf.xml"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
-        </div>
-
-        <p><strong>Nota</strong>:</p>
-
-        <p>En el caso del documento guardado como UTF-8 pero que declara ser ISO-8859-1, también le afecta que haya o no <a href="https://es.wikipedia.org/wiki/Marca_de_orden_de_bytes_%28BOM%29">marca de orden de bytes</a> (BOM).</p>
-
-        <p>La marca de orden de bytes son los primeros caracteres de un fichero UTF. Estos caracteres indican:</p>
-        <ul>
-          <li>el orden de los bytes en los formatos de 16 o 32 bytes. Cuando la codificación de un carácter ocupa más de un byte, los bytes que lo forman pueden estar en el orden natural de lectura (big endian) o en el contrario (little endian). Por ejemplo el carácter A, cuyo código es 0041, se puede guardar en UTF-16 como 00 41 (big endian) o como 41 00 (little endian).</li>
-          <li>el formato del archivo en general. Para saber si un archivo está en formato UTF-8, 16 o 32 (es decir, si cada byte del archivo es un carácter, o los bytes se tienen que tomar de dos en dos, o de cuatro en cuatro), los programas sólo tienen que mirar los primeros bytes del archivo y reconocer la marca correspondiente.</li>
-        </ul>
-
-        <p>En el caso de los archivos UTF-8, la marca de orden de bytes son los tres caracteres EF BB BF (que corresponden a los caracteres <strong>ï»¿</strong>). Pero como en un archivo UTF-8 no se necesita indicar el orden de los bytes, puesto que cada carácter ocupa solamente un byte, la marca es opcional, es decir, que hay archivos UTF-8 con BOM y archivos UTF-8 sin BOM. Los editores (como Eclipse PDT) no muestran estos caracteres y, suelen respetarlos al guardar de nuevo al archivo, pero otros (como el Bloc de notas de Windows) guardan los archivos UTF-8 siempre con BOM. Para ver esos caracteres, se puede utilizar un <a href="http://www.cdlibre.org/consultar/catalogo/Utilidades_Editores-hexadecimales.html">editor hexadecimal</a>, que muestra todos los caracteres sin excepción.</p>
-
-        <p>El ejemplo siguiente muestra como los navegadores son capaces de mostrar correctamente el contenido si el archivo está guardado como UTF-8 con BOM. El motivo es que aunque el archivo declara que está guardado como ISO-8859-1, el navegador detecta el BOM y deduce que se trata de un archivo UTF-8:</p>
-
-        <div class="filaflex">
-          <div class="icono-ok"><img src="../varios/iconos/icono-oksi.svg" alt="Correcto" title="Correcto" width="40" height="40" /></div>
-          <div class="codigo">
-            <pre>
-<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"ISO-8859-1"</span>?&gt;
-&lt;!-- Este texto está guardado como UTF-8 con BOM y declara que es ISO-8859-1 --&gt;
-&lt;prueba&gt;
-  &lt;texto&gt;á é í ó ú&lt;/texto&gt;
-&lt;/prueba&gt;</code>
-</pre>
-          </div>
-          <div class="resultado-object"><object type="application/xml" data="http://www.mclibre.org/consultar/especiales/xml/ejemplo_utf_iso_sibom.xml">ERROR (no puede mostrarse el objeto)</object></div>
-          <div class="icono-enlace"><a href="http://www.mclibre.org/consultar/especiales/xml/ejemplo_utf_iso_sibom.xml"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
-        </div>
-
-        <p>El ejemplo siguiente muestra como los navegadores no son capaces de mostrar correctamente el contenido si el archivo está guardado como UTF-8 sin BOM. El archivo se muestra como si fuera ISO-8859-1 ya que el archivo declara que está guardado como ISO-8859-1 y el navegador no detecta un BOM que le indique que realmente está guardado como UTF-8:</p>
-
-        <div class="filaflex">
-          <div class="icono-ok"><img src="../varios/iconos/icono-okno.svg" alt="Incorrecto" title="Incorrecto" width="40" height="40" /></div>
-          <div class="codigo">
-            <pre>
-<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"ISO-8859-1"</span>?&gt;
-&lt;!-- Este texto está guardado como UTF-8 sin BOM y declara que es ISO-8859-1 --&gt;
-&lt;prueba&gt;
-  &lt;texto&gt;á é í ó ú&lt;/texto&gt;
-&lt;/prueba&gt;</code>
-</pre>
-          </div>
-          <div class="resultado-object"><object type="application/xml" data="../ejemplos/ejemplos-utf-iso/ejemplo-utf-iso-nobom.xml">ERROR (no puede mostrarse el objeto)</object></div>
-          <div class="icono-enlace"><a href="../ejemplos/ejemplos-utf-iso/ejemplo-utf-iso-nobom.xml"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
-        </div>
-      </dd>
-      <dt>Definición de tipo de documento (DTD, <i class="english">Document Type Definition</i>)</dt>
-      <dd>Una DTD es un documento que define la estructura de un documento XML: los elementos, atributos, entidades, notaciones, etc, que pueden aparecer, el orden y el número de veces que pueden aparecer, cuáles pueden ser hijos de cuáles, etc. El procesador XML la utiliza para verificar si un documento es válido, es decir, si el documento cumple las reglas del DTD.</dd>
-      <dt>Declaración de tipo de documento (DOCTYPE,<i class="english"> Document type declaration</i>)</dt>
-      <dd>Una declaración de tipo de documento es una etiqueta que comienza por <span class="xml-tag">&lt;!DOCTYPE</span> y acaba por <span class="xml-tag">&gt;</span> y que indica la(s) DTD(s) que debe utilizar el procesador XML para validar el documento. La DTD puede estar incluida en el propio documento o ser un documento externo. Por ejemplo, el siguiente ejemplo muestra la declaración de tipo de documento que se debe incluir en los documentos XHML 1.0 de tipo strict (en este caso, la DTD es un documento externo):</dd>
-      <dd>
-        <div class="codigo">
-          <pre> <code class="language-xml">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</code></pre>
-        </div>
-      </dd>
-      <dt>Instrucciones de procesamiento (PI, <i class="english">processing instruction</i>)</dt>
-      <dd>Una instrucción de procesamiento en una etiqueta que empieza por "&lt;?" y acaba por "?&gt;" y que contiene instrucciones dirigidas a las aplicaciones que leen el documento. Pueden aparecer en cualquier lugar del documento. Por ejemplo:</dd>
-      <dd>
-        <div class="codigo">
-          <pre><code class="language-xml">&lt;?xml-stylesheet <span class="attr-name">type</span>=<span class="attr-value">"text/xsl"</span> <span class="attr-name">href</span>=<span class="attr-value">"estilo.xsl"</span> ?&gt;</code></pre>
-        </div>
-      </dd>
-      <dt>Entidades de carácter</dt>
-      <dd>En XML se utilizan varias entidades de carácter de HTML, para poder escribir en cadenas de texto los caracteres que delimitan las marcas o las cadenas de texto :
-
-        <table class="tabla-con-borde">
-          <tbody class="mcl-centrado">
-            <tr>
-              <th>Referencia a entidad</th>
-              <th>Carácter</th>
-            </tr>
-            <tr>
-              <td>&amp;lt;</td>
-              <td>&lt;</td>
-            </tr>
-            <tr>
-              <td>&amp;gt;</td>
-              <td>&gt;</td>
-            </tr>
-            <tr>
-              <td>&amp;amp;</td>
-              <td>&amp;</td>
-            </tr>
-            <tr>
-              <td>&amp;apos;</td>
-              <td>'</td>
-            </tr>
-            <tr>
-              <td>&amp;quot;</td>
-              <td>"</td>
-            </tr>
-          </tbody>
-        </table>
-      </dd>
-      <dt>Secciones CDATA (CDATA <i class="english">section</i>)</dt>
-      <dd>Una sección CDATA es una etiqueta que comienza por <span class="xml-attr">&lt;![CDATA[</span> y termina por <span class="xml-attr">]]&gt;</span> y cuyo contenido el procesador XML no interpreta como marcas sino como texto. Es decir, que si aparecen los caracteres especiales (&lt; &amp; " ') en una sección CDATA, el procesador XML no interpreta que empieza una marca, sino que lo considera un carácter más. Se suele utilizar en documentos en los que aparecen muchas veces esos caracteres especiales para no tener que estar utilizando las referencias a entidades (&amp;lt; y &amp;amp;) que dificultan la lectura del documento.
-
-        <div class="filaflex">
-          <div class="icono-ok"><img src="../varios/iconos/icono-okno.svg" alt="Incorrecto" title="Incorrecto" width="40" height="40" /></div>
-          <div class="codigo">
-            <pre>
-<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
-&lt;prueba&gt;
-  &lt;texto&gt;Los caracteres &lt; y &amp; no pueden escribirse
-  si no es como comienzo de marcas&lt;/texto&gt;
-&lt;/prueba&gt;</code>
-</pre>
-          </div>
-          <div class="resultado-object"><object type="application/xml" data="../ejemplos/ejemplos-que-es/ejemplo-cdata-1.xml" style="height: 16em;">ERROR (no puede mostrarse el objeto)</object></div>
-          <div class="icono-enlace"><a href="../ejemplos/ejemplos-que-es/ejemplo-cdata-1.xml"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
-        </div>
-
-        <div class="filaflex">
-          <div class="icono-ok"><img src="../varios/iconos/icono-oksi.svg" alt="Correcto" title="Correcto" width="40" height="40" /></div>
-          <div class="codigo">
-            <pre>
-<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
-&lt;prueba&gt;
-  &lt;texto&gt;Los caracteres &amp;lt; y &amp;amp; no pueden escribirse
-  si no es como comienzo de marcas&lt;/texto&gt;
-&lt;/prueba&gt;</code>
-</pre>
-          </div>
-          <div class="resultado-object"><object type="application/xml" data="../ejemplos/ejemplos-que-es/ejemplo-cdata-2.xml">ERROR (no puede mostrarse el objeto)</object></div>
-          <div class="icono-enlace"><a href="../ejemplos/ejemplos-que-es/ejemplo-cdata-2.xml"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
-        </div>
-
-        <div class="filaflex">
-          <div class="icono-ok"><img src="../varios/iconos/icono-oksi.svg" alt="Correcto" title="Correcto" width="40" height="40" /></div>
-          <div class="codigo">
-            <pre>
-<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
-&lt;prueba&gt;
-  &lt;texto&gt;&lt;![CDATA["Los caracteres &lt; y &amp; no pueden escribirse
-  si no es como comienzo de marcas"]]&gt;&lt;/texto&gt;
-&lt;/prueba&gt;</code>
-</pre>
-          </div>
-          <div class="resultado-object"><object type="application/xml" data="../ejemplos/ejemplos-que-es/ejemplo-cdata-3.xml">ERROR (no puede mostrarse el objeto)</object></div>
-          <div class="icono-enlace"><a href="../ejemplos/ejemplos-que-es/ejemplo-cdata-3.xml"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
-        </div>
-      </dd>
-      <dt>Referencias a entidades</dt>
-      <dd>En XML se pueden definir entidades y utilizarlas como se utilizan las entidades de carácter en el HTML. Una entidad se define mediante una etiqueta que comienza por <span class="xml-tag">&lt;!ENTITY</span> y termina por <span class="xml-tag">&gt;</span> y contiene el nombre y el valor de la entidad. Por ejemplo:
-
-        <p>Como las entidades de carácter del HTML, para hacer referencia a una entidad se escribe sin espacios intermedios el carácter "&amp;", el nombre de la entidad y el carácter ";". Al abrir el documento XML el procesador sustituye la referencia a la entidad por su valor. Por ejemplo:</p>
-
-        <div class="filaflex">
-          <div class="icono-ok"><img src="../varios/iconos/icono-oksi.svg" alt="Correcto" title="Correcto" width="40" height="40" /></div>
-          <div class="codigo">
-            <pre>
-<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"ISO-8859-1"</span>?&gt;
-&lt;!DOCTYPE autor [
-  <span class="codigo-resaltado">&lt;!ENTITY yo &quot;Bartolomé Sintes Marco&quot;&gt;</span>
-  &lt;!ELEMENT autor (#PCDATA)&gt;
-]&gt;
-<span class="codigo-resaltado">&lt;autor&gt;&amp;yo;&lt;/autor&gt;</span></code>
-</pre>
-          </div>
-          <div class="resultado-object"><object type="application/xml" data="../ejemplos/ejemplos-que-es/ejemplo-entidad.xml">ERROR (no puede mostrarse el objeto)</object></div>
-          <div class="icono-enlace"><a href="../ejemplos/ejemplos-que-es/ejemplo-entidad.xml"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
-        </div>
-      </dd>
-    </dl>
-  </section>
-
-  <section id="xml-bien-formados">
-    <h2>Documentos bien formados</h2>
-
-    <p>Un documento XML debe estar bien formado, es decir debe cumplir las reglas de sintaxis de la recomendación XML. Para que un documento esté bien formado, al menos debe cumplir los siguientes puntos:</p>
-    <ul>
-      <li>El documento contiene únicamente caracteres Unicode válidos.</li>
-      <li>Hay un elemento raíz que contiene al resto de elementos.</li>
-      <li>Los nombres de los elementos y de sus atributos no contienen espacios.</li>
-      <li>El primer carácter de un nombre de elemento o de atributo puede ser una letra, dos puntos (:) o subrayado (_).</li>
-      <li>El resto de caracteres pueden ser también números, guiones (-) o puntos (.).</li>
-      <li>Los caracteres "&lt;" y "&amp;" sólo se utilizan como comienzo de marcas.</li>
-      <li>Las etiquetas de apertura, de cierre y vacías están correctamente anidadas (no se solapan) y no falta ni sobra ninguna etiqueta de apertura o cierre.</li>
-      <li>Las etiquetas de cierre coinciden con las de apertura (incluso en el uso de mayúsculas y minúsculas).</li>
-      <li>Las etiquetas de cierre no contienen atributos.</li>
-      <li>Ninguna etiqueta tiene dos atributos con el mismo nombre.</li>
-      <li>Todos los atributos tienen algún valor.</li>
-      <li>Los valores de los atributos están entre comillas.</li>
-      <li>No existen referencias en los valores de los atributos.</li>
-    </ul>
-
-    <p>Si un documento XML no está bien formado, no es un documento XML. Los procesadores XML deben rechazar cualquier documento que contenga errores.</p>
-  </section>
-
-  <section id="xml-validos">
-    <h2>Documentos válidos</h2>
-
-    <p>Un documento XML bien formado puede ser válido. Para ser válido, un documento XML debe:</p>
-    <ul>
-      <li>incluir una referencia a una gramática,</li>
-      <li>incluir únicamente elementos y atributos definidos en la gramática,</li>
-      <li>cumplir las reglas gramaticales definidas en la gramática.</li>
-    </ul>
-
-    <p>Existen varios formas de definir una gramática para documentos XML, las más empleadas son :</p>
-    <ul>
-      <li>DTD (Document Type Definition = Definición de Tipo de Documento). Es el modelo más antiguo, heredado del SGML.</li>
-      <li>XML Schema. Es un modelo creado por el W3C como sucesor de las DTDs.</li>
-      <li>Relax NG. Es un modelo creado por OASIS, más sencillo que XML Schema.</li>
-    </ul>
-  </section>
-
-  <section id="xml-otras-recomendaciones">
-    <h2>Otras recomendaciones XML</h2>
-
-    <p>El W3C y otras organizaciones de normalización han publicado numerosas recomendaciones relacionadas con XML. El cuadro siguiente cita algunas de ellas agrupándolas por temas:</p>
-
-    <p class="captura">
-      <img src="../img/recomendaciones-xml.png" alt="Recomendaciones XML" width="600" height="661" title="Recomendaciones XML" />
-    </p>
-
-    <p>Las más empleadas son las siguientes:</p>
+    <p>Las tecnologías XML básicas desarrolladas por el W3C son las siguientes:</p>
     <dl>
       <dt>XML Namespaces (Espacios de nombres XML)</dt>
-      <dd>Define los mecanismos para permitir que en un documentos se utilicen elementos y atributos de diferentes vocabularios, sin tener que preocuparse de que algunos nombres coincidan.</dd>
-      <dt>XML Base</dt>
-      <dd>Define el atributo xml:base, que puede utilizarse como base para resolver las referencias a URI relativas en un elemento XML</dd>
+      <dd>Define los mecanismos para permitir que en un mismo documento se puedan utilizar elementos y atributos de diferentes lenguajes de marcas (resolviendo, por ejemplo, el problemas de que algunos nombres de elementos coincidan).</dd>
       <dt>XML Infoset</dt>
       <dd>Describe un modelo de datos abstracto para documentos XML a partir de elementos de información. Se utiliza en las especificaciones de lenguajes XML, para describir restricciones en el lenguaje.</dd>
-      <dt>xml:id</dt>
-      <dd>Define el atributo id</dd>
       <dt>XPath</dt>
-      <dd>Define las expresiones XPath que sirven para identificar los componentes de un documento XML y facilitar su acceso a los programas que procesan documentos XML.</dd>
+      <dd>Permite seleccionar los componentes de un documento XML y facilitar su acceso a los programas que procesan documentos XML.</dd>
       <dt>XSLT</dt>
       <dd>Lenguaje de transformación de documentos XML a otros formatos (XML o no XML)</dd>
       <dt>XSL Formatting Objects (XSL-FO)</dt>
@@ -486,11 +173,19 @@
       <dd>Define la sintaxis y las reglas de procesamiento para encriptar documentos XML.</dd>
     </dl>
 
-    <p>Otras recomendaciones del W3C relacionadas con el XML no han tenido mucho éxito, como XInclude, XLink y XPointer.</p>
+    <p>Otras tecnologías XML desarrolladas por el W3C no han tenido mucho éxito, como las siguientes:</p>
+    <dl>
+      <dt>XInclude</dt>
+      <dd>Define el mecanismo para incluir un documento de texto (XML o no XML) dentro de un documento XML.</dd>
+      <dt>XLink</dt>
+      <dd>Define métodos para incluir enlaces internos y externos en documentos XML y asociar metadatos a los enlaces.</dd>
+      <dt>XPointer.</dt>
+      <dd>Define el mecanismo para identificar fragmentos de un documentos.</dd>
+    </dl>
   </section>
 
   <footer>
-    <p class="ultmod">Última modificación de esta página: 19 de abril de 2018</p>
+    <p class="ultmod">Última modificación de esta página: 29 de abril de 2018</p>
 
     <p class="licencia"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../varios/iconos/icono-cc-by-sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
       Esta página forma parte del curso <a href="http://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a> por <a href="http://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
