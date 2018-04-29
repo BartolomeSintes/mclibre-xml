@@ -22,7 +22,7 @@
 
       <ul>
         <li><a href="#web-semantica">Web semántica</a></li>
-        <li><a href="#recomendaciones">Nortmas principales</a>
+        <li><a href="#recomendaciones">Normas principales</a>
           <ul>
             <li><a href="#rdf">RDF</a></li>
             <li><a href="#rdfa">RDFa</a></li>
@@ -33,13 +33,13 @@
         </li>
         <li><a href="#recomendaciones">Normas secundarias</a>
           <ul>
-            <li><a href="#sawsdl">SAWSDL</a></li>
-            <li><a href="#grddl">GRDDL</a></li>
+            <li><a href="#rdf-data-shapes">RDF Data Shapes</a></li>
+            <li><a href="#prov">PROV</a></li>
+            <li><a href="#rdb2rdf">RDB2RDF</a></li>
             <li><a href="#skos">SKOS</a></li>
             <li><a href="#powder">POWDER</a></li>
-            <li><a href="#rdb2rdf">RDB2RDF</a></li>
-            <li><a href="#prov">PROV</a></li>
-            <li><a href="#rdf-data-shapes">RDF Data Shapes</a></li>
+            <li><a href="#grddl">GRDDL</a></li>
+            <li><a href="#sawsdl">SAWSDL</a></li>
           </ul>
         </li>
       </ul>
@@ -356,43 +356,81 @@
 
     <p>En este apartado se comentan las últimas versiones de las recomendaciones. Las versiones obsoletas y las notas de los grupos de trabajo se comentan en el apartado <a href="xml-normas-obsoletas.html">Versiones obsoletas</a>.</p>
 
-    <section id="sawsdl">
-      <h3>Semantic Annotations for WSDL (SAWSDL)</h3>
+    <p>Los grupos de trabajo están ordenados por su fecha de cierre en orden inverso.</p>
 
-      <p>SAWDL amplia los atributos de los elementos de los lenguajes WSDL (Web Services Definition Language) y XML Schema para poder incluir términos de ontologías.</p>
+    <section id="rdf-data-shapes">
+      <h3>RDF Data Shapes</h3>
 
-      <hr class="corta" />
+      <p>Grupo de trabajo <strong>RDF Data Shapes</strong> en el W3C: <a href="https://www.w3.org/2014/data-shapes/wiki/Main_Page">Homepage</a> - Charter: <a href="https://www.w3.org/2014/data-shapes/charter">2014-2017</a> (<a href="https://lists.w3.org/Archives/Public/public-data-shapes-wg/2017Sep/0000.html">extendido hasta abril de 2018</a>)</p>
 
-      <p>Grupo de trabajo <strong>SAWSDL</strong> en el W3C: <a href="https://www.w3.org/2002/ws/sawsdl/">Homepage</a> - Charter: <a href="https://www.w3.org/2005/10/sa-ws-charter.html">2006-2007</a></p>
+      <p>El grupo de trabajo <strong>RDF Data Shapes</strong> se creó en octubre de 2014 y se cerró en abril de 2018. En su lugar se creó el grupo comunitario <a href="https://www.w3.org/community/shacl/">SHACL Community Group</a>.</p>
 
-      <p>El grupo de trabajo <strong>SAWSDL</strong> se creó en abril de 2006 y se cerró en agosto de 2007.</p>
-
-      <p>El grupo de trabajo <strong>SAWSDL</strong> publicó la siguiente recomendación:</p>
+      <p>El grupo de trabajo <strong>RDF Data Shapes</strong> publicó las siguientes recomendaciones:</p>
       <ul>
-        <li>agosto de 2007: <a href="https://www.w3.org/TR/2007/REC-sawsdl-20070828/">Semantic Annotations for WSDL and XML Schema</a>, editada por Joel Farrell y Holger Lausen</li>
+        <li>julio de 2017: <a href="https://www.w3.org/TR/2017/REC-shacl-20170720/">Shapes Constraint Language (SHACL)</a>, editada por Holger Knublauch y Dimitris Kontokostas</li>
       </ul>
 
-      <p>El grupo de trabajo <strong>SAWSDL</strong> publicó la siguiente nota del grupo de trabajo:</p>
+      <p>El grupo de trabajo <strong>RDF Data Shapes</strong> publicó las siguientes notas del grupo de trabajo:</p>
       <ul>
-        <li>agosto de 2007: <a href="https://www.w3.org/TR/2007/NOTE-sawsdl-guide-20070828/">Semantic Annotations for WSDL and XML Schema — Usage Guide</a>, editada por Rama Akkiraju y Brahmananda Sapkota</li>
+        <li>junio de 2017: <a href="https://www.w3.org/TR/2017/NOTE-shacl-af-20170608/">SHACL Advanced Features</a>, editada por Holger Knublauch y otros</li>
+        <li>junio de 2017: <a href="https://www.w3.org/TR/2017/NOTE-shacl-js-20170608/">SHACL JavaScript Extensions</a>, editada por Holger Knublauch y Pano Maria</li>
+        <li>julio de 2017: <a href="https://www.w3.org/TR/2017/NOTE-shacl-ucr-20170720/">SHACL Use Cases and Requirements</a>, editada por Simon Steyskal y Karen Coyle</li>
       </ul>
     </section>
 
-    <section id="grddl">
-      <h3>Gleaning Resource Descriptions from Dialects of Languages (GRDDL)</h3>
+    <section id="prov">
+      <h3>Provenance Interchange (PROV)</h3>
 
-      <p>GRDDL define la forma de extraer tripletes RDF a partir de documentos XML.</p>
+      <p>PROV es un formato para el intercambio de información sobre el origen de la información disponible en un recurso web.</p>
 
       <hr class="corta" />
 
-      <p>Grupo de trabajo <strong>GRDDL</strong> en el W3C: <a href="https://www.w3.org/2001/sw/grddl-wg/">Homepage</a> - Charter: <a href="https://www.w3.org/2006/07/grddl-charter.html">2006-2007</a></p>
+      <p>Grupo de trabajo <strong>PROV</strong> en el W3C: <a href="https://www.w3.org/2011/prov/wiki/Main_Page">Homepage</a> - Charter: <a href="https://www.w3.org/2011/01/prov-wg-charter">2011-2013</a></p>
 
-      <p>El grupo de trabajo <strong>GRDDL</strong> se cerró en diciembre de 2008 <small>[<a href="https://lists.w3.org/Archives/Public/public-grddl-wg/2009Dec/0000.html">fuente</a>]</small>.</p>
+      <p>El grupo de trabajo <strong>PROV</strong> se cerró en junio de 2013.</p>
 
-      <p>El grupo de trabajo <strong>GRDDL</strong> publicó las siguientes recomendaciones:</p>
+      <p>El grupo de trabajo <strong>PROV</strong> publicó las siguientes recomendaciones:</p>
       <ul>
-        <li>septiembre de 2007: <a href="https://www.w3.org/TR/2007/REC-grddl-20070911/">Gleaning Resource Descriptions from Dialects of Languages (GRDDL)</a>, editada por Dan Connolly</li>
-        <li>septiembre de 2007: <a href="https://www.w3.org/TR/2007/REC-grddl-tests-20070911/">GRDDL Test Cases</a>, editada por Chimezie Ogbuji</li>
+        <li>abril de 2013: <a href="https://www.w3.org/TR/2013/REC-prov-n-20130430/">PROV-N: The Provenance Notation</a>, editada por Luc Moreau y Paolo Missier</li>
+        <li>abril de 2013: <a href="https://www.w3.org/TR/2013/REC-prov-dm-20130430/">PROV-DM: The PROV Data Model</a>, editada por Luc Moreau y Paolo Missier</li>
+        <li>abril de 2013: <a href="https://www.w3.org/TR/2013/REC-prov-o-20130430/">PROV-O: The PROV Ontology</a>, editada por Timothy Lebo y otros</li>
+        <li>abril de 2013: <a href="www.w3.org/TR/2013/REC-prov-constraints-20130430/">Constraints of the PROV Data Model</a>, editada por James Cheney y otros</li>
+      </ul>
+
+      <p>El grupo de trabajo <strong>PROV</strong> publicó las siguientes notas del grupo de trabajo:</p>
+      <ul>
+        <li>abril de 2013: <a href="https://www.w3.org/TR/2013/NOTE-prov-aq-20130430/">PROV-AQ: Provenance Access and Query</a>, editada por Graham Klyne y Paul Groth</li>
+        <li>abril de 2013: <a href="https://www.w3.org/TR/2013/NOTE-prov-dc-20130430/">Dublin Core to PROV Mapping</a>, editada por Daniel Garijo y Kai Eckert</li>
+        <li>abril de 2013: <a href="https://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/">PROV-Dictionary: Modeling Provenance for Dictionary Data Structures</a>, editada por Tom De Nies y Sam Coppens</li>
+        <li>abril de 2013: <a href="https://www.w3.org/TR/2013/NOTE-prov-links-20130430/">Linking Across Provenance Bundles</a>, editada por Luc Moreau y Timothy Lebo</li>
+        <li>abril de 2013: <a href="https://www.w3.org/TR/2013/NOTE-prov-implementations-20130430/">PROV Implementation Report</a>, editada por Trung Dong Huynh y otros</li>
+        <li>abril de 2013: <a href="https://www.w3.org/TR/2013/NOTE-prov-overview-20130430/">PROV-Overview</a>, editada por Paul Groth y Luc Moreau</li>
+        <li>abril de 2013: <a href="https://www.w3.org/TR/2013/NOTE-prov-sem-20130430/">Semantics of the PROV Data Model</a>, editada por James Cheney</li>
+        <li>abril de 2013: <a href="https://www.w3.org/TR/2013/NOTE-prov-primer-20130430/">PROV Model Primer</a>, editada por Yolanda Gil y Simon Miles</li>
+        <li>abril de 2013: <a href="https://www.w3.org/TR/2013/NOTE-prov-xml-20130430/">PROV-XML: The PROV XML Schema</a>, editada por Hook Hua y otros</li>
+      </ul>
+    </section>
+
+    <section id="rdb2rdf">
+      <h3>RDB to RDF (RDB2RDF)</h3>
+
+      <p>RDB2RDF es un lenguaje de extracción de tripletes RDF a partir de bases de datos relacionales.</p>
+
+      <hr class="corta" />
+
+      <p>Grupo de trabajo <strong>RDB2RDF</strong> en el W3C: <a href="https://www.w3.org/2001/sw/rdb2rdf/">Homepage</a> - Charter: <a href="https://www.w3.org/2011/10/rdb2rdf-charter">2009-2012</a></p>
+
+      <p>El grupo de trabajo <strong>RDB2RDF</strong> se abrió en septiembre de 2009 y se cerró en octubre de 2012 <small>[<a href="https://lists.w3.org/Archives/Public/public-rdb2rdf-wg/2012Oct/0001.html">fuente</a>]</small>.</p>
+
+      <p>El grupo de trabajo <strong>RDB2RDF</strong> publicó las siguientes recomendaciones:</p>
+      <ul>
+        <li>septiembre de 2012: <a href="https://www.w3.org/TR/2012/REC-r2rml-20120927/">R2RML: RDB to RDF Mapping Language</a>, editada por Souripriya Das y otros</li>
+        <li>septiembre de 2012: <a href="https://www.w3.org/TR/2012/REC-rdb-direct-mapping-20120927/">A Direct Mapping of Relational Data to RDF</a>, editada por Marcelo Arenas y otros</li>
+      </ul>
+
+      <p>El grupo de trabajo <strong>RDB2RDF</strong> publicó la siguiente nota del grupo de trabajo:</p>
+      <ul>
+        <li>agosto de 2012: <a href="https://www.w3.org/TR/2012/NOTE-rdb2rdf-test-cases-20120814/">R2RML and Direct Mapping Test Cases</a>, editada por Boris Villazón-Terrazas y Michael Hausenblas</li>
       </ul>
     </section>
 
@@ -445,103 +483,66 @@
       </ul>
     </section>
 
-    <section id="rdb2rdf">
-      <h3>RDB to RDF (RDB2RDF)</h3>
+    <section id="grddl">
+      <h3>Gleaning Resource Descriptions from Dialects of Languages (GRDDL)</h3>
 
-      <p>RDB2RDF es un lenguaje de extracción de tripletes RDF a partir de bases de datos relacionales.</p>
-
-      <hr class="corta" />
-
-      <p>Grupo de trabajo <strong>RDB2RDF</strong> en el W3C: <a href="https://www.w3.org/2001/sw/rdb2rdf/">Homepage</a> - Charter: <a href="https://www.w3.org/2011/10/rdb2rdf-charter">2009-2012</a></p>
-
-      <p>El grupo de trabajo <strong>RDB2RDF</strong> se abrió en septiembre de 2009 y se cerró en octubre de 2012 <small>[<a href="https://lists.w3.org/Archives/Public/public-rdb2rdf-wg/2012Oct/0001.html">fuente</a>]</small>.</p>
-
-      <p>El grupo de trabajo <strong>RDB2RDF</strong> publicó las siguientes recomendaciones:</p>
-      <ul>
-        <li>septiembre de 2012: <a href="https://www.w3.org/TR/2012/REC-r2rml-20120927/">R2RML: RDB to RDF Mapping Language</a>, editada por Souripriya Das y otros</li>
-        <li>septiembre de 2012: <a href="https://www.w3.org/TR/2012/REC-rdb-direct-mapping-20120927/">A Direct Mapping of Relational Data to RDF</a>, editada por Marcelo Arenas y otros</li>
-      </ul>
-
-      <p>El grupo de trabajo <strong>RDB2RDF</strong> publicó la siguiente nota del grupo de trabajo:</p>
-      <ul>
-        <li>agosto de 2012: <a href="https://www.w3.org/TR/2012/NOTE-rdb2rdf-test-cases-20120814/">R2RML and Direct Mapping Test Cases</a>, editada por Boris Villazón-Terrazas y Michael Hausenblas</li>
-      </ul>
-    </section>
-
-    <section id="prov">
-      <h3>Provenance Interchange (PROV)</h3>
-
-      <p>PROV es un formato para el intercambio de información sobre el origen de la información disponible en un recurso web.</p>
+      <p>GRDDL define la forma de extraer tripletes RDF a partir de documentos XML.</p>
 
       <hr class="corta" />
 
-      <p>Grupo de trabajo <strong>PROV</strong> en el W3C: <a href="https://www.w3.org/2011/prov/wiki/Main_Page">Homepage</a> - Charter: <a href="https://www.w3.org/2011/01/prov-wg-charter">2011-2013</a></p>
+      <p>Grupo de trabajo <strong>GRDDL</strong> en el W3C: <a href="https://www.w3.org/2001/sw/grddl-wg/">Homepage</a> - Charter: <a href="https://www.w3.org/2006/07/grddl-charter.html">2006-2007</a></p>
 
-      <p>El grupo de trabajo <strong>PROV</strong> se cerró en junio de 2013.</p>
+      <p>El grupo de trabajo <strong>GRDDL</strong> se cerró en diciembre de 2008 <small>[<a href="https://lists.w3.org/Archives/Public/public-grddl-wg/2009Dec/0000.html">fuente</a>]</small>.</p>
 
-      <p>El grupo de trabajo <strong>PROV</strong> publicó las siguientes recomendaciones:</p>
+      <p>El grupo de trabajo <strong>GRDDL</strong> publicó las siguientes recomendaciones:</p>
       <ul>
-        <li>abril de 2013: <a href="https://www.w3.org/TR/2013/REC-prov-n-20130430/">PROV-N: The Provenance Notation</a>, editada por Luc Moreau y Paolo Missier</li>
-        <li>abril de 2013: <a href="https://www.w3.org/TR/2013/REC-prov-dm-20130430/">PROV-DM: The PROV Data Model</a>, editada por Luc Moreau y Paolo Missier</li>
-        <li>abril de 2013: <a href="https://www.w3.org/TR/2013/REC-prov-o-20130430/">PROV-O: The PROV Ontology</a>, editada por Timothy Lebo y otros</li>
-        <li>abril de 2013: <a href="www.w3.org/TR/2013/REC-prov-constraints-20130430/">Constraints of the PROV Data Model</a>, editada por James Cheney y otros</li>
-      </ul>
-
-      <p>El grupo de trabajo <strong>PROV</strong> publicó las siguientes notas del grupo de trabajo:</p>
-      <ul>
-        <li>abril de 2013: <a href="https://www.w3.org/TR/2013/NOTE-prov-aq-20130430/">PROV-AQ: Provenance Access and Query</a>, editada por Graham Klyne y Paul Groth</li>
-        <li>abril de 2013: <a href="https://www.w3.org/TR/2013/NOTE-prov-dc-20130430/">Dublin Core to PROV Mapping</a>, editada por Daniel Garijo y Kai Eckert</li>
-        <li>abril de 2013: <a href="https://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/">PROV-Dictionary: Modeling Provenance for Dictionary Data Structures</a>, editada por Tom De Nies y Sam Coppens</li>
-        <li>abril de 2013: <a href="https://www.w3.org/TR/2013/NOTE-prov-links-20130430/">Linking Across Provenance Bundles</a>, editada por Luc Moreau y Timothy Lebo</li>
-        <li>abril de 2013: <a href="https://www.w3.org/TR/2013/NOTE-prov-implementations-20130430/">PROV Implementation Report</a>, editada por Trung Dong Huynh y otros</li>
-        <li>abril de 2013: <a href="https://www.w3.org/TR/2013/NOTE-prov-overview-20130430/">PROV-Overview</a>, editada por Paul Groth y Luc Moreau</li>
-        <li>abril de 2013: <a href="https://www.w3.org/TR/2013/NOTE-prov-sem-20130430/">Semantics of the PROV Data Model</a>, editada por James Cheney</li>
-        <li>abril de 2013: <a href="https://www.w3.org/TR/2013/NOTE-prov-primer-20130430/">PROV Model Primer</a>, editada por Yolanda Gil y Simon Miles</li>
-        <li>abril de 2013: <a href="https://www.w3.org/TR/2013/NOTE-prov-xml-20130430/">PROV-XML: The PROV XML Schema</a>, editada por Hook Hua y otros</li>
+        <li>septiembre de 2007: <a href="https://www.w3.org/TR/2007/REC-grddl-20070911/">Gleaning Resource Descriptions from Dialects of Languages (GRDDL)</a>, editada por Dan Connolly</li>
+        <li>septiembre de 2007: <a href="https://www.w3.org/TR/2007/REC-grddl-tests-20070911/">GRDDL Test Cases</a>, editada por Chimezie Ogbuji</li>
       </ul>
     </section>
 
-    <section id="rdf-data-shapes">
-      <h3>RDF Data Shapes</h3>
+    <section id="sawsdl">
+      <h3>Semantic Annotations for WSDL (SAWSDL)</h3>
 
-      <p>Grupo de trabajo <strong>RDF Data Shapes</strong> en el W3C: <a href="https://www.w3.org/2014/data-shapes/wiki/Main_Page">Homepage</a> - Charter: <a href="https://www.w3.org/2014/data-shapes/charter">2014-2017</a> (<a href="https://lists.w3.org/Archives/Public/public-data-shapes-wg/2017Sep/0000.html">extendido hasta abril de 2018</a>)</p>
+      <p>SAWDL amplia los atributos de los elementos de los lenguajes WSDL (Web Services Definition Language) y XML Schema para poder incluir términos de ontologías.</p>
 
-      <p>El grupo de trabajo <strong>RDF Data Shapes</strong> se creó en octubre de 2014 y se cerró en abril de 2018. En su lugar se creó el grupo comunitario <a href="https://www.w3.org/community/shacl/">SHACL Community Group</a>.</p>
+      <hr class="corta" />
 
-      <p>El grupo de trabajo <strong>RDF Data Shapes</strong> publicó las siguientes recomendaciones:</p>
+      <p>Grupo de trabajo <strong>SAWSDL</strong> en el W3C: <a href="https://www.w3.org/2002/ws/sawsdl/">Homepage</a> - Charter: <a href="https://www.w3.org/2005/10/sa-ws-charter.html">2006-2007</a></p>
+
+      <p>El grupo de trabajo <strong>SAWSDL</strong> se creó en abril de 2006 y se cerró en agosto de 2007.</p>
+
+      <p>El grupo de trabajo <strong>SAWSDL</strong> publicó la siguiente recomendación:</p>
       <ul>
-        <li>julio de 2017: <a href="https://www.w3.org/TR/2017/REC-shacl-20170720/">Shapes Constraint Language (SHACL)</a>, editada por Holger Knublauch y Dimitris Kontokostas</li>
+        <li>agosto de 2007: <a href="https://www.w3.org/TR/2007/REC-sawsdl-20070828/">Semantic Annotations for WSDL and XML Schema</a>, editada por Joel Farrell y Holger Lausen</li>
       </ul>
 
-      <p>El grupo de trabajo <strong>RDF Data Shapes</strong> publicó las siguientes notas del grupo de trabajo:</p>
+      <p>El grupo de trabajo <strong>SAWSDL</strong> publicó la siguiente nota del grupo de trabajo:</p>
       <ul>
-        <li>junio de 2017: <a href="https://www.w3.org/TR/2017/NOTE-shacl-af-20170608/">SHACL Advanced Features</a>, editada por Holger Knublauch y otros</li>
-        <li>junio de 2017: <a href="https://www.w3.org/TR/2017/NOTE-shacl-js-20170608/">SHACL JavaScript Extensions</a>, editada por Holger Knublauch y Pano Maria</li>
-        <li>julio de 2017: <a href="https://www.w3.org/TR/2017/NOTE-shacl-ucr-20170720/">SHACL Use Cases and Requirements</a>, editada por Simon Steyskal y Karen Coyle</li>
+        <li>agosto de 2007: <a href="https://www.w3.org/TR/2007/NOTE-sawsdl-guide-20070828/">Semantic Annotations for WSDL and XML Schema — Usage Guide</a>, editada por Rama Akkiraju y Brahmananda Sapkota</li>
       </ul>
     </section>
-  </section>
 
-  <section id="por-incluir">
-    <h2>Por incluir</h2>
-    <p class="incompleto"><img src="../varios/iconos/icono-en-construccion.svg" alt="En construcción" title="En construcción" width="55" height="48" />La siguientes recomendaciones están pendientes de incluir en los apartados anteriores.</p>
-    <ul>
-      <li><a href="https://www.w3.org/standards/semanticweb/data.html">Linked Data</a>
-        <ul>
-          <li><a href="https://www.w3.org/standards/techs/earl#w3c_all">Evaluation and Report Language (EARL)</a></li>
-          <li><a href="https://www.w3.org/standards/techs/gld#w3c_all">Government Linked Data</a></li>
-          <li><a href="https://www.w3.org/standards/techs/rdfvocabs#w3c_all">https://www.w3.org/standards/techs/rdfvocabs#w3c_all</a></li>
-          <li><a href="https://www.w3.org/2015/spatial/wiki/Main_Page">Spatial data</a></li>
-        </ul>
-      </li>
-      <li><a href="https://www.w3.org/International/multilingualweb/lt/">MultilingualWeb-LT</a></li>
-      <li>Web Services Description Language (WSDL)</li>
-      <li><a href="https://www.w3.org/TR/mediaont-api-1.0/">Metadata API for Media Resources 1.0</a></li>
-    </ul>
+    <section id="por-incluir">
+      <h2>Por incluir</h2>
+      <p class="incompleto"><img src="../varios/iconos/icono-en-construccion.svg" alt="En construcción" title="En construcción" width="55" height="48" />La siguientes recomendaciones están pendientes de incluir en los apartados anteriores.</p>
+      <ul>
+        <li><a href="https://www.w3.org/standards/semanticweb/data.html">Linked Data</a>
+          <ul>
+            <li><a href="https://www.w3.org/standards/techs/earl#w3c_all">Evaluation and Report Language (EARL)</a></li>
+            <li><a href="https://www.w3.org/standards/techs/gld#w3c_all">Government Linked Data</a></li>
+            <li><a href="https://www.w3.org/standards/techs/rdfvocabs#w3c_all">https://www.w3.org/standards/techs/rdfvocabs#w3c_all</a></li>
+            <li><a href="https://www.w3.org/2015/spatial/wiki/Main_Page">Spatial data</a></li>
+          </ul>
+        </li>
+        <li><a href="https://www.w3.org/International/multilingualweb/lt/">MultilingualWeb-LT</a></li>
+        <li><a href="https://www.w3.org/TR/mediaont-api-1.0/">Metadata API for Media Resources 1.0</a></li>
+      </ul>
+    </section>
   </section>
 
   <footer>
-    <p class="ultmod">Última modificación de esta página: 26 de abril de 2018</p>
+    <p class="ultmod">Última modificación de esta página: 29 de abril de 2018</p>
 
     <p class="licencia"><a rel="license " href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../varios/iconos/icono-cc-by-sa.svg " alt="Licencia Creative Commons " title="Licencia Creative Commons BY-SA " width="120 " height="42 " /></a><br />
       Esta página forma parte del curso <a href="http://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a> por <a href="http://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
