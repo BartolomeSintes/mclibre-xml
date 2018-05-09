@@ -1,18 +1,5 @@
-biblioteca {
-  counter-reset: contador;
-}
-
-libro:before {
-  content: counter(contador, upper-alpha) ". ";
-  counter-increment: contador;
-}
-
-titulo {
-  display: inline;
-  margin-left: 5px;
-}
-
-autor, fechaPublicacion {
-  display: block;
-  margin-left: 25px;
+titulo, autor, fechaPublicacion {
+  display: list-item;
+  list-style: disc inside;
+  margin-left: 20px;
 }

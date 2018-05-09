@@ -1,14 +1,18 @@
 biblioteca {
-  display: table;
-  border-spacing: 10px;
-  border: black 1px solid;
+  counter-reset: contador;
 }
 
-libro {
-  display: table-row;
+libro:before {
+  content: counter(contador, upper-alpha) ". ";
+  counter-increment: contador;
 }
 
-titulo, autor, fechaPublicacion {
-  border: black 1px solid;
-  display: table-cell;
+titulo {
+  display: inline;
+  margin-left: 5px;
+}
+
+autor, fechaPublicacion {
+  display: block;
+  margin-left: 25px;
 }
