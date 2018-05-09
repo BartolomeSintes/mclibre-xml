@@ -387,7 +387,7 @@ autor {
           <div class="icono-enlace"><a href="../ejemplos/ejemplos-css/ejemplo-css-2-8.xml"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
         </div>
       </li>
-      <li>Si se quiere indicar explícitamente qué hoja de estilo son las alternativas, se puede incluir el atributo <span class="html-atri">alternate</span> con el valor <span class="html-atri-valor">yes</span>.
+      <li>Si se quiere indicar explícitamente qué hojas de estilo son alternativas, se puede incluir el atributo <span class="html-atri">alternate</span> con el valor <span class="html-atri-valor">yes</span> (aunque se deben incluir de todas formas los atributos <span class="html-atri">title</span>).
 
         <div class="filaflex cabecera">
           <div>XML</div>
@@ -401,7 +401,7 @@ autor {
             <pre>
 <code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
 <span class="codigo-resaltado">&lt;?xml-stylesheet <span class="attr-name">href</span>=<span class="attr-value">"ejemplo_2-9-1.css"</span> <span class="attr-name">title</span>=<span class="attr-value">"Estilo"</span>?&gt;</span>
-<span class="codigo-resaltado">&lt;?xml-stylesheet <span class="attr-name">alternate</span>=<span class="attr-value">"yes"</span> <span class="attr-name">href</span>=<span class="attr-value">"ejemplo_2-9-2.css"</span> <span class="attr-name">title</span>=<span class="attr-value">"Otro estilo"</span>?&gt;</span>
+<span class="codigo-resaltado">&lt;?xml-stylesheet <span class="attr-name">href</span>=<span class="attr-value">"ejemplo_2-9-2.css"</span> <span class="attr-name">alternate</span>=<span class="attr-value">"yes"</span> <span class="attr-name">title</span>=<span class="attr-value">"Otro estilo"</span>?&gt;</span>
 &lt;libro&gt;
   &lt;titulo&gt;La vida está en otra parte&lt;/titulo&gt;
   &lt;autor&gt;Milan Kundera&lt;/autor&gt;
@@ -430,6 +430,51 @@ autor {
 
           <div class="resultado-object"><object type="application/xml" data="../ejemplos/ejemplos-css/ejemplo-css-2-9.xml">ERROR (no puede mostrarse el objeto)</object></div>
           <div class="icono-enlace"><a href="../ejemplos/ejemplos-css/ejemplo-css-2-9.xml"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+        </div>
+      </li>
+      <li>Al usar el atributo <span class="html-atri">alternate</span> con el valor <span class="html-atri-valor">yes</span>, el orden de los enlaces a las hojas de estilo no se tiene en cuenta.
+
+        <div class="filaflex cabecera">
+          <div>XML</div>
+          <div>CSS</div>
+          <div>Resultado</div>
+          <div class="icono-enlace">Enlace</div>
+        </div>
+
+        <div class="filaflex">
+          <div class="codigo">
+            <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+<span class="codigo-resaltado">&lt;?xml-stylesheet <span class="attr-name">href</span>=<span class="attr-value">"ejemplo_2-9-1.css"</span> <span class="attr-name">alternate</span>=<span class="attr-value">"yes"</span> <span class="attr-name">title</span>=<span class="attr-value">"Estilo"</span>?&gt;</span>
+<span class="codigo-resaltado">&lt;?xml-stylesheet <span class="attr-name">href</span>=<span class="attr-value">"ejemplo_2-9-2.css"</span> <span class="attr-name">title</span>=<span class="attr-value">"Otro estilo"</span>?&gt;</span>
+&lt;libro&gt;
+  &lt;titulo&gt;La vida está en otra parte&lt;/titulo&gt;
+  &lt;autor&gt;Milan Kundera&lt;/autor&gt;
+  &lt;fechaPublicacion año="1973"/&gt;
+&lt;/libro&gt;</code>
+</pre>
+          </div>
+          <div class="columnaflex">
+            <div class="codigo">
+              <pre>
+<code class="language-css">/* ejemplo_2-10-1.css */
+titulo {
+  color: red;
+}</code>
+</pre>
+            </div>
+            <div class="codigo">
+              <pre>
+<code class="language-css">/* ejemplo_2-10-2.css */
+autor {
+   font-size: 200%;
+}</code>
+</pre>
+            </div>
+          </div>
+
+          <div class="resultado-object"><object type="application/xml" data="../ejemplos/ejemplos-css/ejemplo-css-2-10.xml">ERROR (no puede mostrarse el objeto)</object></div>
+          <div class="icono-enlace"><a href="../ejemplos/ejemplos-css/ejemplo-css-2-10.xml"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
         </div>
       </li>
     </ul>
@@ -482,7 +527,25 @@ autor {
       </div>
 
       <ul>
-        <li>El único elemento de bloque es <span class="xml-tag">&lt;libro&gt;</span>:
+        <li>Si no hay ningún elemento de bloque:
+
+          <div class="filaflex cabecera">
+            <div>CSS</div>
+            <div>Resultado</div>
+            <div class="icono-enlace">Enlace</div>
+          </div>
+
+          <div class="filaflex">
+            <div class="codigo">
+              <pre>
+<code class="language-css"></code>
+</pre>
+            </div>
+            <div class="resultado-object"><object type="application/xml" data="../ejemplos/ejemplos-css/ejemplo-css-3-1.xml">ERROR (no puede mostrarse el objeto)</object></div>
+            <div class="icono-enlace"><a href="../ejemplos/ejemplos-css/ejemplo-css-3-1.xml"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+          </div>
+        </li>
+        <li>Si el único elemento de bloque es <span class="xml-tag">&lt;libro&gt;</span>:
 
           <div class="filaflex cabecera">
             <div>CSS</div>
@@ -498,11 +561,11 @@ autor {
 }</code>
 </pre>
             </div>
-            <div class="resultado-object"><object type="application/xml" data="../ejemplos/ejemplos-css/ejemplo-css-3-1.xml">ERROR (no puede mostrarse el objeto)</object></div>
-            <div class="icono-enlace"><a href="../ejemplos/ejemplos-css/ejemplo-css-3-1.xml"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+            <div class="resultado-object"><object type="application/xml" data="../ejemplos/ejemplos-css/ejemplo-css-3-2.xml">ERROR (no puede mostrarse el objeto)</object></div>
+            <div class="icono-enlace"><a href="../ejemplos/ejemplos-css/ejemplo-css-3-2.xml"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
           </div>
         </li>
-        <li><span class="xml-tag">&lt;titulo&gt;</span>, <span class="xml-tag">&lt;autor&gt;</span> y <span class="xml-tag">&lt;fechaPublicacion&gt;</span> son bloques:
+        <li>Si <span class="xml-tag">&lt;titulo&gt;</span>, <span class="xml-tag">&lt;autor&gt;</span> y <span class="xml-tag">&lt;fechaPublicacion&gt;</span> son bloques:
 
           <div class="filaflex cabecera">
             <div>CSS</div>
@@ -518,8 +581,8 @@ autor {
 }</code>
 </pre>
             </div>
-            <div class="resultado-object"><object type="application/xml" data="../ejemplos/ejemplos-css/ejemplo-css-3-2.xml" style="height: 13em;">ERROR (no puede mostrarse el objeto)</object></div>
-            <div class="icono-enlace"><a href="../ejemplos/ejemplos-css/ejemplo-css-3-2.xml"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+            <div class="resultado-object"><object type="application/xml" data="../ejemplos/ejemplos-css/ejemplo-css-3-3.xml" style="height: 13em;">ERROR (no puede mostrarse el objeto)</object></div>
+            <div class="icono-enlace"><a href="../ejemplos/ejemplos-css/ejemplo-css-3-3.xml"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
           </div>
         </li>
         <li>Mostrando el documento como una lista no ordenada:
@@ -540,8 +603,8 @@ autor {
 }</code>
 </pre>
             </div>
-            <div class="resultado-object"><object type="application/xml" data="../ejemplos/ejemplos-css/ejemplo-css-3-3.xml" style="height: 12em;">ERROR (no puede mostrarse el objeto)</object></div>
-            <div class="icono-enlace"><a href="../ejemplos/ejemplos-css/ejemplo-css-3-3.xml"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+            <div class="resultado-object"><object type="application/xml" data="../ejemplos/ejemplos-css/ejemplo-css-3-4.xml" style="height: 12em;">ERROR (no puede mostrarse el objeto)</object></div>
+            <div class="icono-enlace"><a href="../ejemplos/ejemplos-css/ejemplo-css-3-4.xml"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
           </div>
         </li>
         <li>Mostrando el documento como una lista ordenada (en el apartado siguiente se comenta con más detalle este caso):
@@ -575,8 +638,8 @@ autor, fechaPublicacion {
 }</code>
 </pre>
             </div>
-            <div class="resultado-object"><object type="application/xml" data="../ejemplos/ejemplos-css/ejemplo-css-3-4.xml" style="height: 12em;">ERROR (no puede mostrarse el objeto)</object></div>
-            <div class="icono-enlace"><a href="../ejemplos/ejemplos-css/ejemplo-css-3-4.xml"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+            <div class="resultado-object"><object type="application/xml" data="../ejemplos/ejemplos-css/ejemplo-css-3-5.xml" style="height: 12em;">ERROR (no puede mostrarse el objeto)</object></div>
+            <div class="icono-enlace"><a href="../ejemplos/ejemplos-css/ejemplo-css-3-5.xml"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
           </div>
         </li>
         <li>Mostrando el documento como una tabla:
@@ -606,8 +669,8 @@ titulo, autor, fechaPublicacion {
 }</code>
 </pre>
             </div>
-            <div class="resultado-object"><object type="application/xml" data="../ejemplos/ejemplos-css/ejemplo-css-3-5.xml">ERROR (no puede mostrarse el objeto)</object></div>
-            <div class="icono-enlace"><a href="../ejemplos/ejemplos-css/ejemplo-css-3-5.xml"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
+            <div class="resultado-object"><object type="application/xml" data="../ejemplos/ejemplos-css/ejemplo-css-3-6.xml">ERROR (no puede mostrarse el objeto)</object></div>
+            <div class="icono-enlace"><a href="../ejemplos/ejemplos-css/ejemplo-css-3-6.xml"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
           </div>
         </li>
       </ul>
@@ -793,7 +856,7 @@ autor, fechaPublicacion {
     <section id="css-class-id">
       <h3>Los atributos <span class="html-atri">class</span> e <span class="html-atri">id</span></h3>
 
-      <p>Cuando un documento XML incluye atributos <span class="html-atri">class</span> e <span class="html-atri">id</span> y la hoja de estilo hace referencia a ellos mediante los selectores almohadilla (#) y punto (.), Firefox y Microsoft Edge aplican ambas reglas, pero  Google Chrome aplica únicamente el selector almohadilla, como muestra el ejemplo siguiente:</p>
+      <p>Cuando un documento XML incluye atributos <span class="html-atri">class</span> e <span class="html-atri">id</span> y la hoja de estilo hace referencia a ellos mediante los selectores almohadilla (#) y punto (.), Firefox y Microsoft Edge aplican ambas reglas, pero Google Chrome aplica únicamente el selector almohadilla, como muestra el ejemplo siguiente:</p>
 
       <div class="filaflex cabecera">
         <div class="icono-navegadores-vacio"><img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="40" height="4" /></div>
