@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Examen 23/05/18. Exámenes. XML. Bartolomé Sintes Marco</title>
+  <link href="../../varios/xml.css" rel="stylesheet" type="text/css" title="mclibre" />
+  <link rel="icon" href="../../varios/favicon.ico" />
+  <link rel="stylesheet" href="../../varios/prism-xml.css" />
+  <script src="../../varios/prism.js" async="async"></script>
+</head>
+
+<body>
+  <h1>Examen 23 de mayo de 2018</h1>
+
+  <nav>
+    <p>
+      <a href="../../index.html"><img src="../../varios/iconos/icono-xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48" /></a>
+      <a href="#"><img src="../../varios/iconos/icono-arrow-circle-up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36" /></a>
+      <a href="../examenes.html"><img src="../../varios/iconos/icono-school.svg" alt="Exámenes" title="Exámenes" width="36" height="36" /></a>
+    </p>
+
+    <div class="toc">
+      <h2>Examen 23/05/18</h2>
+
+      <ol>
+        <li><a href="#ejercicio-1">WFD</a></li>
+        <li><a href="#ejercicio-2">CSS</a></li>
+        <li><a href="#ejercicio-3">XPath</a></li>
+      </ol>
+    </div>
+  </nav>
+
+  <p>Resuelva los siguientes ejercicios guardando las respuestas en una carpeta cuyo nombre contenga su nombre y apellidos.</p>
+
+  <section id="ejercicio-1">
+    <h2>Ejercicio 1. Documentos bien formados</h2>
+
+    <p>Corrija los errores del siguiente documento para que esté bien formado.</p>
+
+    <div class="codigo">
+      <pre>
+<code class="xml-malformado">&lt;?xml version="1.0" encodin="UTE-8"?&gt;
+&lt;inventor id&gt;Otto Blathy, Miksa Déri &amp; Károly Zipernowsky
+&lt;invento codigo=001&gt;transformador eléctrico
+&lt;/inventor
+&lt;/inventos&gt;</code>
+</pre>
+    </div>
+  </section>
+
+  <section id="ejercicio-2">
+    <h2>Ejercicio 2. CSS</h2>
+
+    <p>Escriba una hoja de estilo CSS para que el siguiente documento se vea en el navegador como muestra la imagen.</p>
+
+    <div class="codigo">
+      <pre>
+<code class="language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;software-libre&gt;
+  &lt;lanzamientos&gt;
+    &lt;lanzamiento distribucion="manjaro" version="17.1" año="2017" mes="12" escritorio="xfce" kernel="4.14" /&gt;
+    &lt;lanzamiento distribucion="mint" version="18.3" año="2017" mes="11" escritorio="cinnamon" kernel="4.10" /&gt;
+    &lt;lanzamiento distribucion="mint" version="19" año="2018" mes="6" escritorio="cinnamon" kernel="4.15"/&gt;
+    &lt;lanzamiento distribucion="ubuntu" version="17.10" año="2017" mes="10" escritorio="gnome" kernel="4.13"/&gt;
+    &lt;lanzamiento distribucion="ubuntu" version="18.04" año="2018" mes="4" escritorio="gnome" kernel="4.15" /&gt;
+    &lt;lanzamiento distribucion="debian" version="8" año="2015" mes="4" escritorio="gnome" kernel="3.16" /&gt;
+    &lt;lanzamiento distribucion="debian" version="9" año="2017" mes="6" escritorio="gnome" kernel="4.09" /&gt;
+  &lt;/lanzamientos&gt;
+  &lt;distribuciones&gt;
+    &lt;distribucion id="manjaro"&gt;
+      &lt;nombre&gt;Manjaro Linux&lt;/nombre&gt;
+      &lt;web&gt;https://manjaro.org/&lt;/web&gt;
+      &lt;nacimiento&gt;2011&lt;/nacimiento&gt;
+    &lt;/distribucion&gt;
+    &lt;distribucion id="mint"&gt;
+      &lt;nombre&gt;Linux Mint&lt;/nombre&gt;
+      &lt;web&gt;https://www.linuxmint.com/&lt;/web&gt;
+      &lt;nacimiento&gt;2006&lt;/nacimiento&gt;
+      &lt;derivada&gt;ubuntu&lt;/derivada&gt;
+    &lt;/distribucion&gt;
+    &lt;distribucion id="ubuntu"&gt;
+      &lt;nombre&gt;Ubuntu&lt;/nombre&gt;
+      &lt;web&gt;https://www.ubuntu.com/&lt;/web&gt;
+      &lt;nacimiento&gt;2004&lt;/nacimiento&gt;
+      &lt;derivada&gt;debian&lt;/derivada&gt;
+    &lt;/distribucion&gt;
+    &lt;distribucion id="debian"&gt;
+      &lt;nombre&gt;Debian GNU/Linux&lt;/nombre&gt;
+      &lt;web&gt;https://www.debian.org/&lt;/web&gt;
+      &lt;nacimiento&gt;1993&lt;/nacimiento&gt;
+    &lt;/distribucion&gt;
+  &lt;/distribuciones&gt;
+  &lt;escritorios&gt;
+    &lt;escritorio id="xfce"&gt;
+      &lt;nombre&gt;XFCE&lt;/nombre&gt;
+      &lt;web&gt;https://xfce.org/&lt;/web&gt;
+      &lt;nacimiento&gt;1996&lt;/nacimiento&gt;
+    &lt;/escritorio&gt;
+    &lt;escritorio id="kde"&gt;
+      &lt;nombre&gt;KDE&lt;/nombre&gt;
+      &lt;web&gt;https://kde.org/&lt;/web&gt;
+      &lt;nacimiento&gt;1996&lt;/nacimiento&gt;
+    &lt;/escritorio&gt;
+    &lt;escritorio id="gnome"&gt;
+      &lt;nombre&gt;GNOME&lt;/nombre&gt;
+      &lt;web&gt;https://www.gnome.org/&lt;/web&gt;
+      &lt;nacimiento&gt;1999&lt;/nacimiento&gt;
+    &lt;/escritorio&gt;
+    &lt;escritorio id="cinnamon"&gt;
+      &lt;nombre&gt;Cinnamon&lt;/nombre&gt;
+      &lt;web&gt;https://cinnamon-spices.linuxmint.com/&lt;/web&gt;
+      &lt;nacimiento&gt;2011&lt;/nacimiento&gt;
+    &lt;/escritorio&gt;
+  &lt;/escritorios&gt;
+  &lt;kernels&gt;
+    &lt;kernel id="4.15" año="2018" mes="1" /&gt;
+    &lt;kernel id="4.14" año="2017" mes="11" /&gt;
+    &lt;kernel id="4.13" año="2017" mes="9" /&gt;
+    &lt;kernel id="4.10" año="2017" mes="2" /&gt;
+    &lt;kernel id="4.09" año="2016" mes="12" /&gt;
+    &lt;kernel id="3.16" año="2014" mes="8" /&gt;
+  &lt;/kernels&gt;
+&lt;/software-libre&gt;</code>
+</pre>
+    </div>
+
+    <p class="captura">
+      <img src="180523-css.png" alt="CSS" width="1007" height="380" />
+    </p>
+  </section>
+
+  <section id="ejercicio-3">
+    <h2>Ejercicio 3. XPath</h2>
+
+    <p>A partir del mismo documento XML del ejercicio 2, escriba las expresiones XPath que devuelvan <strong>exactamente</strong> las respuestas indicadas en los cuadros. Escriba todas las expresiones XPath en un único fichero de texto, numerando las respuestas.</p>
+
+    <ol>
+      <li>Nombre de las distribuciones:
+        <div class="resultado-xpath">
+          <pre>
+<code class="language-xml">Manjaro Linux
+Linux Mint
+Ubuntu
+Debian GNU/Linux</code>
+</pre>
+        </div>
+      </li>
+
+      <li>Kernel de las distribuciones publicadas en 2017:
+        <div class="resultado-xpath">
+          <pre>
+<code class="language-xml">  kernel="4.14"
+  kernel="4.10"
+  kernel="4.13"
+  kernel="4.09"</code>
+</pre>
+        </div>
+      </li>
+
+      <li>Distribuciones que no usan Gnome:
+        <div class="resultado-xpath">
+          <pre>
+<code class="language-xml">&lt;lanzamiento distribucion="manjaro" version="17.1" año="2017" mes="12" escritorio="xfce" kernel="4.14"/&gt;
+&lt;lanzamiento distribucion="mint" version="18.3" año="2017" mes="11" escritorio="cinnamon" kernel="4.10"/&gt;
+&lt;lanzamiento distribucion="mint" version="19" año="2018" mes="6" escritorio="cinnamon" kernel="4.15"/&gt;</code>
+</pre>
+        </div>
+      </li>
+
+      <li>Versiones que se publicarán en 2018 (estamos en mayo de 2018):
+        <div class="resultado-xpath">
+          <pre>
+<code class="language-xml">&lt;lanzamiento distribucion="mint" version="19" año="2018" mes="6" escritorio="cinnamon" kernel="4.15"/&gt;</code>
+</pre>
+        </div>
+      </li>
+
+      <li>Distribuciones publicadas con kérneles de 2017:
+        <div class="resultado-xpath">
+          <pre>
+<code class="language-xml">  distribucion="manjaro"
+  distribucion="mint"
+  distribucion="ubuntu"</code>
+</pre>
+        </div>
+      </li>
+
+      <li>Escritorios utilizado por distribuciones derivadas de Ubuntu:
+        <div class="resultado-xpath">
+          <pre>
+<code class="language-xml">  escritorio="cinnamon"
+  escritorio="cinnamon"</code>
+</pre>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <footer>
+    <p class="ultmod">Última modificación de esta página: 23 de mayo de 2018</p>
+
+    <p class="licencia"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../../varios/iconos/icono-cc-by-sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
+      Esta página forma parte del curso <a href="http://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a> por <a href="http://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
+      que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.</p>
+  </footer>
+</body>
+</html>
