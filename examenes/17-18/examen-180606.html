@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Examen 06/06/18. Exámenes. XML. Bartolomé Sintes Marco</title>
+  <link href="../../varios/xml.css" rel="stylesheet" type="text/css" title="mclibre" />
+  <link rel="icon" href="../../varios/favicon.ico" />
+  <link rel="stylesheet" href="../../varios/prism-xml.css" />
+  <script src="../../varios/prism.js" async="async"></script>
+</head>
+
+<body>
+  <h1>Examen 6 de junio de 2018</h1>
+
+  <nav>
+    <p>
+      <a href="../../index.html"><img src="../../varios/iconos/icono-xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48" /></a>
+      <a href="#"><img src="../../varios/iconos/icono-arrow-circle-up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36" /></a>
+      <a href="../examenes.html"><img src="../../varios/iconos/icono-school.svg" alt="Exámenes" title="Exámenes" width="36" height="36" /></a>
+    </p>
+
+    <div class="toc">
+      <h2>Examen 06/06/18</h2>
+
+      <ol>
+        <li><a href="#ejercicio-1">WFD</a></li>
+        <li><a href="#ejercicio-2">CSS</a></li>
+        <li><a href="#ejercicio-3">XPath</a></li>
+      </ol>
+    </div>
+  </nav>
+
+  <p>Resuelva los siguientes ejercicios guardando las respuestas en una carpeta cuyo nombre contenga su nombre y apellidos.</p>
+
+  <section id="ejercicio-1">
+    <h2>Ejercicio 1. Documentos bien formados</h2>
+
+    <p>Corrija los errores del siguiente documento para que esté bien formado.</p>
+
+    <div class="codigo">
+      <pre>
+<code class="xml-malformado">&lt;?xlm version="2.0" encoding="UTF-8"?&gt;
+&lt;cancion duracion=''01:56''&gt;
+&lt;título&gt;Do you want to know a secret&lt;/titulo&gt;
+&lt;musica&gt;John Lennon&lt;/letra&gt;
+&lt;letra&gt;John Lennon&lt;/musica&gt;
+&lt;cancion&gt;</code>
+</pre>
+    </div>
+  </section>
+
+  <section id="ejercicio-2">
+    <h2>Ejercicio 2. CSS</h2>
+
+    <p>Escriba una hoja de estilo CSS para que el siguiente documento se vea en el navegador como muestra la imagen.</p>
+
+    <div class="codigo">
+      <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;leyes&gt;
+  &lt;titulo&gt;Humor&lt;/titulo&gt;
+  &lt;murphy&gt;
+    &lt;tipo&gt;Leyes de Murphy&lt;/tipo&gt;
+    &lt;ley&gt;Si algo puede fallar, fallará. &lt;/ley&gt;
+    &lt;ley&gt;Si algo no puede fallar, lo hara a pesar de todo.&lt;/ley&gt;
+    &lt;ley&gt;Si algo parece que va bien, es obvio que se ha pasado algo por alto.&lt;/ley&gt;
+  &lt;/murphy&gt;
+  &lt;ginsgberg&gt;
+    &lt;tipo&gt;Teoremas de Ginsgberg&lt;/tipo&gt;
+    &lt;ley&gt;No puedes ganar.&lt;/ley&gt;
+    &lt;ley&gt;No puedes desempatar.&lt;/ley&gt;
+    &lt;ley&gt;Y tampoco puedes abandonar el juego.&lt;/ley&gt;
+  &lt;/ginsgberg&gt;
+  &lt;otras&gt;
+    &lt;tipo&gt;Otras&lt;/tipo&gt;
+    &lt;ley&gt;Da igual por donde abras la caja de un medicamento. Siempre te molestará el prospecto.&lt;/ley&gt;
+    &lt;ley&gt;Llegarás al teléfono justo a tiempo para oír como cuelgan.&lt;/ley&gt;
+    &lt;ley&gt;Nunca necesitarás nada que guardes por si lo necesitas.&lt;/ley&gt;
+    &lt;ley&gt;Los problemas nacen, crecen, se multiplican y permanecen.&lt;/ley&gt;
+  &lt;/otras&gt;
+&lt;/leyes&gt;</code>
+</pre>
+    </div>
+
+    <p class="captura">
+      <img src="180601-css.png" alt="CSS" width="760" height="700" />
+    </p>
+  </section>
+
+  <section id="ejercicio-3">
+    <h2>Ejercicio 3. XPath</h2>
+
+    <p>A partir del mismo documento XML del ejercicio 2, escriba las expresiones XPath que devuelvan <strong>exactamente</strong> las respuestas indicadas en los cuadros. Escriba todas las expresiones XPath en un único fichero de texto, numerando las respuestas.</p>
+
+    <div class="codigo">
+      <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;coches&gt;
+  &lt;marcas&gt;
+    &lt;marca nombre=&quot;Renault&quot; inicio=&quot;1899&quot; pais=&quot;Francia&quot; /&gt;
+    &lt;marca nombre=&quot;Volkswagen&quot; inicio=&quot;1937&quot; pais=&quot;Alemania&quot; /&gt;
+    &lt;marca nombre=&quot;Peugeot&quot; inicio=&quot;1896&quot; pais=&quot;Francia&quot; /&gt;
+    &lt;marca nombre=&quot;Mercedes-Benz&quot; inicio=&quot;1926&quot; pais=&quot;Alemania&quot; /&gt;
+  &lt;/marcas&gt;
+
+  &lt;categorias&gt;
+    &lt;categoria&gt;
+      &lt;segmento&gt;B&lt;/segmento&gt;
+      &lt;size&gt;subcompact&lt;/size&gt;
+    &lt;/categoria&gt;
+    &lt;categoria&gt;
+      &lt;segmento&gt;C&lt;/segmento&gt;
+      &lt;size&gt;compact&lt;/size&gt;
+    &lt;/categoria&gt;
+    &lt;categoria&gt;
+      &lt;segmento&gt;D&lt;/segmento&gt;
+      &lt;size&gt;mid-size&lt;/size&gt;
+    &lt;/categoria&gt;
+  &lt;/categorias&gt;
+
+  &lt;modelos&gt;
+    &lt;modelo nombre=&quot;Clio&quot; marca=&quot;Renault&quot; inicio=&quot;1990&quot; final=&quot;1998&quot; categoria=&quot;B&quot; /&gt;
+    &lt;modelo nombre=&quot;Clio II&quot; marca=&quot;Renault&quot; inicio=&quot;1998&quot; final=&quot;2012&quot; categoria=&quot;B&quot; /&gt;
+    &lt;modelo nombre=&quot;Clio III&quot; marca=&quot;Renault&quot; inicio=&quot;2005&quot; final=&quot;2014&quot; categoria=&quot;B&quot; /&gt;
+    &lt;modelo nombre=&quot;Clio IV&quot; marca=&quot;Renault&quot; inicio=&quot;2012&quot; categoria=&quot;B&quot; /&gt;
+    &lt;modelo nombre=&quot;Mégane&quot; marca=&quot;Renault&quot; inicio=&quot;1995&quot; final=&quot;2002&quot; categoria=&quot;C&quot; /&gt;
+    &lt;modelo nombre=&quot;Mégane II&quot; marca=&quot;Renault&quot; inicio=&quot;2002&quot; final=&quot;2009&quot; categoria=&quot;C&quot; /&gt;
+    &lt;modelo nombre=&quot;Mégane III&quot; marca=&quot;Renault&quot; inicio=&quot;2008&quot; final=&quot;2016&quot; categoria=&quot;C&quot; /&gt;
+    &lt;modelo nombre=&quot;308 T7&quot; marca=&quot;Peugeot&quot; inicio=&quot;2008&quot; final=&quot;2013&quot; categoria=&quot;C&quot; /&gt;
+    &lt;modelo nombre=&quot;308 T9&quot; marca=&quot;Peugeot&quot; inicio=&quot;2013&quot; categoria=&quot;C&quot; /&gt;
+    &lt;modelo nombre=&quot;Golf A1&quot; marca=&quot;Volkswagen&quot; inicio=&quot;1974&quot; final=&quot;1984&quot; categoria=&quot;C&quot; /&gt;
+    &lt;modelo nombre=&quot;Golf A2&quot; marca=&quot;Volkswagen&quot; inicio=&quot;1983&quot; final=&quot;1992&quot; categoria=&quot;C&quot; /&gt;
+    &lt;modelo nombre=&quot;Golf A3&quot; marca=&quot;Volkswagen&quot; inicio=&quot;1991&quot; final=&quot;1998&quot; categoria=&quot;C&quot; /&gt;
+    &lt;modelo nombre=&quot;Golf A4&quot; marca=&quot;Volkswagen&quot; inicio=&quot;1998&quot; final=&quot;2005&quot; categoria=&quot;C&quot; /&gt;
+    &lt;modelo nombre=&quot;Golf A5&quot; marca=&quot;Volkswagen&quot; inicio=&quot;2003&quot; final=&quot;2009&quot; categoria=&quot;C&quot; /&gt;
+    &lt;modelo nombre=&quot;Golf A6&quot; marca=&quot;Volkswagen&quot; inicio=&quot;2008&quot; final=&quot;2014&quot; categoria=&quot;C&quot; /&gt;
+    &lt;modelo nombre=&quot;Golf A7&quot; marca=&quot;Volkswagen&quot; inicio=&quot;2012&quot; categoria=&quot;C&quot; /&gt;
+    &lt;modelo nombre=&quot;Passat B1&quot; marca=&quot;Volkswagen&quot; inicio=&quot;1973&quot; final=&quot;1981&quot; categoria=&quot;D&quot; /&gt;
+    &lt;modelo nombre=&quot;Passat B2&quot; marca=&quot;Volkswagen&quot; inicio=&quot;1981&quot; final=&quot;1988&quot; categoria=&quot;D&quot; /&gt;
+    &lt;modelo nombre=&quot;Passat B3&quot; marca=&quot;Volkswagen&quot; inicio=&quot;1988&quot; final=&quot;1996&quot; categoria=&quot;D&quot; /&gt;
+    &lt;modelo nombre=&quot;Passat B5&quot; marca=&quot;Volkswagen&quot; inicio=&quot;1996&quot; final=&quot;2005&quot; categoria=&quot;D&quot; /&gt;
+    &lt;modelo nombre=&quot;Clase C W202&quot; marca=&quot;Mercedes-Benz&quot; inicio=&quot;1993&quot; final=&quot;2000&quot; categoria=&quot;D&quot; /&gt;
+    &lt;modelo nombre=&quot;Clase C W203&quot; marca=&quot;Mercedes-Benz&quot; inicio=&quot;2000&quot; final=&quot;2007&quot; categoria=&quot;D&quot; /&gt;
+    &lt;modelo nombre=&quot;Clase C W204&quot; marca=&quot;Mercedes-Benz&quot; inicio=&quot;2007&quot; final=&quot;2014&quot; categoria=&quot;D&quot; /&gt;
+    &lt;modelo nombre=&quot;Clase C W205&quot; marca=&quot;Mercedes-Benz&quot; inicio=&quot;2014&quot; categoria=&quot;D&quot; /&gt;
+  &lt;/modelos&gt;
+
+  &lt;premios&gt;
+    &lt;caroftheyear year=&quot;1991&quot; modelo=&quot;Clio III&quot; /&gt;
+    &lt;caroftheyear year=&quot;1992&quot; modelo=&quot;Golf A3&quot; /&gt;
+    &lt;caroftheyear year=&quot;2003&quot; modelo=&quot;Mégane II&quot; /&gt;
+    &lt;caroftheyear year=&quot;2006&quot; modelo=&quot;Clio III&quot; /&gt;
+    &lt;caroftheyear year=&quot;2013&quot; modelo=&quot;Golf A7&quot; /&gt;
+    &lt;caroftheyear year=&quot;2014&quot; modelo=&quot;308 T9&quot; /&gt;
+  &lt;/premios&gt;
+&lt;/coches&gt;</code>
+</pre>
+    </div>
+
+    <ol>
+      <li>Marcas de coches francesas
+        <div class="codigo">
+          <pre>
+<code class="language-xml"> nombre="Renault"
+ nombre="Peugeot"</code>
+</pre>
+        </div>
+      </li>
+
+      <li>Nombre de los modelos de coches que se han vendido a partir del 2012
+        <div class="codigo">
+          <pre>
+<code class="language-xml"> nombre="Clio IV"
+ nombre="308 T9"
+ nombre="Golf A7"
+ nombre="Clase C W205"</code>
+</pre>
+        </div>
+      </li>
+
+      <li>Modelos de coches que ya no se fabrican y que se podían comprar en el 2000
+        <div class="codigo">
+          <pre>
+<code class="language-xml"> nombre="Clio II"
+ nombre="Mégane"
+ nombre="Golf A4"
+ nombre="Passat B5"
+ nombre="Clase C W202"
+ nombre="Clase C W203"</code>
+</pre>
+        </div>
+      </li>
+
+      <li>Modelos de coches que se fabricaron durante al menos 10 años
+        <div class="codigo">
+          <pre>
+<code class="language-xml"> nombre="Clio II"
+ nombre="Golf A1"</code>
+</pre>
+        </div>
+      </li>
+
+      <li>Marca de los coches del año
+        <div class="codigo">
+          <pre>
+<code class="language-xml"> marca="Renault"
+ marca="Renault"
+ marca="Peugeot"
+ marca="Volkswagen"
+ marca="Volkswagen"</code>
+</pre>
+        </div>
+      </li>
+
+      <li>Tamaño de los coches que se dejaron de fabricar en 2005
+        <div class="codigo">
+          <pre>
+<code class="language-xml">&lt;size&gt;compact&lt;/size&gt;
+&lt;size&gt;mid-size&lt;/size&gt;</code>
+</pre>
+        </div>
+      </li>
+
+      <li>Marcas de los coches de tamaño subcompact
+        <div class="codigo">
+          <pre>
+<code class="language-xml"> marca="Renault"
+ marca="Renault"
+ marca="Renault"
+ marca="Renault"</code>
+</pre>
+        </div>
+      </li>
+
+    </ol>
+  </section>
+
+  <footer>
+    <p class="ultmod">Última modificación de esta página: 1 de junio de 2018</p>
+
+    <p class="licencia"><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../../varios/iconos/icono-cc-by-sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
+      Esta página forma parte del curso <a href="http://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a> por <a href="http://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
+      que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.</p>
+  </footer>
+</body>
+</html>
