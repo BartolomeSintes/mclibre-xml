@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!-- Este texto está guardado como UTF-8 sin BOM y declara que es ISO-8859-1 -->
 <prueba>
-	<texto>á é í ó ú</texto>
+    <texto>á é í ó ú</texto>
 </prueba>

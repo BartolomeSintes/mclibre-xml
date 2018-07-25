@@ -23,7 +23,6 @@ nombre:before, grado:before, decretoTitulo:before {
   content: counter(contador, lower-alpha) ". ";
 }
 
-
 nombre, grado, decretoTitulo {
   display: block;
   margin-left: 40px;
