@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
@@ -499,7 +499,7 @@
     <section id="xslt-generar-texto">
       <h3>Generar texto adicional</h3>
 
-      <p>Se puede generar texto escribiendolo en la regla, por ejemplo, código html.</p>
+      <p>Se puede generar texto escribiéndolo en la regla, por ejemplo, código html.</p>
 
       <ul>
         <li>En el ejemplo siguiente se obtienen los nombres de los autores porque la regla selecciona el nodo <span class="xml-tag">&lt;libro&gt;</span> como en el ejemplo, 2-1, pero además generamos las etiquetas <span class="html-eti">&lt;p&gt;</span>. El resultado sigue sin verse bien en el navegador, porque aunque hay etiquetas <span class="html-eti">&lt;p&gt;</span>, falta la etiqueta global <span class="html-eti">&lt;html&gt;</span>.
@@ -754,7 +754,7 @@
     <section id="xslt-text-strip-space">
       <h3>Saltos de línea y espacios en blanco: las instrucciones <span class="xsl-i">&lt;xsl:text&gt;</span> y <span class="xsl-i">&lt;xsl:strip-space&gt;</span></h3>
 
-      <p>Al transformar un documento, los procesadores XSLT incorporan saltos de línea y espacios en blanco en el resultado, pero no lo hacen de forma uniforme. Por ejemplo, XML Copy Editor y Notepad++ (con el plug-in XML Tols) producen diferentes resultados.</p>
+      <p>Al transformar un documento, los procesadores XSLT incorporan saltos de línea y espacios en blanco en el resultado, pero no lo hacen de forma uniforme. Por ejemplo, XML Copy Editor y Notepad++ (con el plug-in XML Tools) producen diferentes resultados.</p>
 
       <p>No parece haber una solución sencilla que funcione en todos los procesadores, pero sí soluciones que funcionen en cada uno de ellos.</p>
 
@@ -817,7 +817,7 @@
       <p>La instrucción <span class="xsl-i">&lt;xsl:text&gt;</span> permite generar texto que no se puede generar simplemente añadiéndolo (saltos de líneas y espacios en blanco, por ejemplo).</p>
 
       <ul>
-        <li>En el ejemplo anterior (del <a href="#xslt-apply-templates">apartado sobre la instrucción <span class="xsl-i">&lt;xsl:apply-templates&gt;</span></a>) la etiqueta <span class="html-eti">&lt;h1&gt;</span> se generaba en la misma línea que la etiqueta <span class="html-eti">&lt;html&gt;</span>, pero en el ejemplo siguiente se generan en líneas distintas al añadir un salto de línea con la entidad de carácter &amp;#10; (y un par de espacios para aliner la etiqueta <span class="html-eti">&lt;h1&gt;</span> con las etiquetas <span class="html-eti">&lt;p&gt;</span>):
+        <li>En el ejemplo anterior (del <a href="#xslt-apply-templates">apartado sobre la instrucción <span class="xsl-i">&lt;xsl:apply-templates&gt;</span></a>) la etiqueta <span class="html-eti">&lt;h1&gt;</span> se generaba en la misma línea que la etiqueta <span class="html-eti">&lt;html&gt;</span>, pero en el ejemplo siguiente se generan en líneas distintas al añadir un salto de línea con la entidad de carácter &amp;#10; (y un par de espacios para alinear la etiqueta <span class="html-eti">&lt;h1&gt;</span> con las etiquetas <span class="html-eti">&lt;p&gt;</span>):
 
           <div class="filaflex cabecera">
             <div>XSLT</div>
