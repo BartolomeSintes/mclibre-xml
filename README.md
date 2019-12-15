@@ -4,4 +4,4 @@
 
 Curso de iniciación al XML
 
-Apuntes de XML disponibles en http://www.mclibre.org/consultar/xml/
+Apuntes de XML disponibles en https://www.mclibre.org/consultar/xml/

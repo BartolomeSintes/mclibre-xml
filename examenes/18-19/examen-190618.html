@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Examen 18/06/19. Exámenes. XML. Bartolomé Sintes Marco. www.mclibre.org</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="../../varios/xml.css" title="mclibre" />
+  <link rel="icon" href="../../varios/favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="../../varios/prism-xml.css" />
+  <script src="../../varios/prism.js" async="async"></script>
+</head>
+
+<body>
+  <h1>Examen 18 de junio de 2019</h1>
+
+  <nav>
+    <p>
+      <a href="../../index.html"><img src="../../varios/iconos/icono-xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48" /></a>
+      <a href="#"><img src="../../varios/iconos/icono-arrow-circle-up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36" /></a>
+      <a href="../examenes.html"><img src="../../varios/iconos/icono-school.svg" alt="Exámenes" title="Exámenes" width="36" height="36" /></a>
+    </p>
+
+    <div class="toc">
+      <h2>Examen 18/06/19</h2>
+
+      <ol>
+        <li><a href="#ejercicio-1">CSS</a></li>
+        <li><a href="#ejercicio-2">XPath</a></li>
+      </ol>
+    </div>
+  </nav>
+
+  <p>Resuelva los siguientes ejercicios guardando las respuestas en una carpeta cuyo nombre contenga su nombre y apellidos.</p>
+
+  <section id="ejercicio-1">
+    <h2>Ejercicio 1. CSS</h2>
+
+    <p>Escriba una hoja de estilo CSS para que el siguiente documento se vea en el navegador como muestra la imagen.</p>
+
+    <div class="codigo">
+      <pre>
+<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
+&lt;geografia&gt;
+  &lt;continentes&gt;
+    &lt;continente nombre="Europa"&gt;
+      &lt;pais&gt;España&lt;/pais&gt;
+      &lt;pais&gt;Francia&lt;/pais&gt;
+      &lt;pais&gt;Suiza&lt;/pais&gt;
+    &lt;/continente&gt;
+    &lt;continente nombre="América"&gt;
+      &lt;pais&gt;Argentina&lt;/pais&gt;
+      &lt;pais&gt;Jamaica&lt;/pais&gt;
+      &lt;pais&gt;Uruguay&lt;/pais&gt;
+    &lt;/continente&gt;
+  &lt;/continentes&gt;
+  &lt;paises&gt;
+    &lt;pais nombre="España"&gt;
+      &lt;sistema&gt;monarquía&lt;/sistema&gt;
+      &lt;superficie&gt;504645&lt;/superficie&gt;
+      &lt;moneda&gt;euro&lt;/moneda&gt;
+      &lt;moneda antigua="antigua"&gt;peseta&lt;/moneda&gt;
+      &lt;idioma&gt;español&lt;/idioma&gt;
+    &lt;/pais&gt;
+    &lt;pais nombre="Francia"&gt;
+      &lt;sistema&gt;república&lt;/sistema&gt;
+      &lt;superficie&gt;675417&lt;/superficie&gt;
+      &lt;moneda&gt;euro&lt;/moneda&gt;
+      &lt;moneda antigua="antigua"&gt;franco francés&lt;/moneda&gt;
+      &lt;idioma&gt;francés&lt;/idioma&gt;
+    &lt;/pais&gt;
+    &lt;pais nombre="Suiza"&gt;
+      &lt;sistema&gt;república&lt;/sistema&gt;
+      &lt;superficie&gt;41290&lt;/superficie&gt;
+      &lt;moneda&gt;franco suizo&lt;/moneda&gt;
+      &lt;idioma&gt;francés&lt;/idioma&gt;
+    &lt;/pais&gt;
+    &lt;pais nombre="Uruguay"&gt;
+      &lt;sistema&gt;república&lt;/sistema&gt;
+      &lt;superficie&gt;176215&lt;/superficie&gt;
+      &lt;moneda&gt;peso uruguayo&lt;/moneda&gt;
+      &lt;idioma&gt;español&lt;/idioma&gt;
+    &lt;/pais&gt;
+    &lt;pais nombre="Argentina"&gt;
+      &lt;sistema&gt;república&lt;/sistema&gt;
+      &lt;superficie&gt;2780400&lt;/superficie&gt;
+      &lt;moneda&gt;peso argentino&lt;/moneda&gt;
+      &lt;idioma&gt;español&lt;/idioma&gt;
+    &lt;/pais&gt;
+    &lt;pais nombre="Jamaica"&gt;
+      &lt;sistema&gt;monarquía&lt;/sistema&gt;
+      &lt;superficie&gt;10991&lt;/superficie&gt;
+      &lt;moneda&gt;dólar jamaicano&lt;/moneda&gt;
+      &lt;idioma&gt;inglés&lt;/idioma&gt;
+    &lt;/pais&gt;
+  &lt;/paises&gt;
+  &lt;rios&gt;
+    &lt;rio&gt;
+      &lt;nombre&gt;Uruguay&lt;/nombre&gt;
+      &lt;pais&gt;Argentina&lt;/pais&gt;
+      &lt;pais&gt;Uruguay&lt;/pais&gt;
+    &lt;/rio&gt;
+    &lt;rio&gt;
+      &lt;nombre&gt;Ródano&lt;/nombre&gt;
+      &lt;pais&gt;Suiza&lt;/pais&gt;
+      &lt;pais&gt;Francia&lt;/pais&gt;
+    &lt;/rio&gt;
+    &lt;rio&gt;
+      &lt;nombre&gt;Bidasoa&lt;/nombre&gt;
+      &lt;pais&gt;España&lt;/pais&gt;
+      &lt;pais&gt;Francia&lt;/pais&gt;
+    &lt;/rio&gt;
+  &lt;/rios&gt;
+&lt;/geografia&gt;</code>
+</pre>
+    </div>
+
+    <p class="captura">
+      <img src="190618-css.png" alt="CSS" width="520" height="420" />
+    </p>
+  </section>
+
+  <section id="ejercicio-2">
+    <h2>Ejercicio 2. XPath</h2>
+
+    <p>Dado el documento XML del ejercicio anterior, escriba las expresiones XPath que devuelvan <strong>exactamente</strong> las respuestas indicadas en los cuadros. Escriba todas las expresiones XPath en un único fichero de texto, numerando las respuestas.</p>
+
+    <ol>
+      <li>Nombre de los ríos:
+        <div class="resultado-xpath">
+          <pre>
+<code class="language-xml">Uruguay
+Ródano</code></pre>
+        </div>
+      </li>
+
+      <li>Idiomas de las repúblicas:
+        <div class="resultado-xpath">
+          <pre>
+<code class="language-xml">&lt;idioma&gt;francés&lt;/idioma&gt;
+&lt;idioma&gt;francés&lt;/idioma&gt;
+&lt;idioma&gt;español&lt;/idioma&gt;
+&lt;idioma&gt;español&lt;/idioma&gt;</code>
+</pre>
+        </div>
+      </li>
+
+      <li>Países cuyo idioma es el español:
+        <div class="resultado-xpath">
+          <pre>
+<code class="language-xml">  nombre="España"
+  nombre="Uruguay"
+  nombre="Argentina"</code>
+</pre>
+        </div>
+      </li>
+
+      <li>Tamaños de los países por donde pasa el Bidasoa:
+        <div class="resultado-xpath">
+          <pre><code class="language-xml">504645
+675417</code>
+</pre>
+        </div>
+      </li>
+
+      <li>Ríos de Europa:
+        <div class="resultado-xpath">
+          <pre><code class="language-xml">&lt;nombre&gt;Ródano&lt;/nombre&gt;
+&lt;nombre&gt;Bidasoa&lt;/nombre&gt;</code>
+</pre>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <footer>
+    <p class="ultmod">Última modificación de esta página: 18 de junio de 2019</p>
+
+    <p class="licencia">
+      <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../../varios/iconos/icono-cc-by-sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
+      Esta página forma parte del curso <strong><a href="https://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a></strong> por <a href="https://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
+      que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.
+    </p>
+  </footer>
+</body>
+</html>
