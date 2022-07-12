@@ -90,12 +90,6 @@
           <img src="../img/ejemplos/css/css-1-gc.png" alt="Ejemplo Documento xml en Google Chrome" width="350" height="330" />
         </p>
       </div>
-      <div>
-        <p>Microsoft Edge</p>
-        <p class="captura">
-          <img src="../img/ejemplos/css/css-1-me.png" alt="Ejemplo Documento xml en Microsoft Edge" width="350" height="330" />
-        </p>
-      </div>
     </div>
   </section>
 
@@ -692,7 +686,6 @@ titulo, autor, fechaPublicacion {
         <div class="icono-navegadores">
           <img src="../varios/iconos/icono-gc.svg" alt="Correcto en Chrome" title="Correcto en Chrome" width="32" height="32" />
           <img src="../varios/iconos/icono-ff-X.svg" alt="Incorrecto en Firefox" title="Incorrecto en Firefox" width="44" height="32" />
-          <img src="../varios/iconos/icono-edge.svg" alt="Correcto en Edge" title="Correcto en Edge" width="33" height="32" />
         </div>
         <div class="codigo">
           <pre>
@@ -709,7 +702,7 @@ titulo, autor, fechaPublicacion {
 
       <p><strong>Nota</strong>: Firefox no aumenta el valor del contador, como se comenta en la <a href="../otros/diferencias-navegadores.html#listas-ordenadas">lección de diferencias entre navegadores</a>.</p>
 
-      <p>Además, hay que tener en cuenta que los valores del contador aumentan en Chrome y Edge si los elementos con contadores se encuentran dentro del mismo elemento. En el ejemplo siguiente, el contador sólo se encuentra en los elementos <span class="xml-tag">&lt;titulo&gt;</span> y por tanto el contador no aumenta, ya que los elementos <span class="xml-tag">&lt;titulo&gt;</span> pertenecen a diferentes elementos <span class="xml-tag">&lt;libro&gt;</span>.</p>
+      <p>Además, hay que tener en cuenta que los valores del contador aumentan en Chrome si los elementos con contadores se encuentran dentro del mismo elemento. En el ejemplo siguiente, el contador sólo se encuentra en los elementos <span class="xml-tag">&lt;titulo&gt;</span> y por tanto el contador no aumenta, ya que los elementos <span class="xml-tag">&lt;titulo&gt;</span> pertenecen a diferentes elementos <span class="xml-tag">&lt;libro&gt;</span>.</p>
 
       <div class="filaflex cabecera">
         <div class="icono-navegadores-vacio"><img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="40" height="4" /></div>
@@ -722,7 +715,6 @@ titulo, autor, fechaPublicacion {
         <div class="icono-navegadores">
           <img src="../varios/iconos/icono-gc.svg" alt="Correcto en Chrome" title="Correcto en Chrome" width="32" height="32" />
           <img src="../varios/iconos/icono-ff-X.svg" alt="Incorrecto en Firefox" title="Incorrecto en Firefox" width="44" height="32" />
-          <img src="../varios/iconos/icono-edge.svg" alt="Correcto en Edge" title="Correcto en Edge" width="33" height="32" />
         </div>
         <div class="codigo">
           <pre>
@@ -742,9 +734,9 @@ autor, fechaPublicacion {
         <div class="icono-enlace"><a href="../ejemplos/ejemplos-css/ejemplo-css-4-2.xml"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
       </div>
 
-      <p><strong>Nota</strong>: Aunque los tres navegadores se comportan de la misma manera, Google Chrome y Edge no aumentan el contador porque no se debe hacer en este caso, mientras que Firefox no aumenta el valor del contador porque no lo hace nunca.</p>
+      <p><strong>Nota</strong>: Aunque los dos navegadores se comportan de la misma manera, Google Chrome no aumenta el contador porque no se debe hacer en este caso, mientras que Firefox no aumenta el valor del contador porque no lo hace nunca.</p>
 
-      <p>Si el contador se asocia al elemento <span class="xml-tag">&lt;libro&gt;</span>, Chrome y Edge sí que aumentan el valor del contador, puesto que todos los elementos <span class="xml-tag">&lt;libro&gt;</span> pertenecen al mismo elemento <span class="xml-tag">&lt;biblioteca&gt;</span>.</p>
+      <p>Si el contador se asocia al elemento <span class="xml-tag">&lt;libro&gt;</span>, Chrome sí que aumenta el valor del contador, puesto que todos los elementos <span class="xml-tag">&lt;libro&gt;</span> pertenecen al mismo elemento <span class="xml-tag">&lt;biblioteca&gt;</span>.</p>
 
       <div class="filaflex cabecera">
         <div class="icono-navegadores-vacio"><img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="40" height="4" /></div>
@@ -757,7 +749,6 @@ autor, fechaPublicacion {
         <div class="icono-navegadores">
           <img src="../varios/iconos/icono-gc.svg" alt="Correcto en Chrome" title="Correcto en Chrome" width="32" height="32" />
           <img src="../varios/iconos/icono-ff-X.svg" alt="Incorrecto en Firefox" title="Incorrecto en Firefox" width="44" height="32" />
-          <img src="../varios/iconos/icono-edge.svg" alt="Correcto en Edge" title="Correcto en Edge" width="33" height="32" />
         </div>
         <div class="codigo">
           <pre>
@@ -856,7 +847,7 @@ autor, fechaPublicacion {
     <section id="css-class-id">
       <h3>Los atributos <span class="html-atri">class</span> e <span class="html-atri">id</span></h3>
 
-      <p>Cuando un documento XML incluye atributos <span class="html-atri">class</span> e <span class="html-atri">id</span> y la hoja de estilo hace referencia a ellos mediante los selectores almohadilla (#) y punto (.), Firefox y Microsoft Edge aplican ambas reglas, pero Google Chrome aplica únicamente el selector almohadilla, como muestra el ejemplo siguiente:</p>
+      <p>Cuando un documento XML incluye atributos <span class="html-atri">class</span> e <span class="html-atri">id</span> y la hoja de estilo hace referencia a ellos mediante los selectores almohadilla (#) y punto (.), Firefox aplica ambas reglas, pero Google Chrome aplica únicamente el selector almohadilla, como muestra el ejemplo siguiente:</p>
 
       <div class="filaflex cabecera">
         <div class="icono-navegadores-vacio"><img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="40" height="4" /></div>
@@ -870,7 +861,6 @@ autor, fechaPublicacion {
         <div class="icono-navegadores">
           <img src="../varios/iconos/icono-gc-X.svg" alt="Incorrecto en Chrome" title="Incorrecto en Chrome" width="44" height="32" />
           <img src="../varios/iconos/icono-ff.svg" alt="Correcto en Firefox" title="Correcto en Firefox" width="32" height="32" />
-          <img src="../varios/iconos/icono-edge.svg" alt="Correcto en Edge" title="Correcto en Edge" width="33" height="32" />
         </div>
         <div class="codigo">
           <pre>
@@ -909,12 +899,6 @@ autor, fechaPublicacion {
           <p>Google Chrome</p>
           <p class="captura">
             <img src="../img/ejemplos/css/css-5-1-gc.png" alt="Ejemplo Documento xml en Google Chrome" width="365" height="50" />
-          </p>
-        </div>
-        <div>
-          <p>Microsoft Edge</p>
-          <p class="captura">
-            <img src="../img/ejemplos/css/css-5-1-me.png" alt="Ejemplo Documento xml en Microsoft Edge" width="365" height="50" />
           </p>
         </div>
       </div>

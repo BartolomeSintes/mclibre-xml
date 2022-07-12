@@ -39,7 +39,7 @@
   </nav>
   <p>Se comentan en esta página algunas diferencias entre navegadores.</p>
 
-  <p>Las capturas de imagen que ilustran las diferencias se han realizado con las últimas versiones disponibles en abril de 2018 (Firefox 59, Google Chrome 66 y Microsoft Edge 16). En versiones posteriores, el comportamiento de los navegadores puede ser diferente.</p>
+  <p>Las capturas de imagen que ilustran las diferencias se han realizado con las últimas versiones disponibles en abril de 2018 (Firefox 59 y Google Chrome 66). En versiones posteriores, el comportamiento de los navegadores puede ser diferente.</p>
 
   <section id="css">
     <h2>CSS en XML</h2>
@@ -47,7 +47,7 @@
     <section id="listas-ordenadas">
       <h3>Listas ordenadas</h3>
 
-      <p>Firefox no aumenta los contadores al mostrar elementos como listas ordenadas, pero Chrome y Microsoft Edge lo hacen correctamente.</p>
+      <p>Firefox no aumenta los contadores al mostrar elementos como listas ordenadas, pero Chrome lo hace correctamente.</p>
 
       <div class="filaflex cabecera">
         <div class="icono-navegadores-vacio"><img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="40" height="4" /></div>
@@ -60,7 +60,6 @@
         <div class="icono-navegadores">
           <img src="../varios/iconos/icono-gc.svg" alt="Correcto en Chrome" title="Correcto en Chrome" width="32" height="32" />
           <img src="../varios/iconos/icono-ff-X.svg" alt="Incorrecto en Firefox" title="Incorrecto en Firefox" width="44" height="32" />
-          <img src="../varios/iconos/icono-edge.svg" alt="Correcto en Edge" title="Correcto en Edge" width="33" height="32" />
         </div>
         <div class="columnaflex">
           <div class="codigo">
@@ -104,7 +103,7 @@ elemento {
     <section id="class-id">
       <h3>Los atributos <span class="html-atri">class</span> e <span class="html-atri">id</span></h3>
 
-      <p>Cuando un documento XML incluye atributos <span class="html-atri">class</span> e <span class="html-atri">id</span> y la hoja de estilo hace referencia a ellos mediante los selectores almohadilla (#) y punto (.), Firefox y Microsoft Edge aplican ambas reglas, pero  Google Chrome aplica únicamente el selector almohadilla, como muestra el ejemplo siguiente:</p>
+      <p>Cuando un documento XML incluye atributos <span class="html-atri">class</span> e <span class="html-atri">id</span> y la hoja de estilo hace referencia a ellos mediante los selectores almohadilla (#) y punto (.), Firefox aplica ambas reglas, pero Google Chrome aplica únicamente el selector almohadilla, como muestra el ejemplo siguiente:</p>
 
       <div class="filaflex cabecera">
         <div class="icono-navegadores-vacio"><img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="40" height="4" /></div>
@@ -118,7 +117,6 @@ elemento {
         <div class="icono-navegadores">
           <img src="../varios/iconos/icono-gc-X.svg" alt="Incorrecto en Chrome" title="Incorrecto en Chrome" width="44" height="32" />
           <img src="../varios/iconos/icono-ff.svg" alt="Correcto en Firefox" title="Correcto en Firefox" width="32" height="32" />
-          <img src="../varios/iconos/icono-edge.svg" alt="Correcto en Edge" title="Correcto en Edge" width="33" height="32" />
         </div>
         <div class="codigo">
           <pre>
@@ -159,12 +157,6 @@ elemento {
             <img src="../img/ejemplos/css/css-5-1-gc.png" alt="Ejemplo Documento xml en Google Chrome" width="365" height="50" />
           </p>
         </div>
-        <div>
-          <p>Microsoft Edge</p>
-          <p class="captura">
-            <img src="../img/ejemplos/css/css-5-1-me.png" alt="Ejemplo Documento xml en Microsoft Edge" width="365" height="50" />
-          </p>
-        </div>
       </div>
 
       <p><strong>Nota</strong>: No sé si está definido en alguna recomendación que es lo que tendrían que hacer los navegadores en este caso.</p>
@@ -177,11 +169,11 @@ elemento {
     <section id="enlazar-xslt">
       <h3>Documentos enlazados con hojas de estilo XSLT</h3>
 
-      <p>Si un documento XML enlaza con una hoja de estilo XSLT, al abrir el documento con Firefox y Microsoft Edge se muestra siempre el documento transformado, mientras que Google Chrome sólo muestra el documento transformado si se ha servido desde un servidor web (http://...). Si el documento se abre directamente como un archivo local (file://...), Google Chrome muestra un página en blanco.</p>
+      <p>Si un documento XML enlaza con una hoja de estilo XSLT, al abrir el documento con Firefox se muestra siempre el documento transformado, mientras que Google Chrome sólo muestra el documento transformado si se ha servido desde un servidor web (http://...). Si el documento se abre directamente como un archivo local (file://...), Google Chrome muestra un página en blanco.</p>
 
       <hr class="corta" />
 
-      <p>Si un documento XML enlaza con una hoja de estilo XSLT, al abrir el documento con Firefox y Microsoft Edge se muestra siempre el documento transformado, mientras que Google Chrome sólo lo muestra si el documento resultante está bien formado.</p>
+      <p>Si un documento XML enlaza con una hoja de estilo XSLT, al abrir el documento con Firefox se muestra siempre el documento transformado, mientras que Google Chrome sólo lo muestra si el documento resultante está bien formado.</p>
 
       <div class="filaflex cabecera">
         <div class="icono-navegadores-vacio"><img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="40" height="4" /></div>
@@ -195,7 +187,6 @@ elemento {
         <div class="icono-navegadores">
           <img src="../varios/iconos/icono-gc-X.svg" alt="Incorrecto en Chrome" title="Incorrecto en Chrome" width="44" height="32" />
           <img src="../varios/iconos/icono-ff.svg" alt="Correcto en Firefox" title="Correcto en Firefox" width="32" height="32" />
-          <img src="../varios/iconos/icono-edge.svg" alt="Correcto en Edge" title="Correcto en Edge" width="33" height="32" />
         </div>
         <div class="codigo">
       <pre>
@@ -248,12 +239,6 @@ elemento {
           <p>Google Chrome</p>
           <p class="captura">
             <img src="../img/diferencias/diferencias-2-gc.png" alt="Ejemplo Documento xml en Google Chrome" width="455" height="216" />
-          </p>
-        </div>
-        <div>
-          <p>Microsoft Edge</p>
-          <p class="captura">
-            <img src="../img/diferencias/diferencias-2-me.png" alt="Ejemplo Documento xml en Microsoft Edge" width="420" height="50" />
           </p>
         </div>
       </div>
