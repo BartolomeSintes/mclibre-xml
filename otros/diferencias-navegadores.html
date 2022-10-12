@@ -44,62 +44,6 @@
   <section id="css">
     <h2>CSS en XML</h2>
 
-    <section id="listas-ordenadas">
-      <h3>Listas ordenadas</h3>
-
-      <p>Firefox no aumenta los contadores al mostrar elementos como listas ordenadas, pero Chrome lo hace correctamente.</p>
-
-      <div class="filaflex cabecera">
-        <div class="icono-navegadores-vacio"><img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="40" height="4" /></div>
-        <div>XML / CSS</div>
-        <div>Resultado</div>
-        <div class="icono-enlace">Enlace</div>
-      </div>
-
-      <div class="filaflex">
-        <div class="icono-navegadores">
-          <img src="../varios/iconos/icono-gc.svg" alt="Correcto en Chrome" title="Correcto en Chrome" width="32" height="32" />
-          <img src="../varios/iconos/icono-ff-X.svg" alt="Incorrecto en Firefox" title="Incorrecto en Firefox" width="44" height="32" />
-        </div>
-        <div class="columnaflex">
-          <div class="codigo">
-            <pre>
-<code class="language-xml">&lt;?xml <span class="attr-name">version</span>=<span class="attr-value">"1.0"</span> <span class="attr-name">encoding</span>=<span class="attr-value">"UTF-8"</span>?&gt;
-&lt;?xml-stylesheet href="ejemplo-dif-nav-01.css" title="Estilo"?&gt;
-&lt;listas&gt;
-  &lt;lista&gt;
-    &lt;elemento&gt;Ejemplo&lt;/elemento&gt;
-    &lt;elemento&gt;Ejemplo&lt;/elemento&gt;
-    &lt;elemento&gt;Ejemplo&lt;/elemento&gt;
-  &lt;/lista&gt;
-  &lt;lista&gt;
-    &lt;elemento&gt;Ejemplo&lt;/elemento&gt;
-    &lt;elemento&gt;Ejemplo&lt;/elemento&gt;
-    &lt;elemento&gt;Ejemplo&lt;/elemento&gt;
-  &lt;/lista&gt;l
-&lt;/listas&gt;</code>
-</pre>
-          </div>
-          <div class="codigo">
-            <pre>
-<code class="language-css">lista {
-  display: block;
-  margin-bottom: 10px;
-}
-
-elemento {
-  display: list-item;
-  list-style: decimal inside;
-  margin-left: 20px;
-}</code>
-</pre>
-          </div>
-        </div>
-        <div class="resultado-object"><object type="application/xml" data="../ejemplos/ejemplo-dif-nav-01.xml">ERROR (no puede mostrarse el objeto)</object></div>
-        <div class="icono-enlace"><a href="../ejemplos/ejemplo-dif-nav-01.xml"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
-      </div>
-    </section>
-
     <section id="class-id">
       <h3>Los atributos <span class="html-atri">class</span> e <span class="html-atri">id</span></h3>
 
@@ -140,7 +84,7 @@ elemento {
 }</code>
 </pre>
         </div>
-        <div class="resultado-object"><object type="application/xml" data="../ejemplos/ejemplos-css/ejemplo-css-5-1.xml">ERROR (no puede mostrarse el objeto)</object></div>
+        <iframe src="../ejemplos/ejemplos-css/ejemplo-css-5-1.xml" style="height: 12em;"></iframe>
         <div class="icono-enlace"><a href="../ejemplos/ejemplos-css/ejemplo-css-5-1.xml"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
       </div>
 
@@ -224,7 +168,7 @@ elemento {
 &lt;/xsl:stylesheet&gt;</code>
 </pre>
         </div>
-        <div class="resultado-object"><object type="application/xml" data="../ejemplos/diferencias/xslt_1-1-1.xml">ERROR (no puede mostrarse el objeto)</object></div>
+        <iframe src="../ejemplos/diferencias/xslt_1-1-1.xml" style="height: 28em;"></iframe>
         <div class="icono-enlace"><a href="../ejemplos/diferencias/xslt_1-1-1.xml"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace a ejemplo" title="Enlace a ejemplo" width="31" height="36" /></a></div>
       </div>
 
@@ -246,7 +190,7 @@ elemento {
   </section>
 
   <footer>
-    <p class="ultmod">Última modificación de esta página: 19 de abril de 2018</p>
+    <p class="ultmod">Última modificación de esta página: 12 de octubre de 2022</p>
 
     <p class="licencia">
       <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../varios/iconos/icono-cc-by-sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
