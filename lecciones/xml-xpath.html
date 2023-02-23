@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   <title>XPath: XML Path language. XML. Bartolomé Sintes Marco. www.mclibre.org</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="../varios/xml.css" title="mclibre" />
-  <link rel="icon" href="../varios/favicon.svg" />
-  <link rel="stylesheet" type="text/css" href="../varios/prism-xml.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../varios/xml.css" title="mclibre">
+  <link rel="icon" href="../varios/favicon.svg">
+  <link rel="stylesheet" type="text/css" href="../varios/prism-xml.css">
   <script src="../varios/prism.js" async="async"></script>
 </head>
 
@@ -15,8 +15,8 @@
 
   <nav>
     <p>
-      <a href="../index.html"><img src="../varios/iconos/icono-xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48" /></a>
-      <a href="#"><img src="../varios/iconos/icono-arrow-circle-up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36" /></a>
+      <a href="../index.html"><img src="../varios/iconos/icono-xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48"></a>
+      <a href="#"><img src="../varios/iconos/icono-arrow-circle-up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36"></a>
     </p>
 
     <div class="toc">
@@ -92,28 +92,28 @@
     <p>XPath considera un documento XML como un árbol de nodos. En Informática, un árbol es una estructura de datos que equivale a un árbol matemático. En Matemáticas un árbol es un caso particular de grafo. Los siguientes términos definidos en teoría de grafos se utilizan también en Informática y en XPath:</p>
     <ul>
       <li>Un <strong>grafo</strong> es un conjunto de objetos llamados nodos o vértices unidos por enlaces llamados arcos o aristas.
-        <p><img src="../img/grafos/grafos-grafo.svg" alt="Grafo" height="150" /></p>
+        <p><img src="../img/grafos/grafos-grafo.svg" alt="Grafo" height="150"></p>
       </li>
       <li>Un <strong>grafo dirigido</strong> es un grafo en el que los arcos tienen dirección.
-        <p><img src="../img/grafos/grafos-grafo-dirigido.svg" alt="Grafo dirigido" height="150" /></p>
+        <p><img src="../img/grafos/grafos-grafo-dirigido.svg" alt="Grafo dirigido" height="150"></p>
       </li>
       <li>Cuando dos nodos están unidos por un arco con dirección, el <strong>nodo padre</strong> es el nodo del que parte el arco y el <strong>nodo hijo</strong> es el nodo al que llega el arco.
-        <p><img src="../img/grafos/grafos-padre-hijo.svg" alt="Nodo padre y nodo hijo" height="103" /></p>
+        <p><img src="../img/grafos/grafos-padre-hijo.svg" alt="Nodo padre y nodo hijo" height="103"></p>
       </li>
       <li>Un <strong>árbol</strong> es un grafo en el que cualquier pareja de vértices están conectada por un único camino (es decir, que no hay ciclos). Un <strong>árbol dirigido</strong> es un árbol en el que las aristas tienen dirección y todos los nodos menos uno tienen un único padre.
         <p>
-          <img src="../img/grafos/grafos-arbol.svg" alt="Árbol" height="200" />
-          <img src="../img/grafos/grafos-arbol-dirigido.svg" alt="Árbol dirigido" height="200" />
+          <img src="../img/grafos/grafos-arbol.svg" alt="Árbol" height="200">
+          <img src="../img/grafos/grafos-arbol-dirigido.svg" alt="Árbol dirigido" height="200">
         </p>
       </li>
       <li>El <strong>nodo raíz</strong> de un árbol dirigido es el único nodo sin padre. Los <strong>nodos hermanos</strong> son los nodos que tienen el mismo padre.
-        <p><img src="../img/grafos/grafos-raiz-hermanos.svg" alt="Nodo raíz y nodos hermanos" height="240" /></p>
+        <p><img src="../img/grafos/grafos-raiz-hermanos.svg" alt="Nodo raíz y nodos hermanos" height="240"></p>
       </li>
       <li>Los <strong>nodos descendientes</strong> de un nodo son todos los nodos a los que se llega desde el nodo: los hijos, los hijos de los hijos, etc.
-        <p><img src="../img/grafos/grafos-descendientes.svg" alt="Nodos descendientes" height="240" /></p>
+        <p><img src="../img/grafos/grafos-descendientes.svg" alt="Nodos descendientes" height="240"></p>
       </li>
       <li>Los <strong>nodos ascendientes</strong> de un nodo son todos los nodos de los que un nodo es descendiente: el padre, el padre del padre, etc.
-        <p><img src="../img/grafos/grafos-ascendientes.svg" alt="Nodos ascendientes" height="240" /></p>
+        <p><img src="../img/grafos/grafos-ascendientes.svg" alt="Nodos ascendientes" height="240"></p>
       </li>
     </ul>
 
@@ -160,7 +160,7 @@
 
       <p>se puede representar mediante el siguiente grafo:</p>
 
-      <p class="mcl-centrado"><img src="../img/grafos/grafos-documento.svg" alt="Árbol de documento XML" height="520" /></p>
+      <p class="mcl-centrado"><img src="../img/grafos/grafos-documento.svg" alt="Árbol de documento XML" height="520"></p>
 
       <p>Los nodos atributos y de texto no son como los nodos elemento. Por ejemplo, los nodos atributo y de texto no pueden tener descendientes. En realidad el nodo atributo ni siquiera se considera como hijo, sino como una etiqueta adosada al elemento. El texto contenido por una etiqueta sí que se considera hijo del elemento, aunque las expresiones XPath suelen trabajar con nodos elemento y para referirse a los atributos o al texto se utilizan notaciones especiales.</p>
     </section>
@@ -436,7 +436,7 @@
           </ul>
           <p>Las comparaciones se pueden hacer entre valores de nodos y atributos o con cadenas de texto o numéricas. Las cadenas de texto deben escribirse entre comillas simples o dobles. En el caso de las cadenas numéricas, las comillas son optativas.</p>
           <ul>
-            <li>La condición puede utilizar el valor de un atributo (utilizando @) o el texto que contiene el elemento. <br /> En los ejemplos siguientes se obtienen respectivamente los elementos &lt;fechaPublicacion&gt; cuyo atributo año es posterior/mayor a 1970 y los elementos &lt;libro&gt; cuyo subelemento &lt;autor&gt; tiene como contenido "Mario Vargas Llosa":
+            <li>La condición puede utilizar el valor de un atributo (utilizando @) o el texto que contiene el elemento. <br> En los ejemplos siguientes se obtienen respectivamente los elementos &lt;fechaPublicacion&gt; cuyo atributo año es posterior/mayor a 1970 y los elementos &lt;libro&gt; cuyo subelemento &lt;autor&gt; tiene como contenido "Mario Vargas Llosa":
 
               <div class="filaflex">
                 <div class="codigo">//fechaPublicacion<strong>[@año&gt;1970]</strong></div>
@@ -489,7 +489,7 @@
                 </div>
               </div>
             </li>
-            <li>Un predicado puede contener condiciones compuestas.<br /> En los ejemplos siguientes se seleccionan, respectivamente , los libros escritos por Mario Vargas Llosa <strong>y</strong> publicados en 1973 (primer ejemplo) y los libros escritos por Mario Vargas Llosa <strong>o</strong> publicados en 1973 (segundo ejemplo):
+            <li>Un predicado puede contener condiciones compuestas.<br> En los ejemplos siguientes se seleccionan, respectivamente , los libros escritos por Mario Vargas Llosa <strong>y</strong> publicados en 1973 (primer ejemplo) y los libros escritos por Mario Vargas Llosa <strong>o</strong> publicados en 1973 (segundo ejemplo):
 
               <div class="filaflex">
                 <div class="codigo">//libro[autor="Mario Vargas Llosa" <strong>and</strong> fechaPublicacion/@año="1973"]</div>
@@ -527,7 +527,7 @@
                 </div>
               </div>
             </li>
-            <li>Se pueden escribir varios predicados seguidos, cada uno de los cuales restringe los resultados del anterior, como si estuvieran encadenados por la operación lógica and.<br /> En el ejemplo siguiente se seleccionan los libros escritos por Mario Vargas Llosa y publicados en 1973:
+            <li>Se pueden escribir varios predicados seguidos, cada uno de los cuales restringe los resultados del anterior, como si estuvieran encadenados por la operación lógica and.<br> En el ejemplo siguiente se seleccionan los libros escritos por Mario Vargas Llosa y publicados en 1973:
 
               <div class="filaflex">
                 <div class="codigo">//libro[autor="Mario Vargas Llosa"][fechaPublicacion/@año="1973"]</div>
@@ -552,7 +552,7 @@
 
       <p>La selección de nodos se escribe a continuación del eje y el predicado. Si el eje y el predicado han seleccionado unos nodos, la selección de nodos indica con qué parte de esos nodos nos quedamos.</p>
       <ul>
-        <li><strong>/node()</strong>: selecciona todos los hijos (elementos o texto) del nodo.<br />
+        <li><strong>/node()</strong>: selecciona todos los hijos (elementos o texto) del nodo.<br>
           <strong>//node()</strong>: selecciona todos los descendientes (elementos o texto) del nodo.
 
           <div class="filaflex">
@@ -606,7 +606,7 @@ Mario Vargas Llosa
             </div>
           </div>
         </li>
-        <li><strong>/text()</strong>: selecciona únicamente el texto contenido en el nodo.<br />
+        <li><strong>/text()</strong>: selecciona únicamente el texto contenido en el nodo.<br>
           <strong>//text()</strong>: selecciona únicamente el texto contenido en el nodo y todos sus descendientes.
 
           <div class="filaflex">
@@ -639,7 +639,7 @@ Mario Vargas Llosa</code>
             </div>
           </div>
         </li>
-        <li><strong>/*</strong>: selecciona todos los hijos (sólo elementos) del nodo. <br />
+        <li><strong>/*</strong>: selecciona todos los hijos (sólo elementos) del nodo. <br>
           <strong>//*</strong>: selecciona todos los descendientes (sólo elementos) del nodo.
 
           <div class="filaflex">
@@ -702,7 +702,7 @@ Mario Vargas Llosa</code>
             </div>
           </div>
         </li>
-        <li><strong>/@*</strong>: selecciona todos los atributos del nodo.<br />
+        <li><strong>/@*</strong>: selecciona todos los atributos del nodo.<br>
           <strong>//@*</strong>: selecciona todos los atributos de los descendientes del nodo.
 
           <div class="filaflex">
@@ -915,7 +915,7 @@ Mario Vargas Llosa</code>
         </div>
       </div>
 
-      <hr class="corta" />
+      <hr class="corta">
 
       <p>Otro ejemplo de expresión anidada sería obtener los títulos de los libros del mismo autor que la novela "Pantaleón y las visitadoras". Como en el ejemplo anterior, la respuesta puede obtenerse en dos pasos:</p>
 
@@ -975,8 +975,8 @@ Mario Vargas Llosa</code>
     <p class="ultmod">Última modificación de esta página: 21 de marzo de 2017</p>
 
     <p class="licencia">
-      <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../varios/iconos/icono-cc-by-sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
-      Esta página forma parte del curso <strong><a href="https://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a></strong> por <a href="https://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
+      <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../varios/iconos/icono-cc-by-sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42"></a><br>
+      Esta página forma parte del curso <strong><a href="https://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a></strong> por <a href="https://www.mclibre.org/">Bartolomé Sintes Marco</a><br>
       que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.
     </p>
   </footer>

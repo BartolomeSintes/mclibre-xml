@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   <title>Soluciones. Documentos bien formados. XML. Bartolomé Sintes Marco. www.mclibre.org</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="../varios/xml.css" title="mclibre" />
-  <link rel="icon" href="../varios/favicon.svg" />
-  <link rel="stylesheet" type="text/css" href="../varios/prism-xml.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../varios/xml.css" title="mclibre">
+  <link rel="icon" href="../varios/favicon.svg">
+  <link rel="stylesheet" type="text/css" href="../varios/prism-xml.css">
   <script src="../varios/prism.js" async="async"></script>
 </head>
 
@@ -15,8 +15,8 @@
 
   <nav>
     <p>
-      <a href="../index.html"><img src="../varios/iconos/icono-xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48" /></a>
-      <a href="#"><img src="../varios/iconos/icono-arrow-circle-up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36" /></a>
+      <a href="../index.html"><img src="../varios/iconos/icono-xml.svg" alt="Índice de XML" title="Índice de XML" width="48" height="48"></a>
+      <a href="#"><img src="../varios/iconos/icono-arrow-circle-up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36"></a>
     </p>
 
     <div class="toc">
@@ -55,7 +55,7 @@
       <li>En las etiquetas <span class="xml-tag">&lt;deporte&gt;</span> (líneas 4 y 7) aparecen los términos Atletismo y Natación sueltos.
 
         <div class="codigo">
-          <pre><img src="../varios/iconos/icono-warning-xmlcopyeditor.svg" alt="Error" title="Error" width="37" height="36" class="vmedio" />Error at line 4, column 24: not well-formed (invalid token)</pre>
+          <pre><img src="../varios/iconos/icono-warning-xmlcopyeditor.svg" alt="Error" title="Error" width="37" height="36" class="vmedio">Error at line 4, column 24: not well-formed (invalid token)</pre>
         </div>
         <p>Se podría corregir escribiendo esos términos como valores de un atributo: </p>
 
@@ -79,7 +79,7 @@
       <li>La primera etiqueta <span class="xml-tag">&lt;deportista&gt;</span> no está cerrada.
 
         <div class="codigo">
-          <pre><img src="../varios/iconos/icono-warning-xmlcopyeditor.svg" alt="Error" title="Error" width="37" height="36" class="vmedio" />Error at line 10, column 3: mismatched tag</pre>
+          <pre><img src="../varios/iconos/icono-warning-xmlcopyeditor.svg" alt="Error" title="Error" width="37" height="36" class="vmedio">Error at line 10, column 3: mismatched tag</pre>
         </div>
         <p>Se podría corregir cerrándola: </p>
 
@@ -122,7 +122,7 @@
       <li>No hay una etiqueta raíz que englobe el resto de etiquetas.
 
         <div class="codigo">
-          <pre><img src="../varios/iconos/icono-warning-xmlcopyeditor.svg" alt="Error" title="Error" width="37" height="36" class="vmedio" />Error at line 6, column 1: junk after document element</pre>
+          <pre><img src="../varios/iconos/icono-warning-xmlcopyeditor.svg" alt="Error" title="Error" width="37" height="36" class="vmedio">Error at line 6, column 1: junk after document element</pre>
         </div>
         <p>Se podría corregir añadiendo una etiqueta raíz, cuyo nombre puede ser cualquiera, mientras no coincida con otra etiqueta, por ejemplo <span class="xml-tag">&lt;peliculas&gt;</span>: </p>
 
@@ -141,7 +141,7 @@
       <li>La primera etiqueta &lt;autor&gt; tiene la barra de las etiquetas vacías, pero luego hay una etiqueta de cierre.
 
         <div class="codigo">
-          <pre><img src="../varios/iconos/icono-warning-xmlcopyeditor.svg" alt="Error" title="Error" width="37" height="36" class="vmedio" />Error at line 11, column 17: mismatched tag</pre>
+          <pre><img src="../varios/iconos/icono-warning-xmlcopyeditor.svg" alt="Error" title="Error" width="37" height="36" class="vmedio">Error at line 11, column 17: mismatched tag</pre>
         </div>
         <p>Se podría corregir borrando la barra: </p>
 
@@ -178,7 +178,7 @@
       <li>Las etiquetas de apertura y cierre no coinciden
 
         <div class="codigo">
-          <pre><img src="../varios/iconos/icono-warning-xmlcopyeditor.svg" alt="Error" title="Error" width="37" height="36" class="vmedio" />Error at line 3, column 38: mismatched tag</pre>
+          <pre><img src="../varios/iconos/icono-warning-xmlcopyeditor.svg" alt="Error" title="Error" width="37" height="36" class="vmedio">Error at line 3, column 38: mismatched tag</pre>
         </div>
         <p>Se podría corregir modificando la etiqueta de apertura o la de cierre, por ejemplo: </p>
 
@@ -189,7 +189,7 @@
       <li>Los caracteres :// no están permitidos en las etiquetas
 
         <div class="codigo">
-          <pre><img src="../varios/iconos/icono-warning-xmlcopyeditor.svg" alt="Error" title="Error" width="37" height="36" class="vmedio" />Error at line 8, column 10: not well-formed (invalid token)</pre>
+          <pre><img src="../varios/iconos/icono-warning-xmlcopyeditor.svg" alt="Error" title="Error" width="37" height="36" class="vmedio">Error at line 8, column 10: not well-formed (invalid token)</pre>
         </div>
         <p>Se podría corregir eliminando esos caracteres, por ejemplo: </p>
 
@@ -223,7 +223,7 @@
       <li>El nombre de las etiquetas no pueden contener espacios:
 
         <div class="codigo">
-          <pre><img src="../varios/iconos/icono-warning-xmlcopyeditor.svg" alt="Error" title="Error" width="37" height="36" class="vmedio" />Error at line 2, column 19: not well-formed (invalid token)</pre>
+          <pre><img src="../varios/iconos/icono-warning-xmlcopyeditor.svg" alt="Error" title="Error" width="37" height="36" class="vmedio">Error at line 2, column 19: not well-formed (invalid token)</pre>
         </div>
         <p>Se podría corregir modificando la etiqueta de apertura o la de cierre, por ejemplo: </p>
 
@@ -245,7 +245,7 @@
       <li>La etiqueta de cierre no puede contener atributos:
 
         <div class="codigo">
-          <pre><img src="../varios/iconos/icono-warning-xmlcopyeditor.svg" alt="Error" title="Error" width="37" height="36" class="vmedio" />Error at line 6, column 24: not well-formed (invalid token)</pre>
+          <pre><img src="../varios/iconos/icono-warning-xmlcopyeditor.svg" alt="Error" title="Error" width="37" height="36" class="vmedio">Error at line 6, column 24: not well-formed (invalid token)</pre>
         </div>
         <p>Se podría corregir escribiendo el valor en el interior de la etiqueta, por ejemplo: </p>
 
@@ -278,7 +278,7 @@
       <li>Los atributos no se pueden repetir:
 
         <div class="codigo">
-          <pre><img src="../varios/iconos/icono-warning-xmlcopyeditor.svg" alt="Error" title="Error" width="37" height="36" class="vmedio" />Error at line 3, column 45: duplicate attribute</pre>
+          <pre><img src="../varios/iconos/icono-warning-xmlcopyeditor.svg" alt="Error" title="Error" width="37" height="36" class="vmedio">Error at line 3, column 45: duplicate attribute</pre>
         </div>
         <p>Se podría corregir uniendo los atributos en un único atributo, por ejemplo: </p>
 
@@ -295,7 +295,7 @@
       <li>Los valores de los atributos deben ir entre comillas:
 
         <div class="codigo">
-          <pre><img src="../varios/iconos/icono-warning-xmlcopyeditor.svg" alt="Error" title="Error" width="37" height="36" class="vmedio" />Error at line 4, column 46: not well-formed (invalid token)</pre>
+          <pre><img src="../varios/iconos/icono-warning-xmlcopyeditor.svg" alt="Error" title="Error" width="37" height="36" class="vmedio">Error at line 4, column 46: not well-formed (invalid token)</pre>
         </div>
         <p>Se podría corregir añadiendo comillas, por ejemplo: </p>
 
@@ -326,7 +326,7 @@
       <li>Las etiquetas necesitan tener un nombre de etiqueta:
 
         <div class="codigo">
-          <pre><img src="../varios/iconos/icono-warning-xmlcopyeditor.svg" alt="Error" title="Error" width="37" height="36" class="vmedio" />Error at line 4, column 10: not well-formed (invalid token)</pre>
+          <pre><img src="../varios/iconos/icono-warning-xmlcopyeditor.svg" alt="Error" title="Error" width="37" height="36" class="vmedio">Error at line 4, column 10: not well-formed (invalid token)</pre>
         </div>
         <p>Se podría corregir añadiendo un nombre de atributo, por ejemplo: </p>
 
@@ -342,7 +342,7 @@
       <li>Los nombres de etiquetas no pueden empezar por un número:
 
         <div class="codigo">
-          <pre><img src="../varios/iconos/icono-warning-xmlcopyeditor.svg" alt="Error" title="Error" width="37" height="36" class="vmedio" />Error at line 5, column 6: not well-formed (invalid token)</pre>
+          <pre><img src="../varios/iconos/icono-warning-xmlcopyeditor.svg" alt="Error" title="Error" width="37" height="36" class="vmedio">Error at line 5, column 6: not well-formed (invalid token)</pre>
         </div>
         <p>Se podría corregir añadiendo un nombre de etiqueta, por ejemplo: </p>
 
@@ -379,7 +379,7 @@
       <li>El carácter inferior a (&lt;) sólo puede utilizarse como inicio de etiqueta:
 
         <div class="codigo">
-          <pre><img src="../varios/iconos/icono-warning-xmlcopyeditor.svg" alt="Error" title="Error" width="37" height="36" class="vmedio" />Error at line 3, column 26: not well-formed (invalid token)</pre>
+          <pre><img src="../varios/iconos/icono-warning-xmlcopyeditor.svg" alt="Error" title="Error" width="37" height="36" class="vmedio">Error at line 3, column 26: not well-formed (invalid token)</pre>
         </div>
         <p>Se podría corregir escribiendo la entidad de carácter correspondiente, por ejemplo: </p>
 
@@ -390,7 +390,7 @@
       <li>Los nombre de atributos no pueden contener espacios:
 
         <div class="codigo">
-          <pre><img src="../varios/iconos/icono-warning-xmlcopyeditor.svg" alt="Error" title="Error" width="37" height="36" class="vmedio" />Error at line 4, column 23: not well-formed (invalid token)</pre>
+          <pre><img src="../varios/iconos/icono-warning-xmlcopyeditor.svg" alt="Error" title="Error" width="37" height="36" class="vmedio">Error at line 4, column 23: not well-formed (invalid token)</pre>
         </div>
         <p>Se podría corregir modificando el nombre del atributo, por ejemplo:</p>
 
@@ -401,7 +401,7 @@
       <li>Las etiquetas deben terminar por el carácter superior a (&gt;):
 
         <div class="codigo">
-          <pre><img src="../varios/iconos/icono-warning-xmlcopyeditor.svg" alt="Error" title="Error" width="37" height="36" class="vmedio" />Error at line 5, column 1: not well-formed (invalid token)</pre>
+          <pre><img src="../varios/iconos/icono-warning-xmlcopyeditor.svg" alt="Error" title="Error" width="37" height="36" class="vmedio">Error at line 5, column 1: not well-formed (invalid token)</pre>
         </div>
         <p>Se podría corregir añadiendo los caracteres /&gt; finales, por ejemplo: </p>
 
@@ -428,8 +428,8 @@
     <p class="ultmod">Última modificación de esta página: 27 de abril de 2015</p>
 
     <p class="licencia">
-      <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../varios/iconos/icono-cc-by-sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42" /></a><br />
-      Esta página forma parte del curso <strong><a href="https://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a></strong> por <a href="https://www.mclibre.org/">Bartolomé Sintes Marco</a><br />
+      <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="../varios/iconos/icono-cc-by-sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42"></a><br>
+      Esta página forma parte del curso <strong><a href="https://www.mclibre.org/consultar/xml/">XML: Lenguaje de marcas extensible</a></strong> por <a href="https://www.mclibre.org/">Bartolomé Sintes Marco</a><br>
       que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.
     </p>
   </footer>
