@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" width="49.98" height="48">
+<?xml version="1.0" encoding="UTF-8" ?>
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="48">
   <defs>
     <filter id="a" width="1.24" height="1.25" x="-.12" y="-.13" color-interpolation-filters="sRGB">
       <feGaussianBlur stdDeviation="27.98"/>
